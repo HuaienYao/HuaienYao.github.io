@@ -14,10 +14,10 @@
 <title>
 
 
-     Development 
+     Use @ instead of HEAD 
 
 </title>
-<link rel="canonical" href="https://you.github.io/categories/development/">
+<link rel="canonical" href="https://you.github.io/blog/use-at-instead-of-head/">
 
 
 <script type="text/javascript">
@@ -50,8 +50,6 @@
 >
 
 
-
-  <link href="https://you.github.io/categories/development/index.xml" rel="alternate" type="application/rss+xml" title="Arthur Dent" />
 
 
 
@@ -118,28 +116,73 @@
     </div>
 </section>
 
-<section class="main">
+
+<section class="main post non-narrow zero-top-spacing">
     <div class="container">
         <div class="content">
-            <div class="page-heading">Blog</div>
-            <ul>
-                
-                <li class="post-item">
-    <span class="meta">Dec 20, 2016</span>
-    <a href="https://you.github.io/post/second/"><span>second</span></a>
-</li>
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
 
-                
-                <li class="post-item">
-    <span class="meta">Dec 19, 2016</span>
-    <a href="https://you.github.io/post/first/"><span>关于我</span></a>
-</li>
+    Use @ instead of HEAD
 
-                
-            </ul>
+</div>
+
+                    <div class="initials"><a href="https://you.github.io/"></a></div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="Tue Aug 25 2015 17:09:14 -0500">Aug 25, 2015</div>
+                    <div class="reading-time"><div class="middot"></div>1 minute read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                <p>I recently discovered that from git version <a href="https://github.com/git/git/blob/master/Documentation/RelNotes/1.8.5.txt#L100">1.8.5</a> onwards, <code>@</code> can replace <code>HEAD</code>:</p>
+
+
+$ git reset --hard @~2
+$ git rebase -i @~10
+$ git diff @~2..@~3
+
+
+<p>And also in most scenarios <code>HEAD</code> can be left out completely, so you can say:</p>
+
+
+$ git reset -- @{2}
+
+
+<p>instead of:</p>
+
+
+$ git reset -- HEAD@{2}
+
+
+<p>It takes some getting used to, but it&rsquo;s definitely faster than typing <code>HEAD</code>.</p>
+
+                <br>
+                <p><a href="https://you.github.io/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'cocoaexamplesite';
+    var disqus_identifier = 'https:\/\/you.github.io\/blog\/use-at-instead-of-head\/';
+    var disqus_title = 'Use @ instead of HEAD';
+    var disqus_url = 'https:\/\/you.github.io\/blog\/use-at-instead-of-head\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
         </div>
     </div>
 </section>
+
 
 
 <script type="text/javascript">
@@ -166,5 +209,4 @@ try {
 
 </body>
 </html>
-
 

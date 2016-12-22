@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wyane&#39; Blog</title>
-    <link>http://w.hanayao.com/tags/development/index.xml</link>
-    <description>Recent content on Wyane&#39; Blog</description>
+    <title>Arthur Dent</title>
+    <link>https://you.github.io/tags/development/index.xml</link>
+    <description>Recent content on Arthur Dent</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <managingEditor>wyane.yia@gmail.com (huaienyao)</managingEditor>
-    <webMaster>wyane.yia@gmail.com (huaienyao)</webMaster>
-    <atom:link href="http://w.hanayao.com/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-US</language>
+    <atom:link href="https://you.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>second</title>
-      <link>http://w.hanayao.com/post/second/</link>
+      <link>https://you.github.io/post/second/</link>
       <pubDate>Tue, 20 Dec 2016 02:09:41 +0900</pubDate>
-      <author>wyane.yia@gmail.com (huaienyao)</author>
-      <guid>http://w.hanayao.com/post/second/</guid>
+      
+      <guid>https://you.github.io/post/second/</guid>
       <description></description>
     </item>
     
     <item>
       <title>关于我</title>
-      <link>http://w.hanayao.com/post/first/</link>
+      <link>https://you.github.io/post/first/</link>
       <pubDate>Mon, 19 Dec 2016 02:43:33 +0900</pubDate>
-      <author>wyane.yia@gmail.com (huaienyao)</author>
-      <guid>http://w.hanayao.com/post/first/</guid>
+      
+      <guid>https://you.github.io/post/first/</guid>
       <description></description>
     </item>
     
