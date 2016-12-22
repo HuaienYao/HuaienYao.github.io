@@ -2,13 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://w.hanayao.com/</loc>
-    <lastmod>2016-12-22T14:58:55+09:00</lastmod>
+    <loc>https://huaienyao.github.io/</loc>
+    <lastmod>2016-12-23T01:11:06+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://w.hanayao.com/about/</loc>
-    <lastmod>2016-12-22T14:58:55+09:00</lastmod>
+    <loc>https://huaienyao.github.io/links/</loc>
+    <lastmod>2016-12-23T01:11:06+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://huaienyao.github.io/about/</loc>
+    <lastmod>2015-08-22T06:42:21-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://huaienyao.github.io/colophon/</loc>
+    <lastmod>2015-08-22T06:28:26-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://huaienyao.github.io/code/</loc>
+    <lastmod>2015-08-19T20:29:37-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://huaienyao.github.io/about-this-site/</loc>
+  </url>
+  
+  <url>
+    <loc>https://huaienyao.github.io/posts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://huaienyao.github.io/writing/</loc>
   </url>
   
 </urlset>
