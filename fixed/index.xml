@@ -1,53 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fixed-rss on Wyane&#39;s Blog</title>
-    <link>https://HuaienYao.github.io/fixed/index.xml</link>
-    <description>Recent content in Fixed-rss on Wyane&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>Zh-CN</language>
-    <lastBuildDate>Thu, 22 Dec 2016 06:42:21 -0700</lastBuildDate>
-    <atom:link href="https://HuaienYao.github.io/fixed/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>About</title>
-      <link>https://huaienyao.github.io/about/</link>
-      <pubDate>Thu, 22 Dec 2016 06:42:21 -0700</pubDate>
-      
-      <guid>https://huaienyao.github.io/about/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;@日本东京&lt;/li&gt;
-&lt;li&gt;90后大三留学生&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;爱好：网站建设，略懂HTML,PHP,使用过wordpress，typecho，Discuz!等程序搭建过网站。目前用静态网页生成器Hugo搭建这个博客，用来记录学习搭建网站相关知识。&lt;/p&gt;
-
-&lt;p&gt;下一步想学习下GOlang&lt;/p&gt;
-</description>
-    </item>
+      <title>Fixed-rsses on Wyane&#39; Blog </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://w.hanayao.com/fixed/index.xml</link>
+    <language>en-us</language>
+    <author>Wyane Yao</author>
+    <copyright>Copyright (c) 2009 - 2016, Wyane Yao; all rights reserved.</copyright>
+    <updated>Sat, 22 Aug 2015 06:28:26 -0700</updated>
     
     <item>
       <title>colophon</title>
-      <link>https://huaienyao.github.io/colophon/</link>
+      <link>http://w.hanayao.com/fixed/colophon/</link>
       <pubDate>Sat, 22 Aug 2015 06:28:26 -0700</pubDate>
-      
-      <guid>https://huaienyao.github.io/colophon/</guid>
+      <author>Wyane Yao</author>
+      <guid>http://w.hanayao.com/fixed/colophon/</guid>
       <description>&lt;p&gt;This website is a personal homepage.&lt;/p&gt;
 
-&lt;p&gt;The site is built with &lt;a target=&#34;_blank&#34; href=&#34;//gohugo.io&#34;&gt;Hugo&lt;/a&gt;—a static site generator made with Go. The website &lt;a href=&#34;https://HuaienYao.github.io/&#34;&gt;source code&lt;/a&gt; is available on GitHub. It uses the &lt;a target=&#34;_blank&#34; href=&#34;//github.com/nishanths/cocoa-hugo-theme&#34;&gt;cocoa&lt;/a&gt; theme. The posts are written in Markdown.&lt;/p&gt;
+&lt;p&gt;The site is built with &lt;a target=&#34;_blank&#34; href=&#34;//gohugo.io&#34;&gt;Hugo&lt;/a&gt;—a static site generator made with Go. The website &lt;a href=&#34;http://w.hanayao.com/&#34;&gt;source code&lt;/a&gt; is available on GitHub. It uses the &lt;a target=&#34;_blank&#34; href=&#34;//github.com/nishanths/cocoa-hugo-theme&#34;&gt;cocoa&lt;/a&gt; theme. The posts are written in Markdown.&lt;/p&gt;
 
 &lt;p&gt;The primary font face is Open Sans and the monospace font face is Ubuntu Mono. The social icons are from the Ionicons font set. CSS classes for code syntax highlighting are inserted during compile-time by Hugo using Pygments.&lt;/p&gt;
 
-&lt;p&gt;If you find errors, &lt;a href=&#34;https://HuaienYao.github.io/&#34;&gt;please let me know&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you find errors, &lt;a href=&#34;http://w.hanayao.com/&#34;&gt;please let me know&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Code</title>
-      <link>https://huaienyao.github.io/code/</link>
+      <link>http://w.hanayao.com/fixed/code/</link>
       <pubDate>Wed, 19 Aug 2015 20:29:37 -0700</pubDate>
-      
-      <guid>https://huaienyao.github.io/code/</guid>
+      <author>Wyane Yao</author>
+      <guid>http://w.hanayao.com/fixed/code/</guid>
       <description>
 
 &lt;p&gt;The Hitchhiker&amp;rsquo;s Guide to the Galaxy is a comedy science fiction series created by &lt;a href=&#34;https://en.wikipedia.org/wiki/Douglas_Adams&#34;&gt;Douglas Adams&lt;/a&gt;. Originally a radio comedy broadcast on BBC Radio 4 in 1978, it was later adapted to other formats, and over several years it gradually became an international multi-media phenomenon. Adaptations have included stage shows, a &amp;ldquo;trilogy&amp;rdquo; of five books published between 1979 and 1992, a sixth novel penned by &lt;a href=&#34;https://en.wikipedia.org/wiki/Eoin_Colfer&#34;&gt;Eoin Colfer&lt;/a&gt; in 2009, a 1981 TV series, a 1984 computer game, and three series of three-part comic book adaptations of the first three novels published by DC Comics between 1993 and 1996. There were also two series of towels, produced by Beer-Davies, that are considered by some fans to be an &amp;ldquo;official version&amp;rdquo; of The Hitchhiker&amp;rsquo;s Guide to the Galaxy, as they include text from the first novel.&lt;/p&gt;

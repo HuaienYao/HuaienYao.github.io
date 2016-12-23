@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog-rss on Wyane&#39;s Blog</title>
-    <link>https://HuaienYao.github.io/blog/index.xml</link>
-    <description>Recent content in Blog-rss on Wyane&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>Zh-CN</language>
-    <lastBuildDate>Fri, 23 Dec 2016 01:32:15 +0900</lastBuildDate>
-    <atom:link href="https://HuaienYao.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+      <title>Blog-rsses on Wyane&#39; Blog </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://w.hanayao.com/blog/index.xml</link>
+    <language>en-us</language>
+    <author>Wyane Yao</author>
+    <copyright>Copyright (c) 2009 - 2016, Wyane Yao; all rights reserved.</copyright>
+    <updated>Fri, 23 Dec 2016 01:32:15 JST</updated>
     
     <item>
       <title>我的第一篇文章</title>
-      <link>https://huaienyao.github.io/blog/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
-      <pubDate>Fri, 23 Dec 2016 01:32:15 +0900</pubDate>
-      
-      <guid>https://huaienyao.github.io/blog/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
-      <description>&lt;p&gt;Although this detail has no connection whatever with the real substance of what we are about to relate, it will not be superfluous, if merely for the sake of exactness in all points, to mention here the various rumors and remarks which had been in circulation about him from the very moment when he arrived in the diocese.&lt;/p&gt;
+      <link>http://w.hanayao.com/blog/2016-12-22/</link>
+      <pubDate>Fri, 23 Dec 2016 01:32:15 JST</pubDate>
+      <author>Wyane Yao</author>
+      <guid>http://w.hanayao.com/blog/2016-12-22/</guid>
+      <description>&lt;p&gt;这是我用Hugo生成的第一个静态页面。
+这里用来记录一些相关的网站建设方面的技术知识。&lt;/p&gt;
 </description>
     </item>
     
