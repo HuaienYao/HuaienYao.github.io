@@ -153,7 +153,7 @@ body>footer{margin-top:2em}
 .full:after{clear:both}
 .full>img{display:inline !important}
 #header{position:relative;padding-top:1em;transition:opacity .7s}
-#header figure{width:50%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;display:inline-block;float:left;margin-left:25%;padding-bottom:1em}
+#header figure{width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;display:inline-block;float:left;margin-left:25%;padding-bottom:1em}
 #header figure>img{width:13em;margin:0 auto}
 #logo{font-size:8em;line-height:.8em;text-align:center;margin:.2em 0 .2em 0}
 #byline{display:none !important}
