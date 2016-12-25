@@ -121,7 +121,7 @@ a.yangzhe:hover { background: #22c3aa; color: #fff; }
 .social li a:hover .icon{font-size:100%}
 #social>li>.icon{padding:.2em .2em .4em 1em;color:#ecf0f1;font-size:100%}
 .share .icon,.follow .icon{padding-left:1em;font-size:.8em;padding-right:.5em}
-span.title{text-align:left;line-height:1.4}
+span.title{text-align:left;line-height:1.2}
 span.subcount,span.title{color:#ecf0f1}
 span.subcount{font-size:0.6875em;line-height:1.45309em;text-align:center}
 #social span{text-align:left;display:inline}
