@@ -18,7 +18,7 @@ figure{position:relative}
 figure img,figure object,figure embed,figure video{max-width:100%;display:block}
 img{border:0;-ms-interpolation-mode:bicubic}
 body{font-size:1em;line-height:1.5em}
-h1{font-size:1.625em;line-height:1.14286em}
+h1{font-size:2.625em;line-height:1.14286em}
 h2{font-size:1.625em;line-height:1.38462em}
 h3{font-size:1em;line-height:1.5em}
 body>header,body>section,body>aside,body>footer,body>.content{margin:0 7.14286%;*zoom:1}
