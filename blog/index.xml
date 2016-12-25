@@ -4,17 +4,17 @@
       <title>Blog-rsses on Wyane&#39; Blog </title>
       <generator uri="https://gohugo.io">Hugo</generator>
     <link>http://w.hanayao.com/blog/index.xml</link>
-    <language>en-us</language>
+    <language>Zh-cn</language>
     <author>Wyane Yao</author>
     <copyright>Copyright (c) 2009 - 2016, Wyane Yao; all rights reserved.</copyright>
     <updated>Thu, 22 Dec 2016 00:00:00 UTC</updated>
     
     <item>
       <title>我的第一篇测试</title>
-      <link>http://w.hanayao.com/post/2016-22-22</link>
+      <link>http://w.hanayao.com/blog/2016-22-22</link>
       <pubDate>Thu, 22 Dec 2016 00:00:00 UTC</pubDate>
       <author>Wyane Yao</author>
-      <guid>http://w.hanayao.com/post/2016-22-22</guid>
+      <guid>http://w.hanayao.com/blog/2016-22-22</guid>
       <description>&lt;p&gt;hello&lt;/p&gt;
 </description>
     </item>
