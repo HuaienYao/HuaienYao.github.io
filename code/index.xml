@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title> on Wyane&#39; Blog </title>
+      <title>Code-rsses on Wyane&#39; Blog </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://w.hanayao.com/index.xml</link>
+    <link>http://w.hanayao.com/code/index.xml</link>
     <language>en-us</language>
     <author>Wyane Yao</author>
     <copyright>Copyright (c) 2009 - 2016, Wyane Yao; all rights reserved.</copyright>
-    <updated>Thu, 22 Dec 2016 06:42:21 -0700</updated>
-    
-    <item>
-      <title>About</title>
-      <link>http://w.hanayao.com/about/</link>
-      <pubDate>Thu, 22 Dec 2016 06:42:21 -0700</pubDate>
-      <author>Wyane Yao</author>
-      <guid>http://w.hanayao.com/about/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;@日本东京&lt;/li&gt;
-&lt;li&gt;90后大三留学生&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;爱好：网站建设，略懂HTML,PHP,使用过wordpress，typecho，Discuz!等程序搭建过网站。目前用静态网页生成器Hugo搭建这个博客，用来记录学习搭建网站相关知识。&lt;/p&gt;
-
-&lt;p&gt;下一步想学习下GOlang&lt;/p&gt;
-</description>
-    </item>
+    <updated>Wed, 19 Aug 2015 20:29:37 -0700</updated>
     
     <item>
       <title>Code</title>
@@ -39,17 +22,6 @@
 &lt;h3 id=&#34;movie&#34;&gt;Movie&lt;/h3&gt;
 
 &lt;p&gt;A Hollywood-funded film version, produced and filmed in the UK, was released in April 2005, and radio adaptations of the third, fourth, and fifth novels were broadcast from 2004 to 2005. Adams did many of these adaptations, including the novels, the TV series, the computer game, and the earliest drafts of the Hollywood film’s screenplay, and some of the stage shows introduced new material written by Adams.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>python numpy 计算自相关系数</title>
-      <link>http://w.hanayao.com/post/2016-22-22</link>
-      <pubDate>Sun, 15 Mar 2015 00:00:00 UTC</pubDate>
-      <author>Wyane Yao</author>
-      <guid>http://w.hanayao.com/post/2016-22-22</guid>
-      <description>&lt;p&gt;这是我用Hugo生成的第一个静态页面。
-这里用来记录一些相关的网站建设方面的技术知识。&lt;/p&gt;
 </description>
     </item>
     
