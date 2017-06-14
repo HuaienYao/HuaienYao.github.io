@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://w.hanayao.com/</loc>
+    <loc>http://huaienyao.github.io/</loc>
+    <lastmod>2017-06-14T11:59:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://huaienyao.github.io/talk/no-weibo</loc>
+    <lastmod>2017-06-14T11:59:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://huaienyao.github.io/about/</loc>
     <lastmod>2016-12-22T06:42:21-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://w.hanayao.com/about/</loc>
-    <lastmod>2016-12-22T06:42:21-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://w.hanayao.com/blog/2016-22-22</loc>
+    <loc>http://huaienyao.github.io/blog/2016-22-22</loc>
     <lastmod>2016-12-22T00:00:00+00:00</lastmod>
   </url>
   
