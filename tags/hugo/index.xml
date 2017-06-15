@@ -3,7 +3,7 @@
   <channel>
       <title> on Wyane&#39; Blog </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://HuaienYao.github.io/tags/hugo/index.xml</link>
+    <link>http://w.hanayao.com/tags/hugo/index.xml</link>
     <language>Zh-cn</language>
     <author>Wyane Yao</author>
     <copyright>Copyright (c) 2009 - 2017, Wyane Yao; all rights reserved.</copyright>
@@ -11,10 +11,10 @@
     
     <item>
       <title>我的第一篇测试</title>
-      <link>http://huaienyao.github.io/blog/2016-22-22</link>
+      <link>http://w.hanayao.com/blog/2016-22-22</link>
       <pubDate>Thu, 22 Dec 2016 00:00:00 UTC</pubDate>
       <author>Wyane Yao</author>
-      <guid>http://huaienyao.github.io/blog/2016-22-22</guid>
+      <guid>http://w.hanayao.com/blog/2016-22-22</guid>
       <description>&lt;p&gt;hello&lt;/p&gt;
 </description>
     </item>
