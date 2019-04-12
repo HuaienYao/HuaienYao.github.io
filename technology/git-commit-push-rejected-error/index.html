@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  
+  <link rel="prev" href="/technology/make-directory-lister-more-beautiful/" />
+  <link rel="next" href="/technology/how-to-backup-hexo-to-github/" />
+  <link rel="canonical" href="/technology/git-commit-push-rejected-error/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           git push远程版本和本地版本冲突时强制覆盖已有的分支有的分支 | Wyane&#39;s Blog
+       
+  </title>
+  <meta name="title" content="git push远程版本和本地版本冲突时强制覆盖已有的分支有的分支 | Wyane&#39;s Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "posts",
+    "name" : "git push远程版本和本地版本冲突时强制覆盖已有的分支有的分支",
+    "headline" : "git push远程版本和本地版本冲突时强制覆盖已有的分支有的分支",
+    "description" : "本文记录了在git push的时候出现rejected的远程版本和本地版本冲突错误时，通过强制覆盖已有的分支有的分支来及决的办法。",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-08-03 00:00:00 &#43;0000 UTC",
+    "dateModified" : "2018-08-03 00:00:00 &#43;0000 UTC",
+    "url" : "/technology/git-commit-push-rejected-error/",
+    "wordCount" : "89",
+    "keywords" : [ "Git", "Wyane&#39;s Blog"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/friends/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/friends/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">git push远程版本和本地版本冲突时强制覆盖已有的分支有的分支</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="/" rel="author">Wyane</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2018-08-03 itemprop="datePublished">August 3, 2018</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>前面我们讲到<a href="https://huaien.me/article/blogengine/how-to-backup-hexo-to-github/" rel="nofollow noreferrer" target="_blank">备份 Hexo 源码文件到GitHub仓库</a>
+在尝试将本地hexo源码文件同步到GitHub仓库的hexo分支的时候，执行</p>
+
+<pre><code>git add .
+git commit -m &quot;backup&quot;
+git push -u origin hexo
+</code></pre>
+
+<p>最后提示下面的错误：</p>
+
+<p>rejected的远程版本和本地版本冲突错误</p>
+
+<pre><code>! [rejected]        hexo -&gt; hexo (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Wyane/Wyane.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre>
+
+<h2 id="解决">解决</h2>
+
+<p>原来是远程仓库的分支内容与本地不符。导致无法提交更新，
+可以先试着<code>git pull</code>
+如果能解决就最好，但是我还是提示错误，最后查询网上资料，还是得通过 -f参数来强制覆盖已有的分支。</p>
+
+<pre><code>git push -u origin master -f
+</code></pre>
+
+<p>这样就不会报错了。如果有重要文件 ，建议还是先备份，毕竟是强制覆盖，万一出问题的话丢失文件就麻烦了。</p>
+
+<h2 id="来源">来源</h2>
+
+<ul>
+<li><p><a href="https://blog.csdn.net/shiren1118/article/details/7761203" rel="nofollow noreferrer" target="_blank">https://blog.csdn.net/shiren1118/article/details/7761203</a></p></li>
+
+<li><p><a href="http://www.cnblogs.com/xwdreamer/archive/2012/05/29/2523958.html" rel="nofollow noreferrer" target="_blank">http://www.cnblogs.com/xwdreamer/archive/2012/05/29/2523958.html</a></p></li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Wyane </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/technology/git-commit-push-rejected-error/>/technology/git-commit-push-rejected-error/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="/tags/git/">
+                    #Git</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/technology/make-directory-lister-more-beautiful/" class="prev" rel="prev" title="修改Directory Lister的字体为小夜美化版并将字体本地化"><i class="iconfont icon-left"></i>&nbsp;修改Directory Lister的字体为小夜美化版并将字体本地化</a>
+         
+        
+        <a href="/technology/how-to-backup-hexo-to-github/" class="next" rel="next" title="Windows,Linux多平台下共同维护Hexo 备份Hexo到GitHub">Windows,Linux多平台下共同维护Hexo 备份Hexo到GitHub&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2010 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="/">Wyane</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

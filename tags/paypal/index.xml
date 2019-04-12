@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PayPal on Wyane&#39;s Blog</title>
+    <link>/tags/paypal/</link>
+    <description>Recent content in PayPal on Wyane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 27 Aug 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/paypal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PayPal 2011 4大礼包现金派送</title>
+      <link>/news/paypal-2011-gifts/</link>
+      <pubDate>Sat, 27 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/news/paypal-2011-gifts/</guid>
+      <description>&lt;p&gt;活动地址地址：&lt;a href=&#34;https://www.paypal-biz.com/onestopsolution/2011offer/ossLP.php&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.paypal-biz.com/onestopsolution/2011offer/ossLP.php&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

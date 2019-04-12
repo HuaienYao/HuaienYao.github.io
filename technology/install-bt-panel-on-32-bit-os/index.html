@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  
+  <link rel="prev" href="/technology/nginx-conf-after-ssl/" />
+  <link rel="next" href="/technology/wp_admin_https_sorry_cannot_reach/" />
+  <link rel="canonical" href="/technology/install-bt-panel-on-32-bit-os/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           解决32系统无法安装bt宝塔服务器面板 | Wyane&#39;s Blog
+       
+  </title>
+  <meta name="title" content="解决32系统无法安装bt宝塔服务器面板 | Wyane&#39;s Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "posts",
+    "name" : "解决32系统无法安装bt宝塔服务器面板",
+    "headline" : "解决32系统无法安装bt宝塔服务器面板",
+    "description" : "本文记录了用32位系统安装宝塔面板提示错误的解决办法。",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-05-25 00:00:00 &#43;0000 UTC",
+    "dateModified" : "2018-05-25 00:00:00 &#43;0000 UTC",
+    "url" : "/technology/install-bt-panel-on-32-bit-os/",
+    "wordCount" : "37",
+    "keywords" : [ "宝塔","服务器面板","后端技术", "Wyane&#39;s Blog"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/friends/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/friends/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">解决32系统无法安装bt宝塔服务器面板</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="/" rel="author">Wyane</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2018-05-25 itemprop="datePublished">May 25, 2018</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h2 id="bt">bt</h2>
+
+<p>前段时间把VPS重装系统为debian的32位，因为内存只有512M，还是用32位比较省资源。
+但是在安装宝塔面板的时候却提示BT不支持32位系统的安装（如图）</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://s1.ax1x.com/2018/05/29/C5ZVvF.png" alt="BT不支持32位系统的安装" class="lazyload"><figcaption class="image-caption">BT不支持32位系统的安装</figcaption></figure>
+原来是因为安装的时候会检测是否为64位系统。</p>
+
+<p>这里我们可以用
+<code>vi install.sh</code>
+来修改安装脚本，删除以下部分（如图）
+vi命令</p>
+
+<pre><code>删除命令
+ndw或ndW：删除光标处开始及其后的n-1个字
+do：删至行首
+d$：删至行尾
+ndd：删除当前行及其后n-1行
+x或X：删除一个字符，x删除光标后的，而X删除光标前的
+Ctrl+u：删除输入方式下所输入的文本
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://s1.ax1x.com/2018/05/29/C5ZEgU.png" alt="图中部分删除" class="lazyload"><figcaption class="image-caption">图中部分删除</figcaption></figure></p>
+
+<pre><code>if [ &quot;$is64bit&quot; = '32' ];then
+    echo '=================================================';
+    echo -e &quot;\033[31m BT-Panel Incompatible 32 bit OS. \033[0m&quot;;
+    exit;
+fi
+</code></pre>
+
+<p><code>:wq</code>，保存退出，重新运行<code>sh install.sh</code>，即可安装。</p>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Wyane </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/technology/install-bt-panel-on-32-bit-os/>/technology/install-bt-panel-on-32-bit-os/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="/tags/%E5%AE%9D%E5%A1%94/">
+                    #宝塔</a></span>
+            
+            <span class="tag"><a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/">
+                    #服务器面板</a></span>
+            
+            <span class="tag"><a href="/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/">
+                    #后端技术</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/technology/nginx-conf-after-ssl/" class="prev" rel="prev" title="添加SSL后Nginx的https伪静态配置多次不成功"><i class="iconfont icon-left"></i>&nbsp;添加SSL后Nginx的https伪静态配置多次不成功</a>
+         
+        
+        <a href="/technology/wp_admin_https_sorry_cannot_reach/" class="next" rel="next" title="开启HTTPS后WordPress后台wp-admin登录后：显示抱歉，您不能访问此页面">开启HTTPS后WordPress后台wp-admin登录后：显示抱歉，您不能访问此页面&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2010 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="/">Wyane</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
