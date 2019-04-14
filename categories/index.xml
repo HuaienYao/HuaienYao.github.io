@@ -6,27 +6,10 @@
     <description>Recent content in Categories on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Sat, 02 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>小道消息</title>
-      <link>/categories/%E5%B0%8F%E9%81%93%E6%B6%88%E6%81%AF/</link>
-      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/%E5%B0%8F%E9%81%93%E6%B6%88%E6%81%AF/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>影音资源</title>
-      <link>/categories/%E5%BD%B1%E9%9F%B3%E8%B5%84%E6%BA%90/</link>
-      <pubDate>Sun, 28 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/%E5%BD%B1%E9%9F%B3%E8%B5%84%E6%BA%90/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>技术记录</title>
@@ -34,24 +17,6 @@
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>服务器</title>
-      <link>/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-      <pubDate>Wed, 08 Dec 2010 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>生活随想</title>
-      <link>/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/</link>
-      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/</guid>
       <description></description>
     </item>
     
@@ -65,11 +30,47 @@
     </item>
     
     <item>
+      <title>小道消息</title>
+      <link>/categories/%E5%B0%8F%E9%81%93%E6%B6%88%E6%81%AF/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/%E5%B0%8F%E9%81%93%E6%B6%88%E6%81%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>软件资源</title>
       <link>/categories/%E8%BD%AF%E4%BB%B6%E8%B5%84%E6%BA%90/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/%E8%BD%AF%E4%BB%B6%E8%B5%84%E6%BA%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>生活随想</title>
+      <link>/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/</link>
+      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>影音资源</title>
+      <link>/categories/%E5%BD%B1%E9%9F%B3%E8%B5%84%E6%BA%90/</link>
+      <pubDate>Sun, 28 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/%E5%BD%B1%E9%9F%B3%E8%B5%84%E6%BA%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>服务器</title>
+      <link>/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Wed, 08 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description></description>
     </item>
     
