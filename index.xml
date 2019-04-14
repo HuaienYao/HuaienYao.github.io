@@ -9,75 +9,6 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Friends</title>
-      <link>/links/</link>
-      <pubDate>Tue, 02 Nov 2010 00:00:00 +0000</pubDate>
-      
-      <guid>/links/</guid>
-      <description>&lt;p&gt;大家好，断断续续接触建站知识开始也快十年了。并没有一直坚持下来，期间也换了几次服务器，源码程序导致中断并丢失数据。以后会好好保护数据。。
-如果觉得可以，本博客欢迎与大家交换友情链接。请在添加本博客链接后下方留言或者联系yao#huaien.me 请替换#为@ ，我会在收到信息后及时添加贵站链接。谢谢！&lt;/p&gt;
-
-&lt;p&gt;站名：Wyane&amp;rsquo;s Blog&lt;/p&gt;
-
-&lt;p&gt;链接：&lt;a href=&#34;https://huaien.me&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://huaien.me&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;说明：Do or Die&lt;/p&gt;
-
-&lt;p&gt;图标（如有）：&lt;a href=&#34;https://huaien.me/images/avatar.jpg&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://huaien.me/images/avatar.jpg&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;No.&lt;/th&gt;
-&lt;th&gt;Sites&lt;/th&gt;
-&lt;th&gt;Links&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://hanayao.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;HanaYao Blog&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://hanayao.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://hanayao.com&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HanaYao Blog&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.do1024.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;肉松君博客&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.do1024.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.do1024.com&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;好基友&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.lance.moe&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Lance&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.lance.moe&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.lance.moe&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Lance博客&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.xujianhua.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;许建华博客&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.xujianhua.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.xujianhua.com&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;一个草根站长的个人博客。&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://blog.hicasper.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hiCasper&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://blog.hicasper.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://blog.hicasper.com&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;大前端主题Typecho修改版作者&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
       <title>手滑导致设置git remote仓库错误 如何修改远程仓库地址配置</title>
       <link>/technology/change-git-remote-config/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
@@ -1170,6 +1101,75 @@ INFO  Deleted database.
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;执行后就可以正常使用了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git学习相关资料整理</title>
+      <link>/technology/git-learning-sheet/</link>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/git-learning-sheet/</guid>
+      <description>&lt;p&gt;部分电子书已经收录到仓库中，可以在这里查看到：&lt;a href=&#34;https://down.huaien.me/00.%E7%94%B5%E5%AD%90%E4%B9%A6_Ebook/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;电子书仓库&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;git学习资料&#34;&gt;git学习资料&lt;/h3&gt;
+
+&lt;p&gt;这里面的内容也是从网上收集，但是已经忘记了是从哪里找来的，感谢原作者。
+- &lt;a href=&#34;http://git-scm.com/book/en/v2&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Pro Git&lt;/a&gt;
+- &lt;a href=&#34;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;廖雪峰: git教程&lt;/a&gt;:最好的中文教程。
+- &lt;a href=&#34;https://www.atlassian.com/git?atl_source=cac-bitbucket-1&amp;amp;atl_medium=ace&amp;amp;atl_campaign=ACE-158-Stash-GIT-on-Bitbucket-CAC_git&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Git Tutorials&lt;/a&gt;: bitbucket的教程。
+- &lt;a href=&#34;http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Git Magic&lt;/a&gt;: 网上较火的一套教程。
+- &lt;a href=&#34;https://github.com/gotgit/gotgithub&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GotGithub&lt;/a&gt;: 一本中文的介绍github使用的书。
+- &lt;a href=&#34;http://gitimmersion.com/index.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Git Immersion&lt;/a&gt;: 答题的形式学习git.
+- &lt;a href=&#34;http://www.git-tower.com/learn/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Learn Version Control with Git&lt;/a&gt;
+- &lt;a href=&#34;http://blog.jobbole.com/tag/pro-git/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;伯乐在线&lt;/a&gt;: git详解系列
+- &lt;a href=&#34;http://backlogtool.com/git-guide/cn/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;猴子都能懂的Git入门&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;git-flow&#34;&gt;git-flow&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://danielkummer.github.io/git-flow-cheatsheet/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;git-flow cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;练习&#34;&gt;练习&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://try.github.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Try Git&lt;/a&gt;： codeschool教程。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Gazler/githug&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;githug&lt;/a&gt;: Git your game on!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://lingavin.com/githugtong-guan-gong-lue.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;githug通关攻略&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hgarc014/git-game&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;git-game&lt;/a&gt;: terminal game to test git skills.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://pcottle.github.io/learnGitBranching/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Learn Git Branching&lt;/a&gt;: 形象直观的图形化练习网站。&lt;/p&gt;
+
+&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://justinhileman.info/article/git-pretty/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;git pretty&lt;/a&gt;: 美化git&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GitHub秘籍&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;来自git学习资料整理-知乎搜集的&#34;&gt;来自git学习资料整理（知乎搜集的）&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;首先你要学会git, 提供一些相关的资讯，望有帮助：&lt;/li&gt;
+&lt;li&gt;progit这本书是必看的&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://git-scm.com/book&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://git-scm.com/book&lt;/a&gt; 和 &lt;a href=&#34;http://git-scm.com/book/zh&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://git-scm.com/book/zh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;至少阅读：第一，第二，第三，第五，共4章，即可入门。&lt;/li&gt;
+&lt;li&gt;不过这个网站被墙了，提供下镜像吧：progit-zh.epub 和 [中文].Pro Git.pdf&lt;/li&gt;
+&lt;li&gt;在熟悉命令行后，也许你会需要UI，那可以选择：&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitforwindows.org/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Downloads - msysgit - Git for Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://code.google.com/p/tortoisegit/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://code.google.com/p/tortoisegit/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.sourcetreeapp.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.sourcetreeapp.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;然后建议再看看 git-flow &amp;ndash;&amp;gt; 一个成功的Git分支模型&lt;/li&gt;
+&lt;li&gt;介绍：A successful Git branching model&lt;/li&gt;
+&lt;li&gt;翻译：&lt;a href=&#34;http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;工具：nvie/gitflow · GitHub&lt;/li&gt;
+&lt;li&gt;git-flow 备忘清单&lt;/li&gt;
+&lt;li&gt;最后，你若需要本地搭建一个，那就用GITLAB: Self Hosted Git Management Application吧&lt;/li&gt;
+&lt;li&gt;补充一个刚发现的互动学习git的项目： Learn Git Branching&lt;/li&gt;
+&lt;li&gt;再补充一个：图解Git&lt;/li&gt;
+&lt;li&gt;再补充一个：Git Magic - 前言&lt;/li&gt;
+&lt;li&gt;然后剩下github的，看官方说明吧： &lt;a href=&#34;https://help.github.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://help.github.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>
