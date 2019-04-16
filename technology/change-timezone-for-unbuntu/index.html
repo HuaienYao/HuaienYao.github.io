@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  
+  <link rel="prev" href="/technology/difference-of-iaas-saas-paas/" />
+  <link rel="next" href="/technology/fix-no-wifi-on-deepin-os/" />
+  <link rel="canonical" href="/technology/change-timezone-for-unbuntu/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Ubuntu修改时区的简单方法-以修改UTC为JST为例 | Wyane&#39;s Blog
+       
+  </title>
+  <meta name="title" content="Ubuntu修改时区的简单方法-以修改UTC为JST为例 | Wyane&#39;s Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "posts",
+    "name" : "Ubuntu修改时区的简单方法-以修改UTC为JST为例",
+    "headline" : "Ubuntu修改时区的简单方法-以修改UTC为JST为例",
+    "description" : "本文记录了如何查看Linux的时区设置和变更时区。",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-06-12 00:00:00 &#43;0000 UTC",
+    "dateModified" : "2018-06-12 00:00:00 &#43;0000 UTC",
+    "url" : "/technology/change-timezone-for-unbuntu/",
+    "wordCount" : "28",
+    "keywords" : [ "Ubuntu","Linux", "Wyane&#39;s Blog"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Ubuntu修改时区的简单方法-以修改UTC为JST为例</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="/" rel="author">Wyane</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2018-06-12 itemprop="datePublished">June 12, 2018</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>今天公司给了个课题，让我们查看AWS上的所有服务器是不是JST时区时间。
+如果不是就需要修改为JST。
+先用<code>date</code>命令来查看当前设置的时区。
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2018/06/13/5b209ec985b9c.png" alt="当前时区为EDT" class="lazyload"><figcaption class="image-caption">当前时区为EDT</figcaption></figure>
+网上查询了下Ubuntu的时区修改方法。</p>
+
+<p>参照了<a href="https://blog.csdn.net/qq_20480611/article/details/50325653" title="Ubuntu设置时区和更新时间" rel="nofollow noreferrer" target="_blank">Ubuntu设置时区和更新时间</a>的教程。</p>
+
+<h2 id="解决方法">解决方法</h2>
+
+<p>1、执行</p>
+
+<pre><code>tzselect
+</code></pre>
+
+<p>原文是推荐使用</p>
+
+<pre><code>sudo tzselect
+</code></pre>
+
+<p><em>但是本次没有用sudo也成功了</em>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2018/06/13/5b209ec99f1e6.png" alt="这里选择5）Asia" class="lazyload"><figcaption class="image-caption">这里选择5）Asia</figcaption></figure>
+在出现的界面上选择你的时区。
+这次我选的是Asia，Japan，Tokyo。这里只要输入对应选项前的号码就行了。
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2018/06/13/5b209ec9ad69a.png" alt="选择19）Japan" class="lazyload"><figcaption class="image-caption">选择19）Japan</figcaption></figure></p>
+
+<p>最后选择1）Yes 完成确认修改。
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2018/06/13/5b209ec9ae7bc.png" alt="选择1）Yes确认修改" class="lazyload"><figcaption class="image-caption">选择1）Yes确认修改</figcaption></figure></p>
+
+<p>2、复制文件到 /etc/</p>
+
+<pre><code>sudo    cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2018/06/13/5b209ec9ad5f0.png" alt="复制文件" class="lazyload"><figcaption class="image-caption">复制文件</figcaption></figure>
+3、命令更新时间*(本次我没有执行此更新命令，发现时区已经修改为JST了)</p>
+
+<pre><code>sudo ntpdate us.pool.ntp.org
+</code></pre>
+
+<p>最后用<code>date</code>来确认当前时区。
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2018/06/13/5b209ec9ad5f0.png" alt="此处输入图片的描述" class="lazyload"><figcaption class="image-caption">此处输入图片的描述</figcaption></figure>
+最后的最后，<code>exit</code>退出服务器</p>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Wyane </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/technology/change-timezone-for-unbuntu/>/technology/change-timezone-for-unbuntu/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="/tags/ubuntu/">
+                    #Ubuntu</a></span>
+            
+            <span class="tag"><a href="/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/technology/difference-of-iaas-saas-paas/" class="prev" rel="prev" title="クラウドサービス企業ノAWSとその他の企業Azure　GCP　IBM　CLOUDなどの比較"><i class="iconfont icon-left"></i>&nbsp;クラウドサービス企業ノAWSとその他の企業Azure　GCP　IBM　CLOUDなどの比較</a>
+         
+        
+        <a href="/technology/fix-no-wifi-on-deepin-os/" class="next" rel="next" title="解决Deepin深度系统下没有无线网络选项之安装驱动">解决Deepin深度系统下没有无线网络选项之安装驱动&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2010 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="/">Wyane</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

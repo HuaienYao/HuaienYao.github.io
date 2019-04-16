@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT知识 on Wyane&#39;s Blog</title>
+    <link>/tags/it%E7%9F%A5%E8%AF%86/</link>
+    <description>Recent content in IT知识 on Wyane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 20 Mar 2011 17:39:31 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/it%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Byte与Bit有什么区别</title>
+      <link>/technology/difference-byte-bit/</link>
+      <pubDate>Sun, 20 Mar 2011 17:39:31 +0000</pubDate>
+      
+      <guid>/technology/difference-byte-bit/</guid>
+      <description>&lt;p&gt;在工作中遇到一些概念模糊的地方, 特此转载来以供查询。
+bit意为“位”或“比特”，是计算机运算的基础；
+byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

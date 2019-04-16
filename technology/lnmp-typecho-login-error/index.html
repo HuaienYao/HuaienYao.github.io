@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  
+  <link rel="prev" href="/technology/forgot-imagevue-login-information/" />
+  <link rel="next" href="/technology/wordpress-mod-security/" />
+  <link rel="canonical" href="/technology/lnmp-typecho-login-error/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           LNMP环境下typecho无法登录后台解决方案 | Wyane&#39;s Blog
+       
+  </title>
+  <meta name="title" content="LNMP环境下typecho无法登录后台解决方案 | Wyane&#39;s Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "posts",
+    "name" : "LNMP环境下typecho无法登录后台解决方案",
+    "headline" : "LNMP环境下typecho无法登录后台解决方案",
+    "description" : "本文记录了LNMP环境下typecho无法登陆后台的解决方法。",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2011",
+    "datePublished": "2011-03-06 00:00:00 &#43;0000 UTC",
+    "dateModified" : "2011-03-06 00:00:00 &#43;0000 UTC",
+    "url" : "/technology/lnmp-typecho-login-error/",
+    "wordCount" : "37",
+    "keywords" : [ "typecho", "Wyane&#39;s Blog"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">LNMP环境下typecho无法登录后台解决方案</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="/" rel="author">Wyane</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2011-03-06 itemprop="datePublished">March 6, 2011</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p><strong>感谢<a href="http://www.vpsmm.com/" rel="nofollow noreferrer" target="_blank">小夜</a>提供帮助。</strong>
+&gt; 出现的问题：liccess的lnmp0.6 搭建好后安装了typecho后，只有首页可以访问，其他页面都不能访问，后台登录界面可以看到，但是登录后无法访问。官方有解决方案但是我按照那还是解决不了</p>
+
+<p>解决方案：
+&gt; -lnmp安装typecho 后无法进入后台和其他页面要怎么解决呢？首页可以进去.
+&gt;
+&gt;
+&gt; 找到域名配置文件，修改为：include typecho.conf
+&gt;
+&gt; 再重载LNMP命令：/root/lnmp reload 应该就可以了。
+&gt;
+&gt;
+&gt; -安装lnmp时绑定的域名，直接放在/home/wwwroot/,所以没有添加虚拟主机，找不到/usr/local/nginx/conf/vhost/这个文件夹，不知道域名配置文件在哪
+&gt;
+&gt;
+&gt; 修改/usr/local/nginx/conf/nginx.conf，里面的域名为419.at或其它任意。
+&gt;
+&gt; 命令/root/vhost.sh重新绑定，记得绑定时，输入伪静态规则typecho就行了。
+&gt;
+&gt;
+&gt; -如何用ip直接访问
+&gt;
+&gt;
+&gt; 绑域名的时候，把网站的默认目录设置为/home/wwwroot/即可。</p>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Wyane </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/technology/lnmp-typecho-login-error/>/technology/lnmp-typecho-login-error/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="/tags/typecho/">
+                    #typecho</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/technology/forgot-imagevue-login-information/" class="prev" rel="prev" title="忘记Imagevue的登录信息的解决方案"><i class="iconfont icon-left"></i>&nbsp;忘记Imagevue的登录信息的解决方案</a>
+         
+        
+        <a href="/technology/wordpress-mod-security/" class="next" rel="next" title="Wordpress无法编辑更新文章之解决方案">Wordpress无法编辑更新文章之解决方案&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2010 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="/">Wyane</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
