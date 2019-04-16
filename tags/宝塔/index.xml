@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>宝塔 on Wyane&#39;s Blog</title>
+    <link>/tags/%E5%AE%9D%E5%A1%94/</link>
+    <description>Recent content in 宝塔 on Wyane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 26 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/%E5%AE%9D%E5%A1%94/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>宝塔面板无法启动pure-ftpd服务的解决办法</title>
+      <link>/technology/bt-panel-cannot-active-pure-ftpd/</link>
+      <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/bt-panel-cannot-active-pure-ftpd/</guid>
+      <description>&lt;p&gt;宝塔面板安装pure-ftpd后发现并没有启动，多次手动重启还是显示关闭状态，重装好几次也无法启动。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>宝塔面板忘记密码如何找回宝塔面板账户登录密码</title>
+      <link>/technology/bt-panel-get-password-back/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/bt-panel-get-password-back/</guid>
+      <description>&lt;h2 id=&#34;找回密码&#34;&gt;找回密码&lt;/h2&gt;
+
+&lt;p&gt;如果只是忘记了密码，还记得账号&lt;/p&gt;
+
+&lt;p&gt;可以输入以下命令回车找回密码（早期版本默认账号admin）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>宝塔启动nginx服务失败提示failed (98:Address already in use)</title>
+      <link>/technology/bt-panel-failed-to-start-nginx/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/bt-panel-failed-to-start-nginx/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;发现宝塔的nginx没有在运行，于是在宝塔面板上手动重启，但是提示失败，失败信息是下面那样：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>宝塔面板安装Flarum轻论坛程序时提示The PHP extension &#39;fileinfo&#39; is required</title>
+      <link>/technology/bt-panel-install-fileinfo-for-php/</link>
+      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/bt-panel-install-fileinfo-for-php/</guid>
+      <description>&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
+
+&lt;p&gt;宝塔面板默认并没有安装fileinfo模块，可按以下教程安装：&lt;/p&gt;
+
+&lt;p&gt;注意：以下教程中56为PHP版本，请替换成您要安装此扩展的PHP版本，Flarum轻论坛程序最低要求PHP5.6+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>解决32系统无法安装bt宝塔服务器面板</title>
+      <link>/technology/install-bt-panel-on-32-bit-os/</link>
+      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/install-bt-panel-on-32-bit-os/</guid>
+      <description>&lt;h2 id=&#34;bt&#34;&gt;bt&lt;/h2&gt;
+
+&lt;p&gt;前段时间把VPS重装系统为debian的32位，因为内存只有512M，还是用32位比较省资源。
+但是在安装宝塔面板的时候却提示BT不支持32位系统的安装（如图）&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

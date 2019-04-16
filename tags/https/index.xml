@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTTPS on Wyane&#39;s Blog</title>
+    <link>/tags/https/</link>
+    <description>Recent content in HTTPS on Wyane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 05 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/https/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>开启HTTPS后WordPress后台wp-admin登录后：显示抱歉，您不能访问此页面</title>
+      <link>/technology/wp_admin_https_sorry_cannot_reach/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/wp_admin_https_sorry_cannot_reach/</guid>
+      <description>&lt;p&gt;之前提到Hanayao博客，开启HTTPS后访问后台&lt;code&gt;wp-admin&lt;/code&gt;提示 &lt;code&gt;ERR_TOO_MANY_REDIRECTS&lt;/code&gt;过多次重定向的&lt;a href=&#34;https://huaien.me/2018/06/05/wp_admin_https_unavailable/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;解决办法&lt;/a&gt;
+但是解决多次重定向的问题后，登陆账号后又显示“抱歉，您不能访问此页面。”的提示
+经过查询，下面两部可以解决这个问题。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

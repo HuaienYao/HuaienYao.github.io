@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  
+  <link rel="prev" href="/technology/uninstall-apache20-on-debian8/" />
+  <link rel="next" href="/technology/install-bt-panel-on-32-bit-os/" />
+  <link rel="canonical" href="/technology/nginx-conf-after-ssl/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           添加SSL后Nginx的https伪静态配置多次不成功 | Wyane&#39;s Blog
+       
+  </title>
+  <meta name="title" content="添加SSL后Nginx的https伪静态配置多次不成功 | Wyane&#39;s Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "posts",
+    "name" : "添加SSL后Nginx的https伪静态配置多次不成功",
+    "headline" : "添加SSL后Nginx的https伪静态配置多次不成功",
+    "description" : "本文记录了添加SSL证书后如何配置Nginx的伪静态配置来实现https的方法。",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-10-03 00:00:00 &#43;0000 UTC",
+    "dateModified" : "2017-10-03 00:00:00 &#43;0000 UTC",
+    "url" : "/technology/nginx-conf-after-ssl/",
+    "wordCount" : "498",
+    "keywords" : [ "Nginx","Wordpress","后端技术", "Wyane&#39;s Blog"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">添加SSL后Nginx的https伪静态配置多次不成功</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="/" rel="author">Wyane</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2017-10-03 itemprop="datePublished">October 3, 2017</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>前两天给<a href="http://www.hanayao.com" title="HanaYao博客" rel="nofollow noreferrer" target="_blank">HanaYao博客</a>添加了SSL证书。但是经过多次测试，会出现访问带www的域名就会显示Nginx默认页面，或者是404 。多次修改伪静态配置后也还是会出现带www和不带www域名访问出现问题，或者就是进入后台会出现404。</p>
+
+<hr />
+
+<h3 id="重定向配置">重定向配置</h3>
+
+<p>但是在多次调试后。调阅Nginx官方的资料后。现在官方推荐的301重定向语法应该是
+<code>return 301 https://$server_name$request_uri;</code>
+并且80端口和443端口要开两个
+<code>server{ }</code>
+一个为</p>
+
+<pre><code>server
+    {
+        listen 80;
+        server_name hanayao.com www.hanayao.com;
+        return 301 https://$server_name$request_uri;
+
+    }
+</code></pre>
+
+<p>另一个为（以下配置为wordpress用）</p>
+
+<pre><code>server
+    {
+
+        listen 443; #监听443端口
+        server_name hanayao.com www.hanayao.com;
+        index index.html index.htm index.php default.html default.htm default.php;
+        root  /home/wwwroot/www.hanayao.com;
+        ssl on; #开启SSL
+        ssl_certificate /usr/local/nginx/conf/vhost/ssl/hanayao.pem; #刚才存放域名证书的路径
+        ssl_certificate_key /usr/local/nginx/conf/vhost/ssl/hanayao.key; #存放key的路径
+        include wordpress.conf;
+        error_page   404   /404.html;
+        include enable-php.conf;
+
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+        {
+            expires      30d;
+        }
+
+        location ~ .*\.(js|css)?$
+        {
+            expires      12h;
+        }
+
+        location ~ /\.
+        {
+            deny all;
+        }
+
+        access_log  /home/wwwlogs/www.hanayao.com.log;
+    }
+</code></pre>
+
+<h3 id="调试效果">调试效果</h3>
+
+<p>所以直接将SSL证书放在制定路径后，修改<code>/usr/local/nginx/conf/vhost/</code>下虚拟主机的配置文件conf。将以上配置粘贴进去。然后在ssh端通过 <code>/etc/init.d/nginx restart</code>可以重启Nginx或者直接用lnmp restart 直接重启整个web环境。我觉得后者还比较好用。修改ssl配置并重启后需要清楚浏览器缓存后刷新来查看效果，或者直接用chrome新建个无痕页面也可以。</p>
+
+<p>参考<a href="https://nginx.org/en/" title="Nginx" rel="nofollow noreferrer" target="_blank">Nginx</a></p>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Wyane </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/technology/nginx-conf-after-ssl/>/technology/nginx-conf-after-ssl/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="/tags/nginx/">
+                    #Nginx</a></span>
+            
+            <span class="tag"><a href="/tags/wordpress/">
+                    #Wordpress</a></span>
+            
+            <span class="tag"><a href="/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/">
+                    #后端技术</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/technology/uninstall-apache20-on-debian8/" class="prev" rel="prev" title="删除与卸载Debian8的Apache2"><i class="iconfont icon-left"></i>&nbsp;删除与卸载Debian8的Apache2</a>
+         
+        
+        <a href="/technology/install-bt-panel-on-32-bit-os/" class="next" rel="next" title="解决32系统无法安装bt宝塔服务器面板">解决32系统无法安装bt宝塔服务器面板&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2010 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="/">Wyane</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

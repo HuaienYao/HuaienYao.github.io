@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  
+  <link rel="prev" href="/technology/how-to-backup-hexo-to-github/" />
+  <link rel="next" href="/technology/enable-https-on-coding-pages/" />
+  <link rel="canonical" href="/technology/linux-tar-zcvf-command-of-invisible-file/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Linux打包压缩目录中的隐藏文件命令 | Wyane&#39;s Blog
+       
+  </title>
+  <meta name="title" content="Linux打包压缩目录中的隐藏文件命令 | Wyane&#39;s Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "posts",
+    "name" : "Linux打包压缩目录中的隐藏文件命令",
+    "headline" : "Linux打包压缩目录中的隐藏文件命令",
+    "description" : "有时候我们在Linux系统下打包目录文件的时候，打包后的结果只有目录中的可见文件，但是其实我们需要打包目录下包括隐藏文件，目录的所有文件。这时候我们需要用到的命令，在本文会介绍到。",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-08-04 00:00:00 &#43;0000 UTC",
+    "dateModified" : "2018-08-04 00:00:00 &#43;0000 UTC",
+    "url" : "/technology/linux-tar-zcvf-command-of-invisible-file/",
+    "wordCount" : "27",
+    "keywords" : [ "Linux","Shell","后端技术", "Wyane&#39;s Blog"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Linux打包压缩目录中的隐藏文件命令</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="/" rel="author">Wyane</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2018-08-04 itemprop="datePublished">August 4, 2018</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>今天需要打包Hexo源码文件夹下面的所有文件，但是如果直接使用普通的打包命令不会将包括隐藏的文件或文件夹一起打包，所以得搜索了下，可以用下面的命令来打包。</p>
+
+<p>通常使用的“tar  -zcvf”命令不会打包本层文件夹下的隐藏文件（如果打包整个文件夹的话是可以打包该文件夹下的隐藏文件的），下面的命令解决这个问题：</p>
+
+<pre><code>tar -zcvf   xxx.tar.gz   `ls -a`
+</code></pre>
+
+<p>上面的命令可能会打包到上一级目录中的文件</p>
+
+<p>怎么使用tar打包一个目录中所有的文件而不包含该目录名呢？</p>
+
+<p>在该目录路径下，执行</p>
+
+<pre><code>tar  --exclude=xxx.tar.gz -zcvf xxx.tar.gz ./
+</code></pre>
+
+<p>经过验证，用此方法打包的压缩文件中包含所有的隐藏文件。必要时还可以使用-p选项，保持文件到属性。</p>
+
+<p>cp -a 拷贝时也可阳保持文件的属性</p>
+
+<p>cp 目录时可以将目录中隐藏文件一起拷贝，而cp * 只能拷贝本层的非隐藏文件；cp . 会拷贝所有的文件（包括隐藏）</p>
+
+<p><a href="https://blog.csdn.net/lk07828/article/details/44746749" rel="nofollow noreferrer" target="_blank">https://blog.csdn.net/lk07828/article/details/44746749</a></p>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Wyane </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/technology/linux-tar-zcvf-command-of-invisible-file/>/technology/linux-tar-zcvf-command-of-invisible-file/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="/tags/shell/">
+                    #Shell</a></span>
+            
+            <span class="tag"><a href="/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/">
+                    #后端技术</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/technology/how-to-backup-hexo-to-github/" class="prev" rel="prev" title="Windows,Linux多平台下共同维护Hexo 备份Hexo到GitHub"><i class="iconfont icon-left"></i>&nbsp;Windows,Linux多平台下共同维护Hexo 备份Hexo到GitHub</a>
+         
+        
+        <a href="/technology/enable-https-on-coding-pages/" class="next" rel="next" title="给托管在Coding Pages上的博客开启HTTPS支持 申请失败的原因">给托管在Coding Pages上的博客开启HTTPS支持 申请失败的原因&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2010 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="/">Wyane</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

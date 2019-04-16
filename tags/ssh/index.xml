@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSH on Wyane&#39;s Blog</title>
+    <link>/tags/ssh/</link>
+    <description>Recent content in SSH on Wyane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 27 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>解决Linux系统SSH终端显示中文乱码以centos为例</title>
+      <link>/technology/linux-os-ssh-show-chinese/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/linux-os-ssh-show-chinese/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fvntln8qacj30gj09sgmt&#34; alt=&#34;&#34; /&gt;
+如果没有设置好编码，在SSH客户端连接Linux服务器的时候就是像上面那样显示效果。不过经过设置，可以正常显示中文。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
