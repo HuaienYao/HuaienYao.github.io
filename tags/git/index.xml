@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+<<<<<<< HEAD
     <title>git on Wyane&#39;s Blog</title>
     <link>/tags/git/</link>
     <description>Recent content in git on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 11 Aug 2018 00:00:00 +0000</lastBuildDate>
+=======
+    <title>Git on Wyane&#39;s Blog</title>
+    <link>/tags/git/</link>
+    <description>Recent content in Git on Wyane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 02 Feb 2019 00:00:00 +0000</lastBuildDate>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
     
 	<atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
+=======
+      <title>手滑导致设置git remote仓库错误 如何修改远程仓库地址配置</title>
+      <link>/technology/change-git-remote-config/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/change-git-remote-config/</guid>
+      <description>&lt;p&gt;本文记录了如何修改git remote配置的远程仓库地址。在不小心设置错误git remote地址时可以用这个方法修改为正确的远程仓库地址配置。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       <title>Git生成 SSH 公钥添加到GitHub和Coding.net</title>
       <link>/technology/ssh-key-generator-git/</link>
       <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>

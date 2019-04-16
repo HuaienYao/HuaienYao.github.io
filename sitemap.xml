@@ -1,14 +1,22 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+=======
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
+<<<<<<< HEAD
       <loc>/technology/change-git-remote-config/</loc>
+=======
+      <loc>/categories/</loc>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       <lastmod>2019-04-02T00:00:00+00:00</lastmod>
       
       
       
+<<<<<<< HEAD
       
     </url>
   
@@ -18,11 +26,15 @@
       <lastmod>2018-11-25T00:00:00+00:00</lastmod>
       
       
+=======
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
+<<<<<<< HEAD
       <loc>/internet/become-cloudflare-partner/</loc>
       
       <lastmod>2018-10-11T00:00:00+00:00</lastmod>
@@ -38,11 +50,21 @@
       <lastmod>2018-09-27T00:00:00+00:00</lastmod>
       
       
+=======
+      <loc>/tags/git/</loc>
+      
+      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
+<<<<<<< HEAD
       <loc>/technology/bt-panel-cannot-active-pure-ftpd/</loc>
       
       <lastmod>2018-09-26T00:00:00+00:00</lastmod>
@@ -58,11 +80,21 @@
       <lastmod>2018-09-26T00:00:00+00:00</lastmod>
       
       
+=======
+      <loc>/posts/</loc>
+      
+      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
+<<<<<<< HEAD
       <loc>/technology/bt-panel-get-password-back/</loc>
       
       <lastmod>2018-09-25T00:00:00+00:00</lastmod>
@@ -78,11 +110,21 @@
       <lastmod>2018-09-21T00:00:00+00:00</lastmod>
       
       
+=======
+      <loc>/tags/</loc>
+      
+      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
+<<<<<<< HEAD
       <loc>/technology/ssh-key-generator-git/</loc>
       
       <lastmod>2018-08-11T00:00:00+00:00</lastmod>
@@ -98,14 +140,29 @@
       <lastmod>2018-08-10T00:00:00+00:00</lastmod>
       
       
+=======
+      <loc>/</loc>
+      
+      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
+<<<<<<< HEAD
       <loc>/technology/no-enough-memory-to-make-php/</loc>
       
       <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/change-git-remote-config/</loc>
+      
+      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
       
@@ -113,954 +170,34 @@
     </url>
   
     <url>
+<<<<<<< HEAD
       <loc>/technology/change-password-for-root-on-aws-ec2/</loc>
       
       <lastmod>2018-08-09T00:00:00+00:00</lastmod>
       
       
+=======
+      <loc>/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</loc>
+      
+      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
+<<<<<<< HEAD
       <loc>/technology/let-google-find-your-amp/</loc>
       
       <lastmod>2018-08-08T00:00:00+00:00</lastmod>
       
       
       
-      
-    </url>
-  
-    <url>
-      <loc>/technology/unable-to-use-nodejs-on-64-bit-os/</loc>
-      
-      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/git-learning-sheet/</loc>
-      
-      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/not-able-to-install-nodejs-by-nvm/</loc>
-      
-      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/hexo-for-multiple-platform-error/</loc>
-      
-      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/news/github-pages-support-https/</loc>
-      
-      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/remove-all-except-this-file-linux-command/</loc>
-      
-      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/enable-https-on-coding-pages/</loc>
-      
-      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/linux-tar-zcvf-command-of-invisible-file/</loc>
-      
-      <lastmod>2018-08-04T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/how-to-backup-hexo-to-github/</loc>
-      
-      <lastmod>2018-08-03T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/git-commit-push-rejected-error/</loc>
-      
-      <lastmod>2018-08-03T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/make-directory-lister-more-beautiful/</loc>
-      
-      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/modify-h5ai-copyright/</loc>
-      
-      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/software/compare-some-password-manager/</loc>
-      
-      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/use-caddy-to-build-webdav-server/</loc>
-      
-      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/use-caddy-filemanager-to-build-personal-netdisk/</loc>
-      
-      <lastmod>2018-07-21T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/use-caddy-to-run-site/</loc>
-      
-      <lastmod>2018-07-19T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/caddy-a-light-http-server/</loc>
-      
-      <lastmod>2018-07-18T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/fix-no-wifi-on-deepin-os/</loc>
-      
-      <lastmod>2018-06-13T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/change-timezone-for-unbuntu/</loc>
-      
-      <lastmod>2018-06-12T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/difference-of-iaas-saas-paas/</loc>
-      
-      <lastmod>2018-06-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/wp_admin_https_unavailable/</loc>
-      
-      <lastmod>2018-06-05T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/wp_admin_https_sorry_cannot_reach/</loc>
-      
-      <lastmod>2018-06-05T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/install-bt-panel-on-32-bit-os/</loc>
-      
-      <lastmod>2018-05-25T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/nginx-conf-after-ssl/</loc>
-      
-      <lastmod>2017-10-03T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/uninstall-apache20-on-debian8/</loc>
-      
-      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/need-to-click-twice-to-submit-comment-on-typecho/</loc>
-      
-      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/comment-with-emoji-shows-datebase-error-on-typecho/</loc>
-      
-      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/css-study-note/</loc>
-      
-      <lastmod>2017-06-25T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/typecho-upload-jpg-image/</loc>
-      
-      <lastmod>2017-06-19T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/no-weibo/</loc>
-      
-      <lastmod>2017-06-14T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/using-hugo-to-build-blog/</loc>
-      
-      <lastmod>2017-01-15T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/about/</loc>
-      
-      <lastmod>2016-12-22T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/video/iphone4-retina-wallpapers/</loc>
-      
-      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/news/naffnang-1000-ads/</loc>
-      
-      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/is-there-any-options/</loc>
-      
-      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/news/paypal-2011-gifts/</loc>
-      
-      <lastmod>2011-08-27T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/news/dns-free-vip/</loc>
-      
-      <lastmod>2011-08-26T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/fuck-2011-fujian-gaokao/</loc>
-      
-      <lastmod>2011-07-24T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/video/the-vampire-daries-season-2/</loc>
-      
-      <lastmod>2011-05-14T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/let-nginx-show-file-list/</loc>
-      
-      <lastmod>2011-03-24T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/difference-byte-bit/</loc>
-      
-      <lastmod>2011-03-20T17:39:31+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/yunnan-japan-earthquake/</loc>
-      
-      <lastmod>2011-03-12T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/wordpress-mod-security/</loc>
-      
-      <lastmod>2011-03-07T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/lnmp-typecho-login-error/</loc>
-      
-      <lastmod>2011-03-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/forgot-imagevue-login-information/</loc>
-      
-      <lastmod>2011-03-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/lnmp-conf-rules/</loc>
-      
-      <lastmod>2011-02-04T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/give-power-2011/</loc>
-      
-      <lastmod>2011-02-03T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/hang-qq-on-vps/</loc>
-      
-      <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/my-bad-memory/</loc>
-      
-      <lastmod>2010-12-22T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/video/the-vampire-daries/</loc>
-      
-      <lastmod>2010-12-17T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/write-down-important-things/</loc>
-      
-      <lastmod>2010-12-16T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/jd-dangdang-joy-price-war/</loc>
-      
-      <lastmod>2010-12-15T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/server/backy-llc-laoxue-youzi-host/</loc>
-      
-      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/youku-noads-wordpress/</loc>
-      
-      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/news/iphone-5-is-coming/</loc>
-      
-      <lastmod>2010-12-02T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/guosao-transport-problem/</loc>
-      
-      <lastmod>2010-11-29T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/server/thanksgiving-backy-llc/</loc>
-      
-      <lastmod>2010-11-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/code-highlighter-wordpress-plugin/</loc>
-      
-      <lastmod>2010-11-23T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</loc>
-      
-      <lastmod>2010-11-21T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/change-blog-to-mt/</loc>
-      
-      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/use-htaccess-301-redirect/</loc>
-      
-      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/video/nakashima-mika-the-most-beautiful-of-me/</loc>
-      
-      <lastmod>2010-11-13T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/links/</loc>
-      
-      <lastmod>2010-11-02T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/internet/omegle-random-and-chat-with-friends-around-the-world/</loc>
-      
-      <lastmod>2010-10-31T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/i-hate-about-electric-mobike-no-power/</loc>
-      
-      <lastmod>2010-09-16T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/video/iphone-fan-with-shop-staff-talk/</loc>
-      
-      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/modify-your-head-is-more-prominent-personality/</loc>
-      
-      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/video/8-mins-work-out-everyday/</loc>
-      
-      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/news/tencent-buy-comsenz/</loc>
-      
-      <lastmod>2010-08-25T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/nba-kevin-garnett-video/</loc>
-      
-      <lastmod>2010-08-11T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/about-learning-english/</loc>
-      
-      <lastmod>2010-08-09T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/video/universal-red-army-version-of-you-are-the-one-played-song-can-you-feel-it/</loc>
-      
-      <lastmod>2010-08-08T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/video/iam-woman-fucking-video/</loc>
-      
-      <lastmod>2010-08-07T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/shadowbox-wordpress-plugin/</loc>
-      
-      <lastmod>2010-08-04T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/life/your-blog-finally-on-the-line/</loc>
-      
-      <lastmod>2010-08-04T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/1password/</loc>
-      
-      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/amp/</loc>
-      
-      <lastmod>2018-08-08T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/aws/</loc>
-      
-      <lastmod>2018-08-09T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/apache/</loc>
-      
-      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/azure/</loc>
-      
-      <lastmod>2018-06-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/bitwarden/</loc>
-      
-      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/cdn/</loc>
-      
-      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/css/</loc>
-      
-      <lastmod>2017-06-25T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/caddy/</loc>
-      
-      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/categories/</loc>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/cloudflare-partner/</loc>
-      
-      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/coding-pages/</loc>
-      
-      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/debian/</loc>
-      
-      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/deepin/</loc>
-      
-      <lastmod>2018-06-13T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/directory-lister/</loc>
-      
-      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
+=======
       <loc>/tags/disqus/</loc>
       
       <lastmod>2018-11-25T00:00:00+00:00</lastmod>
@@ -1069,154 +206,132 @@
       
       <priority>0</priority>
       
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
     </url>
   
     <url>
-      <loc>/tags/enpass/</loc>
+<<<<<<< HEAD
+      <loc>/technology/unable-to-use-nodejs-on-64-bit-os/</loc>
       
-      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/disqus-error-to-load/</loc>
       
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/filebrowser/</loc>
-      
-      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
+      <lastmod>2018-11-25T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
-      
-      <priority>0</priority>
       
       
     </url>
   
     <url>
-      <loc>/tags/flarum/</loc>
-      
-      <lastmod>2018-08-10T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/git/</loc>
-      
-      <lastmod>2018-08-11T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/github/</loc>
-      
-      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/https/</loc>
-      
-      <lastmod>2018-06-05T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/hexo/</loc>
+<<<<<<< HEAD
+      <loc>/technology/git-learning-sheet/</loc>
       
       <lastmod>2018-08-07T00:00:00+00:00</lastmod>
       
       
       
-      <priority>0</priority>
+=======
+      <loc>/tags/cdn/</loc>
       
-      
-    </url>
-  
-    <url>
-      <loc>/tags/hugo/</loc>
-      
-      <lastmod>2017-01-15T00:00:00+00:00</lastmod>
+      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
       
       
       
       <priority>0</priority>
       
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
     </url>
   
     <url>
-      <loc>/tags/it%E7%9F%A5%E8%AF%86/</loc>
+<<<<<<< HEAD
+      <loc>/technology/not-able-to-install-nodejs-by-nvm/</loc>
       
-      <lastmod>2011-03-20T17:39:31+00:00</lastmod>
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/cloudflare-partner/</loc>
+      
+      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
       
       
       
       <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
-      <loc>/tags/keepass/</loc>
+<<<<<<< HEAD
+      <loc>/technology/hexo-for-multiple-platform-error/</loc>
       
-      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/ssl/</loc>
+      
+      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
       
       
       
       <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
-      <loc>/tags/lnmp/</loc>
+<<<<<<< HEAD
+      <loc>/news/github-pages-support-https/</loc>
       
-      <lastmod>2011-02-04T00:00:00+00:00</lastmod>
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+=======
+      <loc>/internet/become-cloudflare-partner/</loc>
+      
+      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/remove-all-except-this-file-linux-command/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/categories/%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90/</loc>
+      
+      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
       
       
       
       <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
-      <loc>/tags/lastpass/</loc>
+<<<<<<< HEAD
+      <loc>/technology/enable-https-on-coding-pages/</loc>
       
-      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
       
       
-    </url>
-  
-    <url>
+      
+=======
       <loc>/tags/linux/</loc>
       
       <lastmod>2018-09-27T00:00:00+00:00</lastmod>
@@ -1225,82 +340,18 @@
       
       <priority>0</priority>
       
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
     </url>
   
     <url>
-      <loc>/tags/nginx/</loc>
+<<<<<<< HEAD
+      <loc>/technology/linux-tar-zcvf-command-of-invisible-file/</loc>
       
-      <lastmod>2017-10-03T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
+      <lastmod>2018-08-04T00:00:00+00:00</lastmod>
       
       
-    </url>
-  
-    <url>
-      <loc>/tags/php/</loc>
-      
-      <lastmod>2018-08-10T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/paypal/</loc>
-      
-      <lastmod>2011-08-27T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/posts/</loc>
-      
-      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/qq/</loc>
-      
-      <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/seo/</loc>
-      
-      <lastmod>2018-08-08T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
+=======
       <loc>/tags/ssh/</loc>
       
       <lastmod>2018-09-27T00:00:00+00:00</lastmod>
@@ -1308,331 +359,20 @@
       
       
       <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
-      <loc>/tags/ssl/</loc>
-      
-      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/shadowbox/</loc>
-      
-      <lastmod>2010-08-04T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/shell/</loc>
-      
-      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/</loc>
-      
-      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/ubuntu/</loc>
-      
-      <lastmod>2018-06-12T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/vps/</loc>
-      
-      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/webdav%E7%BD%91%E7%9B%98/</loc>
-      
-      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-      
-      <lastmod>2018-07-21T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/wordpress/</loc>
-      
-      <lastmod>2018-09-26T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/wordpress/</loc>
-      
-      <lastmod>2017-10-03T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/</loc>
-      
-      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/apache/</loc>
-      
-      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/git/</loc>
-      
-      <lastmod>2018-08-11T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/h5ai/</loc>
-      
-      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/htaccess/</loc>
-      
-      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/nginx/</loc>
-      
-      <lastmod>2017-10-03T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/node.js/</loc>
-      
-      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/nvm/</loc>
-      
-      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/php/</loc>
-      
-      <lastmod>2018-08-10T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/typecho/</loc>
-      
-      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/</loc>
-      
-      <lastmod>2018-07-21T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E4%B8%BB%E6%9C%BA/</loc>
-      
-      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E5%81%A5%E8%BA%AB/</loc>
-      
-      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/wordpress-only-one-theme/</loc>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
-      
-      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E5%8D%9A%E5%AE%A2/</loc>
+<<<<<<< HEAD
+      <loc>/technology/how-to-backup-hexo-to-github/</loc>
       
       <lastmod>2018-08-03T00:00:00+00:00</lastmod>
       
       
       
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/</loc>
-      
-      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
+=======
       <loc>/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
       
       <lastmod>2018-09-27T00:00:00+00:00</lastmod>
@@ -1641,83 +381,36 @@
       
       <priority>0</priority>
       
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
     </url>
   
     <url>
-      <loc>/tags/%E5%90%B8%E8%A1%80%E9%AC%BC%E6%97%A5%E8%AE%B0/</loc>
+<<<<<<< HEAD
+      <loc>/technology/git-commit-push-rejected-error/</loc>
       
-      <lastmod>2011-05-14T00:00:00+00:00</lastmod>
+      <lastmod>2018-08-03T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/linux-os-ssh-show-chinese/</loc>
       
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E5%91%BD%E4%BB%A4/</loc>
-      
-      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
-      
-      <priority>0</priority>
       
       
     </url>
   
     <url>
-      <loc>/tags/%E5%9B%BE%E5%BA%8A/</loc>
+<<<<<<< HEAD
+      <loc>/technology/make-directory-lister-more-beautiful/</loc>
       
-      <lastmod>2011-03-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E5%9C%B0%E9%9C%87/</loc>
-      
-      <lastmod>2011-03-12T00:00:00+00:00</lastmod>
+      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
       
       
       
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E5%A5%BD%E7%AB%99%E5%88%86%E4%BA%AB/</loc>
-      
-      <lastmod>2010-10-31T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E5%AE%89%E5%85%A8/</loc>
-      
-      <lastmod>2018-09-25T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E5%AE%9D%E5%A1%94/</loc>
+=======
+      <loc>/tags/wordpress/</loc>
       
       <lastmod>2018-09-26T00:00:00+00:00</lastmod>
       
@@ -1725,10 +418,107 @@
       
       <priority>0</priority>
       
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
     </url>
   
     <url>
+<<<<<<< HEAD
+      <loc>/technology/modify-h5ai-copyright/</loc>
+      
+      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/%E5%AE%9D%E5%A1%94/</loc>
+      
+      <lastmod>2018-09-26T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/software/compare-some-password-manager/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/bt-panel-cannot-active-pure-ftpd/</loc>
+      
+      <lastmod>2018-09-26T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/use-caddy-to-build-webdav-server/</loc>
+      
+      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/wordpress-install-plugin-show-ftp-info/</loc>
+      
+      <lastmod>2018-09-26T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/use-caddy-filemanager-to-build-personal-netdisk/</loc>
+      
+      <lastmod>2018-07-21T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/%E5%AE%89%E5%85%A8/</loc>
+      
+      <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/use-caddy-to-run-site/</loc>
+      
+      <lastmod>2018-07-19T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/bt-panel-get-password-back/</loc>
+      
+      <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/caddy-a-light-http-server/</loc>
+      
+      <lastmod>2018-07-18T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
       <loc>/tags/%E5%AF%86%E7%A0%81/</loc>
       
       <lastmod>2018-09-25T00:00:00+00:00</lastmod>
@@ -1737,174 +527,239 @@
       
       <priority>0</priority>
       
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
     </url>
   
     <url>
-      <loc>/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
-      
-      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/categories/%E5%B0%8F%E9%81%93%E6%B6%88%E6%81%AF/</loc>
-      
-      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/categories/%E5%BD%B1%E9%9F%B3%E8%B5%84%E6%BA%90/</loc>
-      
-      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E5%BE%AE%E5%8D%9A/</loc>
-      
-      <lastmod>2017-06-14T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</loc>
-      
-      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8%E7%A8%8B%E5%BA%8F/</loc>
-      
-      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%A8%8B%E5%BA%8F/</loc>
-      
-      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-      
-      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-      
-      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/</loc>
-      
-      <lastmod>2018-05-25T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/tags/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F/</loc>
+<<<<<<< HEAD
+      <loc>/technology/fix-no-wifi-on-deepin-os/</loc>
       
       <lastmod>2018-06-13T00:00:00+00:00</lastmod>
       
       
+=======
+      <loc>/tags/nginx/</loc>
+      
+      <lastmod>2018-09-21T00:00:00+00:00</lastmod>
+      
+      
       
       <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
-      <loc>/tags/%E6%BA%90%E7%A0%81%E7%A8%8B%E5%BA%8F/</loc>
+<<<<<<< HEAD
+      <loc>/technology/change-timezone-for-unbuntu/</loc>
       
-      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+      <lastmod>2018-06-12T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/bt-panel-failed-to-start-nginx/</loc>
+      
+      <lastmod>2018-09-21T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
-      
-      <priority>0</priority>
       
       
     </url>
   
     <url>
-      <loc>/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/</loc>
+<<<<<<< HEAD
+      <loc>/technology/difference-of-iaas-saas-paas/</loc>
+      
+      <lastmod>2018-06-06T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/ssh-key-generator-git/</loc>
+      
+      <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/wp_admin_https_unavailable/</loc>
+      
+      <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/flarum/</loc>
+      
+      <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/wp_admin_https_sorry_cannot_reach/</loc>
+      
+      <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/php/</loc>
+      
+      <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/install-bt-panel-on-32-bit-os/</loc>
+      
+      <lastmod>2018-05-25T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/bt-panel-install-fileinfo-for-php/</loc>
+      
+      <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/nginx-conf-after-ssl/</loc>
+      
+      <lastmod>2017-10-03T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/no-enough-memory-to-make-php/</loc>
+      
+      <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/uninstall-apache20-on-debian8/</loc>
+      
+      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/aws/</loc>
+      
+      <lastmod>2018-08-09T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/need-to-click-twice-to-submit-comment-on-typecho/</loc>
+      
+      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/change-password-for-root-on-aws-ec2/</loc>
+      
+      <lastmod>2018-08-09T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/comment-with-emoji-shows-datebase-error-on-typecho/</loc>
+      
+      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/amp/</loc>
+      
+      <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/css-study-note/</loc>
+      
+      <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/seo/</loc>
+      
+      <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/typecho-upload-jpg-image/</loc>
+      
+      <lastmod>2017-06-19T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/let-google-find-your-amp/</loc>
+      
+      <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/no-weibo/</loc>
       
       <lastmod>2017-06-14T00:00:00+00:00</lastmod>
       
       
       
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>/technology/linux-ftp-permission/</loc>
-      
-      
-      
-      
-    </url>
-  
-    <url>
+=======
       <loc>/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</loc>
       
       <lastmod>2018-08-08T00:00:00+00:00</lastmod>
@@ -1913,46 +768,678 @@
       
       <priority>0</priority>
       
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
     </url>
   
     <url>
-      <loc>/categories/%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90/</loc>
+<<<<<<< HEAD
+      <loc>/technology/using-hugo-to-build-blog/</loc>
       
-      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+      <lastmod>2017-01-15T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/unable-to-use-nodejs-on-64-bit-os/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/about/</loc>
+      
+      <lastmod>2016-12-22T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/git-learning-sheet/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/video/iphone4-retina-wallpapers/</loc>
+      
+      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/hexo/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
       
       
       
       <priority>0</priority>
       
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
     </url>
   
     <url>
-      <loc>/tags/%E7%BE%8E%E5%89%A7/</loc>
+<<<<<<< HEAD
+      <loc>/news/naffnang-1000-ads/</loc>
+      
+      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/not-able-to-install-nodejs-by-nvm/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/is-there-any-options/</loc>
+      
+      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/node.js/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/news/paypal-2011-gifts/</loc>
+      
+      <lastmod>2011-08-27T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/nvm/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/news/dns-free-vip/</loc>
+      
+      <lastmod>2011-08-26T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/fuck-2011-fujian-gaokao/</loc>
+      
+      <lastmod>2011-07-24T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/hexo-for-multiple-platform-error/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/video/the-vampire-daries-season-2/</loc>
       
       <lastmod>2011-05-14T00:00:00+00:00</lastmod>
       
       
+=======
+      <loc>/tags/coding-pages/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+      
+      
       
       <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
-      <loc>/tags/%E8%8B%B1%E8%AF%AD/</loc>
+<<<<<<< HEAD
+      <loc>/technology/let-nginx-show-file-list/</loc>
       
-      <lastmod>2010-08-09T00:00:00+00:00</lastmod>
+      <lastmod>2011-03-24T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/github/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
       
       
       
       <priority>0</priority>
       
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
     </url>
   
     <url>
+<<<<<<< HEAD
+      <loc>/technology/difference-byte-bit/</loc>
+      
+      <lastmod>2011-03-20T17:39:31+00:00</lastmod>
+=======
+      <loc>/news/github-pages-support-https/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/yunnan-japan-earthquake/</loc>
+      
+      <lastmod>2011-03-12T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/shell/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/wordpress-mod-security/</loc>
+      
+      <lastmod>2011-03-07T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/remove-all-except-this-file-linux-command/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/lnmp-typecho-login-error/</loc>
+      
+      <lastmod>2011-03-06T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/categories/%E5%B0%8F%E9%81%93%E6%B6%88%E6%81%AF/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/forgot-imagevue-login-information/</loc>
+      
+      <lastmod>2011-03-06T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/enable-https-on-coding-pages/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/lnmp-conf-rules/</loc>
+      
+      <lastmod>2011-02-04T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/linux-tar-zcvf-command-of-invisible-file/</loc>
+      
+      <lastmod>2018-08-04T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/give-power-2011/</loc>
+      
+      <lastmod>2011-02-03T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/how-to-backup-hexo-to-github/</loc>
+      
+      <lastmod>2018-08-03T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/hang-qq-on-vps/</loc>
+      
+      <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/git-commit-push-rejected-error/</loc>
+      
+      <lastmod>2018-08-03T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/my-bad-memory/</loc>
+      
+      <lastmod>2010-12-22T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/%E5%8D%9A%E5%AE%A2/</loc>
+      
+      <lastmod>2018-08-03T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/video/the-vampire-daries/</loc>
+      
+      <lastmod>2010-12-17T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/directory-lister/</loc>
+      
+      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/write-down-important-things/</loc>
+      
+      <lastmod>2010-12-16T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/make-directory-lister-more-beautiful/</loc>
+      
+      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/jd-dangdang-joy-price-war/</loc>
+      
+      <lastmod>2010-12-15T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8%E7%A8%8B%E5%BA%8F/</loc>
+      
+      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/server/backy-llc-laoxue-youzi-host/</loc>
+      
+      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/%E6%BA%90%E7%A0%81%E7%A8%8B%E5%BA%8F/</loc>
+      
+      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/youku-noads-wordpress/</loc>
+      
+      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/h5ai/</loc>
+      
+      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/news/iphone-5-is-coming/</loc>
+      
+      <lastmod>2010-12-02T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
+      
+      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/guosao-transport-problem/</loc>
+      
+      <lastmod>2010-11-29T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/%E5%91%BD%E4%BB%A4/</loc>
+      
+      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/server/thanksgiving-backy-llc/</loc>
+      
+      <lastmod>2010-11-28T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/modify-h5ai-copyright/</loc>
+      
+      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/code-highlighter-wordpress-plugin/</loc>
+      
+      <lastmod>2010-11-23T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%A8%8B%E5%BA%8F/</loc>
+      
+      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</loc>
+      
+      <lastmod>2010-11-21T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/1password/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/change-blog-to-mt/</loc>
+      
+      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/bitwarden/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/use-htaccess-301-redirect/</loc>
+      
+      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/enpass/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/video/nakashima-mika-the-most-beautiful-of-me/</loc>
+      
+      <lastmod>2010-11-13T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/keepass/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/links/</loc>
+      
+      <lastmod>2010-11-02T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/lastpass/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/internet/omegle-random-and-chat-with-friends-around-the-world/</loc>
+      
+      <lastmod>2010-10-31T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/i-hate-about-electric-mobike-no-power/</loc>
+      
+      <lastmod>2010-09-16T00:00:00+00:00</lastmod>
+=======
+      <loc>/software/compare-some-password-manager/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/video/iphone-fan-with-shop-staff-talk/</loc>
+      
+      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
       <loc>/categories/%E8%BD%AF%E4%BB%B6%E8%B5%84%E6%BA%90/</loc>
       
       <lastmod>2018-07-24T00:00:00+00:00</lastmod>
@@ -1961,10 +1448,1921 @@
       
       <priority>0</priority>
       
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
     </url>
   
     <url>
+<<<<<<< HEAD
+      <loc>/technology/modify-your-head-is-more-prominent-personality/</loc>
+      
+      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/caddy/</loc>
+      
+      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/video/8-mins-work-out-everyday/</loc>
+      
+      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/filebrowser/</loc>
+      
+      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/news/tencent-buy-comsenz/</loc>
+      
+      <lastmod>2010-08-25T00:00:00+00:00</lastmod>
+      
+      
+=======
+      <loc>/tags/webdav%E7%BD%91%E7%9B%98/</loc>
+      
+      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/nba-kevin-garnett-video/</loc>
+      
+      <lastmod>2010-08-11T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/use-caddy-to-build-webdav-server/</loc>
+      
+      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/about-learning-english/</loc>
+      
+      <lastmod>2010-08-09T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+      
+      <lastmod>2018-07-21T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/video/universal-red-army-version-of-you-are-the-one-played-song-can-you-feel-it/</loc>
+      
+      <lastmod>2010-08-08T00:00:00+00:00</lastmod>
+      
+      
+      
+=======
+      <loc>/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/</loc>
+      
+      <lastmod>2018-07-21T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/video/iam-woman-fucking-video/</loc>
+      
+      <lastmod>2010-08-07T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/use-caddy-filemanager-to-build-personal-netdisk/</loc>
+      
+      <lastmod>2018-07-21T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/shadowbox-wordpress-plugin/</loc>
+      
+      <lastmod>2010-08-04T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/use-caddy-to-run-site/</loc>
+      
+      <lastmod>2018-07-19T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/life/your-blog-finally-on-the-line/</loc>
+      
+      <lastmod>2010-08-04T00:00:00+00:00</lastmod>
+=======
+      <loc>/technology/caddy-a-light-http-server/</loc>
+      
+      <lastmod>2018-07-18T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/1password/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/deepin/</loc>
+      
+      <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/amp/</loc>
+      
+      <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F/</loc>
+      
+      <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/aws/</loc>
+      
+      <lastmod>2018-08-09T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/fix-no-wifi-on-deepin-os/</loc>
+      
+      <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/apache/</loc>
+      
+      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/ubuntu/</loc>
+      
+      <lastmod>2018-06-12T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/azure/</loc>
+      
+      <lastmod>2018-06-06T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/change-timezone-for-unbuntu/</loc>
+      
+      <lastmod>2018-06-12T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/bitwarden/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/azure/</loc>
+      
+      <lastmod>2018-06-06T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/cdn/</loc>
+      
+      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/difference-of-iaas-saas-paas/</loc>
+      
+      <lastmod>2018-06-06T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/css/</loc>
+      
+      <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/https/</loc>
+      
+      <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/caddy/</loc>
+      
+      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/wp_admin_https_unavailable/</loc>
+      
+      <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/categories/</loc>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/wp_admin_https_sorry_cannot_reach/</loc>
+      
+      <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/cloudflare-partner/</loc>
+      
+      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/</loc>
+      
+      <lastmod>2018-05-25T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/coding-pages/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/install-bt-panel-on-32-bit-os/</loc>
+      
+      <lastmod>2018-05-25T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/debian/</loc>
+      
+      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/nginx-conf-after-ssl/</loc>
+      
+      <lastmod>2017-10-03T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/deepin/</loc>
+      
+      <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/debian/</loc>
+      
+      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/directory-lister/</loc>
+      
+      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/vps/</loc>
+      
+      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/disqus/</loc>
+      
+      <lastmod>2018-11-25T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/apache/</loc>
+      
+      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/enpass/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/uninstall-apache20-on-debian8/</loc>
+      
+      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/filebrowser/</loc>
+      
+      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/typecho/</loc>
+      
+      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/flarum/</loc>
+      
+      <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/need-to-click-twice-to-submit-comment-on-typecho/</loc>
+      
+      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/git/</loc>
+      
+      <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/comment-with-emoji-shows-datebase-error-on-typecho/</loc>
+      
+      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/github/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/css/</loc>
+      
+      <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/https/</loc>
+      
+      <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/css-study-note/</loc>
+      
+      <lastmod>2017-06-25T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/hexo/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/typecho-upload-jpg-image/</loc>
+      
+      <lastmod>2017-06-19T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/hugo/</loc>
+      
+      <lastmod>2017-01-15T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/no-weibo/</loc>
+      
+      <lastmod>2017-06-14T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/it%E7%9F%A5%E8%AF%86/</loc>
+      
+      <lastmod>2011-03-20T17:39:31+00:00</lastmod>
+=======
+      <loc>/tags/%E5%BE%AE%E5%8D%9A/</loc>
+      
+      <lastmod>2017-06-14T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/keepass/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+=======
+      <loc>/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/</loc>
+      
+      <lastmod>2017-06-14T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/lnmp/</loc>
+      
+      <lastmod>2011-02-04T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/hugo/</loc>
+      
+      <lastmod>2017-01-15T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/lastpass/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/using-hugo-to-build-blog/</loc>
+      
+      <lastmod>2017-01-15T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/linux/</loc>
+      
+      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/about/</loc>
+      
+      <lastmod>2016-12-22T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/nginx/</loc>
+      
+      <lastmod>2017-10-03T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/video/iphone4-retina-wallpapers/</loc>
+      
+      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/php/</loc>
+      
+      <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+=======
+      <loc>/categories/%E5%BD%B1%E9%9F%B3%E8%B5%84%E6%BA%90/</loc>
+      
+      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/paypal/</loc>
+      
+      <lastmod>2011-08-27T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/news/naffnang-1000-ads/</loc>
+      
+      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/posts/</loc>
+      
+      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/is-there-any-options/</loc>
+      
+      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/qq/</loc>
+      
+      <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/paypal/</loc>
+      
+      <lastmod>2011-08-27T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/seo/</loc>
+      
+      <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/news/paypal-2011-gifts/</loc>
+      
+      <lastmod>2011-08-27T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/ssh/</loc>
+      
+      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/news/dns-free-vip/</loc>
+      
+      <lastmod>2011-08-26T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/ssl/</loc>
+      
+      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/fuck-2011-fujian-gaokao/</loc>
+      
+      <lastmod>2011-07-24T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/shadowbox/</loc>
+      
+      <lastmod>2010-08-04T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E5%90%B8%E8%A1%80%E9%AC%BC%E6%97%A5%E8%AE%B0/</loc>
+      
+      <lastmod>2011-05-14T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/shell/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/video/the-vampire-daries-season-2/</loc>
+      
+      <lastmod>2011-05-14T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E7%BE%8E%E5%89%A7/</loc>
+      
+      <lastmod>2011-05-14T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/ubuntu/</loc>
+      
+      <lastmod>2018-06-12T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/let-nginx-show-file-list/</loc>
+      
+      <lastmod>2011-03-24T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/vps/</loc>
+      
+      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/difference-byte-bit/</loc>
+      
+      <lastmod>2011-03-20T17:39:31+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/webdav%E7%BD%91%E7%9B%98/</loc>
+      
+      <lastmod>2018-07-23T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/it%E7%9F%A5%E8%AF%86/</loc>
+      
+      <lastmod>2011-03-20T17:39:31+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+      
+      <lastmod>2018-07-21T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E5%9C%B0%E9%9C%87/</loc>
+      
+      <lastmod>2011-03-12T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/wordpress/</loc>
+      
+      <lastmod>2018-09-26T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/yunnan-japan-earthquake/</loc>
+      
+      <lastmod>2011-03-12T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+<<<<<<< HEAD
+    <url>
+      <loc>/tags/wordpress/</loc>
+      
+      <lastmod>2017-10-03T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+    <url>
+      <loc>/technology/wordpress-mod-security/</loc>
+      
+      <lastmod>2011-03-07T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/</loc>
+      
+      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/lnmp-typecho-login-error/</loc>
+      
+      <lastmod>2011-03-06T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/apache/</loc>
+      
+      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E5%9B%BE%E5%BA%8A/</loc>
+      
+      <lastmod>2011-03-06T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/git/</loc>
+      
+      <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/forgot-imagevue-login-information/</loc>
+      
+      <lastmod>2011-03-06T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/h5ai/</loc>
+      
+      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/lnmp/</loc>
+      
+      <lastmod>2011-02-04T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/htaccess/</loc>
+      
+      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/lnmp-conf-rules/</loc>
+      
+      <lastmod>2011-02-04T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/nginx/</loc>
+      
+      <lastmod>2017-10-03T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/give-power-2011/</loc>
+      
+      <lastmod>2011-02-03T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/node.js/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/qq/</loc>
+      
+      <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/nvm/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/hang-qq-on-vps/</loc>
+      
+      <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/php/</loc>
+      
+      <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/my-bad-memory/</loc>
+      
+      <lastmod>2010-12-22T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/typecho/</loc>
+      
+      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/video/the-vampire-daries/</loc>
+      
+      <lastmod>2010-12-17T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/</loc>
+      
+      <lastmod>2018-07-21T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/write-down-important-things/</loc>
+      
+      <lastmod>2010-12-16T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E4%B8%BB%E6%9C%BA/</loc>
+      
+      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/jd-dangdang-joy-price-war/</loc>
+      
+      <lastmod>2010-12-15T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%81%A5%E8%BA%AB/</loc>
+      
+      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/server/backy-llc-laoxue-youzi-host/</loc>
+      
+      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/wordpress-only-one-theme/</loc>
+=======
+      <loc>/technology/youku-noads-wordpress/</loc>
+      
+      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
+      
+      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E4%B8%BB%E6%9C%BA/</loc>
+      
+      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%8D%9A%E5%AE%A2/</loc>
+      
+      <lastmod>2018-08-03T00:00:00+00:00</lastmod>
+=======
+      <loc>/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+      
+      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/</loc>
+      
+      <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+      
+      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
+      
+      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/news/iphone-5-is-coming/</loc>
+      
+      <lastmod>2010-12-02T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%90%B8%E8%A1%80%E9%AC%BC%E6%97%A5%E8%AE%B0/</loc>
+      
+      <lastmod>2011-05-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/guosao-transport-problem/</loc>
+      
+      <lastmod>2010-11-29T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%91%BD%E4%BB%A4/</loc>
+      
+      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/server/thanksgiving-backy-llc/</loc>
+      
+      <lastmod>2010-11-28T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%9B%BE%E5%BA%8A/</loc>
+      
+      <lastmod>2011-03-06T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/code-highlighter-wordpress-plugin/</loc>
+      
+      <lastmod>2010-11-23T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%9C%B0%E9%9C%87/</loc>
+      
+      <lastmod>2011-03-12T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</loc>
+      
+      <lastmod>2010-11-21T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%A5%BD%E7%AB%99%E5%88%86%E4%BA%AB/</loc>
+      
+      <lastmod>2010-10-31T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/change-blog-to-mt/</loc>
+      
+      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%AE%89%E5%85%A8/</loc>
+      
+      <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/htaccess/</loc>
+      
+      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%AE%9D%E5%A1%94/</loc>
+      
+      <lastmod>2018-09-26T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/use-htaccess-301-redirect/</loc>
+      
+      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%AF%86%E7%A0%81/</loc>
+      
+      <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</loc>
+      
+      <lastmod>2010-11-20T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/video/nakashima-mika-the-most-beautiful-of-me/</loc>
+      
+      <lastmod>2010-11-13T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/categories/%E5%B0%8F%E9%81%93%E6%B6%88%E6%81%AF/</loc>
+      
+      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E9%9F%B3%E4%B9%90/</loc>
+      
+      <lastmod>2010-11-13T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/categories/%E5%BD%B1%E9%9F%B3%E8%B5%84%E6%BA%90/</loc>
+      
+      <lastmod>2011-08-28T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/links/</loc>
+      
+      <lastmod>2010-11-02T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E5%BE%AE%E5%8D%9A/</loc>
+      
+      <lastmod>2017-06-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/internet/omegle-random-and-chat-with-friends-around-the-world/</loc>
+      
+      <lastmod>2010-10-31T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</loc>
+      
+      <lastmod>2019-04-02T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E5%A5%BD%E7%AB%99%E5%88%86%E4%BA%AB/</loc>
+      
+      <lastmod>2010-10-31T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8%E7%A8%8B%E5%BA%8F/</loc>
+      
+      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/i-hate-about-electric-mobike-no-power/</loc>
+      
+      <lastmod>2010-09-16T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%A8%8B%E5%BA%8F/</loc>
+      
+      <lastmod>2018-07-29T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E5%81%A5%E8%BA%AB/</loc>
+      
+      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+      
+      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/video/iphone-fan-with-shop-staff-talk/</loc>
+      
+      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+      
+      <lastmod>2010-12-08T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/modify-your-head-is-more-prominent-personality/</loc>
+      
+      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/</loc>
+      
+      <lastmod>2018-05-25T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/video/8-mins-work-out-everyday/</loc>
+      
+      <lastmod>2010-08-29T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F/</loc>
+      
+      <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/news/tencent-buy-comsenz/</loc>
+      
+      <lastmod>2010-08-25T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E6%BA%90%E7%A0%81%E7%A8%8B%E5%BA%8F/</loc>
+      
+      <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/nba-kevin-garnett-video/</loc>
+      
+      <lastmod>2010-08-11T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%83%B3/</loc>
+      
+      <lastmod>2017-06-14T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/%E8%8B%B1%E8%AF%AD/</loc>
+      
+      <lastmod>2010-08-09T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/technology/linux-ftp-permission/</loc>
+=======
+      <loc>/life/about-learning-english/</loc>
+      
+      <lastmod>2010-08-09T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</loc>
+      
+      <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/video/universal-red-army-version-of-you-are-the-one-played-song-can-you-feel-it/</loc>
+      
+      <lastmod>2010-08-08T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/categories/%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90/</loc>
+      
+      <lastmod>2018-10-11T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/video/iam-woman-fucking-video/</loc>
+      
+      <lastmod>2010-08-07T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E7%BE%8E%E5%89%A7/</loc>
+      
+      <lastmod>2011-05-14T00:00:00+00:00</lastmod>
+=======
+      <loc>/tags/shadowbox/</loc>
+      
+      <lastmod>2010-08-04T00:00:00+00:00</lastmod>
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/tags/%E8%8B%B1%E8%AF%AD/</loc>
+      
+      <lastmod>2010-08-09T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/technology/shadowbox-wordpress-plugin/</loc>
+      
+      <lastmod>2010-08-04T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>/categories/%E8%BD%AF%E4%BB%B6%E8%B5%84%E6%BA%90/</loc>
+      
+      <lastmod>2018-07-24T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+=======
+      <loc>/life/your-blog-finally-on-the-line/</loc>
+      
+      <lastmod>2010-08-04T00:00:00+00:00</lastmod>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
       <loc>/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</loc>
       
       <lastmod>2010-11-20T00:00:00+00:00</lastmod>
@@ -1972,11 +3370,17 @@
       
       
       <priority>0</priority>
+=======
+      <loc>/technology/wordpress-only-one-theme/</loc>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
   
     <url>
+<<<<<<< HEAD
       <loc>/tags/%E9%9F%B3%E4%B9%90/</loc>
       
       <lastmod>2010-11-13T00:00:00+00:00</lastmod>
@@ -1984,6 +3388,11 @@
       
       
       <priority>0</priority>
+=======
+      <loc>/technology/linux-ftp-permission/</loc>
+      
+      
+>>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       
       
     </url>
