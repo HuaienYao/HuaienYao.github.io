@@ -1,40 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-<<<<<<< HEAD
     <title>nginx on Wyane&#39;s Blog</title>
     <link>/tags/nginx/</link>
     <description>Recent content in nginx on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 03 Oct 2017 00:00:00 +0000</lastBuildDate>
-=======
-    <title>Nginx on Wyane&#39;s Blog</title>
-    <link>/tags/nginx/</link>
-    <description>Recent content in Nginx on Wyane&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Fri, 21 Sep 2018 00:00:00 +0000</lastBuildDate>
->>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
     
 	<atom:link href="/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-<<<<<<< HEAD
-=======
-      <title>宝塔启动nginx服务失败提示failed (98:Address already in use)</title>
-      <link>/technology/bt-panel-failed-to-start-nginx/</link>
-      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/technology/bt-panel-failed-to-start-nginx/</guid>
-      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;发现宝塔的nginx没有在运行，于是在宝塔面板上手动重启，但是提示失败，失败信息是下面那样：&lt;/p&gt;</description>
-    </item>
-    
-    <item>
->>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       <title>添加SSL后Nginx的https伪静态配置多次不成功</title>
       <link>/technology/nginx-conf-after-ssl/</link>
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>

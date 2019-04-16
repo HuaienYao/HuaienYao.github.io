@@ -6,33 +6,12 @@
     <description>Recent content in apache on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-<<<<<<< HEAD
     <lastBuildDate>Sat, 20 Nov 2010 00:00:00 +0000</lastBuildDate>
-=======
-    <lastBuildDate>Mon, 18 Sep 2017 00:00:00 +0000</lastBuildDate>
->>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
     
 	<atom:link href="/tags/apache/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-<<<<<<< HEAD
-=======
-      <title>删除与卸载Debian8的Apache2</title>
-      <link>/technology/uninstall-apache20-on-debian8/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/technology/uninstall-apache20-on-debian8/</guid>
-      <description>参考源：Linux Tips 由于某些主机提供商在重装系统后系统自带apache2，但是我用不到，一直用的nginx。如果不卸载会导致端口冲突等问题。 所以上网查询了下卸载apache2的资料。  Uninstall and Remove Apache2 on Debian 8
-We are going to uninstall and remove Apache2 from our Debian system.
-First we have to stop any running instance of Apache2, because Apache2 will not be properly removed while it is running.
-For stop Apache2 run below command …
-service apache2 stop  Now for remove Apache2 and pakchess run below command …
-apt-get purge apache2 apache2-utils apache2.</description>
-    </item>
-    
-    <item>
->>>>>>> a36ea9322de7be7105aa71a4550f54d9158b32aa
       <title>配置.htaccess来实现301重定向（旧域名指向新域名）</title>
       <link>/technology/use-htaccess-301-redirect/</link>
       <pubDate>Sat, 20 Nov 2010 00:00:00 +0000</pubDate>
