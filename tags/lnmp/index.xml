@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LNMP on Wyane&#39;s Blog</title>
+    <link>/tags/lnmp/</link>
+    <description>Recent content in LNMP on Wyane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 04 Feb 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/lnmp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LNMP下给已存在的虚拟机添加伪静态规则</title>
+      <link>/technology/lnmp-conf-rules/</link>
+      <pubDate>Fri, 04 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/lnmp-conf-rules/</guid>
+      <description>&lt;p&gt;使用军哥的LNMP，在添加虚拟机的时候没有添加伪静态，但是后来真正使用程序的时候需要伪静态，所以想给已经存在的虚拟主机添加伪静态跪着，由于Apache开启伪静态支持后可以直接修改.htaccess文件就行，但是nginx需要新建一个例如名字为example.conf文件，编辑该文件，把伪静态规则输入进去（注意htaccess的伪静态规则需转成nginx的conf规则才行）然后，在/usr/local/nginx/conf/vhost下编辑 域名.conf文件，得到类似&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

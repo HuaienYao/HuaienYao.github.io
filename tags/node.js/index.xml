@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>node.js on Wyane&#39;s Blog</title>
+    <link>/tags/node.js/</link>
+    <description>Recent content in node.js on Wyane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 07 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>32位Linux系统的node_modules文件夹移到64位系统下报错</title>
+      <link>/technology/unable-to-use-nodejs-on-64-bit-os/</link>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/unable-to-use-nodejs-on-64-bit-os/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;把Hexo博客源码整个从32位的Linux系统搬到64位系统下，本来还没发现32位和64位，直到执行hexo clean的时候提示错误才发现。node_modules文件夹的指定模块报错。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux安装nvm后无法使用nvm安装node</title>
+      <link>/technology/not-able-to-install-nodejs-by-nvm/</link>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/not-able-to-install-nodejs-by-nvm/</guid>
+      <description>&lt;p&gt;今天在给服务器安装nvm的时候出现无法安装node的错误，查询了网上资料，可以通过修改bash_profile来解决。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>多平台维护Hexo提示node_modules错误问题</title>
+      <link>/technology/hexo-for-multiple-platform-error/</link>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/hexo-for-multiple-platform-error/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;在将Hexo在多个平台之间移动，配置，使用的时候会遇到组件问题，如下面，在原平台可以正常使用。但是移动到新的64位Linux系统后各种错误。大部分是因为node组件没有安装好的原因。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

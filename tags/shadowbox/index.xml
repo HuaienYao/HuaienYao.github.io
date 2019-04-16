@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ShadowBox on Wyane&#39;s Blog</title>
+    <link>/tags/shadowbox/</link>
+    <description>Recent content in ShadowBox on Wyane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 04 Aug 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/shadowbox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WordPress插件ShadowBoxJS幻灯片</title>
+      <link>/technology/shadowbox-wordpress-plugin/</link>
+      <pubDate>Wed, 04 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>/technology/shadowbox-wordpress-plugin/</guid>
+      <description>&lt;p&gt;wordpress之所以强大就是因为它有很多插件做后盾，多彩丰富的博客都是我们所希望的，幻灯片插件那么就是必不可少的了，Shadowbox JS就一款不错的幻灯片插件，除了一般的图片效果外，它还支持图片的裁剪、拖动、多媒体播放等功能。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
