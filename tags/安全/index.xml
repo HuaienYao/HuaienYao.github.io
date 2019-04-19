@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>安全 on Wyane&#39;s Blog</title>
-    <link>/tags/%E5%AE%89%E5%85%A8/</link>
+    <link>http://huaien.me/tags/%E5%AE%89%E5%85%A8/</link>
     <description>Recent content in 安全 on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 25 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://huaien.me/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>宝塔面板忘记密码如何找回宝塔面板账户登录密码</title>
-      <link>/technology/bt-panel-get-password-back/</link>
+      <link>http://huaien.me/technology/bt-panel-get-password-back/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/technology/bt-panel-get-password-back/</guid>
+      <guid>http://huaien.me/technology/bt-panel-get-password-back/</guid>
       <description>&lt;h2 id=&#34;找回密码&#34;&gt;找回密码&lt;/h2&gt;
 
 &lt;p&gt;如果只是忘记了密码，还记得账号&lt;/p&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azure on Wyane&#39;s Blog</title>
-    <link>/tags/azure/</link>
+    <link>http://huaien.me/tags/azure/</link>
     <description>Recent content in Azure on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 06 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://huaien.me/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>クラウドサービス企業ノAWSとその他の企業Azure　GCP　IBM　CLOUDなどの比較</title>
-      <link>/technology/difference-of-iaas-saas-paas/</link>
+      <link>http://huaien.me/technology/difference-of-iaas-saas-paas/</link>
       <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/technology/difference-of-iaas-saas-paas/</guid>
+      <guid>http://huaien.me/technology/difference-of-iaas-saas-paas/</guid>
       <description>&lt;p&gt;今回は課題としてクラウドサービスの現状を調べました。今後閲覧しやいために、ここでまとめました。&lt;/p&gt;
 
 &lt;h1 id=&#34;クラウドとは&#34;&gt;クラウドとは&lt;/h1&gt;
