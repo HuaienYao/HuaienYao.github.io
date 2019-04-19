@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LastPass on Wyane&#39;s Blog</title>
-    <link>/tags/lastpass/</link>
+    <link>http://huaien.me/tags/lastpass/</link>
     <description>Recent content in LastPass on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 24 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/lastpass/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://huaien.me/tags/lastpass/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>帮你记密码：几款密码管理器Keepass LastPass Bitwarden Enpass</title>
-      <link>/software/compare-some-password-manager/</link>
+      <link>http://huaien.me/software/compare-some-password-manager/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/software/compare-some-password-manager/</guid>
+      <guid>http://huaien.me/software/compare-some-password-manager/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;之前有听说过这类软件，比如1password，之前有在iOS的限免软件里面见到过，但是一直没有去了解。最近发现很多平台的密码给忘记了，而且找回密码需要用到绑定的手机来验证，但是有些网站绑定的手机号已经是国内高中，或者大学时期用得号码，想要找回非常麻烦，就比如之前所说的微博，还有特别要提的是百度的更改手机号的体验及其差，之后有时间会说到。这次想写写关于现在比较热门的几款密码管理器。&lt;/p&gt;
 &lt;/blockquote&gt;</description>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Wyane&#39;s Blog</title>
-    <link>/tags/linux/</link>
+    <link>http://huaien.me/tags/linux/</link>
     <description>Recent content in Linux on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 27 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://huaien.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>解决Linux系统SSH终端显示中文乱码以centos为例</title>
-      <link>/technology/linux-os-ssh-show-chinese/</link>
+      <link>http://huaien.me/technology/linux-os-ssh-show-chinese/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/technology/linux-os-ssh-show-chinese/</guid>
+      <guid>http://huaien.me/technology/linux-os-ssh-show-chinese/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fvntln8qacj30gj09sgmt&#34; alt=&#34;&#34; /&gt;
 如果没有设置好编码，在SSH客户端连接Linux服务器的时候就是像上面那样显示效果。不过经过设置，可以正常显示中文。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>32位Linux系统的node_modules文件夹移到64位系统下报错</title>
-      <link>/technology/unable-to-use-nodejs-on-64-bit-os/</link>
+      <link>http://huaien.me/technology/unable-to-use-nodejs-on-64-bit-os/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/technology/unable-to-use-nodejs-on-64-bit-os/</guid>
+      <guid>http://huaien.me/technology/unable-to-use-nodejs-on-64-bit-os/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;把Hexo博客源码整个从32位的Linux系统搬到64位系统下，本来还没发现32位和64位，直到执行hexo clean的时候提示错误才发现。node_modules文件夹的指定模块报错。&lt;/p&gt;</description>
@@ -34,10 +34,10 @@
     
     <item>
       <title>linux下删除某个文件之外的其他所有文件的命令之extglob模式</title>
-      <link>/technology/remove-all-except-this-file-linux-command/</link>
+      <link>http://huaien.me/technology/remove-all-except-this-file-linux-command/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/technology/remove-all-except-this-file-linux-command/</guid>
+      <guid>http://huaien.me/technology/remove-all-except-this-file-linux-command/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;比如最近我在备份Hexo的时候，多次需要调试效果，因为有备份一个文件夹叫hexo.zip，把这个传到服务器的网站根目录下，然后将其解压。但是之后再重建Hexo的时候需要将目录下所有文件除了hexo.zip都删除的时候，不能只用到简单的rm命令了。&lt;/p&gt;</description>
@@ -45,19 +45,19 @@
     
     <item>
       <title>Linux打包压缩目录中的隐藏文件命令</title>
-      <link>/technology/linux-tar-zcvf-command-of-invisible-file/</link>
+      <link>http://huaien.me/technology/linux-tar-zcvf-command-of-invisible-file/</link>
       <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/technology/linux-tar-zcvf-command-of-invisible-file/</guid>
+      <guid>http://huaien.me/technology/linux-tar-zcvf-command-of-invisible-file/</guid>
       <description>&lt;p&gt;今天需要打包Hexo源码文件夹下面的所有文件，但是如果直接使用普通的打包命令不会将包括隐藏的文件或文件夹一起打包，所以得搜索了下，可以用下面的命令来打包。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>如何修改h5ai右上角的版权信息powered by h5ai</title>
-      <link>/technology/modify-h5ai-copyright/</link>
+      <link>http://huaien.me/technology/modify-h5ai-copyright/</link>
       <pubDate>Sun, 29 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/technology/modify-h5ai-copyright/</guid>
+      <guid>http://huaien.me/technology/modify-h5ai-copyright/</guid>
       <description>&lt;h2 id=&#34;关于h5ai&#34;&gt;关于h5ai&lt;/h2&gt;
 
 &lt;p&gt;前面我们说到了h5ai这款德国开发者开发的强大的PHP文件目录程序。在折腾这款程序的时候有一些地方一直搞不明白。比如今天要说的如何修改右上角版权信息Powered by h5ai。&lt;/p&gt;</description>
@@ -65,10 +65,10 @@
     
     <item>
       <title>利用Caddy的Filemanager插件搭建个人网盘教程</title>
-      <link>/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
+      <link>http://huaien.me/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
+      <guid>http://huaien.me/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
       <description>前面我们了解了Caddy是一个极简HTTP服务器，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Caddy帮你自动生成Let&amp;rsquo;s Encrypt的免费证书，简单的配置就能搭建好一个HTTPS的Web服务器环境。
 其实Caddy自带的Filemanager插件可以直接用来搭建一个个人网盘，而且支持的功能还挺多，界面还挺好看。 
 认识一下File Manager 看上面的动图可以看到用Filemanager可以很方便的在线管理文件。
@@ -81,28 +81,28 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
     
     <item>
       <title>Caddy一个轻量的Go语言HTTP服务器的一键安装脚本教程</title>
-      <link>/technology/caddy-a-light-http-server/</link>
+      <link>http://huaien.me/technology/caddy-a-light-http-server/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/technology/caddy-a-light-http-server/</guid>
+      <guid>http://huaien.me/technology/caddy-a-light-http-server/</guid>
       <description>&lt;p&gt;最近在逛逗比根据地的时候发现了这个用Golang写的极简HTTP WEB Server，叫&lt;a href=&#34;https://doub.io/shell-jc1/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy&lt;/a&gt;，上网查了其实好多博客都写了关于这个。于是就想用闲置的服务器折腾试试。但是毕竟是折腾，过程中还是遇到挺多问题。这里就简单记录一下。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>解决Deepin深度系统下没有无线网络选项之安装驱动</title>
-      <link>/technology/fix-no-wifi-on-deepin-os/</link>
+      <link>http://huaien.me/technology/fix-no-wifi-on-deepin-os/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/technology/fix-no-wifi-on-deepin-os/</guid>
+      <guid>http://huaien.me/technology/fix-no-wifi-on-deepin-os/</guid>
       <description>&lt;p&gt;前两天装了Deepin 深度系统。在查询Linux资料的时候被安利了。深度系统是国内最大的国产系统，由于其界面优美，符合国人使用习惯。下面摘了维基百科的词条：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ubuntu修改时区的简单方法-以修改UTC为JST为例</title>
-      <link>/technology/change-timezone-for-unbuntu/</link>
+      <link>http://huaien.me/technology/change-timezone-for-unbuntu/</link>
       <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/technology/change-timezone-for-unbuntu/</guid>
+      <guid>http://huaien.me/technology/change-timezone-for-unbuntu/</guid>
       <description>&lt;p&gt;今天公司给了个课题，让我们查看AWS上的所有服务器是不是JST时区时间。
 如果不是就需要修改为JST。
 先用&lt;code&gt;date&lt;/code&gt;命令来查看当前设置的时区。

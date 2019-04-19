@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>QQ on Wyane&#39;s Blog</title>
-    <link>/tags/qq/</link>
+    <link>http://huaien.me/tags/qq/</link>
     <description>Recent content in QQ on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/qq/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://huaien.me/tags/qq/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>myqq3.19.zip 折腾VPS挂QQ 教程</title>
-      <link>/technology/hang-qq-on-vps/</link>
+      <link>http://huaien.me/technology/hang-qq-on-vps/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>/technology/hang-qq-on-vps/</guid>
+      <guid>http://huaien.me/technology/hang-qq-on-vps/</guid>
       <description>&lt;p&gt;这文章是转自&lt;a href=&#34;http://bynai.com/archives/528/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://bynai.com/archives/528/&lt;/a&gt; 的  hostloc 上weishimi的&lt;/p&gt;</description>
     </item>
     
