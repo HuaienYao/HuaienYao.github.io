@@ -5,15 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
   
-  
-  
-  
-  
-  <link rel="prev" href="http://huaien.me/life/give-power-2011/" />
-  <link rel="next" href="http://huaien.me/technology/forgot-imagevue-login-information/" />
-  <link rel="canonical" href="http://huaien.me/technology/lnmp-conf-rules/" />
-  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="prev" href="/life/give-power-2011/" />
+  <link rel="next" href="/technology/forgot-imagevue-login-information/" />
+  <link rel="canonical" href="/technology/lnmp-conf-rules/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -34,32 +32,36 @@
   <link rel="stylesheet" href="/css/main.min.css">
 
 
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="LNMP下给已存在的虚拟机添加伪静态规则"/>
-<meta name="twitter:description" content="本文记录了LNMP环境下给已存在的虚拟主机添加伪静态规则。"/>
+  
+  
+ 
 
-  <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BlogPosting",
-  "headline": "LNMP下给已存在的虚拟机添加伪静态规则",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "http://huaien.me/technology/lnmp-conf-rules/"
-  },
-  
-  "genre": "posts",
-  "keywords": "LNMP, Nginx, 后端技术",
-  "wordcount": 59,
-  "url": "http://huaien.me/technology/lnmp-conf-rules/",
-  "datePublished": "2011-02-04T00:00:00+00:00",
-  "dateModified": "2011-02-04T00:00:00+00:00",
-  
-  
-  
-  "description": "本文记录了LNMP环境下给已存在的虚拟主机添加伪静态规则。"
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "posts",
+    "name" : "LNMP下给已存在的虚拟机添加伪静态规则",
+    "headline" : "LNMP下给已存在的虚拟机添加伪静态规则",
+    "description" : "本文记录了LNMP环境下给已存在的虚拟主机添加伪静态规则。",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2011",
+    "datePublished": "2011-02-04 00:00:00 &#43;0000 UTC",
+    "dateModified" : "2011-02-04 00:00:00 &#43;0000 UTC",
+    "url" : "/technology/lnmp-conf-rules/",
+    "wordCount" : "59",
+    "keywords" : [ "LNMP","Nginx","后端技术", "Wyane&#39;s Blog"]
 }
 </script>
+
 </head>
 
   
@@ -70,12 +72,12 @@
         <nav class="navbar">
     <div class="container">
         <div class="navbar-header header-logo">
-        	<a href="http://huaien.me/">Wyane&#39;s Blog</a>
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a>
         </div>
         <div class="menu navbar-right">
                 
                 
-                <a class="menu-item" href="/posts/" title="">Blog</a>
+                <a class="menu-item" href="/post/" title="">Blog</a>
                 
                 <a class="menu-item" href="/categories/" title="">Categories</a>
                 
@@ -85,14 +87,13 @@
                 
                 <a class="menu-item" href="/links/" title="Friends">Friends</a>
                 
-                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
         </div>
     </div>
 </nav>
 <nav class="navbar-mobile" id="nav-mobile" style="display: none">
      <div class="container">
         <div class="navbar-header">
-            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://huaien.me/">Wyane&#39;s Blog</a></div>
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a></div>
             <div class="menu-toggle">
                 <span></span><span></span><span></span>
             </div>
@@ -101,7 +102,7 @@
           <div class="menu" id="mobile-menu">
                 
                 
-                <a class="menu-item" href="/posts/" title="">Blog</a>
+                <a class="menu-item" href="/post/" title="">Blog</a>
                 
                 <a class="menu-item" href="/categories/" title="">Categories</a>
                 
@@ -117,22 +118,20 @@
     	 <main class="main">
           <div class="container">
       		
-<article class="post-warp">
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title">LNMP下给已存在的虚拟机添加伪静态规则</h1>
+        <h1 class="post-title" itemprop="name headline">LNMP下给已存在的虚拟机添加伪静态规则</h1>
         <div class="post-meta">
-            Written by <a href="http://huaien.me/" rel="author">Wyane</a> with ♥ 
+                Written by <a itemprop="name" href="/" rel="author">Wyane</a> with ♥ 
                 <span class="post-time">
-                    on <time datetime=2011-02-04 >4 February 2011</time>
+                on <time datetime=2011-02-04 itemprop="datePublished">February 4, 2011</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="http://huaien.me/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
                         
                 </span>
-                <i class="iconfont icon-timer"></i>
-                1 min
         </div>
     </header>
     <div class="post-content">
@@ -194,16 +193,14 @@
                 </p>
             
            
-            <p class="copyright-item">
-                    <span>Words:</span>
-                   <span>59</span>
-            </p>
-            
-            <p class="copyright-item">
-                
-
              
             <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/technology/lnmp-conf-rules/>/technology/lnmp-conf-rules/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
                 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
             </p>
             
@@ -213,37 +210,41 @@
     <div class="post-tags">
         
             <section>
-            <i class="iconfont icon-icon-tag"></i>Tag: 
+            <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="http://huaien.me/tags/lnmp/">
+            <span class="tag"><a href="/tags/lnmp/">
                     #LNMP</a></span>
             
-            <span class="tag"><a href="http://huaien.me/tags/nginx/">
+            <span class="tag"><a href="/tags/nginx/">
                     #Nginx</a></span>
             
-            <span class="tag"><a href="http://huaien.me/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/">
+            <span class="tag"><a href="/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/">
                     #后端技术</a></span>
             
             </section>
         
         <section>
-                <a href="javascript:window.history.back();">Back</a></span> · 
-                <span><a href="http://huaien.me/">Home</a></span>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="/">home</a></span>
         </section>
     </div>
 
     <div class="post-nav">
         
-        <a href="http://huaien.me/life/give-power-2011/" class="prev" rel="prev" title="给力吧2011！"><i class="iconfont icon-dajiantou"></i>&nbsp;给力吧2011！</a>
+        <a href="/life/give-power-2011/" class="prev" rel="prev" title="给力吧2011！"><i class="iconfont icon-left"></i>&nbsp;给力吧2011！</a>
          
         
-        <a href="http://huaien.me/technology/forgot-imagevue-login-information/" class="next" rel="next" title="忘记Imagevue的登录信息的解决方案">忘记Imagevue的登录信息的解决方案&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        <a href="/technology/forgot-imagevue-login-information/" class="next" rel="next" title="忘记Imagevue的登录信息的解决方案">忘记Imagevue的登录信息的解决方案&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
     <div class="post-comment">
           
-          
+                 
+      
+       
+      
+             
           
     </div>
 </article>
@@ -255,11 +256,15 @@
         
         <span itemprop="copyrightYear">2010 - 2019</span>
         
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
          
-            <span class="author" itemprop="copyrightHolder"><a href="http://huaien.me/">Wyane</a> | </span>
+            <span class="author" itemprop="copyrightHolder"><a href="/">Wyane</a> | </span> 
          
 
-		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
     </div>
 </footer>
 
@@ -279,10 +284,6 @@
     <script src="/js/vendor_no_gallery.min.js" async=""></script>
     
   
-
-
-
-
 
 
 

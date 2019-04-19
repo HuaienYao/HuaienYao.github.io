@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GitHub on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/github/</link>
+    <link>/tags/github/</link>
     <description>Recent content in GitHub on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 06 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Github Pages已经官方支持HTTPS与如何开启GitHub Pages HTTPS支持</title>
-      <link>http://huaien.me/news/github-pages-support-https/</link>
+      <link>/news/github-pages-support-https/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/news/github-pages-support-https/</guid>
+      <guid>/news/github-pages-support-https/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;根据GitHub博客，Github Pages是从今年5月1日开始支持的HTTPS的：
@@ -25,10 +25,10 @@
     
     <item>
       <title>Windows,Linux多平台下共同维护Hexo 备份Hexo到GitHub</title>
-      <link>http://huaien.me/technology/how-to-backup-hexo-to-github/</link>
+      <link>/technology/how-to-backup-hexo-to-github/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/how-to-backup-hexo-to-github/</guid>
+      <guid>/technology/how-to-backup-hexo-to-github/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;因为经常需要在不同的操作系统上工作，所以需要在每个平台下都可以方便的写博客。&lt;/p&gt;

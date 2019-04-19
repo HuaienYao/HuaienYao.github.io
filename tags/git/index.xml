@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/git/</link>
+    <link>/tags/git/</link>
     <description>Recent content in git on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 11 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git生成 SSH 公钥添加到GitHub和Coding.net</title>
-      <link>http://huaien.me/technology/ssh-key-generator-git/</link>
+      <link>/technology/ssh-key-generator-git/</link>
       <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/ssh-key-generator-git/</guid>
+      <guid>/technology/ssh-key-generator-git/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;大多数 Git 服务器都会选择使用 SSH 公钥来进行授权。系统中的每个用户都必须提供一个公钥用于授权，没有的话就要生成一个。例如我们在使用GitHub Pages来托管博客，或者将代码推到GitHub或者Coding上的话需要先生成一个SSH并填入到托管平台的设置中来授权。&lt;/p&gt;</description>
@@ -24,19 +24,19 @@
     
     <item>
       <title>Git学习相关资料整理</title>
-      <link>http://huaien.me/technology/git-learning-sheet/</link>
+      <link>/technology/git-learning-sheet/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/git-learning-sheet/</guid>
+      <guid>/technology/git-learning-sheet/</guid>
       <description>&lt;p&gt;部分电子书已经收录到仓库中，可以在这里查看到：&lt;a href=&#34;https://down.huaien.me/00.%E7%94%B5%E5%AD%90%E4%B9%A6_Ebook/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;电子书仓库&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>git push远程版本和本地版本冲突时强制覆盖已有的分支有的分支</title>
-      <link>http://huaien.me/technology/git-commit-push-rejected-error/</link>
+      <link>/technology/git-commit-push-rejected-error/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/git-commit-push-rejected-error/</guid>
+      <guid>/technology/git-commit-push-rejected-error/</guid>
       <description>&lt;p&gt;前面我们讲到&lt;a href=&#34;https://huaien.me/article/blogengine/how-to-backup-hexo-to-github/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;备份 Hexo 源码文件到GitHub仓库&lt;/a&gt;
 在尝试将本地hexo源码文件同步到GitHub仓库的hexo分支的时候，执行&lt;/p&gt;</description>
     </item>

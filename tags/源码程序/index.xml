@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>源码程序 on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/%E6%BA%90%E7%A0%81%E7%A8%8B%E5%BA%8F/</link>
+    <link>/tags/%E6%BA%90%E7%A0%81%E7%A8%8B%E5%BA%8F/</link>
     <description>Recent content in 源码程序 on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 30 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/%E6%BA%90%E7%A0%81%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/%E6%BA%90%E7%A0%81%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>修改Directory Lister的字体为小夜美化版并将字体本地化</title>
-      <link>http://huaien.me/technology/make-directory-lister-more-beautiful/</link>
+      <link>/technology/make-directory-lister-more-beautiful/</link>
       <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/make-directory-lister-more-beautiful/</guid>
+      <guid>/technology/make-directory-lister-more-beautiful/</guid>
       <description>&lt;p&gt;前一段时间，在&lt;a href=&#34;https://www.moerats.com/archives/547/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Rat&amp;rsquo;s Blog&lt;/a&gt;上看到了小夜大佬Directory Lister美化修改版，但是发现网上下载下来的美化版都和小夜大佬的字体不一样。&lt;/p&gt;
 
 &lt;p&gt;自己安装好后是这样的&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>如何修改h5ai右上角的版权信息powered by h5ai</title>
-      <link>http://huaien.me/technology/modify-h5ai-copyright/</link>
+      <link>/technology/modify-h5ai-copyright/</link>
       <pubDate>Sun, 29 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/modify-h5ai-copyright/</guid>
+      <guid>/technology/modify-h5ai-copyright/</guid>
       <description>&lt;h2 id=&#34;关于h5ai&#34;&gt;关于h5ai&lt;/h2&gt;
 
 &lt;p&gt;前面我们说到了h5ai这款德国开发者开发的强大的PHP文件目录程序。在折腾这款程序的时候有一些地方一直搞不明白。比如今天要说的如何修改右上角版权信息Powered by h5ai。&lt;/p&gt;</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AMP on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/amp/</link>
+    <link>/tags/amp/</link>
     <description>Recent content in AMP on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 08 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/amp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/amp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>正确使用AMP 让Google找到你的AMP页面</title>
-      <link>http://huaien.me/technology/let-google-find-your-amp/</link>
+      <link>/technology/let-google-find-your-amp/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/let-google-find-your-amp/</guid>
+      <guid>/technology/let-google-find-your-amp/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在用Hexo的&lt;a href=&#34;https://github.com/tea3/hexo-generator-amp&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo-generator-amp&lt;/a&gt;插件后，发现并没有被收录AMP页面。
