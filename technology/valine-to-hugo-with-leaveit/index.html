@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  
+  <link rel="prev" href="/technology/change-git-remote-config/" />
+  
+  <link rel="canonical" href="/technology/valine-to-hugo-with-leaveit/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Hugo添加Valine评论系统 以LeaveIt主题为例 | Wyane&#39;s Blog
+       
+  </title>
+  <meta name="title" content="Hugo添加Valine评论系统 以LeaveIt主题为例 | Wyane&#39;s Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "posts",
+    "name" : "Hugo添加Valine评论系统 以LeaveIt主题为例",
+    "headline" : "Hugo添加Valine评论系统 以LeaveIt主题为例",
+    "description" : "本文记录了如何给Hugo的主题LeaveIt添加Valine评论系统。",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-04-19 09:56:14 &#43;0900 JST",
+    "dateModified" : "2019-04-19 09:56:14 &#43;0900 JST",
+    "url" : "/technology/valine-to-hugo-with-leaveit/",
+    "wordCount" : "633",
+    "keywords" : [ "Hugo","Valine", "Wyane&#39;s Blog"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Hugo添加Valine评论系统 以LeaveIt主题为例</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="/" rel="author">Wyane</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-04-19 itemprop="datePublished">April 19, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>最近将博客的生成器由Hexo转回到Hugo了，在这之后选了一些主题，试过Even,Jane,mainroad等等，最后还是选了v2上有人发布的这个LeaveIt主题。主要是因为这个主题简洁又不缺乏华丽的感觉。不过有点不足的是这个主题并不能直接用评论系统，在查看了相关教程之后，终于添加了原来使用的Valine评论系统。</p>
+
+<p>今天参考了Even主题和Jane主题的源码，并且看了@5km的教程，尝试了好久，一直无法添加成功，最后在该教程的评论区，有其他人请教了和我一样的主题的问题，最后通过@5km的解答，终于成功实现了Valine评论系统的添加。</p>
+
+<h2 id="方法1-只加入valine">方法1：只加入Valine</h2>
+
+<p>由于LeaveIt主题并没有自带任何一个评论系统，所以如果只要Valine评论就直接修改下面文件即可。</p>
+
+<h3 id="修改站点配置文件">修改站点配置文件</h3>
+
+<p>首先先在站点的配置文件<code>config.toml</code>里面添加下面的配置。</p>
+
+<pre><code class="language-toml">  # Valine.
+  # You can get your appid and appkey from https://leancloud.cn
+  # more info please open https://valine.js.org
+  [params.valine]
+    enable = true #开关
+    appId = '你的appId'
+    appKey = '你的appKey'
+    notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
+    verify = false # Verification code
+    avatar = 'mp' #神秘人(一个灰白头像) 
+    placeholder = '说点什么吧...' #在评论框显示的温馨提示等
+    visitor = true #访问量统计
+</code></pre>
+
+<h3 id="2-主题的文章页模板添加valine">2.主题的文章页模板添加Valine</h3>
+
+<p>另外在LeaveIt的主题下的 <code>layouts/_default/single.html</code> 找到第97行的 <code>&lt;div class=&quot;post-comment&quot;&gt;</code> 代码块中的判断Disqus略称后的 <code>{{ end }}</code> 后面，插入Valine代码，插入后的效果如下：</p>
+
+<pre><code class="language-html"> &lt;div class=&quot;post-comment&quot;&gt;
+       {{ if ( .Params.showComments | default true ) }}
+             {{ if ne .Site.DisqusShortname &quot;&quot; }}
+                 {{ template &quot;_internal/disqus.html&quot; . }}
+             {{ end }}
+             &lt;!-- valine --&gt;
+             {{- if .Site.Params.valine.enable -}}
+             &lt;!-- id 将作为查询条件 --&gt;
+             &lt;span id=&quot;{{ .URL | relURL }}&quot; class=&quot;leancloud_visitors&quot; data-flag-title=&quot;{{ .Title }}&quot;&gt;
+                 &lt;span class=&quot;post-meta-item-text&quot;&gt;访问量 &lt;/span&gt;
+                 &lt;span class=&quot;leancloud-visitors-count&quot;&gt;&lt;/span&gt;
+                 &lt;p&gt;&lt;/p&gt;
+             &lt;/span&gt;
+             &lt;div id=&quot;vcomments&quot;&gt;&lt;/div&gt;
+             &lt;script src=&quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&quot;&gt;&lt;/script&gt;
+             &lt;script src='//unpkg.com/valine/dist/Valine.min.js'&gt;&lt;/script&gt;
+             &lt;script type=&quot;text/javascript&quot;&gt;
+                 new Valine({
+                     el: '#vcomments' ,
+                     appId: '{{ .Site.Params.valine.appId }}',
+                     appKey: '{{ .Site.Params.valine.appKey }}',
+                     notify: {{ .Site.Params.valine.notify }},
+                     verify: {{ .Site.Params.valine.verify }},
+                     avatar:'{{ .Site.Params.valine.avatar }}',
+                     placeholder: '{{ .Site.Params.valine.placeholder }}',
+                     visitor: {{ .Site.Params.valine.visitor }}
+                 });
+             &lt;/script&gt;
+             {{- end }}
+       {{ end }}
+ &lt;/div&gt;
+</code></pre>
+
+<p>其实这样已经可以实现了。回到博客文章下方就可以看到已经显示出来了。当然前提是你已经配置好过Valine了，就是在Leancloud上注册等等。相关可以查看<a href="https://valine.js.org/quickstart.html" title="Valine官方文档" rel="nofollow noreferrer" target="_blank">Valine官方文档</a>。
+<figure><img src="/images/ring.svg" data-src="https://ww1.sinaimg.cn/large/007i4MEmgy1g27o6azai0j30m30dzweo.jpg" data-sizes="auto" alt="Valine已经可以用了" title="Valine已经可以用了" class="lazyload"><figcaption class="image-caption">Valine已经可以用了</figcaption></figure></p>
+
+<h2 id="方法2-同时加入多个评论系统的配置">方法2：同时加入多个评论系统的配置</h2>
+
+<p>这样是很多主题的做法，为了方便切换评论系统直接内置多个评论系统，这样做的话可以直接在站点配置文件里面修改即可使用。</p>
+
+<h3 id="1-主题模板下新建comments-html">1.主题模板下新建comments.html</h3>
+
+<p>在LeaveIt主题的/themes/LeaveIt/layouts/partials下新建comments.html模板（如有，则不需新建，直接修改内容即可。）在comments.html里面添加下面的内容。</p>
+
+<pre><code class="language-html">{{ if and .IsPage (ne .Params.comment false) -}}
+  &lt;!-- valine --&gt;
+  {{- if .Site.Params.valine.enable -}}
+  &lt;!-- id 将作为查询条件 --&gt;
+  &lt;span id=&quot;{{ .URL | relURL }}&quot; class=&quot;leancloud_visitors&quot; data-flag-title=&quot;{{ .Title }}&quot;&gt;
+    &lt;span class=&quot;post-meta-item-text&quot;&gt;阅读量 &lt;/span&gt;
+    &lt;span class=&quot;leancloud-visitors-count&quot;&gt;&lt;/span&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/span&gt;
+  &lt;div id=&quot;vcomments&quot;&gt;&lt;/div&gt;
+  &lt;script src=&quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src='//unpkg.com/valine/dist/Valine.min.js'&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    new Valine({
+        el: '#vcomments' ,
+        appId: '{{ .Site.Params.valine.appId }}',
+        appKey: '{{ .Site.Params.valine.appKey }}',
+        notify: {{ .Site.Params.valine.notify }}, 
+        verify: {{ .Site.Params.valine.verify }}, 
+        avatar:'{{ .Site.Params.valine.avatar }}', 
+        placeholder: '{{ .Site.Params.valine.placeholder }}',
+        visitor: '{{ .Site.Params.valine.visitor }}'
+    });
+  &lt;/script&gt;
+  {{- end }}
+
+  &lt;!-- Disqus --&gt;
+  {{- if .Site.DisqusShortname -}}
+    &lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    (function() {
+      // Don't ever inject Disqus on localhost--it creates unwanted
+      // discussions from 'localhost:1313' on your Disqus account...
+      if (window.location.hostname === 'localhost') return;
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = '{{ .Site.DisqusShortname }}';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    &lt;/script&gt;
+    &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+  {{- end -}}
+
+  &lt;!-- changyan --&gt;
+  {{- if and .Site.Params.changyanAppid .Site.Params.changyanAppkey -}}
+    &lt;div id=&quot;SOHUCS&quot; sid=&quot;{{ .URL }}&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    (function(){
+      if (window.location.hostname === 'localhost') return;
+      var appid = '{{ .Site.Params.changyanAppid }}';
+      var conf = '{{ .Site.Params.changyanAppkey }}';
+      var width = window.innerWidth || document.documentElement.clientWidth; 
+      if (width &lt; 960) {window.document.write('&lt;script id=&quot;changyan_mobile_js&quot; charset=&quot;utf-8&quot; type=&quot;text/javascript&quot; src=&quot;https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&amp;conf=' + conf + '&quot;&gt;&lt;\/script&gt;'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName(&quot;head&quot;)[0]||document.head||document.documentElement;var b=document.createElement(&quot;script&quot;);b.setAttribute(&quot;type&quot;,&quot;text/javascript&quot;);b.setAttribute(&quot;charset&quot;,&quot;UTF-8&quot;);b.setAttribute(&quot;src&quot;,d);if(typeof a===&quot;function&quot;){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e===&quot;loaded&quot;||e===&quot;complete&quot;){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs(&quot;https://changyan.sohu.com/upload/changyan.js&quot;,function(){window.changyan.api.config({appid:appid,conf:conf})}); }
+    })();
+    &lt;/script&gt;
+  {{- end -}}
+
+  &lt;!-- LiveRe --&gt;
+  {{- if .Site.Params.livereUID -}}
+    &lt;div id=&quot;lv-container&quot; data-id=&quot;city&quot; data-uid=&quot;{{ .Site.Params.livereUID }}&quot;&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    &lt;/script&gt;
+    &lt;noscript&gt;Please enable JavaScript to view the comments powered by &lt;a href=&quot;https://livere.com/&quot;&gt;LiveRe.&lt;/a&gt;&lt;/noscript&gt;
+    &lt;/div&gt;
+  {{- end -}}
+
+  &lt;!-- gitment --&gt;
+  {{- if .Site.Params.gitment.owner -}}
+    &lt;div id=&quot;comments-gitment&quot;&gt;&lt;/div&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+      var gitment = new Gitment({
+        id: '{{ .Date }}',
+        title: '{{ .Title }}',
+        link: decodeURI(location.href),
+        desc: '{{ .Summary }}',
+        owner: '{{ .Site.Params.gitment.owner }}',
+        repo: '{{ .Site.Params.gitment.repo }}',
+        oauth: {
+          client_id: '{{ .Site.Params.gitment.clientId }}',
+          client_secret: '{{ .Site.Params.gitment.clientSecret }}'
+        }
+      });
+      gitment.render('comments-gitment');
+    &lt;/script&gt;
+    &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://github.com/imsun/gitment&quot;&gt;comments powered by gitment.&lt;/a&gt;&lt;/noscript&gt;
+  {{- end -}}
+
+  &lt;!-- gitalk --&gt;
+  {{- if .Site.Params.gitalk.owner -}}
+    &lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+      var gitalk = new Gitalk({
+        id: '{{ .Date }}',
+        title: '{{ .Title }}',
+        clientID: '{{ .Site.Params.gitalk.clientId }}',
+        clientSecret: '{{ .Site.Params.gitalk.clientSecret }}',
+        repo: '{{ .Site.Params.gitalk.repo }}',
+        owner: '{{ .Site.Params.gitalk.owner }}',
+        admin: ['{{ .Site.Params.gitalk.owner }}'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    &lt;/script&gt;
+    &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://github.com/gitalk/gitalk&quot;&gt;comments powered by gitalk.&lt;/a&gt;&lt;/noscript&gt;
+  {{- end }}
+
+{{- end }}
+
+</code></pre>
+
+<h3 id="2-在文章页模板中调用上面新建的评论模板">2.在文章页模板中调用上面新建的评论模板</h3>
+
+<p>例如本站用的LeaveIt主题是在<code>layouts/_default/single.html</code> 找到第97行的<code>&lt;div class=&quot;post-comment&quot;&gt;</code> 代码块中的判断Disqus略称后的 <code>{{ end }}</code>后面，插入调用代码。</p>
+
+<pre><code class="language-html">{{ partial &quot;comments.html&quot; . }}
+</code></pre>
+
+<p>其实就是方法1的第二步，只是方法一是直接将评论代码加到文章页模板中，而这个是将评论代码统统放在comments.html模板下，再在文章页模板通过代码调用这个comments.html，只要站点配置文件config.toml里面存在相关开关配置，则评论系统就会被正常调用。</p>
+
+<p>方法二参考的是其他的主题Even等，Valine评论系统是可以正常被调用，但是其他的没有测试过。</p>
+
+<h2 id="参考来源">参考来源</h2>
+
+<p><a href="https://www.smslit.top/2018/07/08/hugo-valine/" title="hugo博客添加评论系统Valine" rel="nofollow noreferrer" target="_blank">hugo博客添加评论系统Valine</a>
+<a href="https://valine.js.org/quickstart.html" title="Valine官方文档" rel="nofollow noreferrer" target="_blank">Valine官方文档</a></p>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Wyane </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/technology/valine-to-hugo-with-leaveit/>/technology/valine-to-hugo-with-leaveit/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="/tags/hugo/">
+                    #Hugo</a></span>
+            
+            <span class="tag"><a href="/tags/valine/">
+                    #Valine</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/technology/change-git-remote-config/" class="prev" rel="prev" title="手滑导致设置git remote仓库错误 如何修改远程仓库地址配置"><i class="iconfont icon-left"></i>&nbsp;手滑导致设置git remote仓库错误 如何修改远程仓库地址配置</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+      
+       
+      
+             
+             <span id="/technology/valine-to-hugo-with-leaveit" class="leancloud_visitors" data-flag-title="Hugo添加Valine评论系统 以LeaveIt主题为例">
+                 <span class="post-meta-item-text">访问量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                 <p></p>
+             </span>
+             <div id="vcomments"></div>
+             <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+             <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+             <script type="text/javascript">
+                 new Valine({
+                     el: '#vcomments' ,
+                     appId: 'Xh68sAixWz57DyKqQ9zLs3fP-gzGzoHsz',
+                     appKey: '2GtFoSCY3UfDRNNdvWbKGf7O',
+                     notify:  false ,
+                     verify:  false ,
+                     avatar:'monsterid',
+                     placeholder: '分享一下你的想法呗~',
+                     visitor:  false 
+                 });
+             </script>
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2010 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="/">Wyane</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

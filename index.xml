@@ -6,8 +6,227 @@
     <description>Recent content in Wyane&#39;s Blog on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 02 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Apr 2019 09:56:14 +0900</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugo添加Valine评论系统 以LeaveIt主题为例</title>
+      <link>/technology/valine-to-hugo-with-leaveit/</link>
+      <pubDate>Fri, 19 Apr 2019 09:56:14 +0900</pubDate>
+      
+      <guid>/technology/valine-to-hugo-with-leaveit/</guid>
+      <description>&lt;p&gt;最近将博客的生成器由Hexo转回到Hugo了，在这之后选了一些主题，试过Even,Jane,mainroad等等，最后还是选了v2上有人发布的这个LeaveIt主题。主要是因为这个主题简洁又不缺乏华丽的感觉。不过有点不足的是这个主题并不能直接用评论系统，在查看了相关教程之后，终于添加了原来使用的Valine评论系统。&lt;/p&gt;
+
+&lt;p&gt;今天参考了Even主题和Jane主题的源码，并且看了@5km的教程，尝试了好久，一直无法添加成功，最后在该教程的评论区，有其他人请教了和我一样的主题的问题，最后通过@5km的解答，终于成功实现了Valine评论系统的添加。&lt;/p&gt;
+
+&lt;h2 id=&#34;方法1-只加入valine&#34;&gt;方法1：只加入Valine&lt;/h2&gt;
+
+&lt;p&gt;由于LeaveIt主题并没有自带任何一个评论系统，所以如果只要Valine评论就直接修改下面文件即可。&lt;/p&gt;
+
+&lt;h3 id=&#34;修改站点配置文件&#34;&gt;修改站点配置文件&lt;/h3&gt;
+
+&lt;p&gt;首先先在站点的配置文件&lt;code&gt;config.toml&lt;/code&gt;里面添加下面的配置。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;  # Valine.
+  # You can get your appid and appkey from https://leancloud.cn
+  # more info please open https://valine.js.org
+  [params.valine]
+    enable = true #开关
+    appId = &#39;你的appId&#39;
+    appKey = &#39;你的appKey&#39;
+    notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
+    verify = false # Verification code
+    avatar = &#39;mp&#39; #神秘人(一个灰白头像) 
+    placeholder = &#39;说点什么吧...&#39; #在评论框显示的温馨提示等
+    visitor = true #访问量统计
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-主题的文章页模板添加valine&#34;&gt;2.主题的文章页模板添加Valine&lt;/h3&gt;
+
+&lt;p&gt;另外在LeaveIt的主题下的 &lt;code&gt;layouts/_default/single.html&lt;/code&gt; 找到第97行的 &lt;code&gt;&amp;lt;div class=&amp;quot;post-comment&amp;quot;&amp;gt;&lt;/code&gt; 代码块中的判断Disqus略称后的 &lt;code&gt;{{ end }}&lt;/code&gt; 后面，插入Valine代码，插入后的效果如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt; &amp;lt;div class=&amp;quot;post-comment&amp;quot;&amp;gt;
+       {{ if ( .Params.showComments | default true ) }}
+             {{ if ne .Site.DisqusShortname &amp;quot;&amp;quot; }}
+                 {{ template &amp;quot;_internal/disqus.html&amp;quot; . }}
+             {{ end }}
+             &amp;lt;!-- valine --&amp;gt;
+             {{- if .Site.Params.valine.enable -}}
+             &amp;lt;!-- id 将作为查询条件 --&amp;gt;
+             &amp;lt;span id=&amp;quot;{{ .URL | relURL }}&amp;quot; class=&amp;quot;leancloud_visitors&amp;quot; data-flag-title=&amp;quot;{{ .Title }}&amp;quot;&amp;gt;
+                 &amp;lt;span class=&amp;quot;post-meta-item-text&amp;quot;&amp;gt;访问量 &amp;lt;/span&amp;gt;
+                 &amp;lt;span class=&amp;quot;leancloud-visitors-count&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+                 &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+             &amp;lt;/span&amp;gt;
+             &amp;lt;div id=&amp;quot;vcomments&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+             &amp;lt;script src=&amp;quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+             &amp;lt;script src=&#39;//unpkg.com/valine/dist/Valine.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+             &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+                 new Valine({
+                     el: &#39;#vcomments&#39; ,
+                     appId: &#39;{{ .Site.Params.valine.appId }}&#39;,
+                     appKey: &#39;{{ .Site.Params.valine.appKey }}&#39;,
+                     notify: {{ .Site.Params.valine.notify }},
+                     verify: {{ .Site.Params.valine.verify }},
+                     avatar:&#39;{{ .Site.Params.valine.avatar }}&#39;,
+                     placeholder: &#39;{{ .Site.Params.valine.placeholder }}&#39;,
+                     visitor: {{ .Site.Params.valine.visitor }}
+                 });
+             &amp;lt;/script&amp;gt;
+             {{- end }}
+       {{ end }}
+ &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;其实这样已经可以实现了。回到博客文章下方就可以看到已经显示出来了。当然前提是你已经配置好过Valine了，就是在Leancloud上注册等等。相关可以查看&lt;a href=&#34;https://valine.js.org/quickstart.html&#34; title=&#34;Valine官方文档&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Valine官方文档&lt;/a&gt;。
+&lt;img src=&#34;https://ww1.sinaimg.cn/large/007i4MEmgy1g27o6azai0j30m30dzweo.jpg&#34; alt=&#34;Valine已经可以用了&#34; title=&#34;Valine已经可以用了&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;方法2-同时加入多个评论系统的配置&#34;&gt;方法2：同时加入多个评论系统的配置&lt;/h2&gt;
+
+&lt;p&gt;这样是很多主题的做法，为了方便切换评论系统直接内置多个评论系统，这样做的话可以直接在站点配置文件里面修改即可使用。&lt;/p&gt;
+
+&lt;h3 id=&#34;1-主题模板下新建comments-html&#34;&gt;1.主题模板下新建comments.html&lt;/h3&gt;
+
+&lt;p&gt;在LeaveIt主题的/themes/LeaveIt/layouts/partials下新建comments.html模板（如有，则不需新建，直接修改内容即可。）在comments.html里面添加下面的内容。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;{{ if and .IsPage (ne .Params.comment false) -}}
+  &amp;lt;!-- valine --&amp;gt;
+  {{- if .Site.Params.valine.enable -}}
+  &amp;lt;!-- id 将作为查询条件 --&amp;gt;
+  &amp;lt;span id=&amp;quot;{{ .URL | relURL }}&amp;quot; class=&amp;quot;leancloud_visitors&amp;quot; data-flag-title=&amp;quot;{{ .Title }}&amp;quot;&amp;gt;
+    &amp;lt;span class=&amp;quot;post-meta-item-text&amp;quot;&amp;gt;阅读量 &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;leancloud-visitors-count&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+  &amp;lt;/span&amp;gt;
+  &amp;lt;div id=&amp;quot;vcomments&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;script src=&amp;quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script src=&#39;//unpkg.com/valine/dist/Valine.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    new Valine({
+        el: &#39;#vcomments&#39; ,
+        appId: &#39;{{ .Site.Params.valine.appId }}&#39;,
+        appKey: &#39;{{ .Site.Params.valine.appKey }}&#39;,
+        notify: {{ .Site.Params.valine.notify }}, 
+        verify: {{ .Site.Params.valine.verify }}, 
+        avatar:&#39;{{ .Site.Params.valine.avatar }}&#39;, 
+        placeholder: &#39;{{ .Site.Params.valine.placeholder }}&#39;,
+        visitor: &#39;{{ .Site.Params.valine.visitor }}&#39;
+    });
+  &amp;lt;/script&amp;gt;
+  {{- end }}
+
+  &amp;lt;!-- Disqus --&amp;gt;
+  {{- if .Site.DisqusShortname -}}
+    &amp;lt;div id=&amp;quot;disqus_thread&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    (function() {
+      // Don&#39;t ever inject Disqus on localhost--it creates unwanted
+      // discussions from &#39;localhost:1313&#39; on your Disqus account...
+      if (window.location.hostname === &#39;localhost&#39;) return;
+      var dsq = document.createElement(&#39;script&#39;); dsq.type = &#39;text/javascript&#39;; dsq.async = true;
+      var disqus_shortname = &#39;{{ .Site.DisqusShortname }}&#39;;
+      dsq.src = &#39;//&#39; + disqus_shortname + &#39;.disqus.com/embed.js&#39;;
+      (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(dsq);
+    })();
+    &amp;lt;/script&amp;gt;
+    &amp;lt;noscript&amp;gt;Please enable JavaScript to view the &amp;lt;a href=&amp;quot;http://disqus.com/?ref_noscript&amp;quot;&amp;gt;comments powered by Disqus.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
+  {{- end -}}
+
+  &amp;lt;!-- changyan --&amp;gt;
+  {{- if and .Site.Params.changyanAppid .Site.Params.changyanAppkey -}}
+    &amp;lt;div id=&amp;quot;SOHUCS&amp;quot; sid=&amp;quot;{{ .URL }}&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    (function(){
+      if (window.location.hostname === &#39;localhost&#39;) return;
+      var appid = &#39;{{ .Site.Params.changyanAppid }}&#39;;
+      var conf = &#39;{{ .Site.Params.changyanAppkey }}&#39;;
+      var width = window.innerWidth || document.documentElement.clientWidth; 
+      if (width &amp;lt; 960) {window.document.write(&#39;&amp;lt;script id=&amp;quot;changyan_mobile_js&amp;quot; charset=&amp;quot;utf-8&amp;quot; type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=&#39; + appid + &#39;&amp;amp;conf=&#39; + conf + &#39;&amp;quot;&amp;gt;&amp;lt;\/script&amp;gt;&#39;); } else { var loadJs=function(d,a){var c=document.getElementsByTagName(&amp;quot;head&amp;quot;)[0]||document.head||document.documentElement;var b=document.createElement(&amp;quot;script&amp;quot;);b.setAttribute(&amp;quot;type&amp;quot;,&amp;quot;text/javascript&amp;quot;);b.setAttribute(&amp;quot;charset&amp;quot;,&amp;quot;UTF-8&amp;quot;);b.setAttribute(&amp;quot;src&amp;quot;,d);if(typeof a===&amp;quot;function&amp;quot;){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e===&amp;quot;loaded&amp;quot;||e===&amp;quot;complete&amp;quot;){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs(&amp;quot;https://changyan.sohu.com/upload/changyan.js&amp;quot;,function(){window.changyan.api.config({appid:appid,conf:conf})}); }
+    })();
+    &amp;lt;/script&amp;gt;
+  {{- end -}}
+
+  &amp;lt;!-- LiveRe --&amp;gt;
+  {{- if .Site.Params.livereUID -}}
+    &amp;lt;div id=&amp;quot;lv-container&amp;quot; data-id=&amp;quot;city&amp;quot; data-uid=&amp;quot;{{ .Site.Params.livereUID }}&amp;quot;&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === &#39;function&#39;) { return; }
+        j = d.createElement(s);
+        j.src = &#39;https://cdn-city.livere.com/js/embed.dist.js&#39;;
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, &#39;script&#39;);
+    &amp;lt;/script&amp;gt;
+    &amp;lt;noscript&amp;gt;Please enable JavaScript to view the comments powered by &amp;lt;a href=&amp;quot;https://livere.com/&amp;quot;&amp;gt;LiveRe.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
+    &amp;lt;/div&amp;gt;
+  {{- end -}}
+
+  &amp;lt;!-- gitment --&amp;gt;
+  {{- if .Site.Params.gitment.owner -}}
+    &amp;lt;div id=&amp;quot;comments-gitment&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css&amp;quot; crossorigin=&amp;quot;anonymous&amp;quot;&amp;gt;
+    &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js&amp;quot; crossorigin=&amp;quot;anonymous&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+      var gitment = new Gitment({
+        id: &#39;{{ .Date }}&#39;,
+        title: &#39;{{ .Title }}&#39;,
+        link: decodeURI(location.href),
+        desc: &#39;{{ .Summary }}&#39;,
+        owner: &#39;{{ .Site.Params.gitment.owner }}&#39;,
+        repo: &#39;{{ .Site.Params.gitment.repo }}&#39;,
+        oauth: {
+          client_id: &#39;{{ .Site.Params.gitment.clientId }}&#39;,
+          client_secret: &#39;{{ .Site.Params.gitment.clientSecret }}&#39;
+        }
+      });
+      gitment.render(&#39;comments-gitment&#39;);
+    &amp;lt;/script&amp;gt;
+    &amp;lt;noscript&amp;gt;Please enable JavaScript to view the &amp;lt;a href=&amp;quot;https://github.com/imsun/gitment&amp;quot;&amp;gt;comments powered by gitment.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
+  {{- end -}}
+
+  &amp;lt;!-- gitalk --&amp;gt;
+  {{- if .Site.Params.gitalk.owner -}}
+    &amp;lt;div id=&amp;quot;gitalk-container&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&amp;quot; crossorigin=&amp;quot;anonymous&amp;quot;&amp;gt;
+    &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&amp;quot; crossorigin=&amp;quot;anonymous&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+      var gitalk = new Gitalk({
+        id: &#39;{{ .Date }}&#39;,
+        title: &#39;{{ .Title }}&#39;,
+        clientID: &#39;{{ .Site.Params.gitalk.clientId }}&#39;,
+        clientSecret: &#39;{{ .Site.Params.gitalk.clientSecret }}&#39;,
+        repo: &#39;{{ .Site.Params.gitalk.repo }}&#39;,
+        owner: &#39;{{ .Site.Params.gitalk.owner }}&#39;,
+        admin: [&#39;{{ .Site.Params.gitalk.owner }}&#39;],
+        body: decodeURI(location.href)
+      });
+      gitalk.render(&#39;gitalk-container&#39;);
+    &amp;lt;/script&amp;gt;
+    &amp;lt;noscript&amp;gt;Please enable JavaScript to view the &amp;lt;a href=&amp;quot;https://github.com/gitalk/gitalk&amp;quot;&amp;gt;comments powered by gitalk.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
+  {{- end }}
+
+{{- end }}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-在文章页模板中调用上面新建的评论模板&#34;&gt;2.在文章页模板中调用上面新建的评论模板&lt;/h3&gt;
+
+&lt;p&gt;例如本站用的LeaveIt主题是在&lt;code&gt;layouts/_default/single.html&lt;/code&gt; 找到第97行的&lt;code&gt;&amp;lt;div class=&amp;quot;post-comment&amp;quot;&amp;gt;&lt;/code&gt; 代码块中的判断Disqus略称后的 &lt;code&gt;{{ end }}&lt;/code&gt;后面，插入调用代码。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;{{ partial &amp;quot;comments.html&amp;quot; . }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;其实就是方法1的第二步，只是方法一是直接将评论代码加到文章页模板中，而这个是将评论代码统统放在comments.html模板下，再在文章页模板通过代码调用这个comments.html，只要站点配置文件config.toml里面存在相关开关配置，则评论系统就会被正常调用。&lt;/p&gt;
+
+&lt;p&gt;方法二参考的是其他的主题Even等，Valine评论系统是可以正常被调用，但是其他的没有测试过。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.smslit.top/2018/07/08/hugo-valine/&#34; title=&#34;hugo博客添加评论系统Valine&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hugo博客添加评论系统Valine&lt;/a&gt;
+&lt;a href=&#34;https://valine.js.org/quickstart.html&#34; title=&#34;Valine官方文档&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Valine官方文档&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>手滑导致设置git remote仓库错误 如何修改远程仓库地址配置</title>
@@ -1102,75 +1321,6 @@ INFO  Deleted database.
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;执行后就可以正常使用了。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Git学习相关资料整理</title>
-      <link>/technology/git-learning-sheet/</link>
-      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/technology/git-learning-sheet/</guid>
-      <description>&lt;p&gt;部分电子书已经收录到仓库中，可以在这里查看到：&lt;a href=&#34;https://down.huaien.me/00.%E7%94%B5%E5%AD%90%E4%B9%A6_Ebook/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;电子书仓库&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;git学习资料&#34;&gt;git学习资料&lt;/h3&gt;
-
-&lt;p&gt;这里面的内容也是从网上收集，但是已经忘记了是从哪里找来的，感谢原作者。
-- &lt;a href=&#34;http://git-scm.com/book/en/v2&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Pro Git&lt;/a&gt;
-- &lt;a href=&#34;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;廖雪峰: git教程&lt;/a&gt;:最好的中文教程。
-- &lt;a href=&#34;https://www.atlassian.com/git?atl_source=cac-bitbucket-1&amp;amp;atl_medium=ace&amp;amp;atl_campaign=ACE-158-Stash-GIT-on-Bitbucket-CAC_git&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Git Tutorials&lt;/a&gt;: bitbucket的教程。
-- &lt;a href=&#34;http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Git Magic&lt;/a&gt;: 网上较火的一套教程。
-- &lt;a href=&#34;https://github.com/gotgit/gotgithub&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GotGithub&lt;/a&gt;: 一本中文的介绍github使用的书。
-- &lt;a href=&#34;http://gitimmersion.com/index.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Git Immersion&lt;/a&gt;: 答题的形式学习git.
-- &lt;a href=&#34;http://www.git-tower.com/learn/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Learn Version Control with Git&lt;/a&gt;
-- &lt;a href=&#34;http://blog.jobbole.com/tag/pro-git/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;伯乐在线&lt;/a&gt;: git详解系列
-- &lt;a href=&#34;http://backlogtool.com/git-guide/cn/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;猴子都能懂的Git入门&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;git-flow&#34;&gt;git-flow&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://danielkummer.github.io/git-flow-cheatsheet/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;git-flow cheatsheet&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;练习&#34;&gt;练习&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://try.github.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Try Git&lt;/a&gt;： codeschool教程。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Gazler/githug&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;githug&lt;/a&gt;: Git your game on!&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://lingavin.com/githugtong-guan-gong-lue.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;githug通关攻略&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hgarc014/git-game&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;git-game&lt;/a&gt;: terminal game to test git skills.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://pcottle.github.io/learnGitBranching/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Learn Git Branching&lt;/a&gt;: 形象直观的图形化练习网站。&lt;/p&gt;
-
-&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://justinhileman.info/article/git-pretty/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;git pretty&lt;/a&gt;: 美化git&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GitHub秘籍&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;来自git学习资料整理-知乎搜集的&#34;&gt;来自git学习资料整理（知乎搜集的）&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;首先你要学会git, 提供一些相关的资讯，望有帮助：&lt;/li&gt;
-&lt;li&gt;progit这本书是必看的&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://git-scm.com/book&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://git-scm.com/book&lt;/a&gt; 和 &lt;a href=&#34;http://git-scm.com/book/zh&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://git-scm.com/book/zh&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;至少阅读：第一，第二，第三，第五，共4章，即可入门。&lt;/li&gt;
-&lt;li&gt;不过这个网站被墙了，提供下镜像吧：progit-zh.epub 和 [中文].Pro Git.pdf&lt;/li&gt;
-&lt;li&gt;在熟悉命令行后，也许你会需要UI，那可以选择：&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gitforwindows.org/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Downloads - msysgit - Git for Windows&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://code.google.com/p/tortoisegit/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://code.google.com/p/tortoisegit/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sourcetreeapp.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.sourcetreeapp.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;然后建议再看看 git-flow &amp;ndash;&amp;gt; 一个成功的Git分支模型&lt;/li&gt;
-&lt;li&gt;介绍：A successful Git branching model&lt;/li&gt;
-&lt;li&gt;翻译：&lt;a href=&#34;http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.juvenxu.com/2010/11/28/a-successful-git-branching-model/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;工具：nvie/gitflow · GitHub&lt;/li&gt;
-&lt;li&gt;git-flow 备忘清单&lt;/li&gt;
-&lt;li&gt;最后，你若需要本地搭建一个，那就用GITLAB: Self Hosted Git Management Application吧&lt;/li&gt;
-&lt;li&gt;补充一个刚发现的互动学习git的项目： Learn Git Branching&lt;/li&gt;
-&lt;li&gt;再补充一个：图解Git&lt;/li&gt;
-&lt;li&gt;再补充一个：Git Magic - 前言&lt;/li&gt;
-&lt;li&gt;然后剩下github的，看官方说明吧： &lt;a href=&#34;https://help.github.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://help.github.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
   </channel>
