@@ -5,13 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noodp"/>
-  <meta name="author" content="Wyane">
-  <meta name="description" content="Record Wyane&#39;s life and study">
-  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  
+  
+  
+  
   
   <link rel="prev" href="/technology/typecho-upload-jpg-image/" />
   <link rel="next" href="/technology/comment-with-emoji-shows-datebase-error-on-typecho/" />
   <link rel="canonical" href="/technology/css-study-note/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -32,47 +34,43 @@
   <link rel="stylesheet" href="/css/main.min.css">
 
 
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS学习笔记"/>
+<meta name="twitter:description" content="CSS样式的三种方式
+
+
+内嵌式
+嵌入式
+外部式
+
+
+&lt;link href=&quot;base.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+
+三种方式的优先级：内联式 &gt; 嵌入式 &gt; 外部式"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CSS学习笔记",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/technology/css-study-note/"
+  },
+  
+  "genre": "posts",
+  "keywords": "CSS",
+  "wordcount": 14,
+  "url": "/technology/css-study-note/",
+  "datePublished": "2017-06-25T00:00:00+00:00",
+  "dateModified": "2017-06-25T00:00:00+00:00",
   
   
- 
-
-<script type="application/ld+json">
- "@context" : "http://schema.org",
-    "@type" : "BlogPosting",
-    "mainEntityOfPage": {
-         "@type": "WebPage",
-         "@id": "/"
-    },
-    "articleSection" : "posts",
-    "name" : "CSS学习笔记",
-    "headline" : "CSS学习笔记",
-    "description" : "<p>CSS样式的三种方式</p>
-
-<ol>
-<li>内嵌式</li>
-<li>嵌入式</li>
-<li>外部式</li>
-</ol>
-
-<pre><code>&lt;link href=&quot;base.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
-</code></pre>
-
-<p>三种方式的优先级：内联式 &gt; 嵌入式 &gt; 外部式</p>",
-    "inLanguage" : "zh-cn",
-    "author" : "Wyane",
-    "creator" : "Wyane",
-    "publisher": "Wyane",
-    "accountablePerson" : "Wyane",
-    "copyrightHolder" : "Wyane",
-    "copyrightYear" : "2017",
-    "datePublished": "2017-06-25 00:00:00 &#43;0000 UTC",
-    "dateModified" : "2017-06-25 00:00:00 &#43;0000 UTC",
-    "url" : "/technology/css-study-note/",
-    "wordCount" : "14",
-    "keywords" : [ "CSS", "Wyane&#39;s Blog"]
+  
+  "description": ""
 }
 </script>
-
 </head>
 
   
@@ -83,7 +81,7 @@
         <nav class="navbar">
     <div class="container">
         <div class="navbar-header header-logo">
-        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a>
+        	<a href="/">Wyane&#39;s Blog</a>
         </div>
         <div class="menu navbar-right">
                 
@@ -98,13 +96,14 @@
                 
                 <a class="menu-item" href="/links/" title="Friends">Friends</a>
                 
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
         </div>
     </div>
 </nav>
 <nav class="navbar-mobile" id="nav-mobile" style="display: none">
      <div class="container">
         <div class="navbar-header">
-            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a></div>
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="/">Wyane&#39;s Blog</a></div>
             <div class="menu-toggle">
                 <span></span><span></span><span></span>
             </div>
@@ -129,13 +128,13 @@
     	 <main class="main">
           <div class="container">
       		
-<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+<article class="post-warp">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">CSS学习笔记</h1>
+        <h1 class="post-title">CSS学习笔记</h1>
         <div class="post-meta">
-                Written by <a itemprop="name" href="/" rel="author">Wyane</a> with ♥ 
+            Written by <a href="/" rel="author">Wyane</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2017-06-25 itemprop="datePublished">June 25, 2017</time>
+                    on <time datetime=2017-06-25 >25 June 2017</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -143,6 +142,8 @@
                         <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
                         
                 </span>
+                <i class="iconfont icon-timer"></i>
+                1 min
         </div>
     </header>
     <div class="post-content">
@@ -183,14 +184,16 @@
                 </p>
             
            
-             
             <p class="copyright-item">
-                    <span>Link:</span>
-                    <a href=/technology/css-study-note/>/technology/css-study-note/</span>
+                    <span>Words:</span>
+                   <span>14</span>
             </p>
             
+            <p class="copyright-item">
+                
+
              
-            <p class="copyright-item lincese">
+            <p class="copyright-item">
                 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
             </p>
             
@@ -200,7 +203,7 @@
     <div class="post-tags">
         
             <section>
-            <i class="iconfont icon-tag"></i>Tag(s): 
+            <i class="iconfont icon-icon-tag"></i>Tag: 
             
             <span class="tag"><a href="/tags/css/">
                     #CSS</a></span>
@@ -208,45 +211,23 @@
             </section>
         
         <section>
-                <a href="javascript:window.history.back();">back</a></span> · 
-                <span><a href="/">home</a></span>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="/">Home</a></span>
         </section>
     </div>
 
     <div class="post-nav">
         
-        <a href="/technology/typecho-upload-jpg-image/" class="prev" rel="prev" title="typecho博客程序上传后缀为大写JPG附件失败的解决办法"><i class="iconfont icon-left"></i>&nbsp;typecho博客程序上传后缀为大写JPG附件失败的解决办法</a>
+        <a href="/technology/typecho-upload-jpg-image/" class="prev" rel="prev" title="typecho博客程序上传后缀为大写JPG附件失败的解决办法"><i class="iconfont icon-dajiantou"></i>&nbsp;typecho博客程序上传后缀为大写JPG附件失败的解决办法</a>
          
         
-        <a href="/technology/comment-with-emoji-shows-datebase-error-on-typecho/" class="next" rel="next" title="typecho文章评论带表情就database query error">typecho文章评论带表情就database query error&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="/technology/comment-with-emoji-shows-datebase-error-on-typecho/" class="next" rel="next" title="typecho文章评论带表情就database query error">typecho文章评论带表情就database query error&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
         
     </div>
 
     <div class="post-comment">
           
-                 
-      
-       
-      
-             
-         
-                 <p></p>
-             </span>
-             <div id="vcomments"></div>
-             <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-             <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-             <script type="text/javascript">
-                 new Valine({
-                     el: '#vcomments' ,
-                     appId: 'Xh68sAixWz57DyKqQ9zLs3fP-gzGzoHsz',
-                     appKey: '2GtFoSCY3UfDRNNdvWbKGf7O',
-                     notify:  false ,
-                     verify:  false ,
-                     avatar:'monsterid',
-                     placeholder: '分享一下你的想法呗~',
-                     visitor:  false 
-                 });
-             </script>
+          
           
     </div>
 </article>
@@ -258,15 +239,11 @@
         
         <span itemprop="copyrightYear">2010 - 2019</span>
         
-        <span class="with-love">
-    	 <i class="iconfont icon-love"></i> 
-         </span>
          
-            <span class="author" itemprop="copyrightHolder"><a href="/">Wyane</a> | </span> 
+            <span class="author" itemprop="copyrightHolder"><a href="/">Wyane</a> | </span>
          
 
-         
-		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
     </div>
 </footer>
 
@@ -286,6 +263,10 @@
     <script src="/js/vendor_no_gallery.min.js" async=""></script>
     
   
+
+
+
+
 
 
 
