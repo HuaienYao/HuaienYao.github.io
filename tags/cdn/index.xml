@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CDN on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/cdn/</link>
-    <description>Recent content in CDN on Wyane&#39;s Blog</description>
+    <title>CDN on LeaveIt</title>
+    <link>https://example.com/tags/cdn/</link>
+    <description>Recent content in CDN on LeaveIt</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
     <lastBuildDate>Thu, 11 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/cdn/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/tags/cdn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>如何申请成为Cloudflare Partner合作伙伴</title>
-      <link>http://huaien.me/internet/become-cloudflare-partner/</link>
+      <link>https://example.com/internet/become-cloudflare-partner/</link>
       <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/internet/become-cloudflare-partner/</guid>
+      <guid>https://example.com/internet/become-cloudflare-partner/</guid>
       <description>&lt;h2 id=&#34;什么是cloudflare&#34;&gt;什么是CloudFlare&lt;/h2&gt;
 
 &lt;p&gt;CloudFlare想必大家还是挺熟悉的，作为世界最大的CDN服务提供商之一，CloudFlare不但提供了免费的域名DNS解析服务，包括了HTTPS加密的免费的CDN服务，还有吊炸天的1.1.1.1 1.0.0.1的公共DNS服务。而且解析速度非常之快，我也将自己10个左右的域名托管在CloudFlare的DNS解析服务上。试过如果添加解析记录或者修改解析记录后，几乎即时生效，虽然说这样有好有坏，但是反应速度之快，真的让我吓一跳。&lt;/p&gt;</description>

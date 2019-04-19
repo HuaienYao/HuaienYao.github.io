@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Caddy on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/caddy/</link>
-    <description>Recent content in Caddy on Wyane&#39;s Blog</description>
+    <title>Caddy on LeaveIt</title>
+    <link>https://example.com/tags/caddy/</link>
+    <description>Recent content in Caddy on LeaveIt</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
     <lastBuildDate>Mon, 23 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/caddy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/tags/caddy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>利用Caddy来搭建可挂载的WebDAV个人网盘&#43;配合FileBrowser来管理文件</title>
-      <link>http://huaien.me/technology/use-caddy-to-build-webdav-server/</link>
+      <link>https://example.com/technology/use-caddy-to-build-webdav-server/</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/use-caddy-to-build-webdav-server/</guid>
+      <guid>https://example.com/technology/use-caddy-to-build-webdav-server/</guid>
       <description>&lt;p&gt;前面我们讲到了&lt;a href=&#34;https://huaien.me/article/backend/caddy-a-light-http-server/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy&lt;/a&gt;以及用&lt;a href=&#34;https://huaien.me/article/backend/use-caddy-to-run-site/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy搭建网站&lt;/a&gt;还有用&lt;a href=&#34;https://huaien.me/article/backend/use-caddy-filemanager-to-build-personal-netdisk/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy的File Manager来搭建个人网盘&lt;/a&gt;。今天我们要讲的用Caddy的WebDav扩展组件来搭建一个Webdav服务器。并且配合Caddy的FileManager扩展组件来在线管理WebDav服务器的文件。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>利用Caddy的Filemanager插件搭建个人网盘教程</title>
-      <link>http://huaien.me/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
+      <link>https://example.com/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
+      <guid>https://example.com/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
       <description>前面我们了解了Caddy是一个极简HTTP服务器，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Caddy帮你自动生成Let&amp;rsquo;s Encrypt的免费证书，简单的配置就能搭建好一个HTTPS的Web服务器环境。
 其实Caddy自带的Filemanager插件可以直接用来搭建一个个人网盘，而且支持的功能还挺多，界面还挺好看。 
 认识一下File Manager 看上面的动图可以看到用Filemanager可以很方便的在线管理文件。
@@ -38,19 +38,19 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
     
     <item>
       <title>利用Caddy来搭建网站之Caddy配置文件教程</title>
-      <link>http://huaien.me/technology/use-caddy-to-run-site/</link>
+      <link>https://example.com/technology/use-caddy-to-run-site/</link>
       <pubDate>Thu, 19 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/use-caddy-to-run-site/</guid>
+      <guid>https://example.com/technology/use-caddy-to-run-site/</guid>
       <description>&lt;p&gt;前面我们了解了&lt;a href=&#34;https://huaien.me/article/backend/caddy-a-light-http-server/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy是一个极简HTTP服务器&lt;/a&gt;，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Caddy帮你自动生成Let&amp;rsquo;s Encrypt的免费证书，简单的配置就能搭建好一个HTTPS的Web服务器环境。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Caddy一个轻量的Go语言HTTP服务器的一键安装脚本教程</title>
-      <link>http://huaien.me/technology/caddy-a-light-http-server/</link>
+      <link>https://example.com/technology/caddy-a-light-http-server/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/caddy-a-light-http-server/</guid>
+      <guid>https://example.com/technology/caddy-a-light-http-server/</guid>
       <description>&lt;p&gt;最近在逛逗比根据地的时候发现了这个用Golang写的极简HTTP WEB Server，叫&lt;a href=&#34;https://doub.io/shell-jc1/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy&lt;/a&gt;，上网查了其实好多博客都写了关于这个。于是就想用闲置的服务器折腾试试。但是毕竟是折腾，过程中还是遇到挺多问题。这里就简单记录一下。&lt;/p&gt;</description>
     </item>
     

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/hugo/</link>
-    <description>Recent content in Hugo on Wyane&#39;s Blog</description>
+    <title>Hugo on LeaveIt</title>
+    <link>https://example.com/tags/hugo/</link>
+    <description>Recent content in Hugo on LeaveIt</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
     <lastBuildDate>Fri, 19 Apr 2019 09:56:14 +0900</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo添加Valine评论系统 以LeaveIt主题为例</title>
-      <link>http://huaien.me/technology/valine-to-hugo-with-leaveit/</link>
+      <link>https://example.com/technology/valine-to-hugo-with-leaveit/</link>
       <pubDate>Fri, 19 Apr 2019 09:56:14 +0900</pubDate>
       
-      <guid>http://huaien.me/technology/valine-to-hugo-with-leaveit/</guid>
+      <guid>https://example.com/technology/valine-to-hugo-with-leaveit/</guid>
       <description>&lt;p&gt;最近将博客的生成器由Hexo转回到Hugo了，在这之后选了一些主题，试过Even,Jane,mainroad等等，最后还是选了v2上有人发布的这个LeaveIt主题。主要是因为这个主题简洁又不缺乏华丽的感觉。不过有点不足的是这个主题并不能直接用评论系统，在查看了相关教程之后，终于添加了原来使用的Valine评论系统。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>折腾静态博客程序之Hugo部署到Github Pages搭建个人博客</title>
-      <link>http://huaien.me/technology/using-hugo-to-build-blog/</link>
+      <link>https://example.com/technology/using-hugo-to-build-blog/</link>
       <pubDate>Sun, 15 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/using-hugo-to-build-blog/</guid>
+      <guid>https://example.com/technology/using-hugo-to-build-blog/</guid>
       <description>&lt;p&gt;最近在浏览许多人博客时候，发现了静态博客程序这种东西。是因为看到&lt;a href=&#34;http://notes.iissnan.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;IIssNan&lt;/a&gt;这位大神的博客主题非常好看，之前用的博客程序都是wordpress或者typecho，这个主题让人眼前一亮。动态效果很好看。但是看到底部信息，发现是用&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;程序搭建的。于是就搜索了&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;相关信息，才知道静态博客程序这个东西，&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;是用Node.js语言，因为之前有看到过ghost&lt;/p&gt;</description>
     </item>
     
