@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>技术记录 on LeaveIt</title>
-    <link>https://example.com/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</link>
-    <description>Recent content in 技术记录 on LeaveIt</description>
+    <title>技术记录 on Wyane&#39;s Blog</title>
+    <link>http://huaien.me/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</link>
+    <description>Recent content in 技术记录 on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 19 Apr 2019 09:56:14 +0900</lastBuildDate>
     
-	<atom:link href="https://example.com/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://huaien.me/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo添加Valine评论系统 以LeaveIt主题为例</title>
-      <link>https://example.com/technology/valine-to-hugo-with-leaveit/</link>
+      <link>http://huaien.me/technology/valine-to-hugo-with-leaveit/</link>
       <pubDate>Fri, 19 Apr 2019 09:56:14 +0900</pubDate>
       
-      <guid>https://example.com/technology/valine-to-hugo-with-leaveit/</guid>
+      <guid>http://huaien.me/technology/valine-to-hugo-with-leaveit/</guid>
       <description>&lt;p&gt;最近将博客的生成器由Hexo转回到Hugo了，在这之后选了一些主题，试过Even,Jane,mainroad等等，最后还是选了v2上有人发布的这个LeaveIt主题。主要是因为这个主题简洁又不缺乏华丽的感觉。不过有点不足的是这个主题并不能直接用评论系统，在查看了相关教程之后，终于添加了原来使用的Valine评论系统。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>手滑导致设置git remote仓库错误 如何修改远程仓库地址配置</title>
-      <link>https://example.com/technology/change-git-remote-config/</link>
+      <link>http://huaien.me/technology/change-git-remote-config/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/change-git-remote-config/</guid>
+      <guid>http://huaien.me/technology/change-git-remote-config/</guid>
       <description>&lt;p&gt;本文记录了如何修改git remote配置的远程仓库地址。在不小心设置错误git remote地址时可以用这个方法修改为正确的远程仓库地址配置。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Disqus提示无法加载的解决办法</title>
-      <link>https://example.com/technology/disqus-error-to-load/</link>
+      <link>http://huaien.me/technology/disqus-error-to-load/</link>
       <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/disqus-error-to-load/</guid>
+      <guid>http://huaien.me/technology/disqus-error-to-load/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/HTB1c6O0X6vuK1Rjy0Faq6x2aVXaB.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>解决Linux系统SSH终端显示中文乱码以centos为例</title>
-      <link>https://example.com/technology/linux-os-ssh-show-chinese/</link>
+      <link>http://huaien.me/technology/linux-os-ssh-show-chinese/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/linux-os-ssh-show-chinese/</guid>
+      <guid>http://huaien.me/technology/linux-os-ssh-show-chinese/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fvntln8qacj30gj09sgmt&#34; alt=&#34;&#34; /&gt;
 如果没有设置好编码，在SSH客户端连接Linux服务器的时候就是像上面那样显示效果。不过经过设置，可以正常显示中文。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>宝塔面板无法启动pure-ftpd服务的解决办法</title>
-      <link>https://example.com/technology/bt-panel-cannot-active-pure-ftpd/</link>
+      <link>http://huaien.me/technology/bt-panel-cannot-active-pure-ftpd/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/bt-panel-cannot-active-pure-ftpd/</guid>
+      <guid>http://huaien.me/technology/bt-panel-cannot-active-pure-ftpd/</guid>
       <description>&lt;p&gt;宝塔面板安装pure-ftpd后发现并没有启动，多次手动重启还是显示关闭状态，重装好几次也无法启动。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>解决wordpress后台安装插件时提示需要ftp账号和密码</title>
-      <link>https://example.com/technology/wordpress-install-plugin-show-ftp-info/</link>
+      <link>http://huaien.me/technology/wordpress-install-plugin-show-ftp-info/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/wordpress-install-plugin-show-ftp-info/</guid>
+      <guid>http://huaien.me/technology/wordpress-install-plugin-show-ftp-info/</guid>
       <description>&lt;p&gt;在wordpress安装之后，想要安装一个插件来用，结果弹出提示输入ftp账户与密码。如下图&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>宝塔面板忘记密码如何找回宝塔面板账户登录密码</title>
-      <link>https://example.com/technology/bt-panel-get-password-back/</link>
+      <link>http://huaien.me/technology/bt-panel-get-password-back/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/bt-panel-get-password-back/</guid>
+      <guid>http://huaien.me/technology/bt-panel-get-password-back/</guid>
       <description>&lt;h2 id=&#34;找回密码&#34;&gt;找回密码&lt;/h2&gt;
 
 &lt;p&gt;如果只是忘记了密码，还记得账号&lt;/p&gt;
@@ -81,10 +81,10 @@
     
     <item>
       <title>宝塔启动nginx服务失败提示failed (98:Address already in use)</title>
-      <link>https://example.com/technology/bt-panel-failed-to-start-nginx/</link>
+      <link>http://huaien.me/technology/bt-panel-failed-to-start-nginx/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/bt-panel-failed-to-start-nginx/</guid>
+      <guid>http://huaien.me/technology/bt-panel-failed-to-start-nginx/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;发现宝塔的nginx没有在运行，于是在宝塔面板上手动重启，但是提示失败，失败信息是下面那样：&lt;/p&gt;</description>
@@ -92,10 +92,10 @@
     
     <item>
       <title>Git生成 SSH 公钥添加到GitHub和Coding.net</title>
-      <link>https://example.com/technology/ssh-key-generator-git/</link>
+      <link>http://huaien.me/technology/ssh-key-generator-git/</link>
       <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/ssh-key-generator-git/</guid>
+      <guid>http://huaien.me/technology/ssh-key-generator-git/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;大多数 Git 服务器都会选择使用 SSH 公钥来进行授权。系统中的每个用户都必须提供一个公钥用于授权，没有的话就要生成一个。例如我们在使用GitHub Pages来托管博客，或者将代码推到GitHub或者Coding上的话需要先生成一个SSH并填入到托管平台的设置中来授权。&lt;/p&gt;</description>
@@ -103,10 +103,10 @@
     
     <item>
       <title>宝塔面板安装Flarum轻论坛程序时提示The PHP extension &#39;fileinfo&#39; is required</title>
-      <link>https://example.com/technology/bt-panel-install-fileinfo-for-php/</link>
+      <link>http://huaien.me/technology/bt-panel-install-fileinfo-for-php/</link>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/bt-panel-install-fileinfo-for-php/</guid>
+      <guid>http://huaien.me/technology/bt-panel-install-fileinfo-for-php/</guid>
       <description>&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
 
 &lt;p&gt;宝塔面板默认并没有安装fileinfo模块，可按以下教程安装：&lt;/p&gt;
@@ -116,10 +116,10 @@
     
     <item>
       <title>编译安装PHP组件出现错误提示内存不足：virtual memory exhausted Cannot allocate memory</title>
-      <link>https://example.com/technology/no-enough-memory-to-make-php/</link>
+      <link>http://huaien.me/technology/no-enough-memory-to-make-php/</link>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/no-enough-memory-to-make-php/</guid>
+      <guid>http://huaien.me/technology/no-enough-memory-to-make-php/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;前面一篇我们介绍了&lt;a href=&#34;https://huaien.me/article/backend/bt-panel-install-fileinfo-for-php/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;宝塔面板的PHP默认不安装fileinfo组件，需要手动编译安装&lt;/a&gt;。在php5.6上是没有出现问题，但是在编译php7.1的版本的&lt;code&gt;make &amp;amp;&amp;amp; make install&lt;/code&gt;这一步出现错误，提示：&lt;/p&gt;</description>
@@ -127,10 +127,10 @@
     
     <item>
       <title>AWS用ec2-user用户来更改root密码并使用root用户</title>
-      <link>https://example.com/technology/change-password-for-root-on-aws-ec2/</link>
+      <link>http://huaien.me/technology/change-password-for-root-on-aws-ec2/</link>
       <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/change-password-for-root-on-aws-ec2/</guid>
+      <guid>http://huaien.me/technology/change-password-for-root-on-aws-ec2/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;AWS的EC2在创建实例后，默认是使用ec2-user用户加密钥文件来登录ssh，使用AWS默认的EC2账户登录服务器后，用户权限收到很大的限制，有些目录无法访问，需要切换到root账户下工作。&lt;/p&gt;</description>
@@ -138,10 +138,10 @@
     
     <item>
       <title>正确使用AMP 让Google找到你的AMP页面</title>
-      <link>https://example.com/technology/let-google-find-your-amp/</link>
+      <link>http://huaien.me/technology/let-google-find-your-amp/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/let-google-find-your-amp/</guid>
+      <guid>http://huaien.me/technology/let-google-find-your-amp/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在用Hexo的&lt;a href=&#34;https://github.com/tea3/hexo-generator-amp&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo-generator-amp&lt;/a&gt;插件后，发现并没有被收录AMP页面。
@@ -150,10 +150,10 @@
     
     <item>
       <title>32位Linux系统的node_modules文件夹移到64位系统下报错</title>
-      <link>https://example.com/technology/unable-to-use-nodejs-on-64-bit-os/</link>
+      <link>http://huaien.me/technology/unable-to-use-nodejs-on-64-bit-os/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/unable-to-use-nodejs-on-64-bit-os/</guid>
+      <guid>http://huaien.me/technology/unable-to-use-nodejs-on-64-bit-os/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;把Hexo博客源码整个从32位的Linux系统搬到64位系统下，本来还没发现32位和64位，直到执行hexo clean的时候提示错误才发现。node_modules文件夹的指定模块报错。&lt;/p&gt;</description>
@@ -161,28 +161,28 @@
     
     <item>
       <title>Git学习相关资料整理</title>
-      <link>https://example.com/technology/git-learning-sheet/</link>
+      <link>http://huaien.me/technology/git-learning-sheet/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/git-learning-sheet/</guid>
+      <guid>http://huaien.me/technology/git-learning-sheet/</guid>
       <description>&lt;p&gt;部分电子书已经收录到仓库中，可以在这里查看到：&lt;a href=&#34;https://down.huaien.me/00.%E7%94%B5%E5%AD%90%E4%B9%A6_Ebook/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;电子书仓库&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux安装nvm后无法使用nvm安装node</title>
-      <link>https://example.com/technology/not-able-to-install-nodejs-by-nvm/</link>
+      <link>http://huaien.me/technology/not-able-to-install-nodejs-by-nvm/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/not-able-to-install-nodejs-by-nvm/</guid>
+      <guid>http://huaien.me/technology/not-able-to-install-nodejs-by-nvm/</guid>
       <description>&lt;p&gt;今天在给服务器安装nvm的时候出现无法安装node的错误，查询了网上资料，可以通过修改bash_profile来解决。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>多平台维护Hexo提示node_modules错误问题</title>
-      <link>https://example.com/technology/hexo-for-multiple-platform-error/</link>
+      <link>http://huaien.me/technology/hexo-for-multiple-platform-error/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/hexo-for-multiple-platform-error/</guid>
+      <guid>http://huaien.me/technology/hexo-for-multiple-platform-error/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在将Hexo在多个平台之间移动，配置，使用的时候会遇到组件问题，如下面，在原平台可以正常使用。但是移动到新的64位Linux系统后各种错误。大部分是因为node组件没有安装好的原因。&lt;/p&gt;</description>
@@ -190,10 +190,10 @@
     
     <item>
       <title>linux下删除某个文件之外的其他所有文件的命令之extglob模式</title>
-      <link>https://example.com/technology/remove-all-except-this-file-linux-command/</link>
+      <link>http://huaien.me/technology/remove-all-except-this-file-linux-command/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/remove-all-except-this-file-linux-command/</guid>
+      <guid>http://huaien.me/technology/remove-all-except-this-file-linux-command/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;比如最近我在备份Hexo的时候，多次需要调试效果，因为有备份一个文件夹叫hexo.zip，把这个传到服务器的网站根目录下，然后将其解压。但是之后再重建Hexo的时候需要将目录下所有文件除了hexo.zip都删除的时候，不能只用到简单的rm命令了。&lt;/p&gt;</description>
@@ -201,10 +201,10 @@
     
     <item>
       <title>给托管在Coding Pages上的博客开启HTTPS支持 申请失败的原因</title>
-      <link>https://example.com/technology/enable-https-on-coding-pages/</link>
+      <link>http://huaien.me/technology/enable-https-on-coding-pages/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/enable-https-on-coding-pages/</guid>
+      <guid>http://huaien.me/technology/enable-https-on-coding-pages/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;前两天将&lt;a href=&#34;http://blog.huaien.me/article/blogengine/how-to-backup-hexo-to-github/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;博客同时托管到GitHub Pages和Coding Pages，并备份到这两个平台&lt;/a&gt;。
@@ -213,19 +213,19 @@
     
     <item>
       <title>Linux打包压缩目录中的隐藏文件命令</title>
-      <link>https://example.com/technology/linux-tar-zcvf-command-of-invisible-file/</link>
+      <link>http://huaien.me/technology/linux-tar-zcvf-command-of-invisible-file/</link>
       <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/linux-tar-zcvf-command-of-invisible-file/</guid>
+      <guid>http://huaien.me/technology/linux-tar-zcvf-command-of-invisible-file/</guid>
       <description>&lt;p&gt;今天需要打包Hexo源码文件夹下面的所有文件，但是如果直接使用普通的打包命令不会将包括隐藏的文件或文件夹一起打包，所以得搜索了下，可以用下面的命令来打包。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Windows,Linux多平台下共同维护Hexo 备份Hexo到GitHub</title>
-      <link>https://example.com/technology/how-to-backup-hexo-to-github/</link>
+      <link>http://huaien.me/technology/how-to-backup-hexo-to-github/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/how-to-backup-hexo-to-github/</guid>
+      <guid>http://huaien.me/technology/how-to-backup-hexo-to-github/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;因为经常需要在不同的操作系统上工作，所以需要在每个平台下都可以方便的写博客。&lt;/p&gt;
@@ -239,20 +239,20 @@
     
     <item>
       <title>git push远程版本和本地版本冲突时强制覆盖已有的分支有的分支</title>
-      <link>https://example.com/technology/git-commit-push-rejected-error/</link>
+      <link>http://huaien.me/technology/git-commit-push-rejected-error/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/git-commit-push-rejected-error/</guid>
+      <guid>http://huaien.me/technology/git-commit-push-rejected-error/</guid>
       <description>&lt;p&gt;前面我们讲到&lt;a href=&#34;https://huaien.me/article/blogengine/how-to-backup-hexo-to-github/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;备份 Hexo 源码文件到GitHub仓库&lt;/a&gt;
 在尝试将本地hexo源码文件同步到GitHub仓库的hexo分支的时候，执行&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>修改Directory Lister的字体为小夜美化版并将字体本地化</title>
-      <link>https://example.com/technology/make-directory-lister-more-beautiful/</link>
+      <link>http://huaien.me/technology/make-directory-lister-more-beautiful/</link>
       <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/make-directory-lister-more-beautiful/</guid>
+      <guid>http://huaien.me/technology/make-directory-lister-more-beautiful/</guid>
       <description>&lt;p&gt;前一段时间，在&lt;a href=&#34;https://www.moerats.com/archives/547/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Rat&amp;rsquo;s Blog&lt;/a&gt;上看到了小夜大佬Directory Lister美化修改版，但是发现网上下载下来的美化版都和小夜大佬的字体不一样。&lt;/p&gt;
 
 &lt;p&gt;自己安装好后是这样的&lt;/p&gt;</description>
@@ -260,10 +260,10 @@
     
     <item>
       <title>如何修改h5ai右上角的版权信息powered by h5ai</title>
-      <link>https://example.com/technology/modify-h5ai-copyright/</link>
+      <link>http://huaien.me/technology/modify-h5ai-copyright/</link>
       <pubDate>Sun, 29 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/modify-h5ai-copyright/</guid>
+      <guid>http://huaien.me/technology/modify-h5ai-copyright/</guid>
       <description>&lt;h2 id=&#34;关于h5ai&#34;&gt;关于h5ai&lt;/h2&gt;
 
 &lt;p&gt;前面我们说到了h5ai这款德国开发者开发的强大的PHP文件目录程序。在折腾这款程序的时候有一些地方一直搞不明白。比如今天要说的如何修改右上角版权信息Powered by h5ai。&lt;/p&gt;</description>
@@ -271,19 +271,19 @@
     
     <item>
       <title>利用Caddy来搭建可挂载的WebDAV个人网盘&#43;配合FileBrowser来管理文件</title>
-      <link>https://example.com/technology/use-caddy-to-build-webdav-server/</link>
+      <link>http://huaien.me/technology/use-caddy-to-build-webdav-server/</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/use-caddy-to-build-webdav-server/</guid>
+      <guid>http://huaien.me/technology/use-caddy-to-build-webdav-server/</guid>
       <description>&lt;p&gt;前面我们讲到了&lt;a href=&#34;https://huaien.me/article/backend/caddy-a-light-http-server/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy&lt;/a&gt;以及用&lt;a href=&#34;https://huaien.me/article/backend/use-caddy-to-run-site/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy搭建网站&lt;/a&gt;还有用&lt;a href=&#34;https://huaien.me/article/backend/use-caddy-filemanager-to-build-personal-netdisk/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy的File Manager来搭建个人网盘&lt;/a&gt;。今天我们要讲的用Caddy的WebDav扩展组件来搭建一个Webdav服务器。并且配合Caddy的FileManager扩展组件来在线管理WebDav服务器的文件。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>利用Caddy的Filemanager插件搭建个人网盘教程</title>
-      <link>https://example.com/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
+      <link>http://huaien.me/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
+      <guid>http://huaien.me/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
       <description>前面我们了解了Caddy是一个极简HTTP服务器，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Caddy帮你自动生成Let&amp;rsquo;s Encrypt的免费证书，简单的配置就能搭建好一个HTTPS的Web服务器环境。
 其实Caddy自带的Filemanager插件可以直接用来搭建一个个人网盘，而且支持的功能还挺多，界面还挺好看。 
 认识一下File Manager 看上面的动图可以看到用Filemanager可以很方便的在线管理文件。
@@ -296,37 +296,37 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
     
     <item>
       <title>利用Caddy来搭建网站之Caddy配置文件教程</title>
-      <link>https://example.com/technology/use-caddy-to-run-site/</link>
+      <link>http://huaien.me/technology/use-caddy-to-run-site/</link>
       <pubDate>Thu, 19 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/use-caddy-to-run-site/</guid>
+      <guid>http://huaien.me/technology/use-caddy-to-run-site/</guid>
       <description>&lt;p&gt;前面我们了解了&lt;a href=&#34;https://huaien.me/article/backend/caddy-a-light-http-server/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy是一个极简HTTP服务器&lt;/a&gt;，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Caddy帮你自动生成Let&amp;rsquo;s Encrypt的免费证书，简单的配置就能搭建好一个HTTPS的Web服务器环境。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Caddy一个轻量的Go语言HTTP服务器的一键安装脚本教程</title>
-      <link>https://example.com/technology/caddy-a-light-http-server/</link>
+      <link>http://huaien.me/technology/caddy-a-light-http-server/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/caddy-a-light-http-server/</guid>
+      <guid>http://huaien.me/technology/caddy-a-light-http-server/</guid>
       <description>&lt;p&gt;最近在逛逗比根据地的时候发现了这个用Golang写的极简HTTP WEB Server，叫&lt;a href=&#34;https://doub.io/shell-jc1/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy&lt;/a&gt;，上网查了其实好多博客都写了关于这个。于是就想用闲置的服务器折腾试试。但是毕竟是折腾，过程中还是遇到挺多问题。这里就简单记录一下。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>解决Deepin深度系统下没有无线网络选项之安装驱动</title>
-      <link>https://example.com/technology/fix-no-wifi-on-deepin-os/</link>
+      <link>http://huaien.me/technology/fix-no-wifi-on-deepin-os/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/fix-no-wifi-on-deepin-os/</guid>
+      <guid>http://huaien.me/technology/fix-no-wifi-on-deepin-os/</guid>
       <description>&lt;p&gt;前两天装了Deepin 深度系统。在查询Linux资料的时候被安利了。深度系统是国内最大的国产系统，由于其界面优美，符合国人使用习惯。下面摘了维基百科的词条：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ubuntu修改时区的简单方法-以修改UTC为JST为例</title>
-      <link>https://example.com/technology/change-timezone-for-unbuntu/</link>
+      <link>http://huaien.me/technology/change-timezone-for-unbuntu/</link>
       <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/change-timezone-for-unbuntu/</guid>
+      <guid>http://huaien.me/technology/change-timezone-for-unbuntu/</guid>
       <description>&lt;p&gt;今天公司给了个课题，让我们查看AWS上的所有服务器是不是JST时区时间。
 如果不是就需要修改为JST。
 先用&lt;code&gt;date&lt;/code&gt;命令来查看当前设置的时区。
@@ -336,10 +336,10 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
     
     <item>
       <title>クラウドサービス企業ノAWSとその他の企業Azure　GCP　IBM　CLOUDなどの比較</title>
-      <link>https://example.com/technology/difference-of-iaas-saas-paas/</link>
+      <link>http://huaien.me/technology/difference-of-iaas-saas-paas/</link>
       <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/difference-of-iaas-saas-paas/</guid>
+      <guid>http://huaien.me/technology/difference-of-iaas-saas-paas/</guid>
       <description>&lt;p&gt;今回は課題としてクラウドサービスの現状を調べました。今後閲覧しやいために、ここでまとめました。&lt;/p&gt;
 
 &lt;h1 id=&#34;クラウドとは&#34;&gt;クラウドとは&lt;/h1&gt;
@@ -351,10 +351,10 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
     
     <item>
       <title>开启HTTPS后WordPress后台wp-admin提示ERR_TOO_MANY_REDIRECTS</title>
-      <link>https://example.com/technology/wp_admin_https_unavailable/</link>
+      <link>http://huaien.me/technology/wp_admin_https_unavailable/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/wp_admin_https_unavailable/</guid>
+      <guid>http://huaien.me/technology/wp_admin_https_unavailable/</guid>
       <description>&lt;p&gt;今天打开Hanayao博客，访问后台&lt;code&gt;wp-admin&lt;/code&gt;发现提示 &lt;code&gt;ERR_TOO_MANY_REDIRECTS&lt;/code&gt;
 于是查询了下解决方法，参考了&lt;a href=&#34;https://www.tongfu.info/solve-wordpress-wp-admin-https-redirect-loop/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;同富&lt;/a&gt;的文章，发现可以解决。特记录下来。
 在wp-config.php文件下增加了以下几行就可以。&lt;/p&gt;</description>
@@ -362,10 +362,10 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
     
     <item>
       <title>开启HTTPS后WordPress后台wp-admin登录后：显示抱歉，您不能访问此页面</title>
-      <link>https://example.com/technology/wp_admin_https_sorry_cannot_reach/</link>
+      <link>http://huaien.me/technology/wp_admin_https_sorry_cannot_reach/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/wp_admin_https_sorry_cannot_reach/</guid>
+      <guid>http://huaien.me/technology/wp_admin_https_sorry_cannot_reach/</guid>
       <description>&lt;p&gt;之前提到Hanayao博客，开启HTTPS后访问后台&lt;code&gt;wp-admin&lt;/code&gt;提示 &lt;code&gt;ERR_TOO_MANY_REDIRECTS&lt;/code&gt;过多次重定向的&lt;a href=&#34;https://huaien.me/2018/06/05/wp_admin_https_unavailable/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;解决办法&lt;/a&gt;
 但是解决多次重定向的问题后，登陆账号后又显示“抱歉，您不能访问此页面。”的提示
 经过查询，下面两部可以解决这个问题。&lt;/p&gt;</description>
@@ -373,10 +373,10 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
     
     <item>
       <title>解决32系统无法安装bt宝塔服务器面板</title>
-      <link>https://example.com/technology/install-bt-panel-on-32-bit-os/</link>
+      <link>http://huaien.me/technology/install-bt-panel-on-32-bit-os/</link>
       <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/install-bt-panel-on-32-bit-os/</guid>
+      <guid>http://huaien.me/technology/install-bt-panel-on-32-bit-os/</guid>
       <description>&lt;h2 id=&#34;bt&#34;&gt;bt&lt;/h2&gt;
 
 &lt;p&gt;前段时间把VPS重装系统为debian的32位，因为内存只有512M，还是用32位比较省资源。
@@ -385,19 +385,19 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
     
     <item>
       <title>添加SSL后Nginx的https伪静态配置多次不成功</title>
-      <link>https://example.com/technology/nginx-conf-after-ssl/</link>
+      <link>http://huaien.me/technology/nginx-conf-after-ssl/</link>
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/nginx-conf-after-ssl/</guid>
+      <guid>http://huaien.me/technology/nginx-conf-after-ssl/</guid>
       <description>&lt;p&gt;前两天给&lt;a href=&#34;http://www.hanayao.com&#34; title=&#34;HanaYao博客&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;HanaYao博客&lt;/a&gt;添加了SSL证书。但是经过多次测试，会出现访问带www的域名就会显示Nginx默认页面，或者是404 。多次修改伪静态配置后也还是会出现带www和不带www域名访问出现问题，或者就是进入后台会出现404。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>删除与卸载Debian8的Apache2</title>
-      <link>https://example.com/technology/uninstall-apache20-on-debian8/</link>
+      <link>http://huaien.me/technology/uninstall-apache20-on-debian8/</link>
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/uninstall-apache20-on-debian8/</guid>
+      <guid>http://huaien.me/technology/uninstall-apache20-on-debian8/</guid>
       <description>参考源：Linux Tips 由于某些主机提供商在重装系统后系统自带apache2，但是我用不到，一直用的nginx。如果不卸载会导致端口冲突等问题。 所以上网查询了下卸载apache2的资料。  Uninstall and Remove Apache2 on Debian 8
 We are going to uninstall and remove Apache2 from our Debian system.
 First we have to stop any running instance of Apache2, because Apache2 will not be properly removed while it is running.
@@ -408,20 +408,20 @@ apt-get purge apache2 apache2-utils apache2.</description>
     
     <item>
       <title>typecho发表评论需要发送两次才成功的解决方案</title>
-      <link>https://example.com/technology/need-to-click-twice-to-submit-comment-on-typecho/</link>
+      <link>http://huaien.me/technology/need-to-click-twice-to-submit-comment-on-typecho/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/need-to-click-twice-to-submit-comment-on-typecho/</guid>
+      <guid>http://huaien.me/technology/need-to-click-twice-to-submit-comment-on-typecho/</guid>
       <description>&lt;p&gt;最近发现typecho发表评论需要发送两次才会成功发送出去，网上查询了下资料，好像把&lt;strong&gt;&lt;em&gt;后台设置里面的开启反垃圾评论选项关闭&lt;/em&gt;&lt;/strong&gt;就可以解决问题。
 原来typecho的反垃圾就是通过用户发送两次评论来实现。。。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>typecho文章评论带表情就database query error</title>
-      <link>https://example.com/technology/comment-with-emoji-shows-datebase-error-on-typecho/</link>
+      <link>http://huaien.me/technology/comment-with-emoji-shows-datebase-error-on-typecho/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/comment-with-emoji-shows-datebase-error-on-typecho/</guid>
+      <guid>http://huaien.me/technology/comment-with-emoji-shows-datebase-error-on-typecho/</guid>
       <description>&lt;p&gt;前几天开了童童的博客，但是在发布文章经常出现错误。老婆说发不出去。发给我的截图显示错误为&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -434,10 +434,10 @@ apt-get purge apache2 apache2-utils apache2.</description>
     
     <item>
       <title>CSS学习笔记</title>
-      <link>https://example.com/technology/css-study-note/</link>
+      <link>http://huaien.me/technology/css-study-note/</link>
       <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/css-study-note/</guid>
+      <guid>http://huaien.me/technology/css-study-note/</guid>
       <description>&lt;p&gt;CSS样式的三种方式&lt;/p&gt;
 
 &lt;ol&gt;
@@ -454,10 +454,10 @@ apt-get purge apache2 apache2-utils apache2.</description>
     
     <item>
       <title>typecho博客程序上传后缀为大写JPG附件失败的解决办法</title>
-      <link>https://example.com/technology/typecho-upload-jpg-image/</link>
+      <link>http://huaien.me/technology/typecho-upload-jpg-image/</link>
       <pubDate>Mon, 19 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/typecho-upload-jpg-image/</guid>
+      <guid>http://huaien.me/technology/typecho-upload-jpg-image/</guid>
       <description>昨天安装了Typecho 1.0 (14.10.10)，是官网最新的正式版，但是调试中遇到一个问题，就是上传照片的时候会出现不能上传，后来试来试去发现是后缀扩展名为大写的图片不能支持。比如JPG,PNG等，这些是最新ios拍照自动使用大写后缀。但是ios系统又不支持修改文件名，所以导致博客不能用ios系统来上传附件。后来网上找了好久资料，才看到Web Designer有解决方法，这里谢谢他发出来。具体需要修改两个文件，以下摘自Web Designer
   将var/Widget/Options/General.php 文件修改如下：
  $getText = new Typecho_I18n_GetText($file);  改成下面一句
@@ -468,28 +468,28 @@ return isset($info[&#39;extension&#39;]) ? strtolower($info[&#39;extension&#39;]
     
     <item>
       <title>折腾静态博客程序之Hugo部署到Github Pages搭建个人博客</title>
-      <link>https://example.com/technology/using-hugo-to-build-blog/</link>
+      <link>http://huaien.me/technology/using-hugo-to-build-blog/</link>
       <pubDate>Sun, 15 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/using-hugo-to-build-blog/</guid>
+      <guid>http://huaien.me/technology/using-hugo-to-build-blog/</guid>
       <description>&lt;p&gt;最近在浏览许多人博客时候，发现了静态博客程序这种东西。是因为看到&lt;a href=&#34;http://notes.iissnan.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;IIssNan&lt;/a&gt;这位大神的博客主题非常好看，之前用的博客程序都是wordpress或者typecho，这个主题让人眼前一亮。动态效果很好看。但是看到底部信息，发现是用&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;程序搭建的。于是就搜索了&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;相关信息，才知道静态博客程序这个东西，&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;是用Node.js语言，因为之前有看到过ghost&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>开启Nginx的目录文件列表功能-让Nginx显示文件列表</title>
-      <link>https://example.com/technology/let-nginx-show-file-list/</link>
+      <link>http://huaien.me/technology/let-nginx-show-file-list/</link>
       <pubDate>Thu, 24 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/let-nginx-show-file-list/</guid>
+      <guid>http://huaien.me/technology/let-nginx-show-file-list/</guid>
       <description>&lt;p&gt;今天在hostloc上看到以为朋友xtmp 请教&lt;a href=&#34;http://soft.vpser.net/是如何实现的，可以显示文件列表，因为http://soft.vpser.net/用的是nginx&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://soft.vpser.net/是如何实现的，可以显示文件列表，因为http://soft.vpser.net/用的是nginx&lt;/a&gt; 作为webserver的，但是 nginx默认是不允许列出整个目录的，所以看到版主咯拉无米推荐的方法&lt;a href=&#34;http://www.hostloc.com/thread-21478-1-4.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.hostloc.com/thread-21478-1-4.html&lt;/a&gt; 帖子里美国VPS给出一个ctohome的详细教程，下面转自 ctohome&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Byte与Bit有什么区别</title>
-      <link>https://example.com/technology/difference-byte-bit/</link>
+      <link>http://huaien.me/technology/difference-byte-bit/</link>
       <pubDate>Sun, 20 Mar 2011 17:39:31 +0000</pubDate>
       
-      <guid>https://example.com/technology/difference-byte-bit/</guid>
+      <guid>http://huaien.me/technology/difference-byte-bit/</guid>
       <description>&lt;p&gt;在工作中遇到一些概念模糊的地方, 特此转载来以供查询。
 bit意为“位”或“比特”，是计算机运算的基础；
 byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&gt;</description>
@@ -497,56 +497,56 @@ byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&
     
     <item>
       <title>Wordpress无法编辑更新文章之解决方案</title>
-      <link>https://example.com/technology/wordpress-mod-security/</link>
+      <link>http://huaien.me/technology/wordpress-mod-security/</link>
       <pubDate>Mon, 07 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/wordpress-mod-security/</guid>
+      <guid>http://huaien.me/technology/wordpress-mod-security/</guid>
       <description>&lt;p&gt;前天锅烧网出现一个异常，可以添加新文章，但是无法更新和编辑文章，点击更新那个按钮后出现错误提示&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LNMP环境下typecho无法登录后台解决方案</title>
-      <link>https://example.com/technology/lnmp-typecho-login-error/</link>
+      <link>http://huaien.me/technology/lnmp-typecho-login-error/</link>
       <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/lnmp-typecho-login-error/</guid>
+      <guid>http://huaien.me/technology/lnmp-typecho-login-error/</guid>
       <description>&lt;p&gt;&lt;strong&gt;感谢&lt;a href=&#34;http://www.vpsmm.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;小夜&lt;/a&gt;提供帮助。&lt;/strong&gt;
 &amp;gt; 出现的问题：liccess的lnmp0.6 搭建好后安装了typecho后，只有首页可以访问，其他页面都不能访问，后台登录界面可以看到，但是登录后无法访问。官方有解决方案但是我按照那还是解决不了&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>忘记Imagevue的登录信息的解决方案</title>
-      <link>https://example.com/technology/forgot-imagevue-login-information/</link>
+      <link>http://huaien.me/technology/forgot-imagevue-login-information/</link>
       <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/forgot-imagevue-login-information/</guid>
+      <guid>http://huaien.me/technology/forgot-imagevue-login-information/</guid>
       <description>&lt;p&gt;今天想要登录下&lt;a href=&#34;http://www.guosao.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;锅烧网媒体库&lt;/a&gt;，但好像登录的用户名密码都不正确，无法正常登录，所以在网上找了找，看到zfreet.com的一个教程，现在分享下方法。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LNMP下给已存在的虚拟机添加伪静态规则</title>
-      <link>https://example.com/technology/lnmp-conf-rules/</link>
+      <link>http://huaien.me/technology/lnmp-conf-rules/</link>
       <pubDate>Fri, 04 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/lnmp-conf-rules/</guid>
+      <guid>http://huaien.me/technology/lnmp-conf-rules/</guid>
       <description>&lt;p&gt;使用军哥的LNMP，在添加虚拟机的时候没有添加伪静态，但是后来真正使用程序的时候需要伪静态，所以想给已经存在的虚拟主机添加伪静态跪着，由于Apache开启伪静态支持后可以直接修改.htaccess文件就行，但是nginx需要新建一个例如名字为example.conf文件，编辑该文件，把伪静态规则输入进去（注意htaccess的伪静态规则需转成nginx的conf规则才行）然后，在/usr/local/nginx/conf/vhost下编辑 域名.conf文件，得到类似&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>myqq3.19.zip 折腾VPS挂QQ 教程</title>
-      <link>https://example.com/technology/hang-qq-on-vps/</link>
+      <link>http://huaien.me/technology/hang-qq-on-vps/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/hang-qq-on-vps/</guid>
+      <guid>http://huaien.me/technology/hang-qq-on-vps/</guid>
       <description>&lt;p&gt;这文章是转自&lt;a href=&#34;http://bynai.com/archives/528/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://bynai.com/archives/528/&lt;/a&gt; 的  hostloc 上weishimi的&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Wordpress引用优酷无广告版</title>
-      <link>https://example.com/technology/youku-noads-wordpress/</link>
+      <link>http://huaien.me/technology/youku-noads-wordpress/</link>
       <pubDate>Wed, 08 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/youku-noads-wordpress/</guid>
+      <guid>http://huaien.me/technology/youku-noads-wordpress/</guid>
       <description>在引用时,把优酷的flash地址,替换下边的视频flash地址
 [html]&amp;lt;embed type=&amp;quot;application/x-shockwave-flash&amp;quot; src=&amp;quot;视频flash地址&amp;quot;d=&amp;quot;movie_player&amp;quot;name=&amp;quot;movie_player&amp;quot;bgcolor=&amp;quot;#000000&amp;quot;quality=&amp;quot;high&amp;quot;allowfullscreen=&amp;quot;true&amp;quot;flashvars=&amp;quot;isShowRelatedVideo=false&amp;amp;showAd=0&amp;amp;show_pre=1&amp;amp;show_next=1&amp;amp;isAutoPlay=false&amp;amp;isDebug=false&amp;amp;UserID=&amp;amp;winType=interior&amp;amp;playMovie=true&amp;amp;MMControl=false&amp;amp;MMout=false&amp;amp;RecordCode=1001,1002,1003,1004,1005,1006,2001,3001,3002,3003,3004,3005,3007,3008,9999&amp;quot;pluginspage=&amp;quot;http://www.macromedia.com/go/getflashplayer&amp;quot;width=&amp;quot;480&amp;quot; height=&amp;quot;400&amp;quot;&amp;gt;&amp;lt;/embed&amp;gt;[/html]
 然后粘贴在WordPress中 转自：Deloz</description>
@@ -554,10 +554,10 @@ byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&
     
     <item>
       <title>代码高亮插件SyntaxHighlighter Evolved</title>
-      <link>https://example.com/technology/code-highlighter-wordpress-plugin/</link>
+      <link>http://huaien.me/technology/code-highlighter-wordpress-plugin/</link>
       <pubDate>Tue, 23 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/code-highlighter-wordpress-plugin/</guid>
+      <guid>http://huaien.me/technology/code-highlighter-wordpress-plugin/</guid>
       <description>&lt;p&gt;使用方法：&lt;/p&gt;
 
 &lt;p&gt;1.上传插件到 wp-contents/plugins 文件夹并在博客后台启用——————废话啊。。。。&lt;/p&gt;
@@ -567,10 +567,10 @@ byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&
     
     <item>
       <title>WordPress手机适配插件WPtouch</title>
-      <link>https://example.com/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</link>
+      <link>http://huaien.me/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</link>
       <pubDate>Sun, 21 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</guid>
+      <guid>http://huaien.me/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</guid>
       <description>该插件可以让你的wordpress网站在iPhone手机或者android系统上显示的更加美观，功能更加强大，有很好的界面体验。 图片将再下次贴出
 安装使用方法：
 直接在后台搜索WPtouch，可以在线安装或者直接点此进入官方下载。
@@ -582,10 +582,10 @@ WPtouch具有更漂亮的模板，就像名字所说touch，该插件在iPhone i
     
     <item>
       <title>配置.htaccess来实现301重定向（旧域名指向新域名）</title>
-      <link>https://example.com/technology/use-htaccess-301-redirect/</link>
+      <link>http://huaien.me/technology/use-htaccess-301-redirect/</link>
       <pubDate>Sat, 20 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/use-htaccess-301-redirect/</guid>
+      <guid>http://huaien.me/technology/use-htaccess-301-redirect/</guid>
       <description>&lt;p&gt;换了域名，为了访问旧域名的访客引导到新域名上，要使用301重定向。&lt;/p&gt;
 
 &lt;p&gt;最后在网上找到这么一个方法，可以通过 .htaccess 来实现 301 重定向，原文如下：&lt;/p&gt;</description>
@@ -593,39 +593,39 @@ WPtouch具有更漂亮的模板，就像名字所说touch，该插件在iPhone i
     
     <item>
       <title>如何修改WordPress头像</title>
-      <link>https://example.com/technology/modify-your-head-is-more-prominent-personality/</link>
+      <link>http://huaien.me/technology/modify-your-head-is-more-prominent-personality/</link>
       <pubDate>Sun, 29 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/modify-your-head-is-more-prominent-personality/</guid>
+      <guid>http://huaien.me/technology/modify-your-head-is-more-prominent-personality/</guid>
       <description>&lt;p&gt;有些人刚接触像IMYIA的网站，都会有一个疑问，就是 评论的后显示的头像是哪里的？怎么来的？
 这里告诉大家，麦芽使用的wordpress程序搭建的网站，评论的头像是由Gravatar支持的。我也不会表达下面转一段比较清楚的：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>WordPress插件ShadowBoxJS幻灯片</title>
-      <link>https://example.com/technology/shadowbox-wordpress-plugin/</link>
+      <link>http://huaien.me/technology/shadowbox-wordpress-plugin/</link>
       <pubDate>Wed, 04 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/shadowbox-wordpress-plugin/</guid>
+      <guid>http://huaien.me/technology/shadowbox-wordpress-plugin/</guid>
       <description>&lt;p&gt;wordpress之所以强大就是因为它有很多插件做后盾，多彩丰富的博客都是我们所希望的，幻灯片插件那么就是必不可少的了，Shadowbox JS就一款不错的幻灯片插件，除了一般的图片效果外，它还支持图片的裁剪、拖动、多媒体播放等功能。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>关于WordPress后台只显示一个主题的问题</title>
-      <link>https://example.com/technology/wordpress-only-one-theme/</link>
+      <link>http://huaien.me/technology/wordpress-only-one-theme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/wordpress-only-one-theme/</guid>
+      <guid>http://huaien.me/technology/wordpress-only-one-theme/</guid>
       <description>&lt;p&gt;今天给Hanayao博客配置了SSL证书，但是发现前台还是不会显示安全。但是在wordpress后台登录界面却可以显示安全标识。于是进了Hanayao博客后台，想换个主题试试。因为可能是使用的情侣博客主题并不是很完善，导致页面有漏洞。但是却发现后台只能看到一个主题。不过可以安装新的主题，但是安装后也是只显示最新安装的主题。
 于是查询了下资料，发现是&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>用Linux系统搭建Web环境做网站网站FTP权限问题</title>
-      <link>https://example.com/technology/linux-ftp-permission/</link>
+      <link>http://huaien.me/technology/linux-ftp-permission/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/linux-ftp-permission/</guid>
+      <guid>http://huaien.me/technology/linux-ftp-permission/</guid>
       <description>&lt;p&gt;在搬瓦工的VPS上，wordpress的主题或者插件无法直接在后台安装与修改。会弹出ftp设置。
 导致这一问题，一个是需要修改wordpress的主题和插件的文件夹的权限为777。&lt;/p&gt;</description>
     </item>

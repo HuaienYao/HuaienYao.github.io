@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>图床 on LeaveIt</title>
-    <link>https://example.com/tags/%E5%9B%BE%E5%BA%8A/</link>
-    <description>Recent content in 图床 on LeaveIt</description>
+    <title>图床 on Wyane&#39;s Blog</title>
+    <link>http://huaien.me/tags/%E5%9B%BE%E5%BA%8A/</link>
+    <description>Recent content in 图床 on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Sun, 06 Mar 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://huaien.me/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>忘记Imagevue的登录信息的解决方案</title>
-      <link>https://example.com/technology/forgot-imagevue-login-information/</link>
+      <link>http://huaien.me/technology/forgot-imagevue-login-information/</link>
       <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/forgot-imagevue-login-information/</guid>
+      <guid>http://huaien.me/technology/forgot-imagevue-login-information/</guid>
       <description>&lt;p&gt;今天想要登录下&lt;a href=&#34;http://www.guosao.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;锅烧网媒体库&lt;/a&gt;，但好像登录的用户名密码都不正确，无法正常登录，所以在网上找了找，看到zfreet.com的一个教程，现在分享下方法。&lt;/p&gt;</description>
     </item>
     
