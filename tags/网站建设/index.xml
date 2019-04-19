@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>网站建设 on LeaveIt</title>
-    <link>https://example.com/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</link>
-    <description>Recent content in 网站建设 on LeaveIt</description>
+    <title>网站建设 on Wyane&#39;s Blog</title>
+    <link>http://huaien.me/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</link>
+    <description>Recent content in 网站建设 on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Wed, 08 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://huaien.me/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>正确使用AMP 让Google找到你的AMP页面</title>
-      <link>https://example.com/technology/let-google-find-your-amp/</link>
+      <link>http://huaien.me/technology/let-google-find-your-amp/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/technology/let-google-find-your-amp/</guid>
+      <guid>http://huaien.me/technology/let-google-find-your-amp/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在用Hexo的&lt;a href=&#34;https://github.com/tea3/hexo-generator-amp&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo-generator-amp&lt;/a&gt;插件后，发现并没有被收录AMP页面。
@@ -25,10 +25,10 @@
     
     <item>
       <title>锅烧网搬家出现问题</title>
-      <link>https://example.com/life/guosao-transport-problem/</link>
+      <link>http://huaien.me/life/guosao-transport-problem/</link>
       <pubDate>Mon, 29 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/life/guosao-transport-problem/</guid>
+      <guid>http://huaien.me/life/guosao-transport-problem/</guid>
       <description>&lt;p&gt;前面说购买了Backy LLC 的主机，于是将锅烧网搬到该主机上，但是由于域名解析的问题，网站暂时无法访问，正在解决中。&lt;/p&gt;</description>
     </item>
     
