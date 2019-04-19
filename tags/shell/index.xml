@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on LeaveIt</title>
+    <link>https://example.com/tags/shell/</link>
+    <description>Recent content in Shell on LeaveIt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>linux下删除某个文件之外的其他所有文件的命令之extglob模式</title>
+      <link>https://example.com/technology/remove-all-except-this-file-linux-command/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/technology/remove-all-except-this-file-linux-command/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;比如最近我在备份Hexo的时候，多次需要调试效果，因为有备份一个文件夹叫hexo.zip，把这个传到服务器的网站根目录下，然后将其解压。但是之后再重建Hexo的时候需要将目录下所有文件除了hexo.zip都删除的时候，不能只用到简单的rm命令了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux打包压缩目录中的隐藏文件命令</title>
+      <link>https://example.com/technology/linux-tar-zcvf-command-of-invisible-file/</link>
+      <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/technology/linux-tar-zcvf-command-of-invisible-file/</guid>
+      <description>&lt;p&gt;今天需要打包Hexo源码文件夹下面的所有文件，但是如果直接使用普通的打包命令不会将包括隐藏的文件或文件夹一起打包，所以得搜索了下，可以用下面的命令来打包。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

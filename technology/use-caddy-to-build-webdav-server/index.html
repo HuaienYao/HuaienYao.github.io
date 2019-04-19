@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Covey.Liu">
+  
+  
+  
+  <link rel="prev" href="https://example.com/technology/use-caddy-filemanager-to-build-personal-netdisk/" />
+  <link rel="next" href="https://example.com/software/compare-some-password-manager/" />
+  <link rel="canonical" href="https://example.com/technology/use-caddy-to-build-webdav-server/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           利用Caddy来搭建可挂载的WebDAV个人网盘&#43;配合FileBrowser来管理文件 | LeaveIt
+       
+  </title>
+  <meta name="title" content="利用Caddy来搭建可挂载的WebDAV个人网盘&#43;配合FileBrowser来管理文件 | LeaveIt">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/example.com"
+    },
+    "articleSection" : "posts",
+    "name" : "利用Caddy来搭建可挂载的WebDAV个人网盘\x2b配合FileBrowser来管理文件",
+    "headline" : "利用Caddy来搭建可挂载的WebDAV个人网盘\x2b配合FileBrowser来管理文件",
+    "description" : "前面我们介绍了Caddy的Filemanager插件，今天介绍一下用Caddy自带的插件来搭建WebDav服务器和用filemanager来管理文件。",
+    "inLanguage" : "en-us",
+    "author" : "Covey.Liu",
+    "creator" : "Covey.Liu",
+    "publisher": "Covey.Liu",
+    "accountablePerson" : "Covey.Liu",
+    "copyrightHolder" : "Covey.Liu",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-07-23 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2018-07-23 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/example.com\/technology\/use-caddy-to-build-webdav-server\/",
+    "wordCount" : "330",
+    "keywords" : [ "Caddy","WebDav网盘","FileBrowser","后端技术", "LeaveIt"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://example.com">LeaveIt</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://example.com">LeaveIt</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">利用Caddy来搭建可挂载的WebDAV个人网盘&#43;配合FileBrowser来管理文件</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://example.com" rel="author">Covey.Liu</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2018-07-23 itemprop="datePublished">July 23, 2018</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://example.com/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>前面我们讲到了<a href="https://huaien.me/article/backend/caddy-a-light-http-server/" rel="nofollow noreferrer" target="_blank">Caddy</a>以及用<a href="https://huaien.me/article/backend/use-caddy-to-run-site/" rel="nofollow noreferrer" target="_blank">Caddy搭建网站</a>还有用<a href="https://huaien.me/article/backend/use-caddy-filemanager-to-build-personal-netdisk/" rel="nofollow noreferrer" target="_blank">Caddy的File Manager来搭建个人网盘</a>。今天我们要讲的用Caddy的WebDav扩展组件来搭建一个Webdav服务器。并且配合Caddy的FileManager扩展组件来在线管理WebDav服务器的文件。</p>
+
+<h2 id="什么是webdav服务器">什么是WebDav服务器</h2>
+
+<p>WebDAV是基于Web的分布式编写和版本控制，是超文本传输协议（HTTP）的扩展，有利于用户间协同编辑和管理存储在万维网服务器文档。WebDAV最重要的特性包括：</p>
+
+<ul>
+<li>锁（防止覆盖）</li>
+<li>特性（创建，移除和查询）</li>
+<li>命名空间管理</li>
+<li>集合（创建，移除和列举资源）</li>
+</ul>
+
+<p>&ndash;来源：维基百科，掘金</p>
+
+<p>有个好处就是可以像普通网盘那样挂载到本地硬盘，然后实现即时同步功能。</p>
+
+<h2 id="我为什么要搭建webdav服务器">我为什么要搭建WebDav服务器？</h2>
+
+<p>其实是因为最近在研究密码管理器，比如<a href="https://keepass.info/" rel="nofollow noreferrer" target="_blank">keepass</a>，<a href="https://1password.com/" rel="nofollow noreferrer" target="_blank">1password</a>，<a href="https://lastpass.com/" rel="nofollow noreferrer" target="_blank">lastpass</a>，<a href="https://www.enpass.io/" rel="nofollow noreferrer" target="_blank">enpass</a>，<a href="https://bitwarden.com/" rel="nofollow noreferrer" target="_blank">bitwarden</a>等等。在使用keepass或者enpass过程中，遇到webdav这个同步选项。在研究后就想自己搭建一个WebDav服务器来同步数据。</p>
+
+<h2 id="利用caddy的webdav扩展组件来搭建webdav服务器">利用Caddy的WebDav扩展组件来搭建WebDav服务器</h2>
+
+<h3 id="安装caddy">安装Caddy</h3>
+
+<p>使用下面的一键安装包来安装Caddy，需要添加的组件是http.filemanager（在线个人网盘），http.webdav（Webdav支持）还有http.cors（这个是在使用KeeWeb连接Webdav时出现网络错误Netword Error的时候需要添加这个）。</p>
+
+<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.filemanager,http.webdav,http.cors
+
+# 如果上面这个脚本无法下载，尝试使用备用下载：
+
+wget -N --no-check-c# 如果上面这个脚本无法下载，尝试使用备用下载：
+ertificate https://softs.loan/Bash/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.filemanager,http.webdav,http.cors
+</code></pre>
+
+<p>具体安装Caddy教程请参考<a href="https://huaien.me/archives/caddy-a-light-http-server-one-click-shell.html" rel="nofollow noreferrer" target="_blank">这里</a></p>
+
+<h3 id="caddy的使用说明及相关路径">Caddy的使用说明及相关路径</h3>
+
+<pre><code>启动：/etc/init.d/caddy start
+
+停止：/etc/init.d/caddy stop
+
+重启：/etc/init.d/caddy restart
+
+查看状态：/etc/init.d/caddy status
+
+查看Caddy启动日志： tail -f /tmp/caddy.log
+
+安装目录：/usr/local/caddy
+
+Caddy配置文件位置：/usr/local/caddy/Caddyfile
+
+Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sites/xxx.xxx(域名)/
+</code></pre>
+
+<h3 id="搭建webdav服务器">搭建WebDav服务器</h3>
+
+<h4 id="修改caddy配置文件">修改Caddy配置文件</h4>
+
+<h5 id="vi方式">vi方式</h5>
+
+<pre><code>vi /usr/local/caddy/Caddyfile
+</code></pre>
+
+<p>按i键进入insert模式
+输入以下内容</p>
+
+<pre><code>dav.yourdomain.com {
+ #申请免费SSL证书
+ tls 你的邮箱
+ #根目录
+ root /usr/local/caddy/www/file/dav
+ #给网站目录添加简单的登录机制（账号admin密码password自行修改）
+ basicauth / admin password
+ timeouts none
+ gzip
+ webdav / {
+  scope /usr/local/caddy/www/file/dav
+  allow /
+ }
+}
+
+</code></pre>
+
+<p>编辑完成按左上角esc键退出insert模式，再按:冒号进入末行模式「Last line mode」，然后输入wq保存退出。</p>
+
+<h5 id="echo方式">echo方式</h5>
+
+<p>*下面的命令为一串命令，需要一次复制粘贴，不能每行分开复制。</p>
+
+<pre><code class="language-shell">echo &quot;dav.yourdomain.com {
+ #申请免费SSL证书
+ tls 你的邮箱
+ #根目录
+ root /usr/local/caddy/www/file/dav
+ #给网站目录添加简单的登录机制（账号admin密码password自行修改）
+ basicauth / admin password
+ timeouts none
+ gzip
+ webdav / {
+  scope /usr/local/caddy/www/file/dav
+  allow /
+ }
+}&quot; &gt; /usr/local/caddy/Caddyfile
+
+</code></pre>
+
+<p>上面的命令是清空覆盖源文件内容替换为新内容，如果要在源文件内容最后追加新内容的话把上面最后一行改为</p>
+
+<pre><code>}&quot; &gt;&gt; /usr/local/caddy/Caddyfile
+</code></pre>
+
+<h4 id="重启caddy">重启Caddy</h4>
+
+<pre><code>/etc/init.d/caddy restart
+</code></pre>
+
+<h4 id="验证搭建成功">验证搭建成功</h4>
+
+<p>然后浏览器进入你的域名 dav.yourdomain.com，应该会出现登录界面，输入前面配置文件设置的用户名admin密码password成功登录后如果出现下面的画面，表示搭建成功。
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2018/07/23/5b557034b6fe9.png" alt="搭建成功的界面" class="lazyload"><figcaption class="image-caption">搭建成功的界面</figcaption></figure></p>
+
+<h2 id="配合filemanager扩展组件使用">配合FileManager扩展组件使用</h2>
+
+<p>其实上一步已经就完成了WebDav的搭建，后来想到如果能用浏览器在线管理WebDav上面的文件就方便多了。
+于是可以结合之前写的<a href="https://huaien.me/archives/use-caddy-filemanager-to-build-personal-netdisk.html" rel="nofollow noreferrer" target="_blank">利用Caddy的Filemanager插件搭建个人网盘教程</a>来完善WebDav的使用。</p>
+
+<p>前面把WebDav服务器的根目录设置为/usr/local/caddy/www/file/dav也是为了下面搭建个人网盘而准备的。</p>
+
+<p>下面我们把FileManager的根目录设置为/usr/local/caddy/www/file，WebDav服务器就成了FileManager里面的一个文件夹。</p>
+
+<p>如图
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2018/07/23/5b557684a6f56.png" alt="在FIleManager搭建的个人网盘里面，可以直接管理刚才搭建的Webdav文件" class="lazyload"><figcaption class="image-caption">在FIleManager搭建的个人网盘里面，可以直接管理刚才搭建的Webdav文件</figcaption></figure></p>
+
+<h3 id="vi方式修改caddy配置文件">vi方式修改Caddy配置文件</h3>
+
+<pre><code>file.example.com {
+ root /usr/local/caddy/www/file
+ timeouts none
+ #这里使用免费SSL证书
+ tls 你的邮箱
+ gzip
+ filemanager / /usr/local/caddy/www/file {
+  database /usr/local/caddy/filemanager.db
+ }
+}
+</code></pre>
+
+<h3 id="echo方式修改caddy配置文件">echo方式修改Caddy配置文件</h3>
+
+<p>因为之前我们已经配置过Caddyfile了，本次就在前面WebDav配置的后面追加FileManager的配置。所以用下面的命令</p>
+
+<pre><code>echo &quot;file.example.com {
+ root /usr/local/caddy/www/file
+ timeouts none
+ #这里使用免费SSL证书
+ tls 你的邮箱
+ gzip
+ filemanager / /usr/local/caddy/www/file {
+  database /usr/local/caddy/filemanager.db
+ }
+}&quot; &gt;&gt; /usr/local/caddy/Caddyfile
+</code></pre>
+
+<h3 id="重启caddy-1">重启Caddy</h3>
+
+<pre><code>/etc/init.d/caddy restart
+</code></pre>
+
+<h2 id="相关问题">相关问题</h2>
+
+<h3 id="配合keeweb使用出现-network-error">配合KeeWeb使用出现&rdquo;Network Error&rdquo;</h3>
+
+<h4 id="需启用http-cors扩展插件">需启用http.cors扩展插件</h4>
+
+<p>查阅了<a href="https://github.com/keeweb/keeweb/wiki/WebDAV-Config" rel="nofollow noreferrer" target="_blank">KeeWeb的官方Wiki</a>后，得知需要启用http.cors扩展插件。<br />
+http.cors扩展插件前面我们已经在安装Caddy的时候安装好了，现在我们只需要在Caddyfile里面的WebDav配置内容加上cors指令。
+下面是完整的配置文件</p>
+
+<pre><code>dav.yourdomain.com {
+ #申请免费SSL证书
+ tls 你的邮箱
+ #根目录
+ root /usr/local/caddy/www/file/dav
+ #给网站目录添加简单的登录机制（账号admin密码password自行修改）
+ basicauth / admin password
+ timeouts none
+ gzip
+ webdav / {
+  scope /usr/local/caddy/www/file/dav
+  allow /
+ }
+ cors / {
+   origin *
+   methods GET,HEAD,POST,PUT,OPTIONS,MOVE,DELETE,COPY,LOCK,UNLOCK,PROPFIND,MKCOL
+   allow_credentials true
+   max_age 1728000
+   allowed_headers Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Accept-Charset,X-Accept,origin,accept,if-match,destination,overwrite
+   exposed_headers ETag
+ }
+}
+</code></pre>
+
+<p>具体指令里面为什么要写那些我也不知道，这是官方wiki提供的Sample。</p>
+
+<p>但是这样还是有点问题。是下面这个问题。</p>
+
+<h4 id="keeweb无法连接数据库文件-kdbx">KeeWeb无法连接数据库文件.kdbx</h4>
+
+<p>试了好几次好像是因为WebDav开启了认证就不好使。就是配置文件中的basicauth指令。
+后来尝试把basicauth设置成下面的格式就可以用了，但是WebDav就没有认证登录机制了。</p>
+
+<pre><code>dav.yourdomain.com {
+ #申请免费SSL证书
+ tls 你的邮箱
+ #根目录
+ root /usr/local/caddy/www/file/dav
+ #给网站目录添加简单的登录机制，这里删除了/
+ basicauth admin password
+ timeouts none
+ gzip
+ webdav / {
+  scope /usr/local/caddy/www/file/dav
+  allow /
+ }
+ cors / {
+   origin *
+   methods GET,HEAD,POST,PUT,OPTIONS,MOVE,DELETE,COPY,LOCK,UNLOCK,PROPFIND,MKCOL
+   allow_credentials true
+   max_age 1728000
+   allowed_headers Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Accept-Charset,X-Accept,origin,accept,if-match,destination,overwrite
+   exposed_headers ETag
+ }
+}
+</code></pre>
+
+<p>这样设置之后KeeWeb可以正常连接到WebDav上面的密码数据库，而不会之前的报错Network Error，可能可以打开数据库但是修改后无法同步到WebDav服务器。</p>
+
+<h3 id="没有定义root路径">没有定义root路径</h3>
+
+<p>在试验中发现，配置内容里面去掉</p>
+
+<pre><code>root /usr/local/caddy/www/file/dav
+</code></pre>
+
+<p>也可以正常使用。。</p>
+
+<p>附上我实际用的配置，应该是有安全风险的。</p>
+
+<pre><code>dav.domain.com {
+ tls www@gmail.com
+ basicauth admin password
+ webdav / {
+  scope /usr/local/caddy/www/file/dav
+  allow /
+ }
+ cors / {
+   origin *
+   methods GET,HEAD,POST,PUT,OPTIONS,MOVE,DELETE,COPY,LOCK,UNLOCK,PROPFIND,MKCOL
+   allow_credentials true
+   max_age 1728000
+   allowed_headers Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Accept-Charset,X-Accept,origin,accept,if-match,destination,overwrite
+   exposed_headers ETag
+ }
+}
+
+</code></pre>
+
+<h3 id="出现其他问题">出现其他问题</h3>
+
+<p>请活用启动日志</p>
+
+<pre><code>tail -f /tmp/caddy.log
+</code></pre>
+
+<p><strong>出现启动失败多数是因为Caddyfile指令写错或者没有安装相关扩展组件导致无法启动。</strong></p>
+
+<h2 id="相关连接">相关连接</h2>
+
+<p><a href="https://doub.io/jzzy-4/" rel="nofollow noreferrer" target="_blank">https://doub.io/jzzy-4/</a></p>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Covey.Liu </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://example.com/technology/use-caddy-to-build-webdav-server/>https://example.com/technology/use-caddy-to-build-webdav-server/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://example.com/tags/caddy/">
+                    #Caddy</a></span>
+            
+            <span class="tag"><a href="https://example.com/tags/webdav%E7%BD%91%E7%9B%98/">
+                    #WebDav网盘</a></span>
+            
+            <span class="tag"><a href="https://example.com/tags/filebrowser/">
+                    #FileBrowser</a></span>
+            
+            <span class="tag"><a href="https://example.com/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/">
+                    #后端技术</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://example.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://example.com/technology/use-caddy-filemanager-to-build-personal-netdisk/" class="prev" rel="prev" title="利用Caddy的Filemanager插件搭建个人网盘教程"><i class="iconfont icon-left"></i>&nbsp;利用Caddy的Filemanager插件搭建个人网盘教程</a>
+         
+        
+        <a href="https://example.com/software/compare-some-password-manager/" class="next" rel="next" title="帮你记密码：几款密码管理器Keepass LastPass Bitwarden Enpass">帮你记密码：几款密码管理器Keepass LastPass Bitwarden Enpass&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+      
+       
+      
+             
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2011 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://example.com">Covey.Liu</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typecho on LeaveIt</title>
+    <link>https://example.com/tags/typecho/</link>
+    <description>Recent content in typecho on LeaveIt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/typecho/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>typecho发表评论需要发送两次才成功的解决方案</title>
+      <link>https://example.com/technology/need-to-click-twice-to-submit-comment-on-typecho/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/technology/need-to-click-twice-to-submit-comment-on-typecho/</guid>
+      <description>&lt;p&gt;最近发现typecho发表评论需要发送两次才会成功发送出去，网上查询了下资料，好像把&lt;strong&gt;&lt;em&gt;后台设置里面的开启反垃圾评论选项关闭&lt;/em&gt;&lt;/strong&gt;就可以解决问题。
+原来typecho的反垃圾就是通过用户发送两次评论来实现。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho文章评论带表情就database query error</title>
+      <link>https://example.com/technology/comment-with-emoji-shows-datebase-error-on-typecho/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/technology/comment-with-emoji-shows-datebase-error-on-typecho/</guid>
+      <description>&lt;p&gt;前几天开了童童的博客，但是在发布文章经常出现错误。老婆说发不出去。发给我的截图显示错误为&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;database query error&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;但是我测试了发送，却没有问题。这时候我以为是数据库连接不稳定。
+后来又有文章发不出去，老婆把要发的内容发给我，让我来人发。但是我也是发不出去。后来排查了一番。发现去掉文章中的表情。就可以发出。按照网上的说法，打开了typecho的调试模式&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho博客程序上传后缀为大写JPG附件失败的解决办法</title>
+      <link>https://example.com/technology/typecho-upload-jpg-image/</link>
+      <pubDate>Mon, 19 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/technology/typecho-upload-jpg-image/</guid>
+      <description>昨天安装了Typecho 1.0 (14.10.10)，是官网最新的正式版，但是调试中遇到一个问题，就是上传照片的时候会出现不能上传，后来试来试去发现是后缀扩展名为大写的图片不能支持。比如JPG,PNG等，这些是最新ios拍照自动使用大写后缀。但是ios系统又不支持修改文件名，所以导致博客不能用ios系统来上传附件。后来网上找了好久资料，才看到Web Designer有解决方法，这里谢谢他发出来。具体需要修改两个文件，以下摘自Web Designer
+  将var/Widget/Options/General.php 文件修改如下：
+ $getText = new Typecho_I18n_GetText($file);  改成下面一句
+$getText = new Typecho_I18n_GetText($file, false);  将var/Widget/Upload.php 文件修改如下：
+return isset($info[&#39;extension&#39;]) ? $info[&#39;extension&#39;] : &#39;&#39;;  改成下面一句
+return isset($info[&#39;extension&#39;]) ? strtolower($info[&#39;extension&#39;]) : &#39;&#39;;   </description>
+    </item>
+    
+    <item>
+      <title>LNMP环境下typecho无法登录后台解决方案</title>
+      <link>https://example.com/technology/lnmp-typecho-login-error/</link>
+      <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/technology/lnmp-typecho-login-error/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;感谢&lt;a href=&#34;http://www.vpsmm.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;小夜&lt;/a&gt;提供帮助。&lt;/strong&gt;
+&amp;gt; 出现的问题：liccess的lnmp0.6 搭建好后安装了typecho后，只有首页可以访问，其他页面都不能访问，后台登录界面可以看到，但是登录后无法访问。官方有解决方案但是我按照那还是解决不了&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

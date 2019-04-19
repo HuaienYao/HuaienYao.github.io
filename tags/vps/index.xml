@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VPS on LeaveIt</title>
+    <link>https://example.com/tags/vps/</link>
+    <description>Recent content in VPS on LeaveIt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>删除与卸载Debian8的Apache2</title>
+      <link>https://example.com/technology/uninstall-apache20-on-debian8/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/technology/uninstall-apache20-on-debian8/</guid>
+      <description>参考源：Linux Tips 由于某些主机提供商在重装系统后系统自带apache2，但是我用不到，一直用的nginx。如果不卸载会导致端口冲突等问题。 所以上网查询了下卸载apache2的资料。  Uninstall and Remove Apache2 on Debian 8
+We are going to uninstall and remove Apache2 from our Debian system.
+First we have to stop any running instance of Apache2, because Apache2 will not be properly removed while it is running.
+For stop Apache2 run below command …
+service apache2 stop  Now for remove Apache2 and pakchess run below command …
+apt-get purge apache2 apache2-utils apache2.</description>
+    </item>
+    
+    <item>
+      <title>myqq3.19.zip 折腾VPS挂QQ 教程</title>
+      <link>https://example.com/technology/hang-qq-on-vps/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/technology/hang-qq-on-vps/</guid>
+      <description>&lt;p&gt;这文章是转自&lt;a href=&#34;http://bynai.com/archives/528/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://bynai.com/archives/528/&lt;/a&gt; 的  hostloc 上weishimi的&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用Linux系统搭建Web环境做网站网站FTP权限问题</title>
+      <link>https://example.com/technology/linux-ftp-permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/technology/linux-ftp-permission/</guid>
+      <description>&lt;p&gt;在搬瓦工的VPS上，wordpress的主题或者插件无法直接在后台安装与修改。会弹出ftp设置。
+导致这一问题，一个是需要修改wordpress的主题和插件的文件夹的权限为777。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

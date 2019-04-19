@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>服务器面板 on LeaveIt</title>
+    <link>https://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/</link>
+    <description>Recent content in 服务器面板 on LeaveIt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>解决32系统无法安装bt宝塔服务器面板</title>
+      <link>https://example.com/technology/install-bt-panel-on-32-bit-os/</link>
+      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/technology/install-bt-panel-on-32-bit-os/</guid>
+      <description>&lt;h2 id=&#34;bt&#34;&gt;bt&lt;/h2&gt;
+
+&lt;p&gt;前段时间把VPS重装系统为debian的32位，因为内存只有512M，还是用32位比较省资源。
+但是在安装宝塔面板的时候却提示BT不支持32位系统的安装（如图）&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

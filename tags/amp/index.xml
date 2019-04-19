@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AMP on LeaveIt</title>
+    <link>https://example.com/tags/amp/</link>
+    <description>Recent content in AMP on LeaveIt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/amp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>正确使用AMP 让Google找到你的AMP页面</title>
+      <link>https://example.com/technology/let-google-find-your-amp/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/technology/let-google-find-your-amp/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;在用Hexo的&lt;a href=&#34;https://github.com/tea3/hexo-generator-amp&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo-generator-amp&lt;/a&gt;插件后，发现并没有被收录AMP页面。
+查看了下官方文档，如果要让你的AMP页面被找到，需要在head加入link。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

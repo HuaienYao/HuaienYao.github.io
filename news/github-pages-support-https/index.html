@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Covey.Liu">
+  
+  
+  
+  <link rel="prev" href="https://example.com/technology/remove-all-except-this-file-linux-command/" />
+  <link rel="next" href="https://example.com/technology/hexo-for-multiple-platform-error/" />
+  <link rel="canonical" href="https://example.com/news/github-pages-support-https/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Github Pages已经官方支持HTTPS与如何开启GitHub Pages HTTPS支持 | LeaveIt
+       
+  </title>
+  <meta name="title" content="Github Pages已经官方支持HTTPS与如何开启GitHub Pages HTTPS支持 | LeaveIt">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/example.com"
+    },
+    "articleSection" : "posts",
+    "name" : "Github Pages已经官方支持HTTPS与如何开启GitHub Pages HTTPS支持",
+    "headline" : "Github Pages已经官方支持HTTPS与如何开启GitHub Pages HTTPS支持",
+    "description" : "本站是同时托管在GitHub Pages和Coding Pages,Coding Pages很早的时候就支持后台开通HTTPS，用的是自动签发Let\x27s Encrypt的免费证书。而在今年5月1日，GitHub官方也宣布了GitHub Pages支持HTTPS。",
+    "inLanguage" : "en-us",
+    "author" : "Covey.Liu",
+    "creator" : "Covey.Liu",
+    "publisher": "Covey.Liu",
+    "accountablePerson" : "Covey.Liu",
+    "copyrightHolder" : "Covey.Liu",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-08-06 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2018-08-06 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/example.com\/news\/github-pages-support-https\/",
+    "wordCount" : "72",
+    "keywords" : [ "GitHub", "LeaveIt"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://example.com">LeaveIt</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://example.com">LeaveIt</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Github Pages已经官方支持HTTPS与如何开启GitHub Pages HTTPS支持</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://example.com" rel="author">Covey.Liu</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2018-08-06 itemprop="datePublished">August 6, 2018</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://example.com/categories/%E5%B0%8F%E9%81%93%E6%B6%88%E6%81%AF/"> 小道消息 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h2 id="背景">背景</h2>
+
+<p>根据GitHub博客，Github Pages是从今年5月1日开始支持的HTTPS的：
+<a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/" rel="nofollow noreferrer" target="_blank">https://blog.github.com/2018-05-01-github-pages-custom-domains-https/</a></p>
+
+<h2 id="为github开启http">为GitHub开启HTTP</h2>
+
+<h3 id="已经成功绑定域名的情况">已经成功绑定域名的情况</h3>
+
+<p>如果你的Github Pages已经绑定了自己的域名，那就可以直接在Github的设置里面打开自定义域名的HTTPS支持。
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2018/08/02/5b6258e92e11e.png" alt="GitHub Pages里面的自定义域名设置" class="lazyload"><figcaption class="image-caption">GitHub Pages里面的自定义域名设置</figcaption></figure>
+如图 在GitHub Pages的选项里面最后一栏有Enforce HTTPS选项。要开启这个功能需要下面条件。</p>
+
+<blockquote>
+<p>域名已经解析到GitHub 服务器来绑定域名</p>
+</blockquote>
+
+<p>具体请参考这里</p>
+
+<p><a href="https://help.github.com/articles/about-supported-custom-domains/" rel="nofollow noreferrer" target="_blank">https://help.github.com/articles/about-supported-custom-domains/</a></p>
+
+<p>这是如果没有解析到GitHub服务器，会提示你没有正确把域名指向GitHub服务器。这需要你添加CNAME记录解析到 你的github pages地址，如username.github.io</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2018/08/02/5b62629e6acac.png" alt="没有正确解析指向GitHub服务器会提示错误" class="lazyload"><figcaption class="image-caption">没有正确解析指向GitHub服务器会提示错误</figcaption></figure></p>
+
+<h3 id="https支持问题">HTTPS支持问题</h3>
+
+<p>如果HTTPS出现支持问题可以通过直接添加A记录解析到GitHub服务器来启用HTTPS。</p>
+
+<p>具体请参考这里：
+<a href="https://help.github.com/articles/troubleshooting-custom-domains/#https-errors" rel="nofollow noreferrer" target="_blank">https://help.github.com/articles/troubleshooting-custom-domains/#https-errors</a></p>
+
+<p>需要做的是 添加以下任意一个A记录解析到下面的服务器IP
+- 185.199.108.153
+- 185.199.109.153
+- 185.199.110.153
+- 185.199.111.153</p>
+
+<p>这样就会出现前面图片的结果，会提示 ：</p>
+
+<blockquote>
+<p>— Not yet available for your site because the certificate has not finished being issued.
+Please allow 24 hours for this process to complete.</p>
+</blockquote>
+
+<h3 id="成功开启">成功开启</h3>
+
+<p>解析后会开始申请证书。通常需要24小时来完成。<br />
+耐心等待就好。但是事实上只要几分钟，刷新页面就可以了。如图，我提交后不到几分钟就可以打钩HTTPS选项了
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2018/08/02/5b626e2386220.png" alt="几分钟后HTTPS选项就可以启用了" class="lazyload"><figcaption class="image-caption">几分钟后HTTPS选项就可以启用了</figcaption></figure></p>
+
+<p>开启之后上面会提示</p>
+
+<blockquote>
+<p>Your site is published at <a href="https://huaien.me/" rel="nofollow noreferrer" target="_blank">https://huaien.me/</a></p>
+</blockquote>
+
+<p>已经是加了https的链接。</p>
+
+<p>以上就是开启GitHub Pages的HTTPS支持的方法。</p>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Covey.Liu </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://example.com/news/github-pages-support-https/>https://example.com/news/github-pages-support-https/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://example.com/tags/github/">
+                    #GitHub</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://example.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://example.com/technology/remove-all-except-this-file-linux-command/" class="prev" rel="prev" title="linux下删除某个文件之外的其他所有文件的命令之extglob模式"><i class="iconfont icon-left"></i>&nbsp;linux下删除某个文件之外的其他所有文件的命令之extglob模式</a>
+         
+        
+        <a href="https://example.com/technology/hexo-for-multiple-platform-error/" class="next" rel="next" title="多平台维护Hexo提示node_modules错误问题">多平台维护Hexo提示node_modules错误问题&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+      
+       
+      
+             
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2011 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://example.com">Covey.Liu</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
