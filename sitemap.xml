@@ -1,6 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>https://example.com/categories/</loc>
+      
+      <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/posts/news/</loc>
+      
+      <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/</loc>
+      
+      <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/categories/releases/</loc>
+      
+      <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
   
     <url>
       <loc>https://example.com/2018/0.48-relnotes/</loc>
@@ -93,61 +138,23 @@
     </url>
   
     <url>
+      <loc>https://example.com/categories/blog/</loc>
+      
+      <lastmod>2017-07-24T18:36:00+02:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
       <loc>https://example.com/2014/creating-a-new-theme/</loc>
       
       <lastmod>2014-09-28T00:00:00+00:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://example.com/2014/goisforlovers/</loc>
-      
-      <lastmod>2014-07-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://example.com/about/</loc>
-      
-      <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://example.com/2014/hugoisforlovers/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://example.com/2014/migrate-from-jekyll/</loc>
-      
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://example.com/categories/</loc>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
@@ -165,43 +172,9 @@
     </url>
   
     <url>
-      <loc>https://example.com/posts/news/</loc>
-      
-      <lastmod>2018-08-29T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://example.com/</loc>
-      
-      <lastmod>2018-08-29T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://example.com/posts/</loc>
       
       <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://example.com/categories/releases/</loc>
-      
-      <lastmod>2018-08-29T00:00:00+00:00</lastmod>
       
       
       
@@ -247,13 +220,11 @@
     </url>
   
     <url>
-      <loc>https://example.com/categories/blog/</loc>
+      <loc>https://example.com/2014/goisforlovers/</loc>
       
-      <lastmod>2017-07-24T18:36:00+02:00</lastmod>
+      <lastmod>2014-07-28T00:00:00+00:00</lastmod>
       
       
-      
-      <priority>0</priority>
       
       
     </url>
@@ -295,18 +266,6 @@
     </url>
   
     <url>
-      <loc>https://example.com/tags/hugo/</loc>
-      
-      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://example.com/tags/templates/</loc>
       
       <lastmod>2014-07-28T00:00:00+00:00</lastmod>
@@ -326,6 +285,36 @@
       
       
       <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/about/</loc>
+      
+      <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/2014/hugoisforlovers/</loc>
+      
+      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://example.com/2014/migrate-from-jekyll/</loc>
+      
+      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+      
+      
       
       
     </url>
