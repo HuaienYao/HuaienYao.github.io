@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WordPress on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/wordpress/</link>
+    <link>https://huaien.co/tags/wordpress/</link>
     <description>Recent content in WordPress on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 26 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huaien.co/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>解决wordpress后台安装插件时提示需要ftp账号和密码</title>
-      <link>http://huaien.me/technology/wordpress-install-plugin-show-ftp-info/</link>
+      <link>https://huaien.co/technology/wordpress-install-plugin-show-ftp-info/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/wordpress-install-plugin-show-ftp-info/</guid>
+      <guid>https://huaien.co/technology/wordpress-install-plugin-show-ftp-info/</guid>
       <description>&lt;p&gt;在wordpress安装之后，想要安装一个插件来用，结果弹出提示输入ftp账户与密码。如下图&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>开启HTTPS后WordPress后台wp-admin提示ERR_TOO_MANY_REDIRECTS</title>
-      <link>http://huaien.me/technology/wp_admin_https_unavailable/</link>
+      <link>https://huaien.co/technology/wp_admin_https_unavailable/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/wp_admin_https_unavailable/</guid>
+      <guid>https://huaien.co/technology/wp_admin_https_unavailable/</guid>
       <description>&lt;p&gt;今天打开Hanayao博客，访问后台&lt;code&gt;wp-admin&lt;/code&gt;发现提示 &lt;code&gt;ERR_TOO_MANY_REDIRECTS&lt;/code&gt;
 于是查询了下解决方法，参考了&lt;a href=&#34;https://www.tongfu.info/solve-wordpress-wp-admin-https-redirect-loop/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;同富&lt;/a&gt;的文章，发现可以解决。特记录下来。
 在wp-config.php文件下增加了以下几行就可以。&lt;/p&gt;</description>
@@ -33,10 +33,10 @@
     
     <item>
       <title>开启HTTPS后WordPress后台wp-admin登录后：显示抱歉，您不能访问此页面</title>
-      <link>http://huaien.me/technology/wp_admin_https_sorry_cannot_reach/</link>
+      <link>https://huaien.co/technology/wp_admin_https_sorry_cannot_reach/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/wp_admin_https_sorry_cannot_reach/</guid>
+      <guid>https://huaien.co/technology/wp_admin_https_sorry_cannot_reach/</guid>
       <description>&lt;p&gt;之前提到Hanayao博客，开启HTTPS后访问后台&lt;code&gt;wp-admin&lt;/code&gt;提示 &lt;code&gt;ERR_TOO_MANY_REDIRECTS&lt;/code&gt;过多次重定向的&lt;a href=&#34;https://huaien.me/2018/06/05/wp_admin_https_unavailable/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;解决办法&lt;/a&gt;
 但是解决多次重定向的问题后，登陆账号后又显示“抱歉，您不能访问此页面。”的提示
 经过查询，下面两部可以解决这个问题。&lt;/p&gt;</description>
@@ -44,28 +44,28 @@
     
     <item>
       <title>添加SSL后Nginx的https伪静态配置多次不成功</title>
-      <link>http://huaien.me/technology/nginx-conf-after-ssl/</link>
+      <link>https://huaien.co/technology/nginx-conf-after-ssl/</link>
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/nginx-conf-after-ssl/</guid>
+      <guid>https://huaien.co/technology/nginx-conf-after-ssl/</guid>
       <description>&lt;p&gt;前两天给&lt;a href=&#34;http://www.hanayao.com&#34; title=&#34;HanaYao博客&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;HanaYao博客&lt;/a&gt;添加了SSL证书。但是经过多次测试，会出现访问带www的域名就会显示Nginx默认页面，或者是404 。多次修改伪静态配置后也还是会出现带www和不带www域名访问出现问题，或者就是进入后台会出现404。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Wordpress无法编辑更新文章之解决方案</title>
-      <link>http://huaien.me/technology/wordpress-mod-security/</link>
+      <link>https://huaien.co/technology/wordpress-mod-security/</link>
       <pubDate>Mon, 07 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/wordpress-mod-security/</guid>
+      <guid>https://huaien.co/technology/wordpress-mod-security/</guid>
       <description>&lt;p&gt;前天锅烧网出现一个异常，可以添加新文章，但是无法更新和编辑文章，点击更新那个按钮后出现错误提示&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Wordpress引用优酷无广告版</title>
-      <link>http://huaien.me/technology/youku-noads-wordpress/</link>
+      <link>https://huaien.co/technology/youku-noads-wordpress/</link>
       <pubDate>Wed, 08 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/youku-noads-wordpress/</guid>
+      <guid>https://huaien.co/technology/youku-noads-wordpress/</guid>
       <description>在引用时,把优酷的flash地址,替换下边的视频flash地址
 [html]&amp;lt;embed type=&amp;quot;application/x-shockwave-flash&amp;quot; src=&amp;quot;视频flash地址&amp;quot;d=&amp;quot;movie_player&amp;quot;name=&amp;quot;movie_player&amp;quot;bgcolor=&amp;quot;#000000&amp;quot;quality=&amp;quot;high&amp;quot;allowfullscreen=&amp;quot;true&amp;quot;flashvars=&amp;quot;isShowRelatedVideo=false&amp;amp;showAd=0&amp;amp;show_pre=1&amp;amp;show_next=1&amp;amp;isAutoPlay=false&amp;amp;isDebug=false&amp;amp;UserID=&amp;amp;winType=interior&amp;amp;playMovie=true&amp;amp;MMControl=false&amp;amp;MMout=false&amp;amp;RecordCode=1001,1002,1003,1004,1005,1006,2001,3001,3002,3003,3004,3005,3007,3008,9999&amp;quot;pluginspage=&amp;quot;http://www.macromedia.com/go/getflashplayer&amp;quot;width=&amp;quot;480&amp;quot; height=&amp;quot;400&amp;quot;&amp;gt;&amp;lt;/embed&amp;gt;[/html]
 然后粘贴在WordPress中 转自：Deloz</description>
@@ -73,10 +73,10 @@
     
     <item>
       <title>代码高亮插件SyntaxHighlighter Evolved</title>
-      <link>http://huaien.me/technology/code-highlighter-wordpress-plugin/</link>
+      <link>https://huaien.co/technology/code-highlighter-wordpress-plugin/</link>
       <pubDate>Tue, 23 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/code-highlighter-wordpress-plugin/</guid>
+      <guid>https://huaien.co/technology/code-highlighter-wordpress-plugin/</guid>
       <description>&lt;p&gt;使用方法：&lt;/p&gt;
 
 &lt;p&gt;1.上传插件到 wp-contents/plugins 文件夹并在博客后台启用——————废话啊。。。。&lt;/p&gt;
@@ -86,10 +86,10 @@
     
     <item>
       <title>WordPress手机适配插件WPtouch</title>
-      <link>http://huaien.me/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</link>
+      <link>https://huaien.co/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</link>
       <pubDate>Sun, 21 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</guid>
+      <guid>https://huaien.co/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</guid>
       <description>该插件可以让你的wordpress网站在iPhone手机或者android系统上显示的更加美观，功能更加强大，有很好的界面体验。 图片将再下次贴出
 安装使用方法：
 直接在后台搜索WPtouch，可以在线安装或者直接点此进入官方下载。
@@ -101,29 +101,29 @@ WPtouch具有更漂亮的模板，就像名字所说touch，该插件在iPhone i
     
     <item>
       <title>如何修改WordPress头像</title>
-      <link>http://huaien.me/technology/modify-your-head-is-more-prominent-personality/</link>
+      <link>https://huaien.co/technology/modify-your-head-is-more-prominent-personality/</link>
       <pubDate>Sun, 29 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/modify-your-head-is-more-prominent-personality/</guid>
+      <guid>https://huaien.co/technology/modify-your-head-is-more-prominent-personality/</guid>
       <description>&lt;p&gt;有些人刚接触像IMYIA的网站，都会有一个疑问，就是 评论的后显示的头像是哪里的？怎么来的？
 这里告诉大家，麦芽使用的wordpress程序搭建的网站，评论的头像是由Gravatar支持的。我也不会表达下面转一段比较清楚的：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>WordPress插件ShadowBoxJS幻灯片</title>
-      <link>http://huaien.me/technology/shadowbox-wordpress-plugin/</link>
+      <link>https://huaien.co/technology/shadowbox-wordpress-plugin/</link>
       <pubDate>Wed, 04 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/shadowbox-wordpress-plugin/</guid>
+      <guid>https://huaien.co/technology/shadowbox-wordpress-plugin/</guid>
       <description>&lt;p&gt;wordpress之所以强大就是因为它有很多插件做后盾，多彩丰富的博客都是我们所希望的，幻灯片插件那么就是必不可少的了，Shadowbox JS就一款不错的幻灯片插件，除了一般的图片效果外，它还支持图片的裁剪、拖动、多媒体播放等功能。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>关于WordPress后台只显示一个主题的问题</title>
-      <link>http://huaien.me/technology/wordpress-only-one-theme/</link>
+      <link>https://huaien.co/technology/wordpress-only-one-theme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/wordpress-only-one-theme/</guid>
+      <guid>https://huaien.co/technology/wordpress-only-one-theme/</guid>
       <description>&lt;p&gt;今天给Hanayao博客配置了SSL证书，但是发现前台还是不会显示安全。但是在wordpress后台登录界面却可以显示安全标识。于是进了Hanayao博客后台，想换个主题试试。因为可能是使用的情侣博客主题并不是很完善，导致页面有漏洞。但是却发现后台只能看到一个主题。不过可以安装新的主题，但是安装后也是只显示最新安装的主题。
 于是查询了下资料，发现是&lt;/p&gt;</description>
     </item>

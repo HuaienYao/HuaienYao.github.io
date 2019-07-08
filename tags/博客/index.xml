@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>博客 on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <link>https://huaien.co/tags/%E5%8D%9A%E5%AE%A2/</link>
     <description>Recent content in 博客 on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 03 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huaien.co/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Windows,Linux多平台下共同维护Hexo 备份Hexo到GitHub</title>
-      <link>http://huaien.me/technology/how-to-backup-hexo-to-github/</link>
+      <link>https://huaien.co/technology/how-to-backup-hexo-to-github/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/how-to-backup-hexo-to-github/</guid>
+      <guid>https://huaien.co/technology/how-to-backup-hexo-to-github/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;因为经常需要在不同的操作系统上工作，所以需要在每个平台下都可以方便的写博客。&lt;/p&gt;
@@ -30,10 +30,10 @@
     
     <item>
       <title>Change Blog to Mediatense</title>
-      <link>http://huaien.me/life/change-blog-to-mt/</link>
+      <link>https://huaien.co/life/change-blog-to-mt/</link>
       <pubDate>Sat, 20 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/life/change-blog-to-mt/</guid>
+      <guid>https://huaien.co/life/change-blog-to-mt/</guid>
       <description>&lt;p&gt;经过多天准备，将原来的Wyane&amp;rsquo;S Blog 改为MediaTense ，虽然我也不知道这个单词组合有什么意义，就是觉得看得比较好看。&lt;/p&gt;</description>
     </item>
     

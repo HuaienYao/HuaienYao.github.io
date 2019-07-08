@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hexo on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/hexo/</link>
+    <link>https://huaien.co/tags/hexo/</link>
     <description>Recent content in Hexo on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 07 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huaien.co/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linux安装nvm后无法使用nvm安装node</title>
-      <link>http://huaien.me/technology/not-able-to-install-nodejs-by-nvm/</link>
+      <link>https://huaien.co/technology/not-able-to-install-nodejs-by-nvm/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/not-able-to-install-nodejs-by-nvm/</guid>
+      <guid>https://huaien.co/technology/not-able-to-install-nodejs-by-nvm/</guid>
       <description>&lt;p&gt;今天在给服务器安装nvm的时候出现无法安装node的错误，查询了网上资料，可以通过修改bash_profile来解决。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>多平台维护Hexo提示node_modules错误问题</title>
-      <link>http://huaien.me/technology/hexo-for-multiple-platform-error/</link>
+      <link>https://huaien.co/technology/hexo-for-multiple-platform-error/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/hexo-for-multiple-platform-error/</guid>
+      <guid>https://huaien.co/technology/hexo-for-multiple-platform-error/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在将Hexo在多个平台之间移动，配置，使用的时候会遇到组件问题，如下面，在原平台可以正常使用。但是移动到新的64位Linux系统后各种错误。大部分是因为node组件没有安装好的原因。&lt;/p&gt;</description>
@@ -33,10 +33,10 @@
     
     <item>
       <title>Windows,Linux多平台下共同维护Hexo 备份Hexo到GitHub</title>
-      <link>http://huaien.me/technology/how-to-backup-hexo-to-github/</link>
+      <link>https://huaien.co/technology/how-to-backup-hexo-to-github/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/how-to-backup-hexo-to-github/</guid>
+      <guid>https://huaien.co/technology/how-to-backup-hexo-to-github/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;因为经常需要在不同的操作系统上工作，所以需要在每个平台下都可以方便的写博客。&lt;/p&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nginx on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/nginx/</link>
+    <link>https://huaien.co/tags/nginx/</link>
     <description>Recent content in Nginx on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 21 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huaien.co/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>宝塔启动nginx服务失败提示failed (98:Address already in use)</title>
-      <link>http://huaien.me/technology/bt-panel-failed-to-start-nginx/</link>
+      <link>https://huaien.co/technology/bt-panel-failed-to-start-nginx/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/bt-panel-failed-to-start-nginx/</guid>
+      <guid>https://huaien.co/technology/bt-panel-failed-to-start-nginx/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;发现宝塔的nginx没有在运行，于是在宝塔面板上手动重启，但是提示失败，失败信息是下面那样：&lt;/p&gt;</description>
@@ -24,28 +24,28 @@
     
     <item>
       <title>添加SSL后Nginx的https伪静态配置多次不成功</title>
-      <link>http://huaien.me/technology/nginx-conf-after-ssl/</link>
+      <link>https://huaien.co/technology/nginx-conf-after-ssl/</link>
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/nginx-conf-after-ssl/</guid>
+      <guid>https://huaien.co/technology/nginx-conf-after-ssl/</guid>
       <description>&lt;p&gt;前两天给&lt;a href=&#34;http://www.hanayao.com&#34; title=&#34;HanaYao博客&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;HanaYao博客&lt;/a&gt;添加了SSL证书。但是经过多次测试，会出现访问带www的域名就会显示Nginx默认页面，或者是404 。多次修改伪静态配置后也还是会出现带www和不带www域名访问出现问题，或者就是进入后台会出现404。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>开启Nginx的目录文件列表功能-让Nginx显示文件列表</title>
-      <link>http://huaien.me/technology/let-nginx-show-file-list/</link>
+      <link>https://huaien.co/technology/let-nginx-show-file-list/</link>
       <pubDate>Thu, 24 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/let-nginx-show-file-list/</guid>
+      <guid>https://huaien.co/technology/let-nginx-show-file-list/</guid>
       <description>&lt;p&gt;今天在hostloc上看到以为朋友xtmp 请教&lt;a href=&#34;http://soft.vpser.net/是如何实现的，可以显示文件列表，因为http://soft.vpser.net/用的是nginx&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://soft.vpser.net/是如何实现的，可以显示文件列表，因为http://soft.vpser.net/用的是nginx&lt;/a&gt; 作为webserver的，但是 nginx默认是不允许列出整个目录的，所以看到版主咯拉无米推荐的方法&lt;a href=&#34;http://www.hostloc.com/thread-21478-1-4.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.hostloc.com/thread-21478-1-4.html&lt;/a&gt; 帖子里美国VPS给出一个ctohome的详细教程，下面转自 ctohome&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LNMP下给已存在的虚拟机添加伪静态规则</title>
-      <link>http://huaien.me/technology/lnmp-conf-rules/</link>
+      <link>https://huaien.co/technology/lnmp-conf-rules/</link>
       <pubDate>Fri, 04 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/lnmp-conf-rules/</guid>
+      <guid>https://huaien.co/technology/lnmp-conf-rules/</guid>
       <description>&lt;p&gt;使用军哥的LNMP，在添加虚拟机的时候没有添加伪静态，但是后来真正使用程序的时候需要伪静态，所以想给已经存在的虚拟主机添加伪静态跪着，由于Apache开启伪静态支持后可以直接修改.htaccess文件就行，但是nginx需要新建一个例如名字为example.conf文件，编辑该文件，把伪静态规则输入进去（注意htaccess的伪静态规则需转成nginx的conf规则才行）然后，在/usr/local/nginx/conf/vhost下编辑 域名.conf文件，得到类似&lt;/p&gt;</description>
     </item>
     

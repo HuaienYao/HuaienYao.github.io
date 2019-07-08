@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deepin on Wyane&#39;s Blog</title>
-    <link>http://huaien.me/tags/deepin/</link>
+    <link>https://huaien.co/tags/deepin/</link>
     <description>Recent content in Deepin on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://huaien.me/tags/deepin/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://huaien.co/tags/deepin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>解决Deepin深度系统下没有无线网络选项之安装驱动</title>
-      <link>http://huaien.me/technology/fix-no-wifi-on-deepin-os/</link>
+      <link>https://huaien.co/technology/fix-no-wifi-on-deepin-os/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://huaien.me/technology/fix-no-wifi-on-deepin-os/</guid>
+      <guid>https://huaien.co/technology/fix-no-wifi-on-deepin-os/</guid>
       <description>&lt;p&gt;前两天装了Deepin 深度系统。在查询Linux资料的时候被安利了。深度系统是国内最大的国产系统，由于其界面优美，符合国人使用习惯。下面摘了维基百科的词条：&lt;/p&gt;</description>
     </item>
     
