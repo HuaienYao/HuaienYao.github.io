@@ -106,23 +106,6 @@
   var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
   errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
 </script>
-<script src="http://cdn.bootcss.com/purl/2.3.1/purl.min.js"></script>
-
-<script>
-var url = purl();
-if (url.attr('host') == 'huaien.me') {
-    var old_url = url.attr('source');
-    var new_url = old_url.replace('huaien.me', "huaien.co");
-    window.location.replace(new_url); 
-}else if (url.attr('host') == 'www.huaien.me') {
-    var old_url = url.attr('source');
-    var new_url = old_url.replace('huaien.me', "huaien.co");
-    window.location.replace(new_url);
-}else {
-    window.location.href="https://huaien.co";
-}
-    
-</script>
 
           </div>
 		   </main>
