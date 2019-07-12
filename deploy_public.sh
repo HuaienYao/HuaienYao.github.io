@@ -1,3 +1,4 @@
+#!/bin/bash
 git add .
 git commit -m "update blog article"
 git push -u github master
