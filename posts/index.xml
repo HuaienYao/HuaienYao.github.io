@@ -427,6 +427,26 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
     </item>
     
     <item>
+      <title>用Linux系统搭建Web环境做网站网站FTP权限问题</title>
+      <link>https://huaien.co/technology/linux-ftp-permission/</link>
+      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://huaien.co/technology/linux-ftp-permission/</guid>
+      <description>&lt;p&gt;在搬瓦工的VPS上，wordpress的主题或者插件无法直接在后台安装与修改。会弹出ftp设置。
+导致这一问题，一个是需要修改wordpress的主题和插件的文件夹的权限为777。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于WordPress后台只显示一个主题的问题</title>
+      <link>https://huaien.co/technology/wordpress-only-one-theme/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://huaien.co/technology/wordpress-only-one-theme/</guid>
+      <description>&lt;p&gt;今天给Hanayao博客配置了SSL证书，但是发现前台还是不会显示安全。但是在wordpress后台登录界面却可以显示安全标识。于是进了Hanayao博客后台，想换个主题试试。因为可能是使用的情侣博客主题并不是很完善，导致页面有漏洞。但是却发现后台只能看到一个主题。不过可以安装新的主题，但是安装后也是只显示最新安装的主题。
+于是查询了下资料，发现是&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>删除与卸载Debian8的Apache2</title>
       <link>https://huaien.co/technology/uninstall-apache20-on-debian8/</link>
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
@@ -934,26 +954,6 @@ WPtouch具有更漂亮的模板，就像名字所说touch，该插件在iPhone i
 在做免费论坛的那段时间也看到很多人去做独立网站了，但是我没有网银，也只好知足了。今年我才开始学做独立网站。先是购买了一个域名 wyane.net 然后再寻找着合适的空间，在淘宝上买过美国空间和国内的双线空间，上传FTP时的速度让我抛弃了美国的空间，因为国内的一对比，美国的空间太慢了。。第一次程序当然还是Discuz！的。。。说了这么多废话，不说了
 百度下建站程序，发现wordpress很出名。。原来都不知道这个。。真的是孤陋寡闻啊。下载 -安装 发现这个程序真的巨好，有种相见恨晚的感觉，前两天向老薛申请了一个免费空间做一个个人博客耍耍
 wake me up when september ends</description>
-    </item>
-    
-    <item>
-      <title>关于WordPress后台只显示一个主题的问题</title>
-      <link>https://huaien.co/technology/wordpress-only-one-theme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/wordpress-only-one-theme/</guid>
-      <description>&lt;p&gt;今天给Hanayao博客配置了SSL证书，但是发现前台还是不会显示安全。但是在wordpress后台登录界面却可以显示安全标识。于是进了Hanayao博客后台，想换个主题试试。因为可能是使用的情侣博客主题并不是很完善，导致页面有漏洞。但是却发现后台只能看到一个主题。不过可以安装新的主题，但是安装后也是只显示最新安装的主题。
-于是查询了下资料，发现是&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>用Linux系统搭建Web环境做网站网站FTP权限问题</title>
-      <link>https://huaien.co/technology/linux-ftp-permission/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/linux-ftp-permission/</guid>
-      <description>&lt;p&gt;在搬瓦工的VPS上，wordpress的主题或者插件无法直接在后台安装与修改。会弹出ftp设置。
-导致这一问题，一个是需要修改wordpress的主题和插件的文件夹的权限为777。&lt;/p&gt;</description>
     </item>
     
   </channel>
