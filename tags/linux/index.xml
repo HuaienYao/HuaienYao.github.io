@@ -69,14 +69,7 @@
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://huaien.co/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
-      <description>前面我们了解了Caddy是一个极简HTTP服务器，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Caddy帮你自动生成Let&amp;rsquo;s Encrypt的免费证书，简单的配置就能搭建好一个HTTPS的Web服务器环境。
-其实Caddy自带的Filemanager插件可以直接用来搭建一个个人网盘，而且支持的功能还挺多，界面还挺好看。 
-认识一下File Manager 看上面的动图可以看到用Filemanager可以很方便的在线管理文件。
-那么filemanager有哪些功能呢
-Caddy FileBrowser扩展介绍 FileBrowser 是基于Caddy的扩展。它提供文件管理界面，可用于 上传/下载/删除/预览和重命名 等该目录中的文件。
- 支持 上传文件 支持 按类型 搜索文件 支持 批量压缩 文件下载 支持 多用户管理(权限可控) 支持 在网页执行 Linux命令 支持 创建 共享链接(限时/永久) 支持 在线编辑 各类文本文件 支持 在线浏览 图片/文本/视频等 支持 新建/重命名/移动/删除 文件和文件夹等 部署简单，几步完成，无需任何依赖环境 等等 &amp;hellip;  并且支持中文，日语，英语等多种语言。其中中文文件由逗比根据地博主制作。
-安装Caddy与Filemanager插件 如果你已经安装了Caddy，但是没有Filemanager插件，你需要重新安装一次Caddy，附带Filemanager
-wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;amp;&amp;amp; chmod +x caddy_install.sh &amp;amp;&amp;amp; bash caddy_install.sh install http.filemanager # 如果上面这个脚本无法下载，尝试使用备用下载： wget -N --no-check-c# 如果上面这个脚本无法下载，尝试使用备用下载： ertificate https://softs.loan/Bash/caddy_install.sh &amp;amp;&amp;amp; chmod +x caddy_install.</description>
+      <description>前面我们了解了Caddy是一个极简HTTP服务器，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Cadd</description>
     </item>
     
     <item>

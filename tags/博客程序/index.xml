@@ -36,9 +36,7 @@
       <pubDate>Wed, 08 Dec 2010 00:00:00 +0000</pubDate>
       
       <guid>https://huaien.co/technology/youku-noads-wordpress/</guid>
-      <description>在引用时,把优酷的flash地址,替换下边的视频flash地址
-[html]&amp;lt;embed type=&amp;quot;application/x-shockwave-flash&amp;quot; src=&amp;quot;视频flash地址&amp;quot;d=&amp;quot;movie_player&amp;quot;name=&amp;quot;movie_player&amp;quot;bgcolor=&amp;quot;#000000&amp;quot;quality=&amp;quot;high&amp;quot;allowfullscreen=&amp;quot;true&amp;quot;flashvars=&amp;quot;isShowRelatedVideo=false&amp;amp;showAd=0&amp;amp;show_pre=1&amp;amp;show_next=1&amp;amp;isAutoPlay=false&amp;amp;isDebug=false&amp;amp;UserID=&amp;amp;winType=interior&amp;amp;playMovie=true&amp;amp;MMControl=false&amp;amp;MMout=false&amp;amp;RecordCode=1001,1002,1003,1004,1005,1006,2001,3001,3002,3003,3004,3005,3007,3008,9999&amp;quot;pluginspage=&amp;quot;http://www.macromedia.com/go/getflashplayer&amp;quot;width=&amp;quot;480&amp;quot; height=&amp;quot;400&amp;quot;&amp;gt;&amp;lt;/embed&amp;gt;[/html]
-然后粘贴在WordPress中 转自：Deloz</description>
+      <description>在引用时,把优酷的flash地址,替换下边的视频flash地址 [html]&amp;lt;embed type=&amp;quot;application/x-shockwave-flash&amp;quot; src=&amp;quot;视频flash地址&amp;quot;d=&amp;quot;movi</description>
     </item>
     
   </channel>

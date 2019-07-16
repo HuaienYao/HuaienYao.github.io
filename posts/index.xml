@@ -318,14 +318,7 @@
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://huaien.co/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
-      <description>前面我们了解了Caddy是一个极简HTTP服务器，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Caddy帮你自动生成Let&amp;rsquo;s Encrypt的免费证书，简单的配置就能搭建好一个HTTPS的Web服务器环境。
-其实Caddy自带的Filemanager插件可以直接用来搭建一个个人网盘，而且支持的功能还挺多，界面还挺好看。 
-认识一下File Manager 看上面的动图可以看到用Filemanager可以很方便的在线管理文件。
-那么filemanager有哪些功能呢
-Caddy FileBrowser扩展介绍 FileBrowser 是基于Caddy的扩展。它提供文件管理界面，可用于 上传/下载/删除/预览和重命名 等该目录中的文件。
- 支持 上传文件 支持 按类型 搜索文件 支持 批量压缩 文件下载 支持 多用户管理(权限可控) 支持 在网页执行 Linux命令 支持 创建 共享链接(限时/永久) 支持 在线编辑 各类文本文件 支持 在线浏览 图片/文本/视频等 支持 新建/重命名/移动/删除 文件和文件夹等 部署简单，几步完成，无需任何依赖环境 等等 &amp;hellip;  并且支持中文，日语，英语等多种语言。其中中文文件由逗比根据地博主制作。
-安装Caddy与Filemanager插件 如果你已经安装了Caddy，但是没有Filemanager插件，你需要重新安装一次Caddy，附带Filemanager
-wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;amp;&amp;amp; chmod +x caddy_install.sh &amp;amp;&amp;amp; bash caddy_install.sh install http.filemanager # 如果上面这个脚本无法下载，尝试使用备用下载： wget -N --no-check-c# 如果上面这个脚本无法下载，尝试使用备用下载： ertificate https://softs.loan/Bash/caddy_install.sh &amp;amp;&amp;amp; chmod +x caddy_install.</description>
+      <description>前面我们了解了Caddy是一个极简HTTP服务器，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Cadd</description>
     </item>
     
     <item>
@@ -452,12 +445,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://huaien.co/technology/uninstall-apache20-on-debian8/</guid>
-      <description>参考源：Linux Tips 由于某些主机提供商在重装系统后系统自带apache2，但是我用不到，一直用的nginx。如果不卸载会导致端口冲突等问题。 所以上网查询了下卸载apache2的资料。  Uninstall and Remove Apache2 on Debian 8
-We are going to uninstall and remove Apache2 from our Debian system.
-First we have to stop any running instance of Apache2, because Apache2 will not be properly removed while it is running.
-For stop Apache2 run below command …
-service apache2 stop  Now for remove Apache2 and pakchess run below command …
-apt-get purge apache2 apache2-utils apache2.</description>
+      <description>参考源：Linux Tips 由于某些主机提供商在重装系统后系统自带apache2，但是我用不到，一直用的nginx。如果不卸载会导致端口冲突等问题。</description>
     </item>
     
     <item>
@@ -512,12 +500,7 @@ apt-get purge apache2 apache2-utils apache2.</description>
       <pubDate>Mon, 19 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://huaien.co/technology/typecho-upload-jpg-image/</guid>
-      <description>昨天安装了Typecho 1.0 (14.10.10)，是官网最新的正式版，但是调试中遇到一个问题，就是上传照片的时候会出现不能上传，后来试来试去发现是后缀扩展名为大写的图片不能支持。比如JPG,PNG等，这些是最新ios拍照自动使用大写后缀。但是ios系统又不支持修改文件名，所以导致博客不能用ios系统来上传附件。后来网上找了好久资料，才看到Web Designer有解决方法，这里谢谢他发出来。具体需要修改两个文件，以下摘自Web Designer
-  将var/Widget/Options/General.php 文件修改如下：
- $getText = new Typecho_I18n_GetText($file);  改成下面一句
-$getText = new Typecho_I18n_GetText($file, false);  将var/Widget/Upload.php 文件修改如下：
-return isset($info[&#39;extension&#39;]) ? $info[&#39;extension&#39;] : &#39;&#39;;  改成下面一句
-return isset($info[&#39;extension&#39;]) ? strtolower($info[&#39;extension&#39;]) : &#39;&#39;;   </description>
+      <description>昨天安装了Typecho 1.0 (14.10.10)，是官网最新的正式版，但是调试中遇到一个问题，就是上传照片的时候会出现不能上传，后来试来试去发</description>
     </item>
     
     <item>
@@ -738,9 +721,7 @@ byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&
       <pubDate>Wed, 08 Dec 2010 00:00:00 +0000</pubDate>
       
       <guid>https://huaien.co/technology/youku-noads-wordpress/</guid>
-      <description>在引用时,把优酷的flash地址,替换下边的视频flash地址
-[html]&amp;lt;embed type=&amp;quot;application/x-shockwave-flash&amp;quot; src=&amp;quot;视频flash地址&amp;quot;d=&amp;quot;movie_player&amp;quot;name=&amp;quot;movie_player&amp;quot;bgcolor=&amp;quot;#000000&amp;quot;quality=&amp;quot;high&amp;quot;allowfullscreen=&amp;quot;true&amp;quot;flashvars=&amp;quot;isShowRelatedVideo=false&amp;amp;showAd=0&amp;amp;show_pre=1&amp;amp;show_next=1&amp;amp;isAutoPlay=false&amp;amp;isDebug=false&amp;amp;UserID=&amp;amp;winType=interior&amp;amp;playMovie=true&amp;amp;MMControl=false&amp;amp;MMout=false&amp;amp;RecordCode=1001,1002,1003,1004,1005,1006,2001,3001,3002,3003,3004,3005,3007,3008,9999&amp;quot;pluginspage=&amp;quot;http://www.macromedia.com/go/getflashplayer&amp;quot;width=&amp;quot;480&amp;quot; height=&amp;quot;400&amp;quot;&amp;gt;&amp;lt;/embed&amp;gt;[/html]
-然后粘贴在WordPress中 转自：Deloz</description>
+      <description>在引用时,把优酷的flash地址,替换下边的视频flash地址 [html]&amp;lt;embed type=&amp;quot;application/x-shockwave-flash&amp;quot; src=&amp;quot;视频flash地址&amp;quot;d=&amp;quot;movi</description>
     </item>
     
     <item>
@@ -793,13 +774,7 @@ byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&
       <pubDate>Sun, 21 Nov 2010 00:00:00 +0000</pubDate>
       
       <guid>https://huaien.co/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</guid>
-      <description>该插件可以让你的wordpress网站在iPhone手机或者android系统上显示的更加美观，功能更加强大，有很好的界面体验。 图片将再下次贴出
-安装使用方法：
-直接在后台搜索WPtouch，可以在线安装或者直接点此进入官方下载。
-启用插件后，可以进入插件设置页面进行相关设置，常用的还是那些博客名称、底部版权文字、图标、模板等相关设置。
-界面语言是英文，但是一般都能看得懂，实在不行可以使用translate.google.com翻译。
-&amp;ndash;与其他手机插件相比
-WPtouch具有更漂亮的模板，就像名字所说touch，该插件在iPhone iOS系统和Google的Android系统上显示效果更佳，操作当然也更加舒适。由于WPtouch根据来访用户的UserAgent来判断访客所使用的设备，所以直接访问网站的主域名即可显示效果。</description>
+      <description>该插件可以让你的wordpress网站在iPhone手机或者android系统上显示的更加美观，功能更加强大，有很好的界面体验。 图片将再下次</description>
     </item>
     
     <item>
@@ -886,16 +861,7 @@ WPtouch具有更漂亮的模板，就像名字所说touch，该插件在iPhone i
       <pubDate>Wed, 25 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://huaien.co/news/tencent-buy-comsenz/</guid>
-      <description>8月24日，国内最大的互联网企业腾讯证实，已与中国最大的社区软件平台及服务提供商康盛创想达成收购协议，具体交易将在近期完成。
-对于这一事件，大多数关心和使用Discuz!的站长应该都很熟悉，康盛被腾讯收购的消息早在几个月前就闹得沸沸扬扬，收购后的康盛，不知对广大站长是件好事还是坏事，大家只能拭目以待。。
-相关新闻： 腾讯收购康盛创想 &amp;ndash;新浪科技 &amp;gt; 国内最大的互联网企业腾讯证实，已与中国最大的社区软件平台及服务提供商康盛创想达成收购协议，具体交易将在近期完成。据透露，这次的收购金额将在6000万美元以上，借助收购康盛创想，腾讯将有机会杀入中小网站的市场争夺，与百度、阿里巴巴在这一领域一较长短。 &amp;gt; &amp;gt; &amp;gt; 康盛创想旗下的Discuz!是全球范围内用户量最大、覆盖面最广的社区软件平台，拥有超过140万家网站用户，是中小网站首选的社区与网站建设平台。在 Alexa中国排名前1500家网站中，超过70%的网站选择第三方社区平台时采用了Discuz！的解决方案，奇虎董事长周鸿祎和红杉是其投资方&amp;hellip;.
-&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;了解更多
-康盛CEO戴志康告站长书：一万年免费不动摇 &amp;ndash;DoNews
- 康盛创想CEO戴志康在公司网站论坛上致信广大站长，承诺收购之后提供的任何服务，都与之前康盛所提供的一样，基于站长和用户自主、自愿的选择，站长和用户均凭自己的判断和意愿，选择打开或关闭、启用或不启用这些服务。
-以下是帖子全文：
-亲爱的各位站长、网站主、用户朋友
-相信大家已经看到我们之前在康盛官方网站和腾讯网上的新闻报道。是的，康盛即将以腾讯全资子公司的身份，继续为大家服务。
- &amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;了解更多</description>
+      <description>8月24日，国内最大的互联网企业腾讯证实，已与中国最大的社区软件平台及服务提供商康盛创想达成收购协议，具体交易将在近期完成。 对于这一事件，大</description>
     </item>
     
     <item>
@@ -949,11 +915,7 @@ WPtouch具有更漂亮的模板，就像名字所说touch，该插件在iPhone i
       <pubDate>Wed, 04 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://huaien.co/life/your-blog-finally-on-the-line/</guid>
-      <description>经过几天的测试修改，自己的博客终于开通了。 想想自己是在06年的时候开始对网站制作产生兴趣。。想想那时也挺早的，但是由于还小，还不知道建设网站。。于是就百度上搜索了一翻，看到有个phpWind的免费托管论坛。当时并对论坛并没有什么概念，也没想到要做什么主题的网站，就随便开了一个追星性质的论坛。。真的是三分热度，刚开始天天忙于论坛的管理，不过一阵子就失去了兴趣 = = 然后就没有然后了。。
-接着是07年的时候，那是又兴趣来了。百度找到了Discuz！旗下的免费论坛托管拼台我的领地。。原来是觉得这个论坛比较符合我的感觉，呵，当时又是在上初二，就来个 “学习交流论坛” （完全对建站没有任何概念，主题广泛的很，现在也是）后来发现是不是大家对学习不感兴趣还是学习在网上就行不通？后来改成了交友性质的“青春社区” 这个论坛建了最久，期间断断续续管理了不少时间，也是花费我最大精力的网站。会员后来也达到了600人，但其中一部分不是真实活跃的会员。现在这个网站pr还是2。。
-在做免费论坛的那段时间也看到很多人去做独立网站了，但是我没有网银，也只好知足了。今年我才开始学做独立网站。先是购买了一个域名 wyane.net 然后再寻找着合适的空间，在淘宝上买过美国空间和国内的双线空间，上传FTP时的速度让我抛弃了美国的空间，因为国内的一对比，美国的空间太慢了。。第一次程序当然还是Discuz！的。。。说了这么多废话，不说了
-百度下建站程序，发现wordpress很出名。。原来都不知道这个。。真的是孤陋寡闻啊。下载 -安装 发现这个程序真的巨好，有种相见恨晚的感觉，前两天向老薛申请了一个免费空间做一个个人博客耍耍
-wake me up when september ends</description>
+      <description>经过几天的测试修改，自己的博客终于开通了。 想想自己是在06年的时候开始对网站制作产生兴趣。。想想那时也挺早的，但是由于还小，还不知道建设网站</description>
     </item>
     
   </channel>
