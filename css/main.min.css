@@ -473,11 +473,13 @@ h2.description {
 }
 
 .post-warp .post-meta {
-	color: rgba(85,85,85,.52941)!important
+	color: rgba(85,85,85,.52941)!important;
+	padding: 1rem 0 0 0;
 }
 
 .dark-theme .post-warp .post-meta {
-	color: #87878d!important
+	color: #87878d!important;
+	padding: 1rem 0 0 0;
 }
 
 .post-warp .post-meta a {
@@ -682,7 +684,7 @@ h2.description {
 
 .post-warp .post-nav a.next {
 	float: right;
-    padding: 0 0 3rem 0
+	padding: 0 0 3rem 0
 }
 
 .post-warp .post-nav a.next:hover {
@@ -694,7 +696,7 @@ h2.description {
 }
 
 .post-warp .post-comment {
-	padding: 3rem 0
+	padding: 2rem 0
 }
 
 .tag-cloud-tags {
