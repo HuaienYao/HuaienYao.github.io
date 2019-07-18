@@ -683,8 +683,7 @@ h2.description {
 }
 
 .post-warp .post-nav a.next {
-	float: right;
-	padding: 0 0 3rem 0
+	float: right
 }
 
 .post-warp .post-nav a.next:hover {
@@ -696,7 +695,7 @@ h2.description {
 }
 
 .post-warp .post-comment {
-	padding: 3rem 0
+	padding: 3.5rem 0
 }
 
 .tag-cloud-tags {
