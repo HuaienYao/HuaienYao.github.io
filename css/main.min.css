@@ -681,8 +681,8 @@ h2.description {
 }
 
 .post-warp .post-nav a.next {
-	float: right
-    padding: 0 0 3rem 0;
+	float: right;
+    padding: 0 0 3rem 0
 }
 
 .post-warp .post-nav a.next:hover {
