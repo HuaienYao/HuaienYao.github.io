@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 19 Apr 2019 09:56:14 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jul 2019 14:58:47 +0800</lastBuildDate>
     
 	<atom:link href="https://huaien.co/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>coding-pages</title>
+      <link>https://huaien.co/tags/coding-pages/</link>
+      <pubDate>Thu, 25 Jul 2019 14:58:47 +0800</pubDate>
+      
+      <guid>https://huaien.co/tags/coding-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://huaien.co/tags/github/</link>
+      <pubDate>Thu, 25 Jul 2019 14:58:47 +0800</pubDate>
+      
+      <guid>https://huaien.co/tags/github/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hugo</title>
@@ -215,24 +233,6 @@
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://huaien.co/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Coding Pages</title>
-      <link>https://huaien.co/tags/coding-pages/</link>
-      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/tags/coding-pages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GitHub</title>
-      <link>https://huaien.co/tags/github/</link>
-      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/tags/github/</guid>
       <description></description>
     </item>
     

@@ -5,8 +5,205 @@
     <description>Recent content in Wyane&#39;s Blog on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 19 Apr 2019 09:56:14 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jul 2019 14:58:47 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>一键备份博客源文件与发布文章到Github和Coding</title>
+      <link>https://huaien.co/technology/one-click-script-deploy-hugo/</link>
+      <pubDate>Thu, 25 Jul 2019 14:58:47 +0800</pubDate>
+      
+      <guid>https://huaien.co/technology/one-click-script-deploy-hugo/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;经过一番折腾，利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台。
+写在这里也是为了备份一下代码吧。。&lt;/p&gt;
+
+&lt;p&gt;在服务器博客主目录下新建一个文件，名为deploy.sh，将下面的脚本代码复制到新建的deploy.sh文件内。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[root@host huaien.co]# touch deploy.sh
+[root@host huaien.co]# vi deploy.sh
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;原先的版本是这样的&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+echo &amp;quot;............................&amp;quot;
+echo &amp;quot;.开始执行文章发布更新与同步.&amp;quot;
+echo &amp;quot;............................&amp;quot;
+
+echo &amp;quot;进入博客主目录 /www/wwwroot/blog/huaien.co&amp;quot;
+cd /www/wwwroot/blog/huaien.co
+
+echo &amp;quot;检测上级目录tmp是否已有今日日期的目录，如有，改名为今日日期时分秒&amp;quot;
+mv ../tmp/$(date +%Y%m%d)/ ../tmp/$(date +%Y%m%d%H%M%S)/
+
+echo &amp;quot;在上级目录的tmp/下新建今日日期的目录&amp;quot;
+mkdir ../tmp/$(date +%Y%m%d)/
+mkdir ../tmp/$(date +%Y%m%d)/huaien.co/
+
+echo &amp;quot;备份博客主目录下的.git目录至上级目录的tmp/今日日期/huaien.co/&amp;quot;
+cp -rv .git deploy_backupblog.sh deploy config.toml ../tmp/$(date +%Y%m%d)/huaien.co/
+
+echo &amp;quot;备份移动当前以后public目录至上级目录的tmp/今日日期/public/&amp;quot;
+mv -v public ../tmp/$(date +%Y%m%d)/public
+
+echo &amp;quot;生成博客内容 #会在博客主目录下生成public目录&amp;quot;
+hugo
+
+echo &amp;quot;复制备份好的原public目录下的.git目录至新生成的public目录下&amp;quot;
+cp -rv ../tmp/$(date +%Y%m%d)/public/.git ../tmp/$(date +%Y%m%d)/public/CNAME ../tmp/$(date +%Y%m%d)/public/deploy_public.sh  public/
+
+echo &amp;quot;进入public目录&amp;quot;
+cd public
+
+echo &amp;quot;-----------------开始将public同步到github和coding仓库---------------------&amp;quot;
+git add .
+git commit -m &amp;quot;更新博客&amp;quot;
+git push -u github master
+echo &amp;quot;同步到github仓库完成...&amp;quot;
+git push -u coding master
+echo &amp;quot;同步到coding仓库完成...&amp;quot;
+
+echo &amp;quot;--------------------------同步public到仓库结束----------------------------&amp;quot;
+echo &amp;quot;进入博客主目录&amp;quot;
+cd ..
+echo &amp;quot;复制原备份文件.git deploy_backupblog.sh config.toml到博客主目录&amp;quot;
+cp -rv ../tmp/$(date +%Y%m%d)/huaien.co/.git ../tmp/$(date +%Y%m%d)/huaien.co/deploy_backupblog.sh ../tmp/$(date +%Y%m%d)/huaien.co/config.toml ../tmp/$(date +%Y%m%d)/huaien.co/deploy ./
+echo &amp;quot;-----------------开始同步备份博客主目录到github和coding仓库----------------&amp;quot;
+git add .
+git commit -m &amp;quot;备份博客&amp;quot;
+git push -u github master
+echo &amp;quot;同步到github仓库完成...&amp;quot;
+git push -u coding master
+echo &amp;quot;同步到coding仓库完成...&amp;quot;
+echo &amp;quot;-------------------------同步博客主目录到仓库结束---------------------------&amp;quot;
+
+echo &amp;quot;................................&amp;quot;
+echo &amp;quot;.文章发布更新与同步备份博客结束.&amp;quot;
+echo &amp;quot;................................&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;由于上面这个需要转移.git文件夹等造成效率降低，所以将.git文件夹的备份改为删除除.git文件夹等以外的文件及文件夹。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+echo &amp;quot;............................&amp;quot;
+echo &amp;quot;.开始执行文章发布更新与同步.&amp;quot;
+echo &amp;quot;............................&amp;quot;
+
+echo &amp;quot;进入博客的public目录 /www/wwwroot/blog/huaien.co/public&amp;quot;
+cd /www/wwwroot/blog/huaien.co/public
+
+echo &amp;quot;删除.git,deploy_public.sh以外的文件夹与文件&amp;quot;
+ls -a| egrep -v &#39;^.git|deploy_public.sh$&#39; |xargs rm -r
+
+echo &amp;quot;进入博客程序主目录&amp;quot;
+cd ..
+
+echo &amp;quot;生成博客内容 #会在博客主目录下生成public目录&amp;quot;
+hugo
+
+echo &amp;quot;进入博客的public目录&amp;quot;
+cd public
+
+echo &amp;quot;-----------------开始将public同步到github和coding仓库---------------------&amp;quot;
+git add .
+git commit -m &amp;quot;更新博客&amp;quot;
+git push -u github master
+echo &amp;quot;同步到github仓库完成...&amp;quot;
+git push -u coding master
+echo &amp;quot;同步到coding仓库完成...&amp;quot;
+
+echo &amp;quot;--------------------------同步public到仓库结束----------------------------&amp;quot;
+echo &amp;quot;进入博客主目录&amp;quot;
+cd ..
+
+echo &amp;quot;-----------------开始同步备份博客主目录到github和coding仓库----------------&amp;quot;
+git add .
+git commit -m &amp;quot;备份博客&amp;quot;
+git push -u github master
+echo &amp;quot;同步到github仓库完成...&amp;quot;
+git push -u coding master
+echo &amp;quot;同步到coding仓库完成...&amp;quot;
+echo &amp;quot;-------------------------同步博客主目录到仓库结束---------------------------&amp;quot;
+
+echo &amp;quot;................................&amp;quot;
+echo &amp;quot;.文章发布更新与同步备份博客结束.&amp;quot;
+echo &amp;quot;................................&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;关于双平台同步&#34;&gt;关于双平台同步&lt;/h2&gt;
+
+&lt;p&gt;如何同时同步到Github和Coding平台呢？之前用Hexo的时候都是直接用Hexo的Hexo-deploy插件来同时部署到Github和Coding双平台。但是现在换到Hugo后，都是直接通过修改git的config配置文件来直接部署到相关平台。&lt;/p&gt;
+
+&lt;p&gt;步骤如下&lt;/p&gt;
+
+&lt;h3 id=&#34;1-初始化git&#34;&gt;1. 初始化git&lt;/h3&gt;
+
+&lt;p&gt;在博客的源文件目录和public目录下分别执行下面的 命令以初始化git&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-修改-git文件夹下的config配置文件&#34;&gt;2. 修改.git文件夹下的config配置文件&lt;/h3&gt;
+
+&lt;p&gt;分别修改博客的源文件目录和public目录下生成的.ggit目录下的config配置文件&lt;/p&gt;
+
+&lt;p&gt;附上本博客的配置示例&lt;/p&gt;
+
+&lt;h4 id=&#34;博客源文件目录下&#34;&gt;博客源文件目录下&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote &amp;quot;github&amp;quot;]
+	url = git@github.com:HuaienYao/hugo-blog-backup.git
+	fetch = +refs/heads/*:refs/remotes/github/*
+[branch &amp;quot;master&amp;quot;]
+	remote = github
+    remote = coding
+	merge = refs/heads/master
+[remote &amp;quot;coding&amp;quot;]
+	url = git@git.dev.tencent.com:Wyane/hugoblogbackup.git
+	fetch = +refs/heads/*:refs/remotes/coding/*
+
+[submodule &amp;quot;themes/hugo-swift-theme&amp;quot;]
+	url = https://github.com/onweru/hugo-swift-theme.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;public目录下&#34;&gt;public目录下&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote &amp;quot;coding&amp;quot;]
+	url = git@git.dev.tencent.com:Wyane/Hugoblog.git
+	fetch = +refs/heads/*:refs/remotes/coding/*
+[branch &amp;quot;master&amp;quot;]
+	remote = coding
+    remote = github
+	merge = refs/heads/master
+[remote &amp;quot;github&amp;quot;]
+	url = git@github.com:HuaienYao/HuaienYao.github.io.git
+	fetch = +refs/heads/*:refs/remotes/github/*
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-测试一下&#34;&gt;3. 测试一下&lt;/h3&gt;
+
+&lt;p&gt;可以通过执行上面最初的一键部署脚本来测试下部署是否可以成功，当然在这前你必须得在相关平台上添加好SSH公钥。
+具体可以参考下面
+&lt;a href=&#34;https://huaien.co/technology/ssh-key-generator-git/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Git生成 SSH 公钥添加到GitHub和Coding.net&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;如果测试没问题就可以使用上面的一键部署脚本来部署博客了，不过也可以用手动输入git命令来同步部署。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugo添加Valine评论系统 以LeaveIt主题为例</title>
@@ -1223,104 +1420,6 @@ Installing shared extensions:     /www/server/php/71/lib/php/extensions/no-debug
 &lt;p&gt;&lt;a href=&#34;https://www.ampproject.org/docs/fundamentals/discovery&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.ampproject.org/docs/fundamentals/discovery&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://productforums.google.com/forum/?hl=zh-hant#!topic/webmaster-zh-cn/1uPZAhxpReg&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://productforums.google.com/forum/?hl=zh-hant#!topic/webmaster-zh-cn/1uPZAhxpReg&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>32位Linux系统的node_modules文件夹移到64位系统下报错</title>
-      <link>https://huaien.co/technology/unable-to-use-nodejs-on-64-bit-os/</link>
-      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/unable-to-use-nodejs-on-64-bit-os/</guid>
-      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;把Hexo博客源码整个从32位的Linux系统搬到64位系统下，本来还没发现32位和64位，直到执行hexo clean的时候提示错误才发现。node_modules文件夹的指定模块报错。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# hexo clean
-ERROR Plugin load failed: hexo-generator-amp
-Error: Missing binding /blog/node_modules/node-sass/vendor/linux-x64-64/binding.node
-Node Sass could not find a binding for your current environment: Linux 64-bit with Node.js 10.x
-
-Found bindings for the following environments:
-  - Linux 32-bit with Node.js 8.x
-
-This usually happens because your environment has changed since running `npm install`.
-Run `npm rebuild node-sass` to download the binding for your current environment.
-    at module.exports (/www/wwwroot/pan.guosao.com/data/User/admin/home/blog/node_modules/node-sass/lib/binding.js:15:13)
-    at Object.&amp;lt;anonymous&amp;gt; (/www/wwwroot/pan.guosao.com/data/User/admin/home/blog/node_modules/node-sass/lib/index.js:14:35)
-    at Module._compile (internal/modules/cjs/loader.js:689:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)
-    at Module.load (internal/modules/cjs/loader.js:599:32)
-    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
-    at Function.Module._load (internal/modules/cjs/loader.js:530:3)
-    at Module.require (internal/modules/cjs/loader.js:637:17)
-    at require (internal/modules/cjs/helpers.js:20:18)
-    at Object.&amp;lt;anonymous&amp;gt; (/www/wwwroot/pan.guosao.com/data/User/admin/home/blog/node_modules/hexo-generator-amp/lib/templatePath.js:4:22)
-    at Module._compile (internal/modules/cjs/loader.js:689:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)
-    at Module.load (internal/modules/cjs/loader.js:599:32)
-    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
-    at Function.Module._load (internal/modules/cjs/loader.js:530:3)
-    at Module.require (internal/modules/cjs/loader.js:637:17)
-    at require (internal/modules/cjs/helpers.js:20:18)
-    at Object.&amp;lt;anonymous&amp;gt; (/www/wwwroot/pan.guosao.com/data/User/admin/home/blog/node_modules/hexo-generator-amp/lib/generator.js:5:24)
-    at Module._compile (internal/modules/cjs/loader.js:689:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)
-    at Module.load (internal/modules/cjs/loader.js:599:32)
-    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
-INFO  Deleted database.
-INFO  Deleted public folder.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;错误信息&#34;&gt;错误信息&lt;/h2&gt;
-
-&lt;p&gt;主要就是下面这两句&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Node Sass could not find a binding for your current environment: Linux 64-bit with Node.js 10.x
-
-Found bindings for the following environments:
-  - Linux 32-bit with Node.js 8.x
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;就是node sass找不到适合你现在Linux 64位系统的环境捆绑，
-当前找到的是适合32位Linux系统的。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
-
-&lt;p&gt;里面也附带了解决的办法&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;This usually happens because your environment has changed since running `npm install`.
-Run `npm rebuild node-sass` to download the binding for your current environment.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;这通常是因为你换了环境然后执行&lt;code&gt;npm install&lt;/code&gt;导致。
-执行&lt;code&gt;npm rebuild node-sass&lt;/code&gt; 来下下载适合你的当前环境的捆绑。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;root@do-sf2:/www/wwwroot/pan.guosao.com/data/User/admin/home/blog# npm rebuild node-sass
-
-&amp;gt; node-sass@4.9.2 install /www/wwwroot/pan.guosao.com/data/User/admin/home/blog/node_modules/node-sass
-&amp;gt; node scripts/install.js
-
-Downloading binary from https://github.com/sass/node-sass/releases/download/v4.9.2/linux-x64-64_binding.node
-Download complete  ] - :
-Binary saved to /www/wwwroot/pan.guosao.com/data/User/admin/home/blog/node_modules/node-sass/vendor/linux-x64-64/binding.node
-Caching binary to /root/.npm/node-sass/4.9.2/linux-x64-64_binding.node
-
-&amp;gt; node-sass@4.9.2 postinstall /www/wwwroot/pan.guosao.com/data/User/admin/home/blog/node_modules/node-sass
-&amp;gt; node scripts/build.js
-
-Binary found at /www/wwwroot/pan.guosao.com/data/User/admin/home/blog/node_modules/node-sass/vendor/linux-x64-64/binding.node
-Testing binary
-Binary is fine
-node-sass@4.9.2 /www/wwwroot/pan.guosao.com/data/User/admin/home/blog/node_modules/node-sass
-root@do-sf2:/www/wwwroot/pan.guosao.com/data/User/admin/home/blog# hexo clean
-INFO  Deleted database.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;执行后就可以正常使用了。&lt;/p&gt;</description>
     </item>
     
   </channel>

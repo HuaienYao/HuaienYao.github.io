@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  
+  <link rel="prev" href="https://huaien.co/technology/valine-to-hugo-with-leaveit/" />
+  
+  <link rel="canonical" href="https://huaien.co/technology/one-click-script-deploy-hugo/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-4547757701057415",
+          enable_page_level_ads: true
+     });
+</script>
+  
+  <title>
+       
+       
+           一键备份博客源文件与发布文章到Github和Coding | Wyane&#39;s Blog
+       
+  </title>
+  <meta name="title" content="一键备份博客源文件与发布文章到Github和Coding | Wyane&#39;s Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/huaien.co\/"
+    },
+    "articleSection" : "posts",
+    "name" : "一键备份博客源文件与发布文章到Github和Coding",
+    "headline" : "一键备份博客源文件与发布文章到Github和Coding",
+    "description" : "利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-25 14:58:47 \x2b0800 CST",
+    "dateModified" : "2019-07-25 14:58:47 \x2b0800 CST",
+    "url" : "https:\/\/huaien.co\/technology\/one-click-script-deploy-hugo\/",
+    "wordCount" : "2435",
+    "keywords" : [ "coding-pages","github", "Wyane\x27s Blog"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://huaien.co/">Wyane&#39;s Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://huaien.co/">Wyane&#39;s Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Friends">Friends</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">一键备份博客源文件与发布文章到Github和Coding</h1>
+        <div class="post-meta">
+        
+                      
+          <i class="far fa-folder-open"></i>
+                <span class="post-category">
+                        <a href="https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+          <span class="post-time">
+         <i class="far fa-calendar-alt"></i>  <time datetime=2019-07-25 itemprop="datePublished">2019-07-25</time>
+           </span>
+     
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 2435 字</span>
+         <i class="far fa-clock"></i> <span class="more-meta"> 5 分钟</span>
+          
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h2 id="背景">背景</h2>
+
+<p>经过一番折腾，利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台。
+写在这里也是为了备份一下代码吧。。</p>
+
+<p>在服务器博客主目录下新建一个文件，名为deploy.sh，将下面的脚本代码复制到新建的deploy.sh文件内。</p>
+
+<pre><code>[root@host huaien.co]# touch deploy.sh
+[root@host huaien.co]# vi deploy.sh
+
+</code></pre>
+
+<p>原先的版本是这样的</p>
+
+<pre><code class="language-bash">#!/bin/bash
+echo &quot;............................&quot;
+echo &quot;.开始执行文章发布更新与同步.&quot;
+echo &quot;............................&quot;
+
+echo &quot;进入博客主目录 /www/wwwroot/blog/huaien.co&quot;
+cd /www/wwwroot/blog/huaien.co
+
+echo &quot;检测上级目录tmp是否已有今日日期的目录，如有，改名为今日日期时分秒&quot;
+mv ../tmp/$(date +%Y%m%d)/ ../tmp/$(date +%Y%m%d%H%M%S)/
+
+echo &quot;在上级目录的tmp/下新建今日日期的目录&quot;
+mkdir ../tmp/$(date +%Y%m%d)/
+mkdir ../tmp/$(date +%Y%m%d)/huaien.co/
+
+echo &quot;备份博客主目录下的.git目录至上级目录的tmp/今日日期/huaien.co/&quot;
+cp -rv .git deploy_backupblog.sh deploy config.toml ../tmp/$(date +%Y%m%d)/huaien.co/
+
+echo &quot;备份移动当前以后public目录至上级目录的tmp/今日日期/public/&quot;
+mv -v public ../tmp/$(date +%Y%m%d)/public
+
+echo &quot;生成博客内容 #会在博客主目录下生成public目录&quot;
+hugo
+
+echo &quot;复制备份好的原public目录下的.git目录至新生成的public目录下&quot;
+cp -rv ../tmp/$(date +%Y%m%d)/public/.git ../tmp/$(date +%Y%m%d)/public/CNAME ../tmp/$(date +%Y%m%d)/public/deploy_public.sh  public/
+
+echo &quot;进入public目录&quot;
+cd public
+
+echo &quot;-----------------开始将public同步到github和coding仓库---------------------&quot;
+git add .
+git commit -m &quot;更新博客&quot;
+git push -u github master
+echo &quot;同步到github仓库完成...&quot;
+git push -u coding master
+echo &quot;同步到coding仓库完成...&quot;
+
+echo &quot;--------------------------同步public到仓库结束----------------------------&quot;
+echo &quot;进入博客主目录&quot;
+cd ..
+echo &quot;复制原备份文件.git deploy_backupblog.sh config.toml到博客主目录&quot;
+cp -rv ../tmp/$(date +%Y%m%d)/huaien.co/.git ../tmp/$(date +%Y%m%d)/huaien.co/deploy_backupblog.sh ../tmp/$(date +%Y%m%d)/huaien.co/config.toml ../tmp/$(date +%Y%m%d)/huaien.co/deploy ./
+echo &quot;-----------------开始同步备份博客主目录到github和coding仓库----------------&quot;
+git add .
+git commit -m &quot;备份博客&quot;
+git push -u github master
+echo &quot;同步到github仓库完成...&quot;
+git push -u coding master
+echo &quot;同步到coding仓库完成...&quot;
+echo &quot;-------------------------同步博客主目录到仓库结束---------------------------&quot;
+
+echo &quot;................................&quot;
+echo &quot;.文章发布更新与同步备份博客结束.&quot;
+echo &quot;................................&quot;
+
+</code></pre>
+
+<p>由于上面这个需要转移.git文件夹等造成效率降低，所以将.git文件夹的备份改为删除除.git文件夹等以外的文件及文件夹。</p>
+
+<pre><code class="language-bash">#!/bin/bash
+echo &quot;............................&quot;
+echo &quot;.开始执行文章发布更新与同步.&quot;
+echo &quot;............................&quot;
+
+echo &quot;进入博客的public目录 /www/wwwroot/blog/huaien.co/public&quot;
+cd /www/wwwroot/blog/huaien.co/public
+
+echo &quot;删除.git,deploy_public.sh以外的文件夹与文件&quot;
+ls -a| egrep -v '^.git|deploy_public.sh$' |xargs rm -r
+
+echo &quot;进入博客程序主目录&quot;
+cd ..
+
+echo &quot;生成博客内容 #会在博客主目录下生成public目录&quot;
+hugo
+
+echo &quot;进入博客的public目录&quot;
+cd public
+
+echo &quot;-----------------开始将public同步到github和coding仓库---------------------&quot;
+git add .
+git commit -m &quot;更新博客&quot;
+git push -u github master
+echo &quot;同步到github仓库完成...&quot;
+git push -u coding master
+echo &quot;同步到coding仓库完成...&quot;
+
+echo &quot;--------------------------同步public到仓库结束----------------------------&quot;
+echo &quot;进入博客主目录&quot;
+cd ..
+
+echo &quot;-----------------开始同步备份博客主目录到github和coding仓库----------------&quot;
+git add .
+git commit -m &quot;备份博客&quot;
+git push -u github master
+echo &quot;同步到github仓库完成...&quot;
+git push -u coding master
+echo &quot;同步到coding仓库完成...&quot;
+echo &quot;-------------------------同步博客主目录到仓库结束---------------------------&quot;
+
+echo &quot;................................&quot;
+echo &quot;.文章发布更新与同步备份博客结束.&quot;
+echo &quot;................................&quot;
+
+</code></pre>
+
+<h2 id="关于双平台同步">关于双平台同步</h2>
+
+<p>如何同时同步到Github和Coding平台呢？之前用Hexo的时候都是直接用Hexo的Hexo-deploy插件来同时部署到Github和Coding双平台。但是现在换到Hugo后，都是直接通过修改git的config配置文件来直接部署到相关平台。</p>
+
+<p>步骤如下</p>
+
+<h3 id="1-初始化git">1. 初始化git</h3>
+
+<p>在博客的源文件目录和public目录下分别执行下面的 命令以初始化git</p>
+
+<pre><code>git init
+</code></pre>
+
+<h3 id="2-修改-git文件夹下的config配置文件">2. 修改.git文件夹下的config配置文件</h3>
+
+<p>分别修改博客的源文件目录和public目录下生成的.ggit目录下的config配置文件</p>
+
+<p>附上本博客的配置示例</p>
+
+<h4 id="博客源文件目录下">博客源文件目录下</h4>
+
+<pre><code>[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote &quot;github&quot;]
+	url = git@github.com:HuaienYao/hugo-blog-backup.git
+	fetch = +refs/heads/*:refs/remotes/github/*
+[branch &quot;master&quot;]
+	remote = github
+    remote = coding
+	merge = refs/heads/master
+[remote &quot;coding&quot;]
+	url = git@git.dev.tencent.com:Wyane/hugoblogbackup.git
+	fetch = +refs/heads/*:refs/remotes/coding/*
+
+[submodule &quot;themes/hugo-swift-theme&quot;]
+	url = https://github.com/onweru/hugo-swift-theme.git
+</code></pre>
+
+<h4 id="public目录下">public目录下</h4>
+
+<pre><code>[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote &quot;coding&quot;]
+	url = git@git.dev.tencent.com:Wyane/Hugoblog.git
+	fetch = +refs/heads/*:refs/remotes/coding/*
+[branch &quot;master&quot;]
+	remote = coding
+    remote = github
+	merge = refs/heads/master
+[remote &quot;github&quot;]
+	url = git@github.com:HuaienYao/HuaienYao.github.io.git
+	fetch = +refs/heads/*:refs/remotes/github/*
+
+</code></pre>
+
+<h3 id="3-测试一下">3. 测试一下</h3>
+
+<p>可以通过执行上面最初的一键部署脚本来测试下部署是否可以成功，当然在这前你必须得在相关平台上添加好SSH公钥。
+具体可以参考下面
+<a href="https://huaien.co/technology/ssh-key-generator-git/" rel="nofollow noreferrer" target="_blank">Git生成 SSH 公钥添加到GitHub和Coding.net</a></p>
+
+<p>如果测试没问题就可以使用上面的一键部署脚本来部署博客了，不过也可以用手动输入git命令来同步部署。</p>
+    </div>
+
+    <div class="post-copyright">
+            <p class="copyright-item">
+              <span><i class="fa fa-user"></i></span>
+                
+             <span> <a itemprop="name" href="https://huaien.co/" rel="author">Wyane</a> </span>
+                </p>
+
+             
+            <p class="copyright-item">
+              <span><i class="fa fa-link"></i></span>
+                   
+                    <span><a href=https://huaien.co/technology/one-click-script-deploy-hugo/>https://huaien.co/technology/one-click-script-deploy-hugo/</span>
+            </p>
+            
+              
+      
+             
+            <p class="copyright-item lincese">
+              <span><i class="fa fa-copyright"></i></span>
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+      
+        
+
+
+                  
+  
+
+
+
+
+    </div>
+      
+      
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://huaien.co/tags/coding-pages/">
+                    #coding-pages</a></span>
+            
+            <span class="tag"><a href="https://huaien.co/tags/github/">
+                    #github</a></span>
+            
+            </section>
+        
+        <section>
+                <span><a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://huaien.co/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://huaien.co/technology/valine-to-hugo-with-leaveit/" class="prev" rel="prev" title="Hugo添加Valine评论系统 以LeaveIt主题为例"><i class="iconfont icon-left"></i>&nbsp;Hugo添加Valine评论系统 以LeaveIt主题为例</a>
+         
+        
+    </div>
+<br>
+<style>
+.before-comment { height: 3rem; }
+@media(min-width: 500px) { .before-comment { height: 2rem; }
+@media(min-width: 800px) { .before-comment { height: 1rem; }
+</style>       
+<div class="before-comment"></div>  
+
+<div align="center">
+<style>
+.adsbygoogle-comment { width: 99%; height: 60px; padding: 1rem 0px 0px 0px }
+@media(min-width: 500px) { .adsbygoogle-comment { width: 99%; height: 70px; padding: 1rem 0px 0px 0px} }
+@media(min-width: 800px) { .adsbygoogle-comment { width: 99%; height: 90px; padding: 1rem 0px 0px 0px} }
+</style> 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+<ins class="adsbygoogle adsbygoogle-comment"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4547757701057415"
+     data-ad-slot="9118682280"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+      <p></p>
+    <div class="post-comment">
+          
+                 
+          
+            
+      
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'NW2s1QV41zVBXsHRzTeVJWPf-MdYXbMMI',
+        appKey: 'BhNP1gtLFJ7aF5QfM89DpbFv',
+        notify:  false , 
+        verify:  false , 
+        avatar:'monsterid', 
+        placeholder: '说说你的看法~(*填写邮箱的话若有人回复，将可以收到提醒邮件哦^_^)',
+        visitor: 'false'
+    });
+  </script>
+
+  
+
+    </div>
+      
+ 
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2010 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://huaien.co/">Wyane</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

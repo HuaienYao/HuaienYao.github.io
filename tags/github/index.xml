@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GitHub on Wyane&#39;s Blog</title>
+    <title>github on Wyane&#39;s Blog</title>
     <link>https://huaien.co/tags/github/</link>
-    <description>Recent content in GitHub on Wyane&#39;s Blog</description>
+    <description>Recent content in github on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 06 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jul 2019 14:58:47 +0800</lastBuildDate>
     
 	<atom:link href="https://huaien.co/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一键备份博客源文件与发布文章到Github和Coding</title>
+      <link>https://huaien.co/technology/one-click-script-deploy-hugo/</link>
+      <pubDate>Thu, 25 Jul 2019 14:58:47 +0800</pubDate>
+      
+      <guid>https://huaien.co/technology/one-click-script-deploy-hugo/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;经过一番折腾，利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台。
+写在这里也是为了备份一下代码吧。。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Github Pages已经官方支持HTTPS与如何开启GitHub Pages HTTPS支持</title>

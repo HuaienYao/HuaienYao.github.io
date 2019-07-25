@@ -4,7 +4,89 @@
     <url>
       <loc>https://huaien.co/categories/</loc>
       
-      <lastmod>2019-04-19T09:56:14+09:00</lastmod>
+      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/posts/</loc>
+      
+      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/</loc>
+      
+      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/</loc>
+      
+      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/coding-pages/</loc>
+      
+      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/github/</loc>
+      
+      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/technology/one-click-script-deploy-hugo/</loc>
+      
+      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</loc>
+      
+      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
       
       
       
@@ -36,55 +118,7 @@
     </url>
   
     <url>
-      <loc>https://huaien.co/posts/</loc>
-      
-      <lastmod>2019-04-19T09:56:14+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/tags/</loc>
-      
-      <lastmod>2019-04-19T09:56:14+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://huaien.co/tags/valine/</loc>
-      
-      <lastmod>2019-04-19T09:56:14+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/</loc>
-      
-      <lastmod>2019-04-19T09:56:14+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</loc>
       
       <lastmod>2019-04-19T09:56:14+09:00</lastmod>
       
@@ -525,30 +559,6 @@
       <lastmod>2018-08-07T00:00:00+00:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/tags/coding-pages/</loc>
-      
-      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/tags/github/</loc>
-      
-      <lastmod>2018-08-06T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>

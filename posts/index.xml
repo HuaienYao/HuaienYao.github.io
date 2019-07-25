@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 19 Apr 2019 09:56:14 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jul 2019 14:58:47 +0800</lastBuildDate>
     
 	<atom:link href="https://huaien.co/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一键备份博客源文件与发布文章到Github和Coding</title>
+      <link>https://huaien.co/technology/one-click-script-deploy-hugo/</link>
+      <pubDate>Thu, 25 Jul 2019 14:58:47 +0800</pubDate>
+      
+      <guid>https://huaien.co/technology/one-click-script-deploy-hugo/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;经过一番折腾，利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台。
+写在这里也是为了备份一下代码吧。。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugo添加Valine评论系统 以LeaveIt主题为例</title>
