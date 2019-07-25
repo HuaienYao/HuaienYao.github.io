@@ -67,7 +67,7 @@
     "datePublished": "2019-07-25 14:58:47 \x2b0800 CST",
     "dateModified" : "2019-07-25 14:58:47 \x2b0800 CST",
     "url" : "https:\/\/huaien.co\/technology\/one-click-script-deploy-hugo\/",
-    "wordCount" : "2435",
+    "wordCount" : "2418",
     "keywords" : [ "coding-pages","github", "Wyane\x27s Blog"]
 }
 </script>
@@ -143,7 +143,7 @@
          <i class="far fa-calendar-alt"></i>  <time datetime=2019-07-25 itemprop="datePublished">2019-07-25</time>
            </span>
      
-         <i class="far fa-file-word"></i> <span class="post-word-count"> 2435 字</span>
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 2418 字</span>
          <i class="far fa-clock"></i> <span class="more-meta"> 5 分钟</span>
           
         </div>
@@ -166,12 +166,11 @@
 
           <h2 id="背景">背景</h2>
 
-<p>经过一番折腾，利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台。
-写在这里也是为了备份一下代码吧。。</p>
+<p>经过一番折腾，利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台。</p>
 
 <p>在服务器博客主目录下新建一个文件，名为deploy.sh，将下面的脚本代码复制到新建的deploy.sh文件内。</p>
 
-<pre><code>[root@host huaien.co]# touch deploy.sh
+<pre><code class="language-bash">[root@host huaien.co]# touch deploy.sh
 [root@host huaien.co]# vi deploy.sh
 
 </code></pre>
@@ -295,7 +294,7 @@ echo &quot;................................&quot;
 
 <p>在博客的源文件目录和public目录下分别执行下面的 命令以初始化git</p>
 
-<pre><code>git init
+<pre><code class="language-bash">git init
 </code></pre>
 
 <h3 id="2-修改-git文件夹下的config配置文件">2. 修改.git文件夹下的config配置文件</h3>
@@ -306,7 +305,7 @@ echo &quot;................................&quot;
 
 <h4 id="博客源文件目录下">博客源文件目录下</h4>
 
-<pre><code>[core]
+<pre><code class="language-yaml">[core]
 	repositoryformatversion = 0
 	filemode = true
 	bare = false
@@ -328,7 +327,7 @@ echo &quot;................................&quot;
 
 <h4 id="public目录下">public目录下</h4>
 
-<pre><code>[core]
+<pre><code class="language-yaml">[core]
 	repositoryformatversion = 0
 	filemode = true
 	bare = false

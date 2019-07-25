@@ -16,12 +16,11 @@
       <guid>https://huaien.co/technology/one-click-script-deploy-hugo/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
-&lt;p&gt;经过一番折腾，利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台。
-写在这里也是为了备份一下代码吧。。&lt;/p&gt;
+&lt;p&gt;经过一番折腾，利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台。&lt;/p&gt;
 
 &lt;p&gt;在服务器博客主目录下新建一个文件，名为deploy.sh，将下面的脚本代码复制到新建的deploy.sh文件内。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;[root@host huaien.co]# touch deploy.sh
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@host huaien.co]# touch deploy.sh
 [root@host huaien.co]# vi deploy.sh
 
 &lt;/code&gt;&lt;/pre&gt;
@@ -145,7 +144,7 @@ echo &amp;quot;................................&amp;quot;
 
 &lt;p&gt;在博客的源文件目录和public目录下分别执行下面的 命令以初始化git&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git init
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;2-修改-git文件夹下的config配置文件&#34;&gt;2. 修改.git文件夹下的config配置文件&lt;/h3&gt;
@@ -156,7 +155,7 @@ echo &amp;quot;................................&amp;quot;
 
 &lt;h4 id=&#34;博客源文件目录下&#34;&gt;博客源文件目录下&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;[core]
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;[core]
 	repositoryformatversion = 0
 	filemode = true
 	bare = false
@@ -178,7 +177,7 @@ echo &amp;quot;................................&amp;quot;
 
 &lt;h4 id=&#34;public目录下&#34;&gt;public目录下&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;[core]
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;[core]
 	repositoryformatversion = 0
 	filemode = true
 	bare = false

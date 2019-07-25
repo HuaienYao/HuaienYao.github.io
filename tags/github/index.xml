@@ -19,8 +19,7 @@
       <guid>https://huaien.co/technology/one-click-script-deploy-hugo/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
-&lt;p&gt;经过一番折腾，利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台。
-写在这里也是为了备份一下代码吧。。&lt;/p&gt;</description>
+&lt;p&gt;经过一番折腾，利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台。&lt;/p&gt;</description>
     </item>
     
     <item>
