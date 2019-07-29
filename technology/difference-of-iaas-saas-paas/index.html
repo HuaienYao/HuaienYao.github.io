@@ -148,6 +148,63 @@
           
         </div>
     </header>
+	
+          <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title"></h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#クラウドとは">クラウドとは</a></li>
+<li><a href="#iaas-paas-saasの違い">IaaS、PaaS、SaaSの違い</a>
+<ul>
+<li><a href="#iaas">IaaS</a></li>
+<li><a href="#paas">PaaS</a></li>
+<li><a href="#saas">SaaS</a></li>
+<li><a href="#２-クラウドプラットフォームの紹介">２、クラウドプラットフォームの紹介</a></li>
+</ul></li>
+<li><a href="#各クラウドサービス社の世界シェア">各クラウドサービス社の世界シェア</a>
+<ul>
+<li><a href="#仮想マシンの起動速度">仮想マシンの起動速度</a></li>
+<li><a href="#vmの選択方法">VMの選択方法</a></li>
+<li><a href="#計算方法-課金対">計算方法、課金対</a></li>
+<li><a href="#ディスカウント">ディスカウント</a></li>
+<li><a href="#ライセンス利用">ライセンス利用</a></li>
+<li><a href="#データ分析サービスの違い">データ分析サービスの違い</a></li>
+</ul></li>
+<li><a href="#参考文献">参考文献：</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+<script type="text/javascript">
+  window.onload = function () {
+    var fix = $('.post-toc');
+    var end = $('.post-comment');
+    var fixTop = fix.offset().top, fixHeight = fix.height();
+    var endTop, miss;
+    var offsetTop = fix[0].offsetTop;
+    $(window).scroll(function () {
+      var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+      if (end.length > 0) {
+        endTop = end.offset().top;
+        miss = endTop - docTop - fixHeight;
+      }
+      if (fixTop < docTop) {
+        fix.css({ 'position': 'fixed' });
+        if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+          fix.css({ top: miss });
+        } else {
+          fix.css({ top: 0 });
+        }
+      } else {
+        fix.css({ 'position': 'absolute' });
+        fix.css({ top: offsetTop });
+      }
+    })
+  }
+</script> 
+	
     <div class="post-content">
         
 
