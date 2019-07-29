@@ -5,8 +5,183 @@
     <description>Recent content in Wyane&#39;s Blog on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 25 Jul 2019 14:58:47 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jul 2019 07:42:33 +0000</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugo的LeaveIt主题优化记录一-修复错位，添加toc</title>
+      <link>https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/</link>
+      <pubDate>Mon, 29 Jul 2019 07:42:33 +0000</pubDate>
+      
+      <guid>https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/</guid>
+      <description>
+
+&lt;h2 id=&#34;标签处的back-home按钮位置错位&#34;&gt;标签处的back・home按钮位置错位&lt;/h2&gt;
+
+&lt;p&gt;这个问题我现在才发现，原来是因为这个主题在生成静态文件的时候需要sass编译。难怪我每次修改&lt;code&gt;/themes/LeaveIt/assets/css/&lt;/code&gt;下面的样式总不见效果。后来一直直接修改的站点目录下的/resources/_gen/assets/scss/css/XXX.content文件才会看到修改的效果。直到今天，我发现原来普通版本的hugo是不支持sass编译的，查看了这个&lt;a href=&#34;https://github.com/liuzc/LeaveIt/issues/14/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;#14 Issue&lt;/a&gt;才知道原来要用hugo extended版本才可以编译sass。
+可以从&lt;a href=&#34;https://github.com/gohugoio/hugo/releases/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo Release页面&lt;/a&gt;下载该版本。&lt;/p&gt;
+
+&lt;h3 id=&#34;原因&#34;&gt;原因&lt;/h3&gt;
+
+&lt;p&gt;其实就是&lt;code&gt;/themes/LeaveIt/assets/css/_common/_page/post.scss&lt;/code&gt;样式表的&lt;code&gt;.post-tags&lt;/code&gt;样式问题，这个文件里的&lt;code&gt;.post-tags&lt;/code&gt;样式应该是正常的，如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;    .post-tags {
+        padding: 1rem 0 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;而主题目录自带的&lt;code&gt;LeaveIt/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content&lt;/code&gt;里的&lt;code&gt;.post-tags&lt;/code&gt;样式却是不一样。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H39fd4ba308524a4cb510f832b7753b8fl.jpg&#34; alt=&#34;原作者github主题截图&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/liuzc/LeaveIt/blob/master/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;点此&lt;/a&gt;进入相关页面。&lt;/p&gt;
+
+&lt;p&gt;原因就在于作者生成的&lt;code&gt;LeaveIt/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content&lt;/code&gt;里的&lt;code&gt;.post-tags&lt;/code&gt;样式是错误的，正常应该在使用&lt;code&gt;hugo&lt;/code&gt;命令生成静态页面的时候会通过sass编译重新生成&lt;code&gt;LeaveIt/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content&lt;/code&gt;文件，但是由于我用的版本不是&lt;code&gt;hugo_extend&lt;/code&gt;版本，所以每次生成静态页面都导致在 &lt;code&gt;/themes/LeaveIt/assets/css/_common/_page/post.scss&lt;/code&gt; 里面修改的都不能更新到&lt;code&gt;LeaveIt/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content&lt;/code&gt;所以没有效果。&lt;/p&gt;
+
+&lt;h3 id=&#34;解决方法&#34;&gt;解决方法&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;使用支持sass编译的&lt;a href=&#34;https://github.com/gohugoio/hugo/releases//&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hugo extend版本&lt;/a&gt;，就可以通过修改&lt;code&gt;/themes/LeaveIt/assets/css/_common/_page/post.scss&lt;/code&gt;来实现效果。&lt;/li&gt;
+&lt;li&gt;使用普通的不支持sass编译的hugo版本，这样需要直接修改&lt;code&gt;LeaveIt/resources/_gen/assets/scss/css/&lt;/code&gt;下的.content文件，这样的话修改&lt;code&gt;/themes/LeaveIt/assets/css/&lt;/code&gt;下的文件均无法直接反应效果。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;文章页添加toc目录支持&#34;&gt;文章页添加TOC目录支持&lt;/h2&gt;
+
+&lt;p&gt;原版的LeaveIt主题没有很好的支持TOC文章目录导航，但是@&lt;a href=&#34;https://github.com/ehlxr/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;ehlxr&lt;/a&gt; 在Github提交了&lt;a href=&#34;https://github.com/liuzc/LeaveIt/pull/11/commits&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;相关pull请求&lt;/a&gt; 根据这个成功添加了TOC目录支持。&lt;/p&gt;
+
+&lt;p&gt;1，在&lt;code&gt;/themes/LeaveIt/assets/css/_custom.scss&lt;/code&gt;中添加下面的toc样式，可以根据自己的喜好自定义修改。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.post-toc {
+    position: absolute;
+    width: 200px;
+    margin-left: 780px;
+    padding: 10px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+
+    .post-toc-title {
+        margin: 0;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .post-toc-content {
+        &amp;amp;.always-active ul {
+            display: block;
+        }
+
+        &amp;gt;nav&amp;gt;ul {
+            margin: 10px 0;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+
+            ul {
+            padding-left: 15px;
+            display: none;
+            }
+
+            .has-active &amp;gt; ul {
+                display: block;
+            }
+        }
+    }
+
+    a:hover {
+        color: #c05b4d;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    a {
+        display: block;
+        line-height: 30px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -webkit-transition-duration: .2s;
+        transition-duration: .2s;
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        transition-property: transform;
+        transition-property: transform,-webkit-transform;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+}
+
+@media only screen and (max-width: 1224px) {
+    .post-toc {
+        display: none;
+    }
+} 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在&lt;code&gt;/themes/LeaveIt/layouts/partials/&lt;/code&gt;下新建&lt;code&gt;toc.html&lt;/code&gt;文件，内容为下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;post-toc&amp;quot; id=&amp;quot;post-toc&amp;quot;&amp;gt;
+  &amp;lt;h2 class=&amp;quot;post-toc-title&amp;quot;&amp;gt;{{ T &amp;quot;toc&amp;quot; }}&amp;lt;/h2&amp;gt;
+  {{ $globalAutoCollapseToc := .Site.Params.autoCollapseToc | default false }}
+  &amp;lt;div class=&amp;quot;post-toc-content{{ if not (or .Params.autoCollapseToc (and $globalAutoCollapseToc (ne .Params.autoCollapseToc false))) }} always-active{{ end }}&amp;quot;&amp;gt;
+    {{.TableOfContents}}
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+  window.onload = function () {
+    var fix = $(&#39;.post-toc&#39;);
+    var end = $(&#39;.post-comment&#39;);
+    var fixTop = fix.offset().top, fixHeight = fix.height();
+    var endTop, miss;
+    var offsetTop = fix[0].offsetTop;
+    $(window).scroll(function () {
+      var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+      if (end.length &amp;gt; 0) {
+        endTop = end.offset().top;
+        miss = endTop - docTop - fixHeight;
+      }
+      if (fixTop &amp;lt; docTop) {
+        fix.css({ &#39;position&#39;: &#39;fixed&#39; });
+        if ((end.length &amp;gt; 0) &amp;amp;&amp;amp; (endTop &amp;lt; (docTop + fixHeight))) {
+          fix.css({ top: miss });
+        } else {
+          fix.css({ top: 0 });
+        }
+      } else {
+        fix.css({ &#39;position&#39;: &#39;absolute&#39; });
+        fix.css({ top: offsetTop });
+      }
+    })
+  }
+&amp;lt;/script&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在文章页的模板&lt;code&gt;/themes/LeaveIt/layouts/_default/single.html&lt;/code&gt;中 &lt;code&gt;&amp;lt;/header&amp;gt;&lt;/code&gt;标签后引入TOC模板&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;	{{ if ( .Site.Params.toc | default true ) }}
+          {{ partial &amp;quot;toc.html&amp;quot; . }}
+	{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;添加后重新使用hugo来生成静态页面，可以在文章页查看到已经有toc目录导航了。当然前提是你得在编辑文章的时候使用到 h1，h2等标题样式。&lt;/p&gt;
+
+&lt;p&gt;最后站点的配置文件&lt;code&gt;config.toml&lt;/code&gt;添加以下配置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;toc = true                # 是否开启目录
+autoCollapseToc = true   # Auto expand and collapse toc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;相关文章&#34;&gt;相关文章&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/valine-to-hugo-with-leaveit//&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo添加Valine评论系统 以LeaveIt主题为例&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>一键备份博客源文件与发布文章到Github和Coding</title>
@@ -1336,89 +1511,6 @@ Installing shared extensions:     /www/server/php/71/lib/php/extensions/no-debug
 &lt;p&gt;密码更改完成，后续的切换用户操作用 su 命令输入设定好的新密码就可以切换到root用户了。&lt;/p&gt;
 
 &lt;p&gt;经常登录AWS EC2的话，这个在一开始就会用到，如果修改密码，这个命令也是很方便的。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>正确使用AMP 让Google找到你的AMP页面</title>
-      <link>https://huaien.co/technology/let-google-find-your-amp/</link>
-      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/let-google-find-your-amp/</guid>
-      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;在用Hexo的&lt;a href=&#34;https://github.com/tea3/hexo-generator-amp&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo-generator-amp&lt;/a&gt;插件后，发现并没有被收录AMP页面。
-查看了下官方文档，如果要让你的AMP页面被找到，需要在head加入link。&lt;/p&gt;
-
-&lt;h2 id=&#34;如何让-google-发现我的-amp-网页&#34;&gt;如何让 Google 发现我的 AMP 网页？&lt;/h2&gt;
-
-&lt;p&gt;如果有其他网页链接到或引荐 AMP 网页，Google 会将这些 AMP 网页编入索引。&lt;/p&gt;
-
-&lt;p&gt;如果您的网页既有 AMP 版本，又有非 AMP 版本，请包含以下链接：&lt;/p&gt;
-
-&lt;h3 id=&#34;非amp网页&#34;&gt;非AMP网页&lt;/h3&gt;
-
-&lt;p&gt;在任意非 AMP 网页上，引荐相应网页的 AMP 版本，让 Google 和其他平台知道相应网页存在 AMP 版本：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;amphtml&amp;quot; href=&amp;quot;https://www.example.com/url/to/amp-version.html&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;amp网页&#34;&gt;AMP网页&lt;/h3&gt;
-
-&lt;p&gt;在 AMP 网页上，添加以下文本，以便引荐相应的非 AMP 规范版本：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;canonical&amp;quot; href=&amp;quot;https://www.example.com/url/to/regular-html-version.html&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;独立的amp网页&#34;&gt;独立的AMP网页&lt;/h3&gt;
-
-&lt;p&gt;对于独立的 AMP 网页（即不存在非 AMP 版本），请将 AMP 网页本身指定为规范版本：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;canonical&amp;quot; href=&amp;quot;https://www.example.com/url/to/amp-document.html&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Google 在发现独立的 AMP 网页后，也会将其编入索引。因此，对于独立的 AMP 网页，请务必确保能够通过其他已编入索引的网页链接到它们，或将它们列入站点地图。&lt;/p&gt;
-
-&lt;p&gt;最后，请务必仔细检查以确保您未在 AMP 网页的 robots.txt 文件中阻止 Google！&lt;/p&gt;
-
-&lt;p&gt;虽然Hexo的amp生成插件有一段代码需要加入head里面。
-例如本站用的Next主题，需要在&lt;a href=&#34;https://github.com/iissnan/hexo-theme-next/blob/master/layout/_partials/head.swig里面加入&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/iissnan/hexo-theme-next/blob/master/layout/_partials/head.swig里面加入&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{% if is_post() &amp;amp;&amp;amp; config.generator_amp %}
-  &amp;lt;link rel=&amp;quot;amphtml&amp;quot; href=&amp;quot;./amp/index.html&amp;quot;&amp;gt;
-{% endif %}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;但是生成页面后查看页面源码，却没有在正常页面里面发现上面这个amp的指向码，所以觉得应该是判断的语句有问题，索性就直接删除了判断语句，直接用中间那一句就好。也就是&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;amphtml&amp;quot; href=&amp;quot;./amp/index.html&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;再次生成后就发现页面里面有该代码了。&lt;/p&gt;
-
-&lt;p&gt;而且在AMP的测试网站测试正常页面的时候也会提示
-&amp;gt; 链接到在提交的网址上检测到的 AMP 网址
-您可能输入的是权威网页的网址。该网页链接到以下 AMP 网址：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2018/08/08/5b6a55a0a87b3.png&#34; alt=&#34;AMP的测试网站&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;如何检查-google-是否发现了我的-amp-网页&#34;&gt;如何检查 Google 是否发现了我的 AMP 网页？&lt;/h2&gt;
-
-&lt;p&gt;我们在 Search Console 中提供了 &lt;a href=&#34;https://support.google.com/webmasters/answer/6328309&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;AMP 搜索结果外观报告&lt;/a&gt;，以帮助您了解 Google 发现了哪些 AMP 网页。在 Search Console 中依次点击“搜索结果外观”&amp;gt;“Accelerated Mobile Pages”即可找到此类报告。&lt;/p&gt;
-
-&lt;p&gt;搜索结果外观报告可帮助您快速找出未编入索引的 AMP 网页存在的最常见的问题，以便您在网站上实现 AMP 网页的过程中系统性地解决这些问题。您可能只需对模板进行细微调整，或者为内容管理系统 (CMS) 安装兼容的插件，便能解决相关问题。&lt;/p&gt;
-
-&lt;p&gt;请注意，如果您最近才创建了有效的 AMP 网页，那么这些网页可能要过几天才会显示在搜索结果外观报告中。&lt;/p&gt;
-
-&lt;h2 id=&#34;如何检查我的-amp-网页是否可以显示在-google-搜索中&#34;&gt;如何检查我的 AMP 网页是否可以显示在 Google 搜索中？&lt;/h2&gt;
-
-&lt;p&gt;只有有效的 AMP 网页才可显示在 Google 搜索中。因此，请使用 &lt;a href=&#34;https://validator.ampproject.org/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;AMP HTML 网页验证工具&lt;/a&gt;、&lt;a href=&#34;https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Chrome 扩展程序&lt;/a&gt;或通过更加自动化的流程（例如 cron 作业）来检查您的 AMP 网页是否有效，从而确保所有新内容均有效。&lt;/p&gt;
-
-&lt;p&gt;虽然总体来讲在您的 AMP 网页中添加结构化数据是不错的做法（我们建议使用 JSON-LD），但这对新闻发布商来说尤其重要，因为包含&lt;a href=&#34;https://developers.google.com/structured-data/rich-snippets/articles&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;相应标记属性&lt;/a&gt;的新闻内容可能会显示在 Google 搜索结果的“焦点新闻”链接版块（包括“焦点新闻”轮换展示部分）中。使用 &lt;a href=&#34;https://developers.google.com/structured-data/testing-tool&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Google 结构化数据测试工具&lt;/a&gt;测试结构化数据的操作步骤很简单。
-更多请参考：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.ampproject.org/docs/fundamentals/discovery&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.ampproject.org/docs/fundamentals/discovery&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://productforums.google.com/forum/?hl=zh-hant#!topic/webmaster-zh-cn/1uPZAhxpReg&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://productforums.google.com/forum/?hl=zh-hant#!topic/webmaster-zh-cn/1uPZAhxpReg&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
