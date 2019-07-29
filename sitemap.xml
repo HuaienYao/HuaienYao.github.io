@@ -14,6 +14,30 @@
     </url>
   
     <url>
+      <loc>https://huaien.co/tags/coding-pages/</loc>
+      
+      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/github/</loc>
+      
+      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
       <loc>https://huaien.co/posts/</loc>
       
       <lastmod>2019-07-25T14:58:47+08:00</lastmod>
@@ -39,30 +63,6 @@
   
     <url>
       <loc>https://huaien.co/</loc>
-      
-      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/tags/coding-pages/</loc>
-      
-      <lastmod>2019-07-25T14:58:47+08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/tags/github/</loc>
       
       <lastmod>2019-07-25T14:58:47+08:00</lastmod>
       
@@ -1108,7 +1108,7 @@
     </url>
   
     <url>
-      <loc>https://huaien.co/tags/debian/</loc>
+      <loc>https://huaien.co/tags/apache/</loc>
       
       <lastmod>2017-09-18T00:00:00+00:00</lastmod>
       
@@ -1120,7 +1120,7 @@
     </url>
   
     <url>
-      <loc>https://huaien.co/tags/apache/</loc>
+      <loc>https://huaien.co/tags/debian/</loc>
       
       <lastmod>2017-09-18T00:00:00+00:00</lastmod>
       
