@@ -67,7 +67,7 @@
     "datePublished": "2019-07-29 07:42:33 \x2b0000 UTC",
     "dateModified" : "2019-07-29 07:42:33 \x2b0000 UTC",
     "url" : "https:\/\/huaien.co\/technology\/hugo-leaveit-theme-modified-of-bugs-1\/",
-    "wordCount" : "1901",
+    "wordCount" : "2010",
     "keywords" : [ "Hugo","博客程序", "Wyane\x27s Blog"]
 }
 </script>
@@ -143,8 +143,8 @@
          <i class="far fa-calendar-alt"></i>  <time datetime=2019-07-29 itemprop="datePublished">2019-07-29</time>
            </span>
      
-         <i class="far fa-file-word"></i> <span class="post-word-count"> 1901 字</span>
-         <i class="far fa-clock"></i> <span class="more-meta"> 4 分钟</span>
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 2010 字</span>
+         <i class="far fa-clock"></i> <span class="more-meta"> 5 分钟</span>
           
         </div>
     </header>
@@ -163,6 +163,7 @@
 <li><a href="#解决方法">解决方法</a></li>
 </ul></li>
 <li><a href="#文章页添加toc目录支持">文章页添加TOC目录支持</a></li>
+<li><a href="#放大文章内图片显示">放大文章内图片显示</a></li>
 <li><a href="#相关文章">相关文章</a></li>
 </ul></li>
 </ul>
@@ -377,11 +378,23 @@
 autoCollapseToc = true   # Auto expand and collapse toc
 </code></pre>
 
+<h2 id="放大文章内图片显示">放大文章内图片显示</h2>
+
+<p>LeaveIt主题内置了LightGallery灯箱效果，所以图片原状态是比较小，需要点击才能放大，但是通过添加下面的代码就可以让图片放大显示，对眼睛舒服点。</p>
+
+<p>在 <code>assets/css/_custom.scss</code> 中添加下面代码</p>
+
+<pre><code class="language-css">	.post-warp .post-content img {
+  		max-width: 100%;
+}
+</code></pre>
+
 <h2 id="相关文章">相关文章</h2>
 
 <ul>
 <li><a href="https://huaien.co/technology/valine-to-hugo-with-leaveit/" rel="nofollow noreferrer" target="_blank">Hugo添加Valine评论系统 以LeaveIt主题为例</a></li>
 <li><a href="https://huaien.co/technology/install-ruby-update-on-centos/" rel="nofollow noreferrer" target="_blank">Centos下安装和升级Ruby和sass</a></li>
+<li><a href="https://mogeko.me/2018/025/" rel="nofollow noreferrer" target="_blank">Leavelt 主题优化</a></li>
 </ul>
 
     </div>
