@@ -9,9 +9,9 @@
   <meta name="description" content="Record Wyane&#39;s life and study">
   <meta name="keywords" content="Wyane,Blog,博客,ブログ">
   
-  <link rel="prev" href="https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/" />
-  <link rel="next" href="https://huaien.co/technology/hugo-leaveit-theme-update-logs/" />
-  <link rel="canonical" href="https://huaien.co/technology/install-ruby-update-on-centos/" />
+  <link rel="prev" href="https://huaien.co/technology/install-ruby-update-on-centos/" />
+  
+  <link rel="canonical" href="https://huaien.co/technology/hugo-leaveit-theme-update-logs/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -32,10 +32,10 @@
   <title>
        
        
-           Centos安装和升级Ruby和sass | Wyane&#39;s Blog
+           Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片 | Wyane&#39;s Blog
        
   </title>
-  <meta name="title" content="Centos安装和升级Ruby和sass | Wyane&#39;s Blog">
+  <meta name="title" content="Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片 | Wyane&#39;s Blog">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -54,21 +54,21 @@
          "@id": "https:\/\/huaien.co\/"
     },
     "articleSection" : "posts",
-    "name" : "Centos安装和升级Ruby和sass",
-    "headline" : "Centos安装和升级Ruby和sass",
-    "description" : "本文记录了如何在Centos系统下安装和升级Ruby及sass",
+    "name" : "Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片",
+    "headline" : "Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片",
+    "description" : "本博客正在使用的是Hugo的LeaveIt主题，但是有着着各种问题，这里记录了使用过程中的优化记录包括添加字数统计,阅读时间,放大图片等",
     "inLanguage" : "zh-cn",
-    "author" : "",
-    "creator" : "",
-    "publisher": "",
-    "accountablePerson" : "",
-    "copyrightHolder" : "",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
     "copyrightYear" : "2019",
-    "datePublished": "2019-07-31 04:59:52 \x2b0000 UTC",
-    "dateModified" : "2019-07-31 04:59:52 \x2b0000 UTC",
-    "url" : "https:\/\/huaien.co\/technology\/install-ruby-update-on-centos\/",
-    "wordCount" : "1142",
-    "keywords" : [ "Centos","Ruby","SASS","Hugo", "Wyane\x27s Blog"]
+    "datePublished": "2019-07-31 05:18:22 \x2b0000 UTC",
+    "dateModified" : "2019-07-31 05:18:22 \x2b0000 UTC",
+    "url" : "https:\/\/huaien.co\/technology\/hugo-leaveit-theme-update-logs\/",
+    "wordCount" : "853",
+    "keywords" : [ "Hugo","博客程序", "Wyane\x27s Blog"]
 }
 </script>
 
@@ -130,7 +130,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Centos安装和升级Ruby和sass</h1>
+        <h1 class="post-title" itemprop="name headline">Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片</h1>
         <div class="post-meta">
         
                       
@@ -143,8 +143,8 @@
          <i class="far fa-calendar-alt"></i>  <time datetime=2019-07-31 itemprop="datePublished">2019-07-31</time>
            </span>
      
-         <i class="far fa-file-word"></i> <span class="post-word-count"> 1142 字</span>
-         <i class="far fa-clock"></i> <span class="more-meta"> 3 分钟</span>
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 853 字</span>
+         <i class="far fa-clock"></i> <span class="more-meta"> 2 分钟</span>
           
         </div>
     </header>
@@ -157,12 +157,14 @@
 <ul>
 <li>
 <ul>
-<li><a href="#安装ruby">安装Ruby</a></li>
-<li><a href="#rvm升级ruby">RVM升级Ruby</a></li>
-<li><a href="#添加ruby仓库">添加ruby仓库</a></li>
-<li><a href="#延伸阅读">延伸阅读</a></li>
+<li><a href="#添加字数统计-阅读时间">添加字数统计,阅读时间</a>
+<ul>
+<li><a href="#导入font-awesome的cdn地址">导入font awesome的cdn地址</a></li>
+<li><a href="#修改文章页面的排版">修改文章页面的排版</a></li>
+</ul></li>
+<li><a href="#放大文章内图片显示">放大文章内图片显示</a></li>
 <li><a href="#相关文章">相关文章</a></li>
-<li><a href="#参考链接">参考链接</a></li>
+<li><a href="#参考文章">参考文章</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -200,6 +202,8 @@
         
 
         
+            
+        
 
         
         
@@ -212,211 +216,114 @@
           
           
 
-          <h2 id="安装ruby">安装Ruby</h2>
+          
 
-<p>Centos下在线安装Ruby,版本可能比较旧</p>
+<h2 id="添加字数统计-阅读时间">添加字数统计,阅读时间</h2>
 
-<pre><code class="language-shell">sudo yum install ruby
+<p>原文章标题下的分类目录等的样式是下面图片的样子。图片截图于主题<a href="https://liuzhichao.com/2018/hugo-theme-leaveit/" rel="nofollow noreferrer" target="_blank">原作者博客</a></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/Hc1715da2ca7c43d9b64791b16b8a97d8I.jpg" alt="截自主题原作者博客" class="lazyload"><figcaption class="image-caption">截自主题原作者博客</figcaption></figure></p>
+
+<p>在添加了字数统计和阅读时间后，将排版改成下面这样：</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/H0199dad846c04a20a55014a76bc46759K.jpg" alt="新的样式" class="lazyload"><figcaption class="image-caption">新的样式</figcaption></figure></p>
+
+<p>直接放相关代码</p>
+
+<h3 id="导入font-awesome的cdn地址">导入font awesome的cdn地址</h3>
+
+<p>在主题目录的<code>/LeaveIt/layouts/partials/head.html</code>的 <code>&lt;/head&gt;</code>标签前(为了方便查看建议在原有的  <code>&lt;link&gt;</code>标签后)加入下面代码，以加入font awesome  5.9.0版本为例</p>
+
+<pre><code class="language-html">&lt;link href=&quot;//use.fontawesome.com/releases/v5.9.0/css/all.css&quot; rel=&quot;stylesheet&quot;&gt;
 </code></pre>
 
-<p>安装完成后可以通过<code>ruby -v</code>来查看版本</p>
+<h3 id="修改文章页面的排版">修改文章页面的排版</h3>
 
-<h2 id="rvm升级ruby">RVM升级Ruby</h2>
+<p>修改主题目录下的<code>/LeaveIt/layouts/_default/single.html</code>文件，将第7行开始的下面的代码</p>
 
-<p>如果版本太低了，可以听过RVM来升级Ruby</p>
-
-<p>什么是RVM？
-&gt; RAM（Ruby Version Manager ）是一款RAM的命令行工具，可以使用RAM轻松安装，管理Ruby版本。RVM包含了Ruby的版本管理和Gem库管理(gemset)</p>
-
-<p>可以通过以下命令来安装RVM</p>
-
-<p>先安装GPG keys:</p>
-
-<pre><code class="language-bash">gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+<pre><code class="language-html">                Written by &lt;a itemprop=&quot;name&quot; href=&quot;{{.Site.BaseURL }}&quot; rel=&quot;author&quot;&gt;{{ if isset .Params &quot;author&quot; }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}&lt;/a&gt; with ♥ 
+                &lt;span class=&quot;post-time&quot;&gt;
+                on &lt;time datetime={{.Date.Format (.Site.Params.dateFormatToUse | default &quot;2006-01-02&quot;) }} itemprop=&quot;datePublished&quot;&gt;{{ .Date.Format (.Site.Params.dateFormatToUse | default &quot;January 2, 2006&quot;) }}&lt;/time&gt;
+                &lt;/span&gt;
+                in
+                {{ with .Params.categories -}}
+                &lt;i class=&quot;iconfont icon-folder&quot;&gt;&lt;/i&gt;
+                &lt;span class=&quot;post-category&quot;&gt;
+                        {{ range . }}
+                        {{- $name := . -}}
+                        {{- with $.Site.GetPage &quot;taxonomy&quot; (printf &quot;categories/%s&quot; $name) | default ($.Site.GetPage &quot;taxonomy&quot; (printf &quot;categories/%s&quot; ($name | urlize))) -}}
+                          &lt;a href=&quot;{{ .Permalink }}&quot;&gt; {{ $name }} &lt;/a&gt;
+                        {{ end -}}
+                        {{ end }}
+                &lt;/span&gt;
+                {{- end }}
 </code></pre>
 
-<p>再安装RVM:</p>
+<p>修改为</p>
 
-<pre><code>\curl -sSL https://get.rvm.io | bash -s stable
+<pre><code class="language-html">            {{ with .Params.categories -}}
+          &lt;i class=&quot;far fa-folder-open&quot;&gt;&lt;/i&gt;
+                &lt;span class=&quot;post-category&quot;&gt;
+                        {{ range . }}
+                        {{- $name := . -}}
+                        {{- with $.Site.GetPage &quot;taxonomy&quot; (printf &quot;categories/%s&quot; $name) | default ($.Site.GetPage &quot;taxonomy&quot; (printf &quot;categories/%s&quot; ($name | urlize))) -}}
+                          &lt;a href=&quot;{{ .Permalink }}&quot;&gt; {{ $name }} &lt;/a&gt;
+                        {{ end -}}
+                        {{ end }}
+                &lt;/span&gt;
+            {{- end }}
+          &lt;span class=&quot;post-time&quot;&gt;
+         &lt;i class=&quot;far fa-calendar-alt&quot;&gt;&lt;/i&gt;  &lt;time datetime={{.Date.Format (.Site.Params.dateFormatToUse | default &quot;2006-01-02&quot;) }} itemprop=&quot;datePublished&quot;&gt;{{ .Date.Format (.Site.Params.dateFormatToUse | default &quot;2006-01-02&quot;) }}&lt;/time&gt;
+           &lt;/span&gt;
+         &lt;i class=&quot;far fa-file-word&quot;&gt;&lt;/i&gt; &lt;span class=&quot;post-word-count&quot;&gt; {{ .WordCount }} 字&lt;/span&gt;
+         &lt;i class=&quot;far fa-clock&quot;&gt;&lt;/i&gt; &lt;span class=&quot;more-meta&quot;&gt; {{ .ReadingTime }} 分钟&lt;/span&gt;
 </code></pre>
 
-<p>如果需要在安装RVM的同时安装Ruby 和 Rails 的话用下面的命令:</p>
+<p>这样就修改成了上图的排版，添加了字数统计及阅读时间。以及添加了几个font awesome的图标。使得比较简单点。
+不过用了字数统计，就需要在站点配置文件config.toml里面添加一个配置，表示网站内容包含中文，日语，韩文。可以更准确的统计字数。(或者在文章的frontmatter内单独添加这个配置应该也行的)</p>
 
-<pre><code class="language-bash">\curl -sSL https://get.rvm.io | bash -s stable --rails
+<pre><code>hasCJKLanguage = true
 </code></pre>
 
-<p>安装完成后需要更新配置文件，来使其生效</p>
+<h2 id="放大文章内图片显示">放大文章内图片显示</h2>
 
-<pre><code class="language-bash">source /etc/profile.d/rvm.sh
+<p>LeaveIt主题内置了LightGallery灯箱效果，所以图片原状态是比较小，需要点击才能放大，但是通过添加下面的代码就可以让图片放大显示，对眼睛舒服点。</p>
+
+<p>在 <code>assets/css/_custom.scss</code> 中添加下面代码</p>
+
+<pre><code class="language-css">	.post-warp .post-content img {
+  		max-width: 100%;
+}
 </code></pre>
-
-<p>接着可以通过<code>rvm -v</code>来查看RVM版本信息，如果可以代表安装成功。</p>
-
-<pre><code class="language-bash">[root@host ~]# rvm -v
-rvm 1.29.9 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
-</code></pre>
-
-<p>执行以下命令来查看Ruby版本</p>
-
-<pre><code class="language-bash">rvm list known
-</code></pre>
-
-<p>结果如下</p>
-
-<pre><code class="language-bash">[root@host ~]# rvm list known
-# MRI Rubies
-[ruby-]1.8.6[-p420]
-[ruby-]1.8.7[-head] # security released on head
-[ruby-]1.9.1[-p431]
-[ruby-]1.9.2[-p330]
-[ruby-]1.9.3[-p551]
-[ruby-]2.0.0[-p648]
-[ruby-]2.1[.10]
-[ruby-]2.2[.10]
-[ruby-]2.3[.8]
-[ruby-]2.4[.6]
-[ruby-]2.5[.5]
-[ruby-]2.6[.3]
-[ruby-]2.7[.0-preview1]
-ruby-head
-
-# for forks use: rvm install ruby-head-&lt;name&gt; --url https://github.com/githuby.git --branch 2.2
-
-# JRuby
-jruby-1.6[.8]
-jruby-1.7[.27]
-jruby-9.1[.17.0]
-jruby[-9.2.7.0]
-jruby-head
-
-# Rubinius
-rbx-1[.4.3]
-rbx-2.3[.0]
-rbx-2.4[.1]
-rbx-2[.5.8]
-rbx-3[.107]
-rbx-4[.3]
-rbx-head
-
-# TruffleRuby
-truffleruby[-19.1.0]
-
-# Opal
-opal
-
-# Minimalistic ruby implementation - ISO 30170:2012
-mruby-1.0.0
-mruby-1.1.0
-mruby-1.2.0
-mruby-1.3.0
-mruby-1[.4.1]
-mruby-2[.0.1]
-mruby[-head]
-
-# Ruby Enterprise Edition
-ree-1.8.6
-ree[-1.8.7][-2012.02]
-
-# Topaz
-topaz
-
-# MagLev
-maglev-1.0.0
-maglev-1.1[RC1]
-maglev[-1.2Alpha4]
-maglev-head
-
-# Mac OS X Snow Leopard Or Newer
-macruby-0.10
-macruby-0.11
-macruby[-0.12]
-macruby-nightly
-macruby-head
-
-# IronRuby
-ironruby[-1.1.3]
-ironruby-head
-</code></pre>
-
-<p>然后就可以通过下面的命令来安装指定版本的Ruby，例如Ruby2.5</p>
-
-<pre><code class="language-bash">rvm install 2.5
-
-</code></pre>
-
-<p>安装后可以通过下面的命令来检测是否安装成功</p>
-
-<pre><code class="language-bash">[root@host ~]# ruby -v
-ruby 2.5.5p157 (2019-03-15 revision 67260) [i686-linux]
-</code></pre>
-
-<h2 id="添加ruby仓库">添加ruby仓库</h2>
-
-<p>如何添加ruby仓库</p>
-
-<p>添加aliyun镜像并检测Ruby版本</p>
-
-<pre><code class="language-bash">gem sources -a http://mirrors.aliyun.com/rubygems/ 
-</code></pre>
-
-<p>使用rvm安装发现下载缓慢，可以考虑删除原来的仓库地址，只保留阿里云镜像。</p>
-
-<pre><code class="language-bash">gem sources --remove https://rubygems.org/
-</code></pre>
-
-<h2 id="延伸阅读">延伸阅读</h2>
-
-<p>为什么要安装Ruby呢？因为Hugo的这个LeaveIt主题有用到sass编译，但是sass编译需要安装sass，</p>
-
-<p>因为以上安装了Ruby，所以可以通过 gem安装sass。</p>
-
-<pre><code class="language-bash">gem install sass
-</code></pre>
-
-<p>安装完成后用命令查看版本，看是否安装成功</p>
-
-<pre><code class="language-bash">[root@host ~]# sass -v
-Ruby Sass 3.7.4
-</code></pre>
-
-<p>显示sass安装成功后，我们每次在修改了LeaveIt主题的样式后都需要执行下面的命令，不然修改的样式没有变化。</p>
-
-<pre><code class="language-bash">sass --style compressed [Leacelt 目录]/assets/css/main.scss:[Leacelt 目录]/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content
-</code></pre>
-
-<p>需要替换上面的<code>[Leacelt 目录]</code>，命令执行后就会在LeaveIt主题目录下的<code>/resources/_gen/assets/scss/css/</code>下更新<code>.content文件</code>。</p>
-
-<p>其实还有另一种方法，你可以直接使用Hugo提供的hugo_extended版本就可以直接编译sass了，不需要另外执行sass编译命令。         可以参考<a href="https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/#%E5%8E%9F%E5%9B%A0/" rel="nofollow noreferrer" target="_blank">这里</a></p>
 
 <h2 id="相关文章">相关文章</h2>
 
 <ul>
 <li><a href="https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/" rel="nofollow noreferrer" target="_blank">Hugo的LeaveIt主题优化记录一-修复错位，添加toc</a></li>
+<li><a href="https://huaien.co/technology/valine-to-hugo-with-leaveit/" rel="nofollow noreferrer" target="_blank">Hugo添加Valine评论系统 以LeaveIt主题为例</a></li>
+<li><a href="https://huaien.co/technology/install-ruby-update-on-centos/" rel="nofollow noreferrer" target="_blank">Centos下安装和升级Ruby和sass</a></li>
 </ul>
 
-<h2 id="参考链接">参考链接</h2>
+<h2 id="参考文章">参考文章</h2>
 
 <ul>
-<li><a href="https://rvm.io/" rel="nofollow noreferrer" target="_blank">RVM</a></li>
-<li><a href="https://blog.csdn.net/qq_26440803/article/details/82717244/" rel="nofollow noreferrer" target="_blank">Centos7安装升级Ruby</a></li>
 <li><a href="https://mogeko.me/2018/025/" rel="nofollow noreferrer" target="_blank">Leavelt 主题优化</a></li>
-<li><a href="https://akisnote.com/2018/12/sass-scss/" rel="nofollow noreferrer" target="_blank">簡単！便利！HugoでSass/Scssを使う方法！</a></li>
-<li><a href="https://www.sass.hk/install/" rel="nofollow noreferrer" target="_blank">如何安装Sass</a></li>
 </ul>
+
     </div>
 
     <div class="post-copyright">
             <p class="copyright-item">
               <span><i class="fa fa-user"></i></span>
                 
-             <span> <a itemprop="name" href="https://huaien.co/" rel="author"></a> </span>
+             <span> <a itemprop="name" href="https://huaien.co/" rel="author">Wyane</a> </span>
                 </p>
 
              
             <p class="copyright-item">
               <span><i class="fa fa-link"></i></span>
                    
-                    <span><a href=https://huaien.co/technology/install-ruby-update-on-centos/>https://huaien.co/technology/install-ruby-update-on-centos/</span>
+                    <span><a href=https://huaien.co/technology/hugo-leaveit-theme-update-logs/>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</span>
             </p>
             
               
@@ -447,17 +354,11 @@ Ruby Sass 3.7.4
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="https://huaien.co/tags/centos/">
-                    #Centos</a></span>
-            
-            <span class="tag"><a href="https://huaien.co/tags/ruby/">
-                    #Ruby</a></span>
-            
-            <span class="tag"><a href="https://huaien.co/tags/sass/">
-                    #SASS</a></span>
-            
             <span class="tag"><a href="https://huaien.co/tags/hugo/">
                     #Hugo</a></span>
+            
+            <span class="tag"><a href="https://huaien.co/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/">
+                    #博客程序</a></span>
             
             </section>
         
@@ -469,10 +370,8 @@ Ruby Sass 3.7.4
 
     <div class="post-nav">
         
-        <a href="https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/" class="prev" rel="prev" title="Hugo的LeaveIt主题优化记录一-修复错位，添加toc"><i class="iconfont icon-left"></i>&nbsp;Hugo的LeaveIt主题优化记录一-修复错位，添加toc</a>
+        <a href="https://huaien.co/technology/install-ruby-update-on-centos/" class="prev" rel="prev" title="Centos安装和升级Ruby和sass"><i class="iconfont icon-left"></i>&nbsp;Centos安装和升级Ruby和sass</a>
          
-        
-        <a href="https://huaien.co/technology/hugo-leaveit-theme-update-logs/" class="next" rel="next" title="Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片">Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 <br>
@@ -570,8 +469,9 @@ Ruby Sass 3.7.4
 
 
     
-    
-    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
     
   
 

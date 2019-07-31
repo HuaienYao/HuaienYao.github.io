@@ -5,8 +5,110 @@
     <description>Recent content in Wyane&#39;s Blog on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 31 Jul 2019 04:59:52 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2019 05:18:22 +0000</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片</title>
+      <link>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</link>
+      <pubDate>Wed, 31 Jul 2019 05:18:22 +0000</pubDate>
+      
+      <guid>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</guid>
+      <description>
+
+&lt;h2 id=&#34;添加字数统计-阅读时间&#34;&gt;添加字数统计,阅读时间&lt;/h2&gt;
+
+&lt;p&gt;原文章标题下的分类目录等的样式是下面图片的样子。图片截图于主题&lt;a href=&#34;https://liuzhichao.com/2018/hugo-theme-leaveit/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;原作者博客&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hc1715da2ca7c43d9b64791b16b8a97d8I.jpg&#34; alt=&#34;截自主题原作者博客&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在添加了字数统计和阅读时间后，将排版改成下面这样：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H0199dad846c04a20a55014a76bc46759K.jpg&#34; alt=&#34;新的样式&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;直接放相关代码&lt;/p&gt;
+
+&lt;h3 id=&#34;导入font-awesome的cdn地址&#34;&gt;导入font awesome的cdn地址&lt;/h3&gt;
+
+&lt;p&gt;在主题目录的&lt;code&gt;/LeaveIt/layouts/partials/head.html&lt;/code&gt;的 &lt;code&gt;&amp;lt;/head&amp;gt;&lt;/code&gt;标签前(为了方便查看建议在原有的  &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;标签后)加入下面代码，以加入font awesome  5.9.0版本为例&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link href=&amp;quot;//use.fontawesome.com/releases/v5.9.0/css/all.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;修改文章页面的排版&#34;&gt;修改文章页面的排版&lt;/h3&gt;
+
+&lt;p&gt;修改主题目录下的&lt;code&gt;/LeaveIt/layouts/_default/single.html&lt;/code&gt;文件，将第7行开始的下面的代码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;                Written by &amp;lt;a itemprop=&amp;quot;name&amp;quot; href=&amp;quot;{{.Site.BaseURL }}&amp;quot; rel=&amp;quot;author&amp;quot;&amp;gt;{{ if isset .Params &amp;quot;author&amp;quot; }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}&amp;lt;/a&amp;gt; with ♥ 
+                &amp;lt;span class=&amp;quot;post-time&amp;quot;&amp;gt;
+                on &amp;lt;time datetime={{.Date.Format (.Site.Params.dateFormatToUse | default &amp;quot;2006-01-02&amp;quot;) }} itemprop=&amp;quot;datePublished&amp;quot;&amp;gt;{{ .Date.Format (.Site.Params.dateFormatToUse | default &amp;quot;January 2, 2006&amp;quot;) }}&amp;lt;/time&amp;gt;
+                &amp;lt;/span&amp;gt;
+                in
+                {{ with .Params.categories -}}
+                &amp;lt;i class=&amp;quot;iconfont icon-folder&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
+                &amp;lt;span class=&amp;quot;post-category&amp;quot;&amp;gt;
+                        {{ range . }}
+                        {{- $name := . -}}
+                        {{- with $.Site.GetPage &amp;quot;taxonomy&amp;quot; (printf &amp;quot;categories/%s&amp;quot; $name) | default ($.Site.GetPage &amp;quot;taxonomy&amp;quot; (printf &amp;quot;categories/%s&amp;quot; ($name | urlize))) -}}
+                          &amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt; {{ $name }} &amp;lt;/a&amp;gt;
+                        {{ end -}}
+                        {{ end }}
+                &amp;lt;/span&amp;gt;
+                {{- end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修改为&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;            {{ with .Params.categories -}}
+          &amp;lt;i class=&amp;quot;far fa-folder-open&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
+                &amp;lt;span class=&amp;quot;post-category&amp;quot;&amp;gt;
+                        {{ range . }}
+                        {{- $name := . -}}
+                        {{- with $.Site.GetPage &amp;quot;taxonomy&amp;quot; (printf &amp;quot;categories/%s&amp;quot; $name) | default ($.Site.GetPage &amp;quot;taxonomy&amp;quot; (printf &amp;quot;categories/%s&amp;quot; ($name | urlize))) -}}
+                          &amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt; {{ $name }} &amp;lt;/a&amp;gt;
+                        {{ end -}}
+                        {{ end }}
+                &amp;lt;/span&amp;gt;
+            {{- end }}
+          &amp;lt;span class=&amp;quot;post-time&amp;quot;&amp;gt;
+         &amp;lt;i class=&amp;quot;far fa-calendar-alt&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;  &amp;lt;time datetime={{.Date.Format (.Site.Params.dateFormatToUse | default &amp;quot;2006-01-02&amp;quot;) }} itemprop=&amp;quot;datePublished&amp;quot;&amp;gt;{{ .Date.Format (.Site.Params.dateFormatToUse | default &amp;quot;2006-01-02&amp;quot;) }}&amp;lt;/time&amp;gt;
+           &amp;lt;/span&amp;gt;
+         &amp;lt;i class=&amp;quot;far fa-file-word&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;span class=&amp;quot;post-word-count&amp;quot;&amp;gt; {{ .WordCount }} 字&amp;lt;/span&amp;gt;
+         &amp;lt;i class=&amp;quot;far fa-clock&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;span class=&amp;quot;more-meta&amp;quot;&amp;gt; {{ .ReadingTime }} 分钟&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样就修改成了上图的排版，添加了字数统计及阅读时间。以及添加了几个font awesome的图标。使得比较简单点。
+不过用了字数统计，就需要在站点配置文件config.toml里面添加一个配置，表示网站内容包含中文，日语，韩文。可以更准确的统计字数。(或者在文章的frontmatter内单独添加这个配置应该也行的)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hasCJKLanguage = true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;放大文章内图片显示&#34;&gt;放大文章内图片显示&lt;/h2&gt;
+
+&lt;p&gt;LeaveIt主题内置了LightGallery灯箱效果，所以图片原状态是比较小，需要点击才能放大，但是通过添加下面的代码就可以让图片放大显示，对眼睛舒服点。&lt;/p&gt;
+
+&lt;p&gt;在 &lt;code&gt;assets/css/_custom.scss&lt;/code&gt; 中添加下面代码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;	.post-warp .post-content img {
+  		max-width: 100%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;相关文章&#34;&gt;相关文章&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo的LeaveIt主题优化记录一-修复错位，添加toc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/valine-to-hugo-with-leaveit/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo添加Valine评论系统 以LeaveIt主题为例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/install-ruby-update-on-centos/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Centos下安装和升级Ruby和sass&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;参考文章&#34;&gt;参考文章&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/025/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Leavelt 主题优化&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Centos安装和升级Ruby和sass</title>
@@ -203,6 +305,7 @@ Ruby Sass 3.7.4
 &lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/qq_26440803/article/details/82717244/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Centos7安装升级Ruby&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/025/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Leavelt 主题优化&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://akisnote.com/2018/12/sass-scss/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;簡単！便利！HugoでSass/Scssを使う方法！&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sass.hk/install/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;如何安装Sass&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -1571,128 +1674,6 @@ NrRFi9wrf+M7Q== schacon@agadorlaptop.local
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;这样就可以了。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>编译安装PHP组件出现错误提示内存不足：virtual memory exhausted Cannot allocate memory</title>
-      <link>https://huaien.co/technology/no-enough-memory-to-make-php/</link>
-      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/no-enough-memory-to-make-php/</guid>
-      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;前面一篇我们介绍了&lt;a href=&#34;https://huaien.me/article/backend/bt-panel-install-fileinfo-for-php/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;宝塔面板的PHP默认不安装fileinfo组件，需要手动编译安装&lt;/a&gt;。在php5.6上是没有出现问题，但是在编译php7.1的版本的&lt;code&gt;make &amp;amp;&amp;amp; make install&lt;/code&gt;这一步出现错误，提示：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;virtual memory exhausted: Cannot allocate memory
-Makefile:197: recipe for target &#39;libmagic/apprentice.lo&#39; failed
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;下面是make编译后的详细信息：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/www/server/php/71/src/ext/fileinfo# make &amp;amp;&amp;amp; make install /bin/sh /www/server/php/71/src/ext/fileinfo/libtool --mode=compile cc -I/www/server/php/71/src/ext/fileinfo/libmagic -I. -I/www/server/php/71/src/ext/fileinfo -DPHP_ATOM_INC -I/www/server/php/71/src/ext/fileinfo/include -I/www/server/php/71/src/ext/fileinfo/main -I/www/server/php/71/src/ext/fileinfo -I/www/server/php/71/include/php -I/www/server/php/71/include/php/main -I/www/server/php/71/include/php/TSRM -I/www/server/php/71/include/php/Zend -I/www/server/php/71/include/php/ext -I/www/server/php/71/include/php/ext/date/lib  -DHAVE_CONFIG_H  -g -O2   -c /www/server/php/71/src/ext/fileinfo/libmagic/apprentice.c -o libmagic/apprentice.lo
- cc -I/www/server/php/71/src/ext/fileinfo/libmagic -I. -I/www/server/php/71/src/ext/fileinfo -DPHP_ATOM_INC -I/www/server/php/71/src/ext/fileinfo/include -I/www/server/php/71/src/ext/fileinfo/main -I/www/server/php/71/src/ext/fileinfo -I/www/server/php/71/include/php -I/www/server/php/71/include/php/main -I/www/server/php/71/include/php/TSRM -I/www/server/php/71/include/php/Zend -I/www/server/php/71/include/php/ext -I/www/server/php/71/include/php/ext/date/lib -DHAVE_CONFIG_H -g -O2 -c /www/server/php/71/src/ext/fileinfo/libmagic/apprentice.c  -fPIC -DPIC -o libmagic/.libs/apprentice.o
-virtual memory exhausted: Cannot allocate memory
-Makefile:197: recipe for target &#39;libmagic/apprentice.lo&#39; failed
-make: *** [libmagic/apprentice.lo] Error 1
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
-
-&lt;p&gt;==这个意思是内存不足，无法完成编译。==&lt;/p&gt;
-
-&lt;p&gt;本次使用的是AWS t2.micro配置的EC2实例，实际上其内存有1GB，但是还是出现本次的错误，应该是同时运行的其他程序导致内存不足。&lt;/p&gt;
-
-&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
-
-&lt;p&gt;既然这样，物理内存不足我们没办法，但是可以通过自行增加虚拟内存的方法来解决。&lt;/p&gt;
-
-&lt;h3 id=&#34;通过free-m来查看下内存使用状况&#34;&gt;通过free -m来查看下内存使用状况&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;# free -m
-              total        used        free      shared  buff/cache   available
-Mem:            990         466         447           3          76         401
-Swap:             0           0           0
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;创建一个目录-opt-images&#34;&gt;创建一个目录/opt/images/&lt;/h3&gt;
-
-&lt;p&gt;你可以自己定路径&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# mkdir /opt/images/
-# rm -rf /opt/images/swap
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;创建一个2gb大小的文件&#34;&gt;创建一个2GB大小的文件&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;# dd if=/dev/zero of=/opt/images/swap bs=1024 count=2048000
-2048000+0 records in
-2048000+0 records out
-2097152000 bytes (2.1 GB, 2.0 GiB) copied, 30.3635 s, 69.1 MB/s
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;把创建的文件变成swap分区&#34;&gt;把创建的文件变成SWAP分区&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;# mkswap /opt/images/swap
-Setting up swapspace version 1, size = 2 GiB (2097147904 bytes)
-no label, UUID=dd2fa2db-f8bd-41db-9e1a-5d9257924c6f
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;启用这个swap文件&#34;&gt;启用这个SWAP文件&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;# swapon /opt/images/swap
-swapon: /opt/images/swap: insecure permissions 0644, 0600 suggested.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;看看swap是否生效&#34;&gt;看看SWAP是否生效&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;# free -m
-              total        used        free      shared  buff/cache   available
-Mem:            990         467          64           3         458         356
-Swap:          1999           0        1999
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;可以看到的确有2GB的SWAP内存&lt;/p&gt;
-
-&lt;h3 id=&#34;然后回到原来的作业&#34;&gt;然后回到原来的作业&lt;/h3&gt;
-
-&lt;p&gt;使用&lt;code&gt;cd -&lt;/code&gt;回到原来的&lt;code&gt;/www/server/php/71/src/ext/fileinfo&lt;/code&gt;目录&lt;/p&gt;
-
-&lt;h3 id=&#34;继续编译fileinfo&#34;&gt;继续编译fileinfo&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;# make &amp;amp;&amp;amp; make install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;执行成功&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;See any operating system documentation about shared libraries for
-more information, such as the ld(1) and ld.so(8) manual pages.
-----------------------------------------------------------------------
-
-Build complete.
-Don&#39;t forget to run &#39;make test&#39;.
-
-Installing shared extensions:     /www/server/php/71/lib/php/extensions/no-debug-non-zts-20160303/
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;完成后关闭swap&#34;&gt;完成后关闭SWAP&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;# swapoff swap
-# rm -f /opt/images/swap
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以后再出现内存不足可以通过增加SWAP虚拟内存来解决~&lt;/p&gt;
-
-&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/chenpingzhao/p/4820814.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.cnblogs.com/chenpingzhao/p/4820814.html&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

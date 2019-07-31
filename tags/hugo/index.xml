@@ -6,10 +6,19 @@
     <description>Recent content in Hugo on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 31 Jul 2019 04:59:52 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2019 05:18:22 +0000</lastBuildDate>
     
 	<atom:link href="https://huaien.co/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片</title>
+      <link>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</link>
+      <pubDate>Wed, 31 Jul 2019 05:18:22 +0000</pubDate>
+      
+      <guid>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</guid>
+      <description>添加字数统计,阅读时间 原文章标题下的分类目录等的样式是下面图片的样子。图片截图于主题原作者博客 在添加了字数统计和阅读时间后，将排版改成下面这</description>
+    </item>
     
     <item>
       <title>Centos安装和升级Ruby和sass</title>
