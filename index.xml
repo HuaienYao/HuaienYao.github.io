@@ -5,8 +5,205 @@
     <description>Recent content in Wyane&#39;s Blog on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 29 Jul 2019 07:42:33 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2019 04:59:52 +0000</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Centos安装和升级Ruby和sass</title>
+      <link>https://huaien.co/technology/install-ruby-update-on-centos/</link>
+      <pubDate>Wed, 31 Jul 2019 04:59:52 +0000</pubDate>
+      
+      <guid>https://huaien.co/technology/install-ruby-update-on-centos/</guid>
+      <description>&lt;h2 id=&#34;安装ruby&#34;&gt;安装Ruby&lt;/h2&gt;
+
+&lt;p&gt;Centos下在线安装Ruby,版本可能比较旧&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo yum install ruby
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装完成后可以通过&lt;code&gt;ruby -v&lt;/code&gt;来查看版本&lt;/p&gt;
+
+&lt;h2 id=&#34;rvm升级ruby&#34;&gt;RVM升级Ruby&lt;/h2&gt;
+
+&lt;p&gt;如果版本太低了，可以听过RVM来升级Ruby&lt;/p&gt;
+
+&lt;p&gt;什么是RVM？
+&amp;gt; RAM（Ruby Version Manager ）是一款RAM的命令行工具，可以使用RAM轻松安装，管理Ruby版本。RVM包含了Ruby的版本管理和Gem库管理(gemset)&lt;/p&gt;
+
+&lt;p&gt;可以通过以下命令来安装RVM&lt;/p&gt;
+
+&lt;p&gt;先安装GPG keys:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;再安装RVM:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;\curl -sSL https://get.rvm.io | bash -s stable
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果需要在安装RVM的同时安装Ruby 和 Rails 的话用下面的命令:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;\curl -sSL https://get.rvm.io | bash -s stable --rails
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装完成后需要更新配置文件，来使其生效&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;source /etc/profile.d/rvm.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接着可以通过&lt;code&gt;rvm -v&lt;/code&gt;来查看RVM版本信息，如果可以代表安装成功。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@host ~]# rvm -v
+rvm 1.29.9 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;执行以下命令来查看Ruby版本&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rvm list known
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;结果如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@host ~]# rvm list known
+# MRI Rubies
+[ruby-]1.8.6[-p420]
+[ruby-]1.8.7[-head] # security released on head
+[ruby-]1.9.1[-p431]
+[ruby-]1.9.2[-p330]
+[ruby-]1.9.3[-p551]
+[ruby-]2.0.0[-p648]
+[ruby-]2.1[.10]
+[ruby-]2.2[.10]
+[ruby-]2.3[.8]
+[ruby-]2.4[.6]
+[ruby-]2.5[.5]
+[ruby-]2.6[.3]
+[ruby-]2.7[.0-preview1]
+ruby-head
+
+# for forks use: rvm install ruby-head-&amp;lt;name&amp;gt; --url https://github.com/githuby.git --branch 2.2
+
+# JRuby
+jruby-1.6[.8]
+jruby-1.7[.27]
+jruby-9.1[.17.0]
+jruby[-9.2.7.0]
+jruby-head
+
+# Rubinius
+rbx-1[.4.3]
+rbx-2.3[.0]
+rbx-2.4[.1]
+rbx-2[.5.8]
+rbx-3[.107]
+rbx-4[.3]
+rbx-head
+
+# TruffleRuby
+truffleruby[-19.1.0]
+
+# Opal
+opal
+
+# Minimalistic ruby implementation - ISO 30170:2012
+mruby-1.0.0
+mruby-1.1.0
+mruby-1.2.0
+mruby-1.3.0
+mruby-1[.4.1]
+mruby-2[.0.1]
+mruby[-head]
+
+# Ruby Enterprise Edition
+ree-1.8.6
+ree[-1.8.7][-2012.02]
+
+# Topaz
+topaz
+
+# MagLev
+maglev-1.0.0
+maglev-1.1[RC1]
+maglev[-1.2Alpha4]
+maglev-head
+
+# Mac OS X Snow Leopard Or Newer
+macruby-0.10
+macruby-0.11
+macruby[-0.12]
+macruby-nightly
+macruby-head
+
+# IronRuby
+ironruby[-1.1.3]
+ironruby-head
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后就可以通过下面的命令来安装指定版本的Ruby，例如Ruby2.5&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rvm install 2.5
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装后可以通过下面的命令来检测是否安装成功&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@host ~]# ruby -v
+ruby 2.5.5p157 (2019-03-15 revision 67260) [i686-linux]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;添加ruby仓库&#34;&gt;添加ruby仓库&lt;/h2&gt;
+
+&lt;p&gt;如何添加ruby仓库&lt;/p&gt;
+
+&lt;p&gt;添加aliyun镜像并检测Ruby版本&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gem sources -a http://mirrors.aliyun.com/rubygems/ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用rvm安装发现下载缓慢，可以考虑删除原来的仓库地址，只保留阿里云镜像。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gem sources --remove https://rubygems.org/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;延伸阅读&#34;&gt;延伸阅读&lt;/h2&gt;
+
+&lt;p&gt;为什么要安装Ruby呢？因为Hugo的这个LeaveIt主题有用到sass编译，但是sass编译需要安装sass，&lt;/p&gt;
+
+&lt;p&gt;因为以上安装了Ruby，所以可以通过 gem安装sass。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gem install sass
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装完成后用命令查看版本，看是否安装成功&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@host ~]# sass -v
+Ruby Sass 3.7.4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;显示sass安装成功后，我们每次在修改了LeaveIt主题的样式后都需要执行下面的命令，不然修改的样式没有变化。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sass --style compressed [Leacelt 目录]/assets/css/main.scss:[Leacelt 目录]/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;需要替换上面的&lt;code&gt;[Leacelt 目录]&lt;/code&gt;，命令执行后就会在LeaveIt主题目录下的&lt;code&gt;/resources/_gen/assets/scss/css/&lt;/code&gt;下更新&lt;code&gt;.content文件&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;其实还有另一种方法，你可以直接使用Hugo提供的hugo_extended版本就可以直接编译sass了，不需要另外执行sass编译命令。         可以参考&lt;a href=&#34;https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/#%E5%8E%9F%E5%9B%A0/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这里&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;相关文章&#34;&gt;相关文章&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo的LeaveIt主题优化记录一-修复错位，添加toc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://akisnote.com/2018/12/sass-scss/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;簡単！便利！HugoでSass/Scssを使う方法！&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;参考链接&#34;&gt;参考链接&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://rvm.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;RVM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/qq_26440803/article/details/82717244/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Centos7安装升级Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>Hugo的LeaveIt主题优化记录一-修复错位，添加toc</title>
@@ -45,6 +242,7 @@
 &lt;ol&gt;
 &lt;li&gt;使用支持sass编译的&lt;a href=&#34;https://github.com/gohugoio/hugo/releases//&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hugo extend版本&lt;/a&gt;，就可以通过修改&lt;code&gt;/themes/LeaveIt/assets/css/_common/_page/post.scss&lt;/code&gt;来实现效果。&lt;/li&gt;
 &lt;li&gt;使用普通的不支持sass编译的hugo版本，这样需要直接修改&lt;code&gt;LeaveIt/resources/_gen/assets/scss/css/&lt;/code&gt;下的.content文件，这样的话修改&lt;code&gt;/themes/LeaveIt/assets/css/&lt;/code&gt;下的文件均无法直接反应效果。&lt;/li&gt;
+&lt;li&gt;使用普通的不支持sass编译的hugo版本，在修改样式后，需要使用sass命令来编译生成一下.content文件，具体可以参考&lt;a href=&#34;https://huaien.co/technology/install-ruby-update-on-centos/#延伸阅读&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这里&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;文章页添加toc目录支持&#34;&gt;文章页添加TOC目录支持&lt;/h2&gt;
@@ -178,7 +376,8 @@ autoCollapseToc = true   # Auto expand and collapse toc
 &lt;h2 id=&#34;相关文章&#34;&gt;相关文章&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/valine-to-hugo-with-leaveit//&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo添加Valine评论系统 以LeaveIt主题为例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/valine-to-hugo-with-leaveit/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo添加Valine评论系统 以LeaveIt主题为例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/install-ruby-update-on-centos/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Centos下安装和升级Ruby和sass&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -1481,36 +1680,6 @@ Installing shared extensions:     /www/server/php/71/lib/php/extensions/no-debug
 &lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/chenpingzhao/p/4820814.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.cnblogs.com/chenpingzhao/p/4820814.html&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>AWS用ec2-user用户来更改root密码并使用root用户</title>
-      <link>https://huaien.co/technology/change-password-for-root-on-aws-ec2/</link>
-      <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/change-password-for-root-on-aws-ec2/</guid>
-      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;AWS的EC2在创建实例后，默认是使用ec2-user用户加密钥文件来登录ssh，使用AWS默认的EC2账户登录服务器后，用户权限收到很大的限制，有些目录无法访问，需要切换到root账户下工作。&lt;/p&gt;
-
-&lt;h2 id=&#34;创建root密码&#34;&gt;创建root密码&lt;/h2&gt;
-
-&lt;p&gt;初次登录aws后并没有默认的root用户密码，需要在ec2用户下创建root密码，可以使用命令&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo passwd root
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在出现提示后创建新密码。&lt;/p&gt;
-
-&lt;h2 id=&#34;重置密码&#34;&gt;重置密码&lt;/h2&gt;
-
-&lt;p&gt;如果出现root密码丢失的情况，也可以使用上边的命令重新生成新的root密码。&lt;/p&gt;
-
-&lt;h2 id=&#34;切换root用户&#34;&gt;切换root用户&lt;/h2&gt;
-
-&lt;p&gt;密码更改完成，后续的切换用户操作用 su 命令输入设定好的新密码就可以切换到root用户了。&lt;/p&gt;
-
-&lt;p&gt;经常登录AWS EC2的话，这个在一开始就会用到，如果修改密码，这个命令也是很方便的。&lt;/p&gt;</description>
     </item>
     
   </channel>

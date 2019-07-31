@@ -10,7 +10,7 @@
   <meta name="keywords" content="Wyane,Blog,博客,ブログ">
   
   <link rel="prev" href="https://huaien.co/technology/one-click-script-deploy-hugo/" />
-  
+  <link rel="next" href="https://huaien.co/technology/install-ruby-update-on-centos/" />
   <link rel="canonical" href="https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -67,7 +67,7 @@
     "datePublished": "2019-07-29 07:42:33 \x2b0000 UTC",
     "dateModified" : "2019-07-29 07:42:33 \x2b0000 UTC",
     "url" : "https:\/\/huaien.co\/technology\/hugo-leaveit-theme-modified-of-bugs-1\/",
-    "wordCount" : "1815",
+    "wordCount" : "1901",
     "keywords" : [ "Hugo","博客程序", "Wyane\x27s Blog"]
 }
 </script>
@@ -143,7 +143,7 @@
          <i class="far fa-calendar-alt"></i>  <time datetime=2019-07-29 itemprop="datePublished">2019-07-29</time>
            </span>
      
-         <i class="far fa-file-word"></i> <span class="post-word-count"> 1815 字</span>
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 1901 字</span>
          <i class="far fa-clock"></i> <span class="more-meta"> 4 分钟</span>
           
         </div>
@@ -246,6 +246,7 @@
 <ol>
 <li>使用支持sass编译的<a href="https://github.com/gohugoio/hugo/releases//" rel="nofollow noreferrer" target="_blank">hugo extend版本</a>，就可以通过修改<code>/themes/LeaveIt/assets/css/_common/_page/post.scss</code>来实现效果。</li>
 <li>使用普通的不支持sass编译的hugo版本，这样需要直接修改<code>LeaveIt/resources/_gen/assets/scss/css/</code>下的.content文件，这样的话修改<code>/themes/LeaveIt/assets/css/</code>下的文件均无法直接反应效果。</li>
+<li>使用普通的不支持sass编译的hugo版本，在修改样式后，需要使用sass命令来编译生成一下.content文件，具体可以参考<a href="https://huaien.co/technology/install-ruby-update-on-centos/#延伸阅读" rel="nofollow noreferrer" target="_blank">这里</a></li>
 </ol>
 
 <h2 id="文章页添加toc目录支持">文章页添加TOC目录支持</h2>
@@ -379,7 +380,8 @@ autoCollapseToc = true   # Auto expand and collapse toc
 <h2 id="相关文章">相关文章</h2>
 
 <ul>
-<li><a href="https://huaien.co/technology/valine-to-hugo-with-leaveit//" rel="nofollow noreferrer" target="_blank">Hugo添加Valine评论系统 以LeaveIt主题为例</a></li>
+<li><a href="https://huaien.co/technology/valine-to-hugo-with-leaveit/" rel="nofollow noreferrer" target="_blank">Hugo添加Valine评论系统 以LeaveIt主题为例</a></li>
+<li><a href="https://huaien.co/technology/install-ruby-update-on-centos/" rel="nofollow noreferrer" target="_blank">Centos下安装和升级Ruby和sass</a></li>
 </ul>
 
     </div>
@@ -444,6 +446,8 @@ autoCollapseToc = true   # Auto expand and collapse toc
         
         <a href="https://huaien.co/technology/one-click-script-deploy-hugo/" class="prev" rel="prev" title="一键备份博客源文件与发布文章到Github和Coding"><i class="iconfont icon-left"></i>&nbsp;一键备份博客源文件与发布文章到Github和Coding</a>
          
+        
+        <a href="https://huaien.co/technology/install-ruby-update-on-centos/" class="next" rel="next" title="Centos安装和升级Ruby和sass">Centos安装和升级Ruby和sass&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 <br>
