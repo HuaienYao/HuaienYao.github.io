@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  
+  <link rel="prev" href="https://huaien.co/technology/hugo-leaveit-theme-update-logs/" />
+  
+  <link rel="canonical" href="https://huaien.co/technology/docker-install-bt-panel/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-4547757701057415",
+          enable_page_level_ads: true
+     });
+</script>
+  
+  <title>
+       
+       
+           记录docker安装宝塔面板 | Wyane&#39;s Blog
+       
+  </title>
+  <meta name="title" content="记录docker安装宝塔面板 | Wyane&#39;s Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/huaien.co\/"
+    },
+    "articleSection" : "posts",
+    "name" : "记录docker安装宝塔面板",
+    "headline" : "记录docker安装宝塔面板",
+    "description" : "因为最近在学docker，而且有oracle的免费机，就像测试测试docker安装宝塔面板的效果。其实通过一系列操作可以学习到挺多docker命令。",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-09-30 10:58:47 \x2b0900 \x2b0900",
+    "dateModified" : "2019-09-30 10:58:47 \x2b0900 \x2b0900",
+    "url" : "https:\/\/huaien.co\/technology\/docker-install-bt-panel\/",
+    "wordCount" : "2348",
+    "keywords" : [ "docker","宝塔面板", "Wyane\x27s Blog"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://huaien.co/">Wyane&#39;s Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Links">Links</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://huaien.co/">Wyane&#39;s Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Links">Links</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">记录docker安装宝塔面板</h1>
+        <div class="post-meta">
+        
+                      
+          <i class="far fa-folder-open"></i>
+                <span class="post-category">
+                        <a href="https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+          <span class="post-time">
+         <i class="far fa-calendar-alt"></i>  <time datetime=2019-09-30 itemprop="datePublished">2019-09-30</time>
+           </span>
+     
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 2348 字</span>
+         <i class="far fa-clock"></i> <span class="more-meta"> 5 分钟</span>
+          
+        </div>
+    </header>
+	
+          <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title"></h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#背景">背景</a></li>
+<li><a href="#安装docker">安装Docker</a>
+<ul>
+<li><a href="#安装前的准备">安装前的准备</a></li>
+<li><a href="#安装docker的命令">安装Docker的命令</a></li>
+<li><a href="#查看docker版本">查看Docker版本</a></li>
+</ul></li>
+<li><a href="#docker内安装宝塔">Docker内安装宝塔</a>
+<ul>
+<li><a href="#拉取系统镜像">拉取系统镜像</a></li>
+<li><a href="#创建运行容器">创建运行容器</a></li>
+<li><a href="#进入该容器">进入该容器</a></li>
+<li><a href="#容器内安装宝塔">容器内安装宝塔</a></li>
+<li><a href="#错误信息">错误信息</a>
+<ul>
+<li><a href="#错误信息内容">错误信息内容</a></li>
+<li><a href="#错误原因">错误原因</a></li>
+<li><a href="#解决错误">解决错误</a></li>
+</ul></li>
+<li><a href="#获取宝塔面板入口">获取宝塔面板入口</a></li>
+<li><a href="#设置容器自启">设置容器自启</a>
+<ul>
+<li><a href="#初次运行时">初次运行时</a></li>
+<li><a href="#运行后的容器更新自启设置">运行后的容器更新自启设置</a></li>
+</ul></li>
+<li><a href="#退出容器等操作">退出容器等操作</a>
+<ul>
+<li><a href="#停止容器">停止容器</a></li>
+<li><a href="#进入容器">进入容器</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#参考文章">参考文章</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+<script type="text/javascript">
+  window.onload = function () {
+    var fix = $('.post-toc');
+    var end = $('.post-comment');
+    var fixTop = fix.offset().top, fixHeight = fix.height();
+    var endTop, miss;
+    var offsetTop = fix[0].offsetTop;
+    $(window).scroll(function () {
+      var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+      if (end.length > 0) {
+        endTop = end.offset().top;
+        miss = endTop - docTop - fixHeight;
+      }
+      if (fixTop < docTop) {
+        fix.css({ 'position': 'fixed' });
+        if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+          fix.css({ top: miss });
+        } else {
+          fix.css({ top: 0 });
+        }
+      } else {
+        fix.css({ 'position': 'absolute' });
+        fix.css({ top: offsetTop });
+      }
+    })
+  }
+</script> 
+	
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="背景">背景</h1>
+
+<p>因为最近在学docker，而且有oracle的免费机，就像测试测试docker安装宝塔面板的效果。其实通过一系列操作可以学习到挺多docker命令。</p>
+
+<!--MORE-->
+
+<h1 id="安装docker">安装Docker</h1>
+
+<p>首先你的机器上要有docker，如果没有安装的话可以通过下面的命令安装docker。</p>
+
+<h2 id="安装前的准备">安装前的准备</h2>
+
+<p>这里用的是Oracle免费机来测试，系统为Ubuntu
+通过以下命令可以查看OS信息。</p>
+
+<pre><code class="language-bash">root@instance:/home/ubuntu# uname -a
+Linux instance 4.15.0-1021-oracle #23-Ubuntu SMP Wed Aug 7 16:35:09 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+root@instance:/home/ubuntu# cat /proc/version
+Linux version 4.15.0-1021-oracle (buildd@lgw01-amd64-030) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #23-Ubuntu SMP Wed Aug 7 16:35:09 UTC 2019
+root@instance:/home/ubuntu# cat /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION=&quot;Ubuntu 18.04.3 LTS&quot;
+</code></pre>
+
+<p>Docker 要求 Ubuntu 系统的内核版本高于 3.10
+通过以下命令查看</p>
+
+<pre><code class="language-bash">root@instance-20190921-1119:/home/ubuntu# uname -r
+4.15.0-1021-oracle
+
+</code></pre>
+
+<p>这个机器是4.15 可以安装。</p>
+
+<h2 id="安装docker的命令">安装Docker的命令</h2>
+
+<p>然后这里用的是以下的命令安装docker。官方是使用<a href="https://yeasy.gitbooks.io/docker_practice/install/ubuntu.html" rel="nofollow noreferrer" target="_blank">这里</a>的方法，比较麻烦</p>
+
+<pre><code class="language-bash">#先更新下ubuntu软件库
+apt-get update
+#通过apt-get安装docker
+apt-get install docker.io
+</code></pre>
+
+<h2 id="查看docker版本">查看Docker版本</h2>
+
+<p>接着查看docker版本，能显示就是安装成功</p>
+
+<pre><code class="language-bash">root@instance:/home/ubuntu# docker version
+Client:
+ Version:           18.09.7
+ API version:       1.39
+ Go version:        go1.10.1
+ Git commit:        2d0083d
+ Built:             Fri Aug 16 14:20:06 2019
+ OS/Arch:           linux/amd64
+ Experimental:      false
+
+Server:
+ Engine:
+  Version:          18.09.7
+  API version:      1.39 (minimum version 1.12)
+  Go version:       go1.10.1
+  Git commit:       2d0083d
+  Built:            Wed Aug 14 19:41:23 2019
+  OS/Arch:          linux/amd64
+  Experimental:     false
+</code></pre>
+
+<h1 id="docker内安装宝塔">Docker内安装宝塔</h1>
+
+<h2 id="拉取系统镜像">拉取系统镜像</h2>
+
+<p>先拉取一个系统镜像。这里选了debian，好用又比较小。</p>
+
+<pre><code class="language-bash">docker pull debian
+</code></pre>
+
+<h2 id="创建运行容器">创建运行容器</h2>
+
+<p>接着创建和运行容器</p>
+
+<pre><code class="language-bash">docker run -i -t -d --name baota -p 20:20 -p 21:21 -p 80:80 -p 443:443 -p 888:888 -p 8888:8888 --privileged=true -v /home/www:/www debian
+</code></pre>
+
+<blockquote>
+<p>上面命令的意思是创建一个docker容易命名为baota(名称大家自定义)让他后台运行，然后将宿主机的20，21，80，443，888，8888这五个端口映射到docker容器中去。
+并且将宿主机的/home/www文件夹映射到docker容器的/www上去(注意：文件目录如果不存在。宿主机和容器会自己创建，无需手动创建)。privileged表示在运行容器的时候，给容器加特权，设置容器有写文件的权限。</p>
+</blockquote>
+
+<p>查看容器的运行状态和ID</p>
+
+<pre><code class="language-bash">docker ps
+</code></pre>
+
+<h2 id="进入该容器">进入该容器</h2>
+
+<pre><code class="language-bash">docker exec -it d497dcfd6062  /bin/bash(这里也可以直接用 bash)或者下面都行
+docker exec -it baota /bin/bash
+</code></pre>
+
+<blockquote>
+<p>exec 为在进入容器进行操作</p>
+
+<p>-i :即使没有附加也保持STDIN 打开</p>
+
+<p>-t :分配一个伪终端</p>
+
+<p>这里的<code>d497dcfd6062</code>为上面<code>docker ps</code>得到的容器ID</p>
+</blockquote>
+
+<p>执行上进入容器命令后会显示下面这样，就是进入了这个Debian容器了</p>
+
+<pre><code class="language-bash">root@e27df07f4a6d:/#
+</code></pre>
+
+<h2 id="容器内安装宝塔">容器内安装宝塔</h2>
+
+<p>接着用宝塔官方的安装命令，这里用的是Debian系统下的宝塔安装命令。</p>
+
+<pre><code class="language-bash">wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; bash install.sh
+</code></pre>
+
+<p>会让你输入y来确认安装，然后就等着装好。</p>
+
+<h2 id="错误信息">错误信息</h2>
+
+<h3 id="错误信息内容">错误信息内容</h3>
+
+<p>但是这里我最后出现错误</p>
+
+<pre><code class="language-bash">------------------------------------------------------
+Error: BT-Task service startup failed.
+username: ed5ymzfg
+Stopping Bt-Tasks.../etc/init.d/bt: line 76: ps: command not found
+        done
+Stopping Bt-Panel.../etc/init.d/bt: line 86: ps: command not found
+        done
+/etc/init.d/bt: line 23: ps: command not found
+Starting Bt-Panel..     done
+/etc/init.d/bt: line 53: ps: command not found
+Starting Bt-Tasks... /etc/init.d/bt: line 58: ps: command not found
+failed
+------------------------------------------------------
+--2019-09-30 02:25:28--  http://103.224.251.67/stop.html
+Connecting to 103.224.251.67:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3460 (3.4K) [text/html]
+Saving to: '/www/server/stop/index.html'
+
+     0K ...                                                   100%  484M=0s
+
+2019-09-30 02:25:28 (484 MB/s) - '/www/server/stop/index.html' saved [3460/3460]
+
+--2019-09-30 02:25:29--  http://103.224.251.67/stop.html
+Connecting to 103.224.251.67:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3460 (3.4K) [text/html]
+Saving to: '/www/server/stop/index.html'
+
+     0K ...                                                   100%  568M=0s
+
+2019-09-30 02:25:29 (568 MB/s) - '/www/server/stop/index.html' saved [3460/3460]
+
+------------------------------------------------------
+Error: BT-Task service startup failed.
+install.sh: line 478: ps: command not found
+ERROR: The BT-Panel service startup failed.
+============================================
+</code></pre>
+
+<h3 id="错误原因">错误原因</h3>
+
+<p>我简单看了下，搜索网上解决办法，一个是
+<a href="https://blog.csdn.net/weixin_42453905/article/details/89399089" rel="nofollow noreferrer" target="_blank">https://blog.csdn.net/weixin_42453905/article/details/89399089</a>
+和 <a href="https://www.daniao.org/3790.html" rel="nofollow noreferrer" target="_blank">https://www.daniao.org/3790.html</a></p>
+
+<h3 id="解决错误">解决错误</h3>
+
+<p>好像是python版本还是python public包和面板冲突的原因，看了下本机python版本为2.7，然后就用下面的命令安装了python3</p>
+
+<pre><code class="language-bash">apt install python3.6
+</code></pre>
+
+<p>然后解决下public包冲突，接着重启宝塔</p>
+
+<pre><code class="language-bash">pip uninstall public
+bt restart 
+#或者
+/etc/init.d/bt restart
+</code></pre>
+
+<p>但是这里还是提示错误</p>
+
+<pre><code class="language-bash">Stopping Bt-Tasks.../etc/init.d/bt: line 76: ps: command not found
+        done
+Stopping Bt-Panel.../etc/init.d/bt: line 86: ps: command not found
+        done
+/etc/init.d/bt: line 23: ps: command not found
+Starting Bt-Panel..     done
+/etc/init.d/bt: line 53: ps: command not found
+Starting Bt-Tasks... /etc/init.d/bt: line 58: ps: command not found
+failed
+------------------------------------------------------
+--2019-09-30 02:25:28--  http://103.224.251.67/stop.html
+Connecting to 103.224.251.67:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3460 (3.4K) [text/html]
+Saving to: '/www/server/stop/index.html'
+
+     0K ...                                                   100%  484M=0s
+
+2019-09-30 02:25:28 (484 MB/s) - '/www/server/stop/index.html' saved [3460/3460]
+
+--2019-09-30 02:25:29--  http://103.224.251.67/stop.html
+Connecting to 103.224.251.67:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3460 (3.4K) [text/html]
+Saving to: '/www/server/stop/index.html'
+
+     0K ...                                                   100%  568M=0s
+
+2019-09-30 02:25:29 (568 MB/s) - '/www/server/stop/index.html' saved [3460/3460]
+
+------------------------------------------------------
+Error: BT-Task service startup failed.
+</code></pre>
+
+<p>现在没了之前的BT-panel无法启动的错误，但是还有ps命令没找到的错误。所以需要安装下ps。
+这里参考了这里
+<a href="https://www.imooc.com/qadetail/217173" rel="nofollow noreferrer" target="_blank">https://www.imooc.com/qadetail/217173</a></p>
+
+<pre><code class="language-bash">apt-get install procps
+</code></pre>
+
+<p>正常安装后测试一下ps命令，显示以下内容就是安装成功</p>
+
+<pre><code class="language-bash">root@e27df07f4a6d:/# ps
+  PID TTY          TIME CMD
+    8 pts/1    00:00:00 bash
+ 5593 pts/1    00:00:03 python
+ 5669 pts/1    00:00:03 python
+ 6483 pts/1    00:00:01 python
+ 6553 pts/1    00:00:01 python
+ 6653 pts/1    00:00:01 python
+ 6737 pts/1    00:00:01 python
+ 6823 pts/1    00:00:01 python
+ 6899 pts/1    00:00:01 python
+ 6971 pts/1    00:00:00 ps
+</code></pre>
+
+<p>然后再重启下宝塔面板试试看</p>
+
+<pre><code class="language-bash">root@e27df07f4a6d:/# /etc/init.d/bt restart
+Stopping Bt-Tasks...    done
+Stopping Bt-Panel...    done
+Starting Bt-Panel.......        done
+Starting Bt-Tasks...    done
+</code></pre>
+
+<p>没有提示错误可以启动。</p>
+
+<h2 id="获取宝塔面板入口">获取宝塔面板入口</h2>
+
+<p>但是这里因为刚才安装没有正常结束，应该最后没有正常显示面板入口 登录用户名密码等信息。</p>
+
+<p>如果你直接进入 <a href="https://IP地址:8888" rel="nofollow noreferrer" target="_blank">https://IP地址:8888</a>
+就会显示下面的内容</p>
+
+<pre><code class="language-bash">请使用正确的入口登录面板
+错误原因：当前宝塔新安装的已经开启了安全入口登录，新装机器都会随机一个8位字符的安全入口名称，亦可以在面板设置处修改，如您没记录或不记得了，可以使用以下方式解决
+
+解决方法：在SSH终端输入以下一种命令来解决
+
+1.查看面板入口：/etc/init.d/bt default
+
+2.关闭安全入口：rm -f /www/server/panel/data/admin_path.pl
+
+注意：【关闭安全入口】将使您的面板登录地址被直接暴露在互联网上，非常危险，请谨慎操作
+</code></pre>
+
+<p>根据提示内容，在容器内操作下面的命令来查看面板入口信息。</p>
+
+<pre><code class="language-bash">/etc/init.d/bt default
+</code></pre>
+
+<p>会显示以下信息，然后用这个地址，用户名密码登陆就可以了</p>
+
+<pre><code class="language-bash">==================================================================
+BT-Panel default info!
+==================================================================
+Bt-Panel-URL: http://IP地址:8888/2bdsdb7ca
+username: edsdmzfg
+password: 6c750614
+Warning:
+If you cannot access the panel,
+release the following port (8888|888|80|443|20|21) in the security group
+==================================================================
+</code></pre>
+
+<h2 id="设置容器自启">设置容器自启</h2>
+
+<p>这里我们开头并没有对容器设置了自动启动参数。
+如果一开始要设置重启后自动启动容器的话，可以用下面的命令</p>
+
+<h3 id="初次运行时">初次运行时</h3>
+
+<pre><code class="language-bash">docker run --restart=always  -i -t -d --name baota -p 20:20 -p 21:21 -p 80:80 -p 443:443 -p 888:888 -p 8888:8888 --privileged=true -v /home/www:/www debian
+</code></pre>
+
+<p>其实就是<code>docker run</code>的时候加入<code>--restart=always</code></p>
+
+<h3 id="运行后的容器更新自启设置">运行后的容器更新自启设置</h3>
+
+<p>如果前面运行的时候没设置自动启动，但是现在想设置的话，可以用下面的命令</p>
+
+<pre><code class="language-bash">docker update --restart=always &lt;CONTAINER ID&gt;
+</code></pre>
+
+<p>容器ID可以通过<code>docker ps -a</code>或者 <code>docker container ls</code>来查看</p>
+
+<pre><code class="language-bash">root@instance:/home/ubuntu# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                                                                                                              NAMES
+e27df07f4a6d        debian              &quot;bash&quot;              2 hours ago         Up 2 hours          0.0.0.0:20-21-&gt;20-21/tcp, 0.0.0.0:80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp, 0.0.0.0:888-&gt;888/tcp, 0.0.0.0:8888-&gt;8888/tcp   baota
+root@instance:/home/ubuntu# docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                                                                                                              NAMES
+e27df07f4a6d        debian              &quot;bash&quot;              2 hours ago         Up 2 hours          0.0.0.0:20-21-&gt;20-21/tcp, 0.0.0.0:80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp, 0.0.0.0:888-&gt;888/tcp, 0.0.0.0:8888-&gt;8888/tcp   baota
+</code></pre>
+
+<h2 id="退出容器等操作">退出容器等操作</h2>
+
+<p>最后如果要退出容器可以使用
+<code>Ctrl+D</code> 或者<code>exit</code></p>
+
+<pre><code class="language-bash">root@e27df07f4a6d:/# exit
+exit
+</code></pre>
+
+<h3 id="停止容器">停止容器</h3>
+
+<p>想要停止运行中的容器就用</p>
+
+<pre><code class="language-bash">docker stop 容器名或者容器ID
+</code></pre>
+
+<p>运行就用</p>
+
+<pre><code class="language-bash">docker start 容器名或者容器ID
+</code></pre>
+
+<h3 id="进入容器">进入容器</h3>
+
+<p>如果要进入正在运行的容器就用</p>
+
+<pre><code class="language-bash">docker attach 容器名或者容器ID
+</code></pre>
+
+<p>或者</p>
+
+<pre><code class="language-bash">docker exec -it 容器名或者容器ID /bin/bash
+</code></pre>
+
+<p>例如</p>
+
+<pre><code class="language-bash">root@instance:/home/ubuntu# docker exec -it e27 /bin/bash
+root@instance:/home/ubuntu# docker attach baota
+</code></pre>
+
+<p>注：docker的容器ID可以用只取前几位能定位到容器就可以。</p>
+
+<h1 id="参考文章">参考文章</h1>
+
+<ul>
+<li><a href="https://www.cnblogs.com/phpper/p/10844757.html" rel="nofollow noreferrer" target="_blank">https://www.cnblogs.com/phpper/p/10844757.html</a></li>
+<li><a href="https://www.qiancheng.me/post/coding/show-linux-issue-version" rel="nofollow noreferrer" target="_blank">https://www.qiancheng.me/post/coding/show-linux-issue-version</a></li>
+<li><a href="http://www.runoob.com/docker/ubuntu-docker-install.html" rel="nofollow noreferrer" target="_blank">http://www.runoob.com/docker/ubuntu-docker-install.html</a></li>
+<li><a href="http://www.runoob.com/docker/docker-exec-command.html" rel="nofollow noreferrer" target="_blank">http://www.runoob.com/docker/docker-exec-command.html</a></li>
+<li><a href="https://www.bt.cn/bbs/thread-19376-1-1.html" rel="nofollow noreferrer" target="_blank">https://www.bt.cn/bbs/thread-19376-1-1.html</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+            <p class="copyright-item">
+              <span><i class="fa fa-user"></i></span>
+                
+             <span> <a itemprop="name" href="https://huaien.co/" rel="author">Wyane</a> </span>
+                </p>
+
+             
+            <p class="copyright-item">
+              <span><i class="fa fa-link"></i></span>
+                   
+                    <span><a href=https://huaien.co/technology/docker-install-bt-panel/>https://huaien.co/technology/docker-install-bt-panel/</span>
+            </p>
+            
+              
+      
+             
+            <p class="copyright-item lincese">
+              <span><i class="fa fa-copyright"></i></span>
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+      
+        
+
+
+                  
+  
+
+
+
+
+    </div>
+      
+      
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://huaien.co/tags/docker/">
+                    #docker</a></span>
+            
+            <span class="tag"><a href="https://huaien.co/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/">
+                    #宝塔面板</a></span>
+            
+            </section>
+        
+        <section>
+                <span><a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://huaien.co/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://huaien.co/technology/hugo-leaveit-theme-update-logs/" class="prev" rel="prev" title="Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片"><i class="iconfont icon-left"></i>&nbsp;Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片</a>
+         
+        
+    </div>
+<br>
+<style>
+.before-comment { height: 3rem; }
+@media(min-width: 500px) { .before-comment { height: 2rem; }
+@media(min-width: 800px) { .before-comment { height: 1rem; }
+</style>       
+<div class="before-comment"></div>  
+
+          
+			
+			<div align="center">
+<style>
+.adsbygoogle-comment { width: 99%; height: 60px; padding: 1rem 0px }
+@media(min-width: 500px) { .adsbygoogle-comment { width: 99%; height: 70px; padding: 1rem 0px} }
+@media(min-width: 800px) { .adsbygoogle-comment { width: 99%; height: 90px; padding: 1rem 0px} }
+</style> 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+<ins class="adsbygoogle adsbygoogle-comment"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4547757701057415"
+     data-ad-slot="9118682280"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+          
+
+      <p></p>
+<div class="post-comment">
+		
+                 
+            
+			
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'NW2s1QV41zVBXsHRzTeVJWPf-MdYXbMMI',
+        appKey: 'BhNP1gtLFJ7aF5QfM89DpbFv',
+        notify:  false , 
+        verify:  false , 
+        avatar:'monsterid', 
+        placeholder: '说说你的看法~(*填写邮箱的话若有人回复，将可以收到提醒邮件哦^_^)',
+        visitor: 'false'
+    });
+  </script>
+
+  
+
+		
+
+</div>
+      
+ 
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2010 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://huaien.co/">Wyane</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+  
+    
+  
+  
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5d4384e9e5ae967ef80e0653/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+  
+ <script src="https://embed.small.chat/TLZK60LJ2GLL3K6R8B.js" async></script> 
+  
+    
+
+  
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

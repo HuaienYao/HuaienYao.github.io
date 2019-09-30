@@ -5,8 +5,400 @@
     <description>Recent content in Wyane&#39;s Blog on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 31 Jul 2019 05:18:22 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Sep 2019 10:58:47 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>记录docker安装宝塔面板</title>
+      <link>https://huaien.co/technology/docker-install-bt-panel/</link>
+      <pubDate>Mon, 30 Sep 2019 10:58:47 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/docker-install-bt-panel/</guid>
+      <description>
+
+&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
+
+&lt;p&gt;因为最近在学docker，而且有oracle的免费机，就像测试测试docker安装宝塔面板的效果。其实通过一系列操作可以学习到挺多docker命令。&lt;/p&gt;
+
+&lt;!--MORE--&gt;
+
+&lt;h1 id=&#34;安装docker&#34;&gt;安装Docker&lt;/h1&gt;
+
+&lt;p&gt;首先你的机器上要有docker，如果没有安装的话可以通过下面的命令安装docker。&lt;/p&gt;
+
+&lt;h2 id=&#34;安装前的准备&#34;&gt;安装前的准备&lt;/h2&gt;
+
+&lt;p&gt;这里用的是Oracle免费机来测试，系统为Ubuntu
+通过以下命令可以查看OS信息。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@instance:/home/ubuntu# uname -a
+Linux instance 4.15.0-1021-oracle #23-Ubuntu SMP Wed Aug 7 16:35:09 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+root@instance:/home/ubuntu# cat /proc/version
+Linux version 4.15.0-1021-oracle (buildd@lgw01-amd64-030) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #23-Ubuntu SMP Wed Aug 7 16:35:09 UTC 2019
+root@instance:/home/ubuntu# cat /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION=&amp;quot;Ubuntu 18.04.3 LTS&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Docker 要求 Ubuntu 系统的内核版本高于 3.10
+通过以下命令查看&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@instance-20190921-1119:/home/ubuntu# uname -r
+4.15.0-1021-oracle
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这个机器是4.15 可以安装。&lt;/p&gt;
+
+&lt;h2 id=&#34;安装docker的命令&#34;&gt;安装Docker的命令&lt;/h2&gt;
+
+&lt;p&gt;然后这里用的是以下的命令安装docker。官方是使用&lt;a href=&#34;https://yeasy.gitbooks.io/docker_practice/install/ubuntu.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这里&lt;/a&gt;的方法，比较麻烦&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#先更新下ubuntu软件库
+apt-get update
+#通过apt-get安装docker
+apt-get install docker.io
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;查看docker版本&#34;&gt;查看Docker版本&lt;/h2&gt;
+
+&lt;p&gt;接着查看docker版本，能显示就是安装成功&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@instance:/home/ubuntu# docker version
+Client:
+ Version:           18.09.7
+ API version:       1.39
+ Go version:        go1.10.1
+ Git commit:        2d0083d
+ Built:             Fri Aug 16 14:20:06 2019
+ OS/Arch:           linux/amd64
+ Experimental:      false
+
+Server:
+ Engine:
+  Version:          18.09.7
+  API version:      1.39 (minimum version 1.12)
+  Go version:       go1.10.1
+  Git commit:       2d0083d
+  Built:            Wed Aug 14 19:41:23 2019
+  OS/Arch:          linux/amd64
+  Experimental:     false
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;docker内安装宝塔&#34;&gt;Docker内安装宝塔&lt;/h1&gt;
+
+&lt;h2 id=&#34;拉取系统镜像&#34;&gt;拉取系统镜像&lt;/h2&gt;
+
+&lt;p&gt;先拉取一个系统镜像。这里选了debian，好用又比较小。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker pull debian
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;创建运行容器&#34;&gt;创建运行容器&lt;/h2&gt;
+
+&lt;p&gt;接着创建和运行容器&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -i -t -d --name baota -p 20:20 -p 21:21 -p 80:80 -p 443:443 -p 888:888 -p 8888:8888 --privileged=true -v /home/www:/www debian
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;上面命令的意思是创建一个docker容易命名为baota(名称大家自定义)让他后台运行，然后将宿主机的20，21，80，443，888，8888这五个端口映射到docker容器中去。
+并且将宿主机的/home/www文件夹映射到docker容器的/www上去(注意：文件目录如果不存在。宿主机和容器会自己创建，无需手动创建)。privileged表示在运行容器的时候，给容器加特权，设置容器有写文件的权限。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;查看容器的运行状态和ID&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker ps
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;进入该容器&#34;&gt;进入该容器&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker exec -it d497dcfd6062  /bin/bash(这里也可以直接用 bash)或者下面都行
+docker exec -it baota /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;exec 为在进入容器进行操作&lt;/p&gt;
+
+&lt;p&gt;-i :即使没有附加也保持STDIN 打开&lt;/p&gt;
+
+&lt;p&gt;-t :分配一个伪终端&lt;/p&gt;
+
+&lt;p&gt;这里的&lt;code&gt;d497dcfd6062&lt;/code&gt;为上面&lt;code&gt;docker ps&lt;/code&gt;得到的容器ID&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;执行上进入容器命令后会显示下面这样，就是进入了这个Debian容器了&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@e27df07f4a6d:/#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;容器内安装宝塔&#34;&gt;容器内安装宝塔&lt;/h2&gt;
+
+&lt;p&gt;接着用宝塔官方的安装命令，这里用的是Debian系统下的宝塔安装命令。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;amp;&amp;amp; bash install.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;会让你输入y来确认安装，然后就等着装好。&lt;/p&gt;
+
+&lt;h2 id=&#34;错误信息&#34;&gt;错误信息&lt;/h2&gt;
+
+&lt;h3 id=&#34;错误信息内容&#34;&gt;错误信息内容&lt;/h3&gt;
+
+&lt;p&gt;但是这里我最后出现错误&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;------------------------------------------------------
+Error: BT-Task service startup failed.
+username: ed5ymzfg
+Stopping Bt-Tasks.../etc/init.d/bt: line 76: ps: command not found
+        done
+Stopping Bt-Panel.../etc/init.d/bt: line 86: ps: command not found
+        done
+/etc/init.d/bt: line 23: ps: command not found
+Starting Bt-Panel..     done
+/etc/init.d/bt: line 53: ps: command not found
+Starting Bt-Tasks... /etc/init.d/bt: line 58: ps: command not found
+failed
+------------------------------------------------------
+--2019-09-30 02:25:28--  http://103.224.251.67/stop.html
+Connecting to 103.224.251.67:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3460 (3.4K) [text/html]
+Saving to: &#39;/www/server/stop/index.html&#39;
+
+     0K ...                                                   100%  484M=0s
+
+2019-09-30 02:25:28 (484 MB/s) - &#39;/www/server/stop/index.html&#39; saved [3460/3460]
+
+--2019-09-30 02:25:29--  http://103.224.251.67/stop.html
+Connecting to 103.224.251.67:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3460 (3.4K) [text/html]
+Saving to: &#39;/www/server/stop/index.html&#39;
+
+     0K ...                                                   100%  568M=0s
+
+2019-09-30 02:25:29 (568 MB/s) - &#39;/www/server/stop/index.html&#39; saved [3460/3460]
+
+------------------------------------------------------
+Error: BT-Task service startup failed.
+install.sh: line 478: ps: command not found
+ERROR: The BT-Panel service startup failed.
+============================================
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;错误原因&#34;&gt;错误原因&lt;/h3&gt;
+
+&lt;p&gt;我简单看了下，搜索网上解决办法，一个是
+&lt;a href=&#34;https://blog.csdn.net/weixin_42453905/article/details/89399089&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://blog.csdn.net/weixin_42453905/article/details/89399089&lt;/a&gt;
+和 &lt;a href=&#34;https://www.daniao.org/3790.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.daniao.org/3790.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;解决错误&#34;&gt;解决错误&lt;/h3&gt;
+
+&lt;p&gt;好像是python版本还是python public包和面板冲突的原因，看了下本机python版本为2.7，然后就用下面的命令安装了python3&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;apt install python3.6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后解决下public包冲突，接着重启宝塔&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pip uninstall public
+bt restart 
+#或者
+/etc/init.d/bt restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;但是这里还是提示错误&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;Stopping Bt-Tasks.../etc/init.d/bt: line 76: ps: command not found
+        done
+Stopping Bt-Panel.../etc/init.d/bt: line 86: ps: command not found
+        done
+/etc/init.d/bt: line 23: ps: command not found
+Starting Bt-Panel..     done
+/etc/init.d/bt: line 53: ps: command not found
+Starting Bt-Tasks... /etc/init.d/bt: line 58: ps: command not found
+failed
+------------------------------------------------------
+--2019-09-30 02:25:28--  http://103.224.251.67/stop.html
+Connecting to 103.224.251.67:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3460 (3.4K) [text/html]
+Saving to: &#39;/www/server/stop/index.html&#39;
+
+     0K ...                                                   100%  484M=0s
+
+2019-09-30 02:25:28 (484 MB/s) - &#39;/www/server/stop/index.html&#39; saved [3460/3460]
+
+--2019-09-30 02:25:29--  http://103.224.251.67/stop.html
+Connecting to 103.224.251.67:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3460 (3.4K) [text/html]
+Saving to: &#39;/www/server/stop/index.html&#39;
+
+     0K ...                                                   100%  568M=0s
+
+2019-09-30 02:25:29 (568 MB/s) - &#39;/www/server/stop/index.html&#39; saved [3460/3460]
+
+------------------------------------------------------
+Error: BT-Task service startup failed.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;现在没了之前的BT-panel无法启动的错误，但是还有ps命令没找到的错误。所以需要安装下ps。
+这里参考了这里
+&lt;a href=&#34;https://www.imooc.com/qadetail/217173&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.imooc.com/qadetail/217173&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;apt-get install procps
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;正常安装后测试一下ps命令，显示以下内容就是安装成功&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@e27df07f4a6d:/# ps
+  PID TTY          TIME CMD
+    8 pts/1    00:00:00 bash
+ 5593 pts/1    00:00:03 python
+ 5669 pts/1    00:00:03 python
+ 6483 pts/1    00:00:01 python
+ 6553 pts/1    00:00:01 python
+ 6653 pts/1    00:00:01 python
+ 6737 pts/1    00:00:01 python
+ 6823 pts/1    00:00:01 python
+ 6899 pts/1    00:00:01 python
+ 6971 pts/1    00:00:00 ps
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后再重启下宝塔面板试试看&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@e27df07f4a6d:/# /etc/init.d/bt restart
+Stopping Bt-Tasks...    done
+Stopping Bt-Panel...    done
+Starting Bt-Panel.......        done
+Starting Bt-Tasks...    done
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;没有提示错误可以启动。&lt;/p&gt;
+
+&lt;h2 id=&#34;获取宝塔面板入口&#34;&gt;获取宝塔面板入口&lt;/h2&gt;
+
+&lt;p&gt;但是这里因为刚才安装没有正常结束，应该最后没有正常显示面板入口 登录用户名密码等信息。&lt;/p&gt;
+
+&lt;p&gt;如果你直接进入 &lt;a href=&#34;https://IP地址:8888&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://IP地址:8888&lt;/a&gt;
+就会显示下面的内容&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;请使用正确的入口登录面板
+错误原因：当前宝塔新安装的已经开启了安全入口登录，新装机器都会随机一个8位字符的安全入口名称，亦可以在面板设置处修改，如您没记录或不记得了，可以使用以下方式解决
+
+解决方法：在SSH终端输入以下一种命令来解决
+
+1.查看面板入口：/etc/init.d/bt default
+
+2.关闭安全入口：rm -f /www/server/panel/data/admin_path.pl
+
+注意：【关闭安全入口】将使您的面板登录地址被直接暴露在互联网上，非常危险，请谨慎操作
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;根据提示内容，在容器内操作下面的命令来查看面板入口信息。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/etc/init.d/bt default
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;会显示以下信息，然后用这个地址，用户名密码登陆就可以了&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;==================================================================
+BT-Panel default info!
+==================================================================
+Bt-Panel-URL: http://IP地址:8888/2bdsdb7ca
+username: edsdmzfg
+password: 6c750614
+Warning:
+If you cannot access the panel,
+release the following port (8888|888|80|443|20|21) in the security group
+==================================================================
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;设置容器自启&#34;&gt;设置容器自启&lt;/h2&gt;
+
+&lt;p&gt;这里我们开头并没有对容器设置了自动启动参数。
+如果一开始要设置重启后自动启动容器的话，可以用下面的命令&lt;/p&gt;
+
+&lt;h3 id=&#34;初次运行时&#34;&gt;初次运行时&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run --restart=always  -i -t -d --name baota -p 20:20 -p 21:21 -p 80:80 -p 443:443 -p 888:888 -p 8888:8888 --privileged=true -v /home/www:/www debian
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;其实就是&lt;code&gt;docker run&lt;/code&gt;的时候加入&lt;code&gt;--restart=always&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;运行后的容器更新自启设置&#34;&gt;运行后的容器更新自启设置&lt;/h3&gt;
+
+&lt;p&gt;如果前面运行的时候没设置自动启动，但是现在想设置的话，可以用下面的命令&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker update --restart=always &amp;lt;CONTAINER ID&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;容器ID可以通过&lt;code&gt;docker ps -a&lt;/code&gt;或者 &lt;code&gt;docker container ls&lt;/code&gt;来查看&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@instance:/home/ubuntu# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                                                                                                              NAMES
+e27df07f4a6d        debian              &amp;quot;bash&amp;quot;              2 hours ago         Up 2 hours          0.0.0.0:20-21-&amp;gt;20-21/tcp, 0.0.0.0:80-&amp;gt;80/tcp, 0.0.0.0:443-&amp;gt;443/tcp, 0.0.0.0:888-&amp;gt;888/tcp, 0.0.0.0:8888-&amp;gt;8888/tcp   baota
+root@instance:/home/ubuntu# docker container ls
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                                                                                                              NAMES
+e27df07f4a6d        debian              &amp;quot;bash&amp;quot;              2 hours ago         Up 2 hours          0.0.0.0:20-21-&amp;gt;20-21/tcp, 0.0.0.0:80-&amp;gt;80/tcp, 0.0.0.0:443-&amp;gt;443/tcp, 0.0.0.0:888-&amp;gt;888/tcp, 0.0.0.0:8888-&amp;gt;8888/tcp   baota
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;退出容器等操作&#34;&gt;退出容器等操作&lt;/h2&gt;
+
+&lt;p&gt;最后如果要退出容器可以使用
+&lt;code&gt;Ctrl+D&lt;/code&gt; 或者&lt;code&gt;exit&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@e27df07f4a6d:/# exit
+exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;停止容器&#34;&gt;停止容器&lt;/h3&gt;
+
+&lt;p&gt;想要停止运行中的容器就用&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker stop 容器名或者容器ID
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;运行就用&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker start 容器名或者容器ID
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;进入容器&#34;&gt;进入容器&lt;/h3&gt;
+
+&lt;p&gt;如果要进入正在运行的容器就用&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker attach 容器名或者容器ID
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或者&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker exec -it 容器名或者容器ID /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例如&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@instance:/home/ubuntu# docker exec -it e27 /bin/bash
+root@instance:/home/ubuntu# docker attach baota
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;注：docker的容器ID可以用只取前几位能定位到容器就可以。&lt;/p&gt;
+
+&lt;h1 id=&#34;参考文章&#34;&gt;参考文章&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/phpper/p/10844757.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.cnblogs.com/phpper/p/10844757.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.qiancheng.me/post/coding/show-linux-issue-version&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.qiancheng.me/post/coding/show-linux-issue-version&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.runoob.com/docker/ubuntu-docker-install.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.runoob.com/docker/ubuntu-docker-install.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.runoob.com/docker/docker-exec-command.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.runoob.com/docker/docker-exec-command.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bt.cn/bbs/thread-19376-1-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.bt.cn/bbs/thread-19376-1-1.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片</title>
@@ -1627,53 +2019,6 @@ NrRFi9wrf+M7Q== schacon@agadorlaptop.local
 &lt;p&gt;关于在多个操作系统上设立相同 SSH 公钥的教程，可以查阅 GitHub 上有关 SSH 公钥的向导：&lt;a href=&#34;http://github.com/guides/providing-your-ssh-key。&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://github.com/guides/providing-your-ssh-key。&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;来源：&lt;a href=&#34;https://git-scm.com/book/zh/v1/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E7%94%9F%E6%88%90-SSH-%E5%85%AC%E9%92%A5&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;3 服务器上的 Git - 生成 SSH 公钥&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>宝塔面板安装Flarum轻论坛程序时提示The PHP extension &#39;fileinfo&#39; is required</title>
-      <link>https://huaien.co/technology/bt-panel-install-fileinfo-for-php/</link>
-      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/bt-panel-install-fileinfo-for-php/</guid>
-      <description>&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
-
-&lt;p&gt;宝塔面板默认并没有安装fileinfo模块，可按以下教程安装：&lt;/p&gt;
-
-&lt;p&gt;注意：以下教程中56为PHP版本，请替换成您要安装此扩展的PHP版本，Flarum轻论坛程序最低要求PHP5.6+&lt;/p&gt;
-
-&lt;h2 id=&#34;解决过程&#34;&gt;解决过程&lt;/h2&gt;
-
-&lt;h3 id=&#34;进入对应版本的fileinfo扩展源码目录&#34;&gt;进入对应版本的fileinfo扩展源码目录&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /www/server/php/56/src/ext/fileinfo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;初始化扩展安装&#34;&gt;初始化扩展安装&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;/www/server/php/56/bin/phpize
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;生成编译配置&#34;&gt;生成编译配置&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;./configure --with-php-config=/www/server/php/56/bin/php-config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;编译并安装扩展&#34;&gt;编译并安装扩展&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;make &amp;amp;&amp;amp; make install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;写入配置文件&#34;&gt;写入配置文件&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;echo &#39;extension=fileinfo.so&#39; &amp;gt;&amp;gt; /www/server/php/56/etc/php.ini
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;重载php配置&#34;&gt;重载PHP配置&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;service php-fpm-56 reload
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;这样就可以了。&lt;/p&gt;</description>
     </item>
     
   </channel>
