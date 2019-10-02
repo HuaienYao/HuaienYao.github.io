@@ -4,7 +4,19 @@
     <url>
       <loc>https://huaien.co/categories/</loc>
       
-      <lastmod>2019-09-30T10:58:47+09:00</lastmod>
+      <lastmod>2019-10-02T01:14:12+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/django/</loc>
+      
+      <lastmod>2019-10-02T01:14:12+00:00</lastmod>
       
       
       
@@ -16,7 +28,7 @@
     <url>
       <loc>https://huaien.co/posts/</loc>
       
-      <lastmod>2019-09-30T10:58:47+09:00</lastmod>
+      <lastmod>2019-10-02T01:14:12+00:00</lastmod>
       
       
       
@@ -28,7 +40,7 @@
     <url>
       <loc>https://huaien.co/tags/</loc>
       
-      <lastmod>2019-09-30T10:58:47+09:00</lastmod>
+      <lastmod>2019-10-02T01:14:12+00:00</lastmod>
       
       
       
@@ -40,7 +52,19 @@
     <url>
       <loc>https://huaien.co/</loc>
       
-      <lastmod>2019-09-30T10:58:47+09:00</lastmod>
+      <lastmod>2019-10-02T01:14:12+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/debian/</loc>
+      
+      <lastmod>2019-10-02T01:14:12+00:00</lastmod>
       
       
       
@@ -52,7 +76,7 @@
     <url>
       <loc>https://huaien.co/tags/docker/</loc>
       
-      <lastmod>2019-09-30T10:58:47+09:00</lastmod>
+      <lastmod>2019-10-02T01:14:12+00:00</lastmod>
       
       
       
@@ -62,9 +86,9 @@
     </url>
   
     <url>
-      <loc>https://huaien.co/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</loc>
+      <loc>https://huaien.co/tags/%E5%AF%BC%E8%88%AA/</loc>
       
-      <lastmod>2019-09-30T10:58:47+09:00</lastmod>
+      <lastmod>2019-10-02T01:14:12+00:00</lastmod>
       
       
       
@@ -75,6 +99,28 @@
   
     <url>
       <loc>https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</loc>
+      
+      <lastmod>2019-10-02T01:14:12+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/technology/debian-install-zhuye-im/</loc>
+      
+      <lastmod>2019-10-02T01:14:12+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</loc>
       
       <lastmod>2019-09-30T10:58:47+09:00</lastmod>
       
@@ -1209,18 +1255,6 @@
   
     <url>
       <loc>https://huaien.co/tags/apache/</loc>
-      
-      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/tags/debian/</loc>
       
       <lastmod>2017-09-18T00:00:00+00:00</lastmod>
       

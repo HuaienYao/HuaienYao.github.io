@@ -10,7 +10,7 @@
   <meta name="keywords" content="Wyane,Blog,博客,ブログ">
   
   <link rel="prev" href="https://huaien.co/technology/hugo-leaveit-theme-update-logs/" />
-  
+  <link rel="next" href="https://huaien.co/technology/debian-install-zhuye-im/" />
   <link rel="canonical" href="https://huaien.co/technology/docker-install-bt-panel/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -67,7 +67,7 @@
     "datePublished": "2019-09-30 10:58:47 \x2b0900 \x2b0900",
     "dateModified" : "2019-09-30 10:58:47 \x2b0900 \x2b0900",
     "url" : "https:\/\/huaien.co\/technology\/docker-install-bt-panel\/",
-    "wordCount" : "2348",
+    "wordCount" : "2406",
     "keywords" : [ "docker","宝塔面板", "Wyane\x27s Blog"]
 }
 </script>
@@ -143,7 +143,7 @@
          <i class="far fa-calendar-alt"></i>  <time datetime=2019-09-30 itemprop="datePublished">2019-09-30</time>
            </span>
      
-         <i class="far fa-file-word"></i> <span class="post-word-count"> 2348 字</span>
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 2406 字</span>
          <i class="far fa-clock"></i> <span class="more-meta"> 5 分钟</span>
           
         </div>
@@ -182,6 +182,8 @@
 </ul></li>
 <li><a href="#退出容器等操作">退出容器等操作</a>
 <ul>
+<li><a href="#退出并停止容器">退出并停止容器</a></li>
+<li><a href="#退出但是不停止容器">退出但是不停止容器</a></li>
 <li><a href="#停止容器">停止容器</a></li>
 <li><a href="#进入容器">进入容器</a></li>
 </ul></li>
@@ -570,12 +572,22 @@ e27df07f4a6d        debian              &quot;bash&quot;              2 hours ag
 
 <h2 id="退出容器等操作">退出容器等操作</h2>
 
+<h3 id="退出并停止容器">退出并停止容器</h3>
+
 <p>最后如果要退出容器可以使用
 <code>Ctrl+D</code> 或者<code>exit</code></p>
 
-<pre><code class="language-bash">root@e27df07f4a6d:/# exit
+<pre><code>root@e27df07f4a6d:/# exit
 exit
 </code></pre>
+
+<p>但是这样退出后会停止容器。</p>
+
+<h3 id="退出但是不停止容器">退出但是不停止容器</h3>
+
+<p>想要退出但是不停止容器就要用
+<code>Ctrl+P+Q</code>
+这样的话容器还在继续运行中。</p>
 
 <h3 id="停止容器">停止容器</h3>
 
@@ -681,6 +693,8 @@ root@instance:/home/ubuntu# docker attach baota
         
         <a href="https://huaien.co/technology/hugo-leaveit-theme-update-logs/" class="prev" rel="prev" title="Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片"><i class="iconfont icon-left"></i>&nbsp;Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片</a>
          
+        
+        <a href="https://huaien.co/technology/debian-install-zhuye-im/" class="next" rel="next" title="记录docker的Debian下搭建Django框架开发的仿zhuye.kim导航">记录docker的Debian下搭建Django框架开发的仿zhuye.kim导航&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 <br>

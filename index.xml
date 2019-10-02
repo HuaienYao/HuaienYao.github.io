@@ -5,8 +5,235 @@
     <description>Recent content in Wyane&#39;s Blog on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 30 Sep 2019 10:58:47 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 01 Oct 2019 16:14:12 +0000</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>记录docker的Debian下搭建Django框架开发的仿zhuye.kim导航</title>
+      <link>https://huaien.co/technology/debian-install-zhuye-im/</link>
+      <pubDate>Tue, 01 Oct 2019 16:14:12 +0000</pubDate>
+      
+      <guid>https://huaien.co/technology/debian-install-zhuye-im/</guid>
+      <description>&lt;p&gt;先祝祖国70华诞生日快乐！&lt;/p&gt;
+
+&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
+
+&lt;p&gt;zhuye.kim这个网页导航估计站长的话很熟悉了。一个简洁漂亮的网页导航。不过作者没有开放源码，所以没有机会试一试，但是有hostloc上的大佬用python＋Django仿了一个。可以来试试看，顺便学下Python和Django，之前昆哥一直给我推荐Django这个框架。
+记录本次的折腾，主要是因为这个程序的官方还有moerats只写了centos的教程。因为我最近玩docker，就想用昨天docker拉取的Debian系统下搭建试试看。其实区别的话无非就是两个OS的命令 yum 和 apt-get的区别吧。。虽然如此还是记录一下。
+&lt;!--MORE--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;环境要求&#34;&gt;环境要求&lt;/h1&gt;
+
+&lt;p&gt;官方要求是下面这样&lt;br /&gt;
+&lt;code&gt;Centos7 + Python3 + MySQL + Django1.8.x-2.0.x&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这次我用的下面的环境&lt;br /&gt;
+&lt;code&gt;debian(docker镜像版 + Python3.7 + MySQL5.6 + Django1.8.x-2.0.x&lt;/code&gt;)`&lt;/p&gt;
+
+&lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
+
+&lt;p&gt;既然知道了所需环境，那就各个安装了就好。
+Debian的话这里用的是昨天docker拉取的Debian镜像。相关教程可以查看这里。&lt;/p&gt;
+
+&lt;p&gt;由于昨天的Debian也直接安装了宝塔面板，直接面板里安装了mysql5.6，所以mysql也有了。&lt;/p&gt;
+
+&lt;p&gt;接下来就安装下python3.7&lt;/p&gt;
+
+&lt;p&gt;我们先从docker进去Debian系统容器&lt;/p&gt;
+
+&lt;p&gt;先看下正在运行的容器ID&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;root@instance:/home/ubuntu# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                                                                                                              NAMES
+e27df07f4a6d        debian              &amp;quot;bash&amp;quot;              30 hours ago        Up 6 hours          0.0.0.0:20-21-&amp;gt;20-21/tcp, 0.0.0.0:80-&amp;gt;80/tcp, 0.0.0.0:443-&amp;gt;443/tcp, 0.0.0.0:888-&amp;gt;888/tcp, 0.0.0.0:8888-&amp;gt;8888/tcp   baota
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果容器没有在运行就会出现下面这样&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;root@instance:/home/ubuntu# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样我们需要先运行一下容器。&lt;/p&gt;
+
+&lt;p&gt;查看下容器的ID或者说是有什么容器。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;root@instance:/home/ubuntu# docker ps --all
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                          PORTS               NAMES
+e27df07f4a6d        debian              &amp;quot;bash&amp;quot;              30 hours ago        Exited (0) About a minute ago                       baota
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;知道了有个名字是“baota” ID为“e27df07f4a6d”的容器。&lt;/p&gt;
+
+&lt;p&gt;那我们就运行它，用ID也可以。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;root@instance-20190921-1119:/home/ubuntu# docker start baota
+baota
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;启动后通过下面命令来进入正在运行的容器&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;root@instance:/home/ubuntu# docker attach baota
+root@e27df07f4a6d:/#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样我们就在昨天搭建的Debian镜像容器里了。就是在debian的环境下操作了。&lt;/p&gt;
+
+&lt;h2 id=&#34;安装python3&#34;&gt;安装python3&lt;/h2&gt;
+
+&lt;p&gt;进入后你可以先用&lt;code&gt;python3 --version&lt;/code&gt; 看下有没有python3，如果提示没有该命令的话就是没有安装，我的这个Debian系统是没有自带python3 的，所以需要自己安装。&lt;/p&gt;
+
+&lt;p&gt;我是用系统自带package包安装的，所以需要先更新下软件库。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;root@e27df07f4a6d:/# apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;成功后接着安装python3&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;root@e27df07f4a6d:/# apt-get install python3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后软件库就会自动安装好最新版的python3，这里装了python3.7.3-1。&lt;/p&gt;
+
+&lt;p&gt;没有python3，自然也没有pip3，所以如果直接用
+&lt;code&gt;apt-get install pip&lt;/code&gt;安装的是pip2不支持python3，所以要用下面的命令来安装就可以了&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;apt-get install python3-pip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;完成后可以查看下版本确认下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;root@e27df07f4a6d:/# python3 --version
+Python 3.7.3
+root@e27df07f4a6d:/# pip3 --version
+pip 18.1 from /usr/lib/python3/dist-packages/pip (python 3.7)
+root@e27df07f4a6d:/# pip --version
+pip 19.2.3 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;安装必备组件&#34;&gt;安装必备组件&lt;/h2&gt;
+
+&lt;p&gt;就是 Git，screen 之类的&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;apt-get install git screen -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;-y：yes，在命令行交互提示中，直接输入 yes 的意思&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;获取源码&#34;&gt;获取源码&lt;/h2&gt;
+
+&lt;p&gt;接着用git来拉取源码，因为我们昨天搭建了宝塔面板，网站的目录在 &lt;code&gt;/www/wwwroot/&lt;/code&gt; 下，所以在这里拉取源码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;root@e27df07f4a6d:/# cd /www/wwwroot/
+root@e27df07f4a6d:/www/wwwroot# git clone https://github.com/HuaienYao/zhuye_kim.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;新建数据库&#34;&gt;新建数据库&lt;/h2&gt;
+
+&lt;p&gt;我们在宝塔上新建数据库，这里数据库名字取&lt;code&gt;zhuye&lt;/code&gt;，用户名取&lt;code&gt;zhuye&lt;/code&gt; 密码用 &lt;code&gt;123456&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;或者你可以用原有的数据库，只需要修改&lt;code&gt;/www/wwwroot/zhuye_kim/zhuye_kim/settings.py&lt;/code&gt;文件的68行起的database部分设置，&lt;code&gt;&#39;NAME&#39;&lt;/code&gt;部分改为你的原有数据库名，&lt;code&gt;&#39;USER&#39;&lt;/code&gt;改为你的原有数据库用户名，&lt;code&gt;&#39;PASSWORD&#39;&lt;/code&gt;改为你原有数据库的密码。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# Database
+
+DATABASES = {
+    &#39;default&#39;: {
+        &#39;ENGINE&#39;: &#39;django.db.backends.mysql&#39;,
+        &#39;NAME&#39;: &#39;zhuye&#39;,
+        &#39;USER&#39;: &#39;zhuye&#39;,
+        &#39;PASSWORD&#39;: &#39;123456&#39;,
+        &#39;HOST&#39;: &#39;127.0.0.1&#39;,
+        &#39;PORT&#39;: &#39;3306&#39;,
+        &#39;OPTIONS&#39;: {
+            &#39;init_command&#39;: &amp;quot;SET sql_mode=&#39;STRICT_TRANS_TABLES&#39;&amp;quot;,
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;安装必备库-迁移模型-更新表结构&#34;&gt;安装必备库，迁移模型(更新表结构)&lt;/h2&gt;
+
+&lt;p&gt;这步我就照做就行。。还不理解python的知识。。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd /www/wwwroot/zhuye_kim/
+pip3 install -r requirements.txt
+python3 manage.py makemigrations --merge
+python3 manage.py makemigrations
+python3 manage.py migrate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;运行网站&#34;&gt;运行网站&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd /www/wwwroot/zhuye_kim/
+# screen就是开一个后台
+screen -S zhuye
+python3 manage.py runserver 127.0.0.1:8001
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;运行成功会显示以下信息&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sh-5.0# python3 manage.py runserver 127.0.0.1:8001
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 01, 2019 - 16:44:23
+Django version 2.0.12, using settings &#39;zhuye_kim.settings&#39;
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果要停止运行就是 Ctrl＋C&lt;/p&gt;
+
+&lt;h3 id=&#34;关于screen命令&#34;&gt;关于screen命令&lt;/h3&gt;
+
+&lt;p&gt;这是linux里开启多任务的命令，可以理解成窗口。如果你创建了这个，并运行了网站，但是如果你直接关闭窗口还是会停止的。如果只是想最小化，暂时断开的话，需要用&lt;code&gt;Ctrl+A+D&lt;/code&gt; 就可以暂时断开（detach）这个任务。
+之后回来可以通过&lt;code&gt;screen -r session名字&lt;/code&gt; 这里就是你之前设置的zhuye&lt;/p&gt;
+
+&lt;p&gt;这里附上一些screen的常用命令&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;screen -S yourname -&amp;gt; 新建一个叫yourname的session
+screen -ls -&amp;gt; 列出当前所有的session
+screen -r yourname -&amp;gt; 回到yourname这个session
+screen -d yourname -&amp;gt; 远程detach某个session
+screen -d -r yourname -&amp;gt; 结束当前session并回到yourname这个session
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;反向代理&#34;&gt;反向代理&lt;/h2&gt;
+
+&lt;p&gt;然后就是在宝塔反向代理这个端口。&lt;/p&gt;
+
+&lt;p&gt;宝塔面板添加网站&lt;/p&gt;
+
+&lt;p&gt;如下图所示，在宝塔面板的【网站】【添加站点】添加一个站点。
+&lt;img src=&#34;https://ae01.alicdn.com/kf/He609c1f0a4d84abd940ddfd1ebae2916e.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然后在面板的网站列表找到你刚添加的网站，点击网站名弹出设置，左侧选择反向代理，如下图所示设置保存。
+&lt;img src=&#34;https://ae01.alicdn.com/kf/H165db11268ec40c5a5e980d3d6222c5ah.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果前面没出错误信息，应该就可以访问了。&lt;/p&gt;
+
+&lt;p&gt;通过你的域名访问，当然你要提前把域名解析到这个服务器上。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hb194233d718d495d84c0a8bd992d7211Q.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;后台就是 http://域名/admin 来访问&lt;/p&gt;
+
+&lt;p&gt;管理员用户名admin 密码12345678@&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hf495610e6b2f41a0bb2584e73f85244bp.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/wenguonideshou/zhuye_kim&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/wenguonideshou/zhuye_kim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.moerats.com/archives/679/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.moerats.com/archives/679/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/keith_bb/article/details/65435337&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://blog.csdn.net/keith_bb/article/details/65435337&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://linux.cn/article-8215-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://linux.cn/article-8215-1.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>记录docker安装宝塔面板</title>
@@ -349,12 +576,22 @@ e27df07f4a6d        debian              &amp;quot;bash&amp;quot;              2 
 
 &lt;h2 id=&#34;退出容器等操作&#34;&gt;退出容器等操作&lt;/h2&gt;
 
+&lt;h3 id=&#34;退出并停止容器&#34;&gt;退出并停止容器&lt;/h3&gt;
+
 &lt;p&gt;最后如果要退出容器可以使用
 &lt;code&gt;Ctrl+D&lt;/code&gt; 或者&lt;code&gt;exit&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@e27df07f4a6d:/# exit
+&lt;pre&gt;&lt;code&gt;root@e27df07f4a6d:/# exit
 exit
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;但是这样退出后会停止容器。&lt;/p&gt;
+
+&lt;h3 id=&#34;退出但是不停止容器&#34;&gt;退出但是不停止容器&lt;/h3&gt;
+
+&lt;p&gt;想要退出但是不停止容器就要用
+&lt;code&gt;Ctrl+P+Q&lt;/code&gt;
+这样的话容器还在继续运行中。&lt;/p&gt;
 
 &lt;h3 id=&#34;停止容器&#34;&gt;停止容器&lt;/h3&gt;
 
@@ -1962,63 +2199,6 @@ tcp6       0      0 :::3306                 :::*                    LISTEN      
 
 &lt;p&gt;然后就可以在宝塔面板上或者使用
 &lt;code&gt;service nginx start&lt;/code&gt;命令来启动nginx服务了。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Git生成 SSH 公钥添加到GitHub和Coding.net</title>
-      <link>https://huaien.co/technology/ssh-key-generator-git/</link>
-      <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/ssh-key-generator-git/</guid>
-      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;大多数 Git 服务器都会选择使用 SSH 公钥来进行授权。系统中的每个用户都必须提供一个公钥用于授权，没有的话就要生成一个。例如我们在使用GitHub Pages来托管博客，或者将代码推到GitHub或者Coding上的话需要先生成一个SSH并填入到托管平台的设置中来授权。&lt;/p&gt;
-
-&lt;h2 id=&#34;生成&#34;&gt;生成&lt;/h2&gt;
-
-&lt;p&gt;生成公钥的过程在所有操作系统上都差不多。 首先先确认一下是否已经有一个公钥了。SSH 公钥默认储存在账户的主目录下的&lt;code&gt;~/.ssh&lt;/code&gt;目录。进去看看：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd ~/.ssh
-$ ls
-authorized_keys2  id_dsa       known_hosts
-config            id_dsa.pub
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;关键是看有没有用 something 和 something.pub 来命名的一对文件，这个 something 通常就是 &lt;code&gt;id_dsa&lt;/code&gt; 或 &lt;code&gt;id_rsa&lt;/code&gt;。有 &lt;code&gt;.pub&lt;/code&gt; 后缀的文件就是公钥，另一个文件则是密钥。假如没有这些文件，或者干脆连 .ssh 目录都没有，可以用 &lt;code&gt;ssh-keygen&lt;/code&gt; 来创建。该程序在 Linux/Mac 系统上由 SSH 包提供，而在 Windows 上则包含在 MSysGit 包里：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ ssh-keygen
-Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/schacon/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /Users/schacon/.ssh/id_rsa.
-Your public key has been saved in /Users/schacon/.ssh/id_rsa.pub.
-The key fingerprint is:
-43:c5:5b:5f:b1:f1:50:43:ad:20:a6:92:6a:1f:9a:3a schacon@agadorlaptop.local
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;它先要求你确认保存公钥的位置（&lt;code&gt;.ssh/id_rsa&lt;/code&gt;），然后它会让你重复一个密码两次，如果不想在使用公钥的时候输入密码，可以留空。&lt;/p&gt;
-
-&lt;p&gt;现在，所有做过这一步的用户都得把它们的公钥给你或者 Git 服务器的管理员（假设 SSH 服务被设定为使用公钥机制）。他们只需要复制 &lt;code&gt;.pub&lt;/code&gt; 文件的内容然后发邮件给管理员。&lt;/p&gt;
-
-&lt;h2 id=&#34;得到公钥&#34;&gt;得到公钥&lt;/h2&gt;
-
-&lt;p&gt;公钥的样子大致如下：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cat ~/.ssh/id_rsa.pub
-ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9Tjom/BWDSU
-GPl+nafzlHDTYW7hdI4yZ5ew18JH4JW9jbhUFrviQzM7xlELEVf4h9lFX5QVkbPppSwg0cda3
-Pbv7kOdJ/MTyBlWXFCR+HAo3FXRitBqxiX1nKhXpHAZsMciLq8V6RjsNAQwdsdMFvSlVK/7XA
-t3FaoJoAsncM1Q9x5+3V0Ww68/eIFmb1zuUFljQJKprrX88XypNDvjYNby6vw/Pb0rwert/En
-mZ+AW4OZPnTPI89ZPmVMLuayrD2cE86Z/il8b+gw3r3+1nKatmIkjn2so1d01QraTlMqVSsbx
-NrRFi9wrf+M7Q== schacon@agadorlaptop.local
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;将上面得到的公钥内容填到你要授权的托管平台的SSH钥设置中就好了~&lt;/p&gt;
-
-&lt;p&gt;关于在多个操作系统上设立相同 SSH 公钥的教程，可以查阅 GitHub 上有关 SSH 公钥的向导：&lt;a href=&#34;http://github.com/guides/providing-your-ssh-key。&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://github.com/guides/providing-your-ssh-key。&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;来源：&lt;a href=&#34;https://git-scm.com/book/zh/v1/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E7%94%9F%E6%88%90-SSH-%E5%85%AC%E9%92%A5&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;3 服务器上的 Git - 生成 SSH 公钥&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
