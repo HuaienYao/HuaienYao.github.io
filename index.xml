@@ -10,10 +10,10 @@
     
     <item>
       <title>记录docker的Debian下搭建Django框架开发的仿zhuye.kim导航</title>
-      <link>https://huaien.co/technology/debian-install-zhuye-im/</link>
+      <link>https://huaien.co/technology/debian-install-zhuye-kim/</link>
       <pubDate>Tue, 01 Oct 2019 16:14:12 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/debian-install-zhuye-im/</guid>
+      <guid>https://huaien.co/technology/debian-install-zhuye-kim/</guid>
       <description>&lt;p&gt;先祝祖国70华诞生日快乐！&lt;/p&gt;
 
 &lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
@@ -28,12 +28,12 @@
 &lt;code&gt;Centos7 + Python3 + MySQL + Django1.8.x-2.0.x&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;这次我用的下面的环境&lt;br /&gt;
-&lt;code&gt;debian(docker镜像版 + Python3.7 + MySQL5.6 + Django1.8.x-2.0.x&lt;/code&gt;)`&lt;/p&gt;
+&lt;code&gt;debian(docker镜像版 + Python3.7 + MySQL5.6 + Django1.8.x-2.0.x)&lt;/code&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
 
 &lt;p&gt;既然知道了所需环境，那就各个安装了就好。
-Debian的话这里用的是昨天docker拉取的Debian镜像。相关教程可以查看这里。&lt;/p&gt;
+Debian的话这里用的是昨天docker拉取的Debian镜像。相关教程可以查看&lt;a href=&#34;https://huaien.co/technology/docker-install-bt-panel/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这里&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;由于昨天的Debian也直接安装了宝塔面板，直接面板里安装了mysql5.6，所以mysql也有了。&lt;/p&gt;
 
@@ -227,11 +227,11 @@ screen -d -r yourname -&amp;gt; 结束当前session并回到yourname这个sessio
 &lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/wenguonideshou/zhuye_kim&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/wenguonideshou/zhuye_kim&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.moerats.com/archives/679/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.moerats.com/archives/679/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/keith_bb/article/details/65435337&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://blog.csdn.net/keith_bb/article/details/65435337&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://linux.cn/article-8215-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://linux.cn/article-8215-1.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/wenguonideshou/zhuye_kim&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;zhuye.kim源码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.moerats.com/archives/679/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Django框架开发的仿zhuye.kim的简单个人主页/导航程序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;linux screen 命令详解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/keith_bb/article/details/65435337&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Linux-Ubuntu16.04下Python3.5安装pip3以及scrapy、numpy、itchat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://linux.cn/article-8215-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;screen 命令使用及示例&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -581,7 +581,7 @@ e27df07f4a6d        debian              &amp;quot;bash&amp;quot;              2 
 &lt;p&gt;最后如果要退出容器可以使用
 &lt;code&gt;Ctrl+D&lt;/code&gt; 或者&lt;code&gt;exit&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;root@e27df07f4a6d:/# exit
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;root@e27df07f4a6d:/# exit
 exit
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1605,7 +1605,7 @@ $ git remote add origin git@github.com:github帐号名/仓库名.git
 
 &lt;p&gt;在hexo中的根目录下的_config.yml文件中，这段代码：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# URL
+&lt;pre&gt;&lt;code class=&#34;language-YAML&#34;&gt;# URL
 ## If your site is put in a subdirectory, set url as &#39;http://yoursite.com/child&#39; and root as &#39;/child/&#39;
 url: https://www.nihoncard.com
 root: /
