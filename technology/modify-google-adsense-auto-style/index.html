@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  <meta name="google-site-verification" content="BSHAeX0rpMJl5P9uivMCvTuOjrwjHaZJd1ByR12z6BE" />
+   
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122761254-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122761254-3');
+</script>
+  
+  <link rel="prev" href="https://huaien.co/technology/debian-install-zhuye-kim/" />
+  
+  <link rel="canonical" href="https://huaien.co/technology/modify-google-adsense-auto-style/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+
+  
+  <title>
+       
+       
+           修改AdSense自适应广告尺寸 不同宽度屏幕指定不同尺寸广告 | Wyane&#39;s Blog
+       
+  </title>
+  <meta name="title" content="修改AdSense自适应广告尺寸 不同宽度屏幕指定不同尺寸广告 | Wyane&#39;s Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/huaien.co\/"
+    },
+    "articleSection" : "posts",
+    "name" : "修改AdSense自适应广告尺寸 不同宽度屏幕指定不同尺寸广告",
+    "headline" : "修改AdSense自适应广告尺寸 不同宽度屏幕指定不同尺寸广告",
+    "description" : "虽然Google Adsense提供了自适应广告尺寸。但是有时候适配的尺寸并不是你想要的尺寸。比如本博客的下方有个横幅广告，考虑到用固定尺寸的横幅广告会导致手机端的显示太大，不美观。",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-10-03 04:50:16 \x2b0000 UTC",
+    "dateModified" : "2019-10-03 04:50:16 \x2b0000 UTC",
+    "url" : "https:\/\/huaien.co\/technology\/modify-google-adsense-auto-style\/",
+    "wordCount" : "1770",
+    "keywords" : [ "Adsense", "Wyane\x27s Blog"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://huaien.co/">Wyane&#39;s Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Links">Links</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://huaien.co/">Wyane&#39;s Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Links">Links</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">修改AdSense自适应广告尺寸 不同宽度屏幕指定不同尺寸广告</h1>
+        <div class="post-meta">
+        
+                      
+          <i class="far fa-folder-open"></i>
+                <span class="post-category">
+                        <a href="https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+          <span class="post-time">
+         <i class="far fa-calendar-alt"></i>  <time datetime=2019-10-03 itemprop="datePublished">2019-10-03</time>
+           </span>
+     
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 1770 字</span>
+         <i class="far fa-clock"></i> <span class="more-meta"> 4 分钟</span>
+          
+        </div>
+    </header>
+	
+          <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title"></h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#背景">背景</a></li>
+<li><a href="#效果">效果</a>
+<ul>
+<li><a href="#电脑端显示效果">电脑端显示效果</a></li>
+<li><a href="#ipad端显示效果">iPad端显示效果</a></li>
+<li><a href="#手机端显示效果">手机端显示效果</a></li>
+</ul></li>
+<li><a href="#代码">代码</a>
+<ul>
+<li><a href="#谷歌官方修改代码">谷歌官方修改代码</a></li>
+<li><a href="#本博客修改后代码">本博客修改后代码</a></li>
+<li><a href="#解释">解释</a></li>
+</ul></li>
+<li><a href="#参考来源">参考来源</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+<script type="text/javascript">
+  window.onload = function () {
+    var fix = $('.post-toc');
+    var end = $('.post-comment');
+    var fixTop = fix.offset().top, fixHeight = fix.height();
+    var endTop, miss;
+    var offsetTop = fix[0].offsetTop;
+    $(window).scroll(function () {
+      var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+      if (end.length > 0) {
+        endTop = end.offset().top;
+        miss = endTop - docTop - fixHeight;
+      }
+      if (fixTop < docTop) {
+        fix.css({ 'position': 'fixed' });
+        if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+          fix.css({ top: miss });
+        } else {
+          fix.css({ top: 0 });
+        }
+      } else {
+        fix.css({ 'position': 'absolute' });
+        fix.css({ top: offsetTop });
+      }
+    })
+  }
+</script> 
+	
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://ae01.alicdn.com/kf/H1ec7aab92ddf4898a72d0fe2353f5b71N.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="背景">背景</h1>
+
+<p>个人也是比较反感那些不美观的广告，但是适当利用Google广告的话可以给网站添加一点内容，个人觉得还是挺好的。虽然Google Adsense 提供了自适应广告尺寸。但是有时候适配的尺寸并不是你想要的尺寸。比如本博客的下方有个横幅广告，考虑到用固定尺寸的横幅广告会导致手机端的显示太大，不美观。试过了自适应广告尺寸，效果是移动端的显示也是正方形方块广告，但是我想要的是高度比较小的横幅广告，只要一小块的长方形广告会比较美观。这篇文章记录了如何将自适应广告代码修改为不同屏幕大小显示指定尺寸。</p>
+
+<!--MORE-->
+
+<h1 id="效果">效果</h1>
+
+<p>下面是本博客的评论框上方的长方形广告。根据不同屏幕宽度显示不同高度尺寸，宽度基本为根据屏幕大小自动拉伸。</p>
+
+<h2 id="电脑端显示效果">电脑端显示效果</h2>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/Hc88ab47c72984960b4b91925619a5f3cg.jpg" alt="电脑端显示效果" class="lazyload"><figcaption class="image-caption">电脑端显示效果</figcaption></figure></p>
+
+<h2 id="ipad端显示效果">iPad端显示效果</h2>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/Heba58630eeb741a5a90598f4821d1488M.jpg" alt="iPad端显示效果" class="lazyload"><figcaption class="image-caption">iPad端显示效果</figcaption></figure></p>
+
+<h2 id="手机端显示效果">手机端显示效果</h2>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/Hf47aa3c8030e4a6bb77c93fac699d910U.jpg" alt="手机端显示效果" class="lazyload"><figcaption class="image-caption">手机端显示效果</figcaption></figure></p>
+
+<p>可以看到，根据不同屏幕大小，广告尺寸会自动适配宽度和指定高度。原来的代码会导致是一块正方形广告，感觉在手机端等比较小的屏幕上占用屏幕太大，影响体验。</p>
+
+<h1 id="代码">代码</h1>
+
+<h2 id="谷歌官方修改代码">谷歌官方修改代码</h2>
+
+<p>这里贴上Google官方修改后的自适应广告代码。</p>
+
+<pre><code class="language-html">&lt;style&gt;
+.example_responsive_1 { width: 320px; height: 100px; }
+@media(min-width: 500px) { .example_responsive_1 { width: 468px; height: 60px; } }
+@media(min-width: 800px) { .example_responsive_1 { width: 728px; height: 90px; } }
+&lt;/style&gt;
+&lt;script async src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+&lt;!-- example_responsive_1 --&gt;
+&lt;ins class=&quot;adsbygoogle example_responsive_1&quot;
+     style=&quot;display:inline-block&quot;
+     data-ad-client=&quot;ca-pub-XXXXXXX11XXX9&quot;
+     data-ad-slot=&quot;8XXXXX1&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+</code></pre>
+
+<blockquote>
+<ul>
+<li>宽度不超过 500 像素的屏幕：320x100 广告单元。</li>
+<li>宽度在 500 像素到 799 像素之间的屏幕：468x60 广告单元。</li>
+<li>宽度在 800 像素以上的屏幕：728x90 广告单元。</li>
+</ul>
+</blockquote>
+
+<h2 id="本博客修改后代码">本博客修改后代码</h2>
+
+<p>这里附上本博客用的代码，就是Google发布的代码再根据自己的实际情况修改。</p>
+
+<pre><code class="language-html">&lt;div align=&quot;center&quot;&gt;
+&lt;style&gt;
+.adsbygoogle-comment { width: 99%; height: 60px; padding: 1rem 0px }
+@media(min-width: 500px) { .adsbygoogle-comment { width: 99%; height: 70px; padding: 1rem 0px} }
+@media(min-width: 800px) { .adsbygoogle-comment { width: 99%; height: 90px; padding: 1rem 0px} }
+&lt;/style&gt; 
+&lt;script async src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Wyane's Blog 长方形 --&gt;
+
+&lt;ins class=&quot;adsbygoogle adsbygoogle-comment&quot;
+     style=&quot;display:inline-block&quot;
+     data-ad-client=&quot;ca-pub-xxxxxxxxxxxxxxxxxx&quot;
+     data-ad-slot=&quot;xxxxxxxxxx&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+     (adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2 id="解释">解释</h2>
+
+<ul>
+<li>宽度不超过 500 像素的屏幕：宽度为根据屏幕实际宽度自动调整为99%的宽度，高度固定为60px的广告单元 上下内边距1rem。</li>
+<li>宽度在 500 像素到 799 像素之间的屏幕：宽度为根据屏幕实际宽度自动调整为99%的宽度，高度固定为70px的广告单元 上下内边距1rem。</li>
+<li>宽度在 800 像素以上的屏幕：宽度为根据屏幕实际宽度自动调整为99%的宽度，高度固定为90px的广告单元 上下内边距1rem。</li>
+<li><code>adsbygoogle-comment</code>为样式名，可以自定义，需要和 <code>&lt;ins class=&quot;adsbygoogle adsbygoogle-comment&quot;</code> 对应</li>
+<li><code>data-ad-client=&quot;ca-pub-xxxxxxxxxxxxxxxxxx&quot;</code>的<code>ca-pub-xxxxxxxxxxxxxxxxxx</code>为你自己的发布商ID</li>
+<li><code>data-ad-slot=&quot;xxxxxxxxxx&quot;</code>的<code>xxxxxxxxxx</code>为你自己的广告单元ID</li>
+<li>以上地方根据自己需求修改。</li>
+</ul>
+
+<p>如果还有不懂的地方可以参考下面的官方解释。
+注意：Google AdSense原则上不允许修改广告代码，官方好像只允许这种通过css样式的方法来修改自适应广告尺寸。</p>
+
+<blockquote>
+<p>在您的 AdSense 帐号中创建一个展示广告单元，确保“广告尺寸”部分中的自适应选项保持选中状态。记下自适应广告代码中的以下信息：
+发布商 ID，例如 ca-pub-1234567891234567
+广告单元 ID (data-ad-slot)，例如 1234567890。
+在示例代码中：
+将所有 example_responsive_1 实例都替换为唯一名称，例如 Home_Page、front_page_123 等。
+注意事项：
+您的唯一名称只能包含英文字母 (A-Z)、数字和下划线，且第一个字符必须是英文字母。
+您每次调整此示例代码时都必须使用不同的唯一名称。
+将 ca-pub-XXXXXXX11XXX9 替换为您自己的发布商 ID。
+将 8XXXXX1 替换为您自己的广告单元 ID。
+决定您希望广告单元在每类屏幕宽度上占据的尺寸：
+如果您希望采用示例代码中现有的广告单元尺寸，则不需要做出任何额外更改。
+如果您希望根据具体屏幕尺寸设置不同的广告单元尺寸，请在示例代码中进行以下操作：
+将 320px 和 100px 替换为您希望为宽度不超过 500 像素的屏幕使用的广告单元的宽度和高度。
+将 468px 和 60px 替换为您希望为宽度在 500 像素和 799 像素之间的屏幕使用的广告单元的宽度和高度。
+将 728px 和 90px 替换为您希望为宽度超过 800 像素的屏幕使用的广告单元的宽度和高度。
+复制修改后的广告代码，并将其粘贴到您希望展示广告的网页的 HTML 源代码中。
+注意：放置广告代码后，我们建议您在不同的设备和屏幕上测试您的广告，确保自适应功能正常工作。
+自适应广告代码高级功能示例
+如果您发现我们的自适应广告代码无法满足您的所有需求，则不妨修改广告代码，通过 CSS 指定广告单元的确切尺寸。</p>
+
+<p>注意：除非您对修改广告代码非常有把握，否则我们不建议您使用这些高级功能。</p>
+</blockquote>
+
+<h1 id="参考来源">参考来源</h1>
+
+<ul>
+<li><a href="https://support.google.com/adsense/answer/9183363?hl=zh-Hans&amp;visit_id=636989514276087628-3394097392&amp;rd=1" rel="nofollow noreferrer" target="_blank">如何修改自适应广告代码</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+            <p class="copyright-item">
+              <span><i class="fa fa-user"></i></span>
+                
+             <span> <a itemprop="name" href="https://huaien.co/" rel="author">Wyane</a> </span>
+                </p>
+
+             
+            <p class="copyright-item">
+              <span><i class="fa fa-link"></i></span>
+                   
+                    <span><a href=https://huaien.co/technology/modify-google-adsense-auto-style/>https://huaien.co/technology/modify-google-adsense-auto-style/</span>
+            </p>
+            
+              
+      
+             
+            <p class="copyright-item lincese">
+              <span><i class="fa fa-copyright"></i></span>
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+      
+        
+
+
+                  
+  
+
+
+
+
+    </div>
+      
+      
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://huaien.co/tags/adsense/">
+                    #Adsense</a></span>
+            
+            </section>
+        
+        <section>
+                <span><a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://huaien.co/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://huaien.co/technology/debian-install-zhuye-kim/" class="prev" rel="prev" title="记录docker的Debian下搭建Django框架开发的仿zhuye.kim导航"><i class="iconfont icon-left"></i>&nbsp;记录docker的Debian下搭建Django框架开发的仿zhuye.kim导航</a>
+         
+        
+    </div>
+<br>
+<style>
+.before-comment { height: 3rem; }
+@media(min-width: 500px) { .before-comment { height: 2rem; }
+@media(min-width: 800px) { .before-comment { height: 1rem; }
+</style>       
+<div class="before-comment"></div>  
+
+          
+			
+			<div align="center">
+<style>
+.adsbygoogle-comment { width: 99%; height: 60px; padding: 1rem 0px }
+@media(min-width: 500px) { .adsbygoogle-comment { width: 99%; height: 70px; padding: 1rem 0px} }
+@media(min-width: 800px) { .adsbygoogle-comment { width: 99%; height: 90px; padding: 1rem 0px} }
+</style> 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+<ins class="adsbygoogle adsbygoogle-comment"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4547757701057415"
+     data-ad-slot="9118682280"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+          
+
+      <p></p>
+<div class="post-comment">
+		
+                 
+            
+			
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'NW2s1QV41zVBXsHRzTeVJWPf-MdYXbMMI',
+        appKey: 'BhNP1gtLFJ7aF5QfM89DpbFv',
+        notify:  false , 
+        verify:  false , 
+        avatar:'monsterid', 
+        placeholder: '说说你的看法~(*填写邮箱的话若有人回复，将可以收到提醒邮件哦^_^)',
+        visitor: 'false'
+    });
+  </script>
+
+  
+
+		
+
+</div>
+      
+ 
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2010 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://huaien.co/">Wyane</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+  
+    
+  
+  
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5d4384e9e5ae967ef80e0653/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+  
+ <script src="https://embed.small.chat/TLZK60LJ2GLL3K6R8B.js" async></script> 
+  
+    
+
+  
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

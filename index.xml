@@ -5,8 +5,142 @@
     <description>Recent content in Wyane&#39;s Blog on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 01 Oct 2019 16:14:12 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 04:50:16 +0000</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>修改AdSense自适应广告尺寸 不同宽度屏幕指定不同尺寸广告</title>
+      <link>https://huaien.co/technology/modify-google-adsense-auto-style/</link>
+      <pubDate>Thu, 03 Oct 2019 04:50:16 +0000</pubDate>
+      
+      <guid>https://huaien.co/technology/modify-google-adsense-auto-style/</guid>
+      <description>
+
+&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
+
+&lt;p&gt;个人也是比较反感那些不美观的广告，但是适当利用Google广告的话可以给网站添加一点内容，个人觉得还是挺好的。虽然Google Adsense 提供了自适应广告尺寸。但是有时候适配的尺寸并不是你想要的尺寸。比如本博客的下方有个横幅广告，考虑到用固定尺寸的横幅广告会导致手机端的显示太大，不美观。试过了自适应广告尺寸，效果是移动端的显示也是正方形方块广告，但是我想要的是高度比较小的横幅广告，只要一小块的长方形广告会比较美观。这篇文章记录了如何将自适应广告代码修改为不同屏幕大小显示指定尺寸。&lt;/p&gt;
+
+&lt;!--MORE--&gt;
+
+&lt;h1 id=&#34;效果&#34;&gt;效果&lt;/h1&gt;
+
+&lt;p&gt;下面是本博客的评论框上方的长方形广告。根据不同屏幕宽度显示不同高度尺寸，宽度基本为根据屏幕大小自动拉伸。&lt;/p&gt;
+
+&lt;h2 id=&#34;电脑端显示效果&#34;&gt;电脑端显示效果&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hc88ab47c72984960b4b91925619a5f3cg.jpg&#34; alt=&#34;电脑端显示效果&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ipad端显示效果&#34;&gt;iPad端显示效果&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Heba58630eeb741a5a90598f4821d1488M.jpg&#34; alt=&#34;iPad端显示效果&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;手机端显示效果&#34;&gt;手机端显示效果&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hf47aa3c8030e4a6bb77c93fac699d910U.jpg&#34; alt=&#34;手机端显示效果&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以看到，根据不同屏幕大小，广告尺寸会自动适配宽度和指定高度。原来的代码会导致是一块正方形广告，感觉在手机端等比较小的屏幕上占用屏幕太大，影响体验。&lt;/p&gt;
+
+&lt;h1 id=&#34;代码&#34;&gt;代码&lt;/h1&gt;
+
+&lt;h2 id=&#34;谷歌官方修改代码&#34;&gt;谷歌官方修改代码&lt;/h2&gt;
+
+&lt;p&gt;这里贴上Google官方修改后的自适应广告代码。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;style&amp;gt;
+.example_responsive_1 { width: 320px; height: 100px; }
+@media(min-width: 500px) { .example_responsive_1 { width: 468px; height: 60px; } }
+@media(min-width: 800px) { .example_responsive_1 { width: 728px; height: 90px; } }
+&amp;lt;/style&amp;gt;
+&amp;lt;script async src=&amp;quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- example_responsive_1 --&amp;gt;
+&amp;lt;ins class=&amp;quot;adsbygoogle example_responsive_1&amp;quot;
+     style=&amp;quot;display:inline-block&amp;quot;
+     data-ad-client=&amp;quot;ca-pub-XXXXXXX11XXX9&amp;quot;
+     data-ad-slot=&amp;quot;8XXXXX1&amp;quot;&amp;gt;&amp;lt;/ins&amp;gt;
+&amp;lt;script&amp;gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;宽度不超过 500 像素的屏幕：320x100 广告单元。&lt;/li&gt;
+&lt;li&gt;宽度在 500 像素到 799 像素之间的屏幕：468x60 广告单元。&lt;/li&gt;
+&lt;li&gt;宽度在 800 像素以上的屏幕：728x90 广告单元。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;本博客修改后代码&#34;&gt;本博客修改后代码&lt;/h2&gt;
+
+&lt;p&gt;这里附上本博客用的代码，就是Google发布的代码再根据自己的实际情况修改。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div align=&amp;quot;center&amp;quot;&amp;gt;
+&amp;lt;style&amp;gt;
+.adsbygoogle-comment { width: 99%; height: 60px; padding: 1rem 0px }
+@media(min-width: 500px) { .adsbygoogle-comment { width: 99%; height: 70px; padding: 1rem 0px} }
+@media(min-width: 800px) { .adsbygoogle-comment { width: 99%; height: 90px; padding: 1rem 0px} }
+&amp;lt;/style&amp;gt; 
+&amp;lt;script async src=&amp;quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;!-- Wyane&#39;s Blog 长方形 --&amp;gt;
+
+&amp;lt;ins class=&amp;quot;adsbygoogle adsbygoogle-comment&amp;quot;
+     style=&amp;quot;display:inline-block&amp;quot;
+     data-ad-client=&amp;quot;ca-pub-xxxxxxxxxxxxxxxxxx&amp;quot;
+     data-ad-slot=&amp;quot;xxxxxxxxxx&amp;quot;&amp;gt;&amp;lt;/ins&amp;gt;
+&amp;lt;script&amp;gt;
+     (adsbygoogle = window.adsbygoogle || []).push({});
+&amp;lt;/script&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;解释&#34;&gt;解释&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;宽度不超过 500 像素的屏幕：宽度为根据屏幕实际宽度自动调整为99%的宽度，高度固定为60px的广告单元 上下内边距1rem。&lt;/li&gt;
+&lt;li&gt;宽度在 500 像素到 799 像素之间的屏幕：宽度为根据屏幕实际宽度自动调整为99%的宽度，高度固定为70px的广告单元 上下内边距1rem。&lt;/li&gt;
+&lt;li&gt;宽度在 800 像素以上的屏幕：宽度为根据屏幕实际宽度自动调整为99%的宽度，高度固定为90px的广告单元 上下内边距1rem。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adsbygoogle-comment&lt;/code&gt;为样式名，可以自定义，需要和 &lt;code&gt;&amp;lt;ins class=&amp;quot;adsbygoogle adsbygoogle-comment&amp;quot;&lt;/code&gt; 对应&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data-ad-client=&amp;quot;ca-pub-xxxxxxxxxxxxxxxxxx&amp;quot;&lt;/code&gt;的&lt;code&gt;ca-pub-xxxxxxxxxxxxxxxxxx&lt;/code&gt;为你自己的发布商ID&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data-ad-slot=&amp;quot;xxxxxxxxxx&amp;quot;&lt;/code&gt;的&lt;code&gt;xxxxxxxxxx&lt;/code&gt;为你自己的广告单元ID&lt;/li&gt;
+&lt;li&gt;以上地方根据自己需求修改。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果还有不懂的地方可以参考下面的官方解释。
+注意：Google AdSense原则上不允许修改广告代码，官方好像只允许这种通过css样式的方法来修改自适应广告尺寸。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;在您的 AdSense 帐号中创建一个展示广告单元，确保“广告尺寸”部分中的自适应选项保持选中状态。记下自适应广告代码中的以下信息：
+发布商 ID，例如 ca-pub-1234567891234567
+广告单元 ID (data-ad-slot)，例如 1234567890。
+在示例代码中：
+将所有 example_responsive_1 实例都替换为唯一名称，例如 Home_Page、front_page_123 等。
+注意事项：
+您的唯一名称只能包含英文字母 (A-Z)、数字和下划线，且第一个字符必须是英文字母。
+您每次调整此示例代码时都必须使用不同的唯一名称。
+将 ca-pub-XXXXXXX11XXX9 替换为您自己的发布商 ID。
+将 8XXXXX1 替换为您自己的广告单元 ID。
+决定您希望广告单元在每类屏幕宽度上占据的尺寸：
+如果您希望采用示例代码中现有的广告单元尺寸，则不需要做出任何额外更改。
+如果您希望根据具体屏幕尺寸设置不同的广告单元尺寸，请在示例代码中进行以下操作：
+将 320px 和 100px 替换为您希望为宽度不超过 500 像素的屏幕使用的广告单元的宽度和高度。
+将 468px 和 60px 替换为您希望为宽度在 500 像素和 799 像素之间的屏幕使用的广告单元的宽度和高度。
+将 728px 和 90px 替换为您希望为宽度超过 800 像素的屏幕使用的广告单元的宽度和高度。
+复制修改后的广告代码，并将其粘贴到您希望展示广告的网页的 HTML 源代码中。
+注意：放置广告代码后，我们建议您在不同的设备和屏幕上测试您的广告，确保自适应功能正常工作。
+自适应广告代码高级功能示例
+如果您发现我们的自适应广告代码无法满足您的所有需求，则不妨修改广告代码，通过 CSS 指定广告单元的确切尺寸。&lt;/p&gt;
+
+&lt;p&gt;注意：除非您对修改广告代码非常有把握，否则我们不建议您使用这些高级功能。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;参考来源&#34;&gt;参考来源&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/adsense/answer/9183363?hl=zh-Hans&amp;amp;visit_id=636989514276087628-3394097392&amp;amp;rd=1&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;如何修改自适应广告代码&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>记录docker的Debian下搭建Django框架开发的仿zhuye.kim导航</title>
@@ -2122,83 +2256,6 @@ rwlfzj3w
 &lt;p&gt;可以看到返回的rwlfzj3w就是你的账号，你可以用这个账号和新密码来登录面板，登录进去后可以去面板设置修改账号密码。&lt;/p&gt;
 
 &lt;p&gt;原文地址：&lt;a href=&#34;http://www.bt.cn/bbs/thread-1172-1-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.bt.cn/bbs/thread-1172-1-1.html&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>宝塔启动nginx服务失败提示failed (98:Address already in use)</title>
-      <link>https://huaien.co/technology/bt-panel-failed-to-start-nginx/</link>
-      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/bt-panel-failed-to-start-nginx/</guid>
-      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;发现宝塔的nginx没有在运行，于是在宝塔面板上手动重启，但是提示失败，失败信息是下面那样：&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;警告消息：&lt;/p&gt;
-
-&lt;p&gt;nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
-nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
-nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
-nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
-nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
-nginx: [emerg] still could not bind()&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
-
-&lt;p&gt;原因是nginx服务被卡死，导致80端口被占用，地址已经被使用。&lt;/p&gt;
-
-&lt;p&gt;解决这一问题的办法，我们得找到占用80端口的服务进程，并结束它。&lt;/p&gt;
-
-&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
-
-&lt;p&gt;用 &lt;code&gt;netstat -ntpl&lt;/code&gt; 来查看端口使用情况&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;root@woo2:/www/server/panel# netstat -ntpl
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      6822/nginx.conf
-tcp        0      0 0.0.0.0:21              0.0.0.0:*               LISTEN      6672/pure-ftpd (SER
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1769/sshd
-tcp        0      0 0.0.0.0:888             0.0.0.0:*               LISTEN      6822/nginx.conf
-tcp        0      0 0.0.0.0:8888            0.0.0.0:*               LISTEN      20242/python
-tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      1943/sendmail: MTA:
-tcp        0      0 127.0.0.1:587           0.0.0.0:*               LISTEN      1943/sendmail: MTA:
-tcp6       0      0 :::21                   :::*                    LISTEN      6672/pure-ftpd (SER
-tcp6       0      0 :::22                   :::*                    LISTEN      1769/sshd
-tcp6       0      0 :::3306                 :::*                    LISTEN      19710/mysqld
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;可以看到进程pid 6822占用了80的端口，导致nginx无法启动。&lt;/p&gt;
-
-&lt;p&gt;我们只要将6822进程结束就行了&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;root@woo2:/www/server/panel# kill 6822
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;结束后再次查看端口使用情况&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;root@woo2:/www/server/panel# netstat -ntpl
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        0      0 0.0.0.0:21              0.0.0.0:*               LISTEN      6672/pure-ftpd (SER
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1769/sshd
-tcp        0      0 0.0.0.0:8888            0.0.0.0:*               LISTEN      20242/python
-tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      1943/sendmail: MTA:
-tcp        0      0 127.0.0.1:587           0.0.0.0:*               LISTEN      1943/sendmail: MTA:
-tcp6       0      0 :::21                   :::*                    LISTEN      6672/pure-ftpd (SER
-tcp6       0      0 :::22                   :::*                    LISTEN      1769/sshd
-tcp6       0      0 :::3306                 :::*                    LISTEN      19710/mysqld
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;发现已经没有80端口在使用中了。&lt;/p&gt;
-
-&lt;p&gt;然后就可以在宝塔面板上或者使用
-&lt;code&gt;service nginx start&lt;/code&gt;命令来启动nginx服务了。&lt;/p&gt;</description>
     </item>
     
   </channel>
