@@ -144,6 +144,62 @@
     </item>
     
     <item>
+      <title>好看喜欢的免费与收费typecho主题收藏</title>
+      <link>https://huaien.co/internet/favorite-great-typecho-themes/</link>
+      <pubDate>Wed, 02 Oct 2019 06:03:21 +0000</pubDate>
+      
+      <guid>https://huaien.co/internet/favorite-great-typecho-themes/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;因为本人也在用typecho搭建博客，typecho的主题没有wordpress多，但是很多国内大佬做的主题是真心喜欢，本人收藏的多为简洁又好看的主题。&lt;/p&gt;
+
+&lt;p&gt;有遇到好看的随时更新，如果有作者觉得侵犯了您的权益，请告知我。我会及时删除。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;免费版提供下载地址或者github地址，收费版请到作者页面购买。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;主题&#34;&gt;主题&lt;/h1&gt;
+
+&lt;h2 id=&#34;免费版&#34;&gt;免费版&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Initial&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&#34;https://www.offodd.com/17.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;孙杰&lt;/a&gt; （OFFODD）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;当前版本&lt;/strong&gt;：2019/2/20:更新2.4.3版本&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预览地址&lt;/strong&gt;：&lt;a href=&#34;https://www.offodd.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;OFFODD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预览图&lt;/strong&gt;：&lt;img src=&#34;https://ae01.alicdn.com/kf/H1d715be23a98442faa3a9d958771c2b2a.jpg&#34; alt=&#34;作者博客&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub项目地址&lt;/strong&gt;: &lt;a href=&#34;https://github.com/jielive/initial&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Initial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;收藏理由&lt;/strong&gt;：轻量级设计，极速浏览体验，全站Pjax、Ajax评论、Ajax翻页、HTML压缩、CSS文件压缩，支持“轻语”功能（类似说说）等等，感觉都是收费主题的级别了。。
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;收费版&#34;&gt;收费版&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;handsome&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&#34;https://www.ihewro.com/archives/489/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;友人C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;当前版本&lt;/strong&gt;：5.3.0 2019/10/04当前&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;价格&lt;/strong&gt;：55元（限时优惠）2019/10/04当前&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预览地址&lt;/strong&gt;：&lt;a href=&#34;https://www.ihewro.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;友人C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预览图&lt;/strong&gt;：&lt;img src=&#34;https://assets.ihewro.com/usr/uploads/2019/09/391386371.png&#34; alt=&#34;作者博客&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;购买地址&lt;/strong&gt;: &lt;a href=&#34;https://www.ihewro.com/archives/489/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;友人C官方&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;收藏理由&lt;/strong&gt;：作者太良心了，价格真心便宜。估计是typecho最火主题了吧，看到大部分人都持有，由于用了hugo这个博客程序，想回头都难，所以暂时没有入手。超多功能，界面精美。Pjax全站无刷新页面体验，内置音乐播放器，时光机，可选私密，相册等等一大堆特性。
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
       <title>记录docker的Debian下搭建Django框架开发的仿zhuye.kim导航</title>
       <link>https://huaien.co/technology/debian-install-zhuye-kim/</link>
       <pubDate>Tue, 01 Oct 2019 16:14:12 +0000</pubDate>
@@ -2216,47 +2272,6 @@ vsftpd  855 root    3u  IPv6  15453      0t0  TCP *:ftp (LISTEN)
 &lt;hr /&gt;
 
 &lt;p&gt;本文来自：&lt;a href=&#34;https://blog.csdn.net/u014182411/article/details/78127663?utm_source=copy&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://blog.csdn.net/u014182411/article/details/78127663?utm_source=copy&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>宝塔面板忘记密码如何找回宝塔面板账户登录密码</title>
-      <link>https://huaien.co/technology/bt-panel-get-password-back/</link>
-      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/bt-panel-get-password-back/</guid>
-      <description>&lt;h2 id=&#34;找回密码&#34;&gt;找回密码&lt;/h2&gt;
-
-&lt;p&gt;如果只是忘记了密码，还记得账号&lt;/p&gt;
-
-&lt;p&gt;可以输入以下命令回车找回密码（早期版本默认账号admin）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cat /www/server/panel/default.pl
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;下面是执行命令实例&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;root@woo2:~# cat /www/server/panel/default.pl
-c58d3170
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;返回的c58d3170就是密码。&lt;/p&gt;
-
-&lt;h2 id=&#34;找回用户名&#34;&gt;找回用户名&lt;/h2&gt;
-
-&lt;p&gt;如果你也不记得账号，可以通过下面的命令来重置密码并得到默认账户。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /www/server/panel &amp;amp;&amp;amp; python tools.pyc panel newpassword
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;newpassword请改成你要修改的密码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@woo2:~# cd /www/server/panel &amp;amp;&amp;amp; python tools.pyc panel newpassword
-rwlfzj3w
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;可以看到返回的rwlfzj3w就是你的账号，你可以用这个账号和新密码来登录面板，登录进去后可以去面板设置修改账号密码。&lt;/p&gt;
-
-&lt;p&gt;原文地址：&lt;a href=&#34;http://www.bt.cn/bbs/thread-1172-1-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.bt.cn/bbs/thread-1172-1-1.html&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
