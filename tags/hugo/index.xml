@@ -6,10 +6,23 @@
     <description>Recent content in Hugo on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 31 Jul 2019 05:18:22 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Oct 2019 16:53:05 +0900</lastBuildDate>
     
 	<atom:link href="https://huaien.co/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo的LeaveIt主题优化记录三-修复文章内URL无法改行问题</title>
+      <link>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</link>
+      <pubDate>Fri, 04 Oct 2019 16:53:05 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</guid>
+      <description>&lt;h1 id=&#34;问题&#34;&gt;问题&lt;/h1&gt;
+
+&lt;h2 id=&#34;文内长url手机端显示问题&#34;&gt;文内长URL手机端显示问题&lt;/h2&gt;
+
+&lt;p&gt;修复文章内长URL在手机端无法自动换行导致页面自适应错误。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片</title>

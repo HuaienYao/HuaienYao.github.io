@@ -5,8 +5,102 @@
     <description>Recent content in Wyane&#39;s Blog on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 03 Oct 2019 04:50:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Oct 2019 16:53:05 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugo的LeaveIt主题优化记录三-修复文章内URL无法改行问题</title>
+      <link>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</link>
+      <pubDate>Fri, 04 Oct 2019 16:53:05 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</guid>
+      <description>&lt;h1 id=&#34;问题&#34;&gt;问题&lt;/h1&gt;
+
+&lt;h2 id=&#34;文内长url手机端显示问题&#34;&gt;文内长URL手机端显示问题&lt;/h2&gt;
+
+&lt;p&gt;修复文章内长URL在手机端无法自动换行导致页面自适应错误。&lt;/p&gt;
+
+&lt;h1 id=&#34;效果&#34;&gt;效果&lt;/h1&gt;
+
+&lt;h2 id=&#34;修复前&#34;&gt;修复前&lt;/h2&gt;
+
+&lt;p&gt;以下是在iPhone X上的显示效果&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hda2a7734ce3f4b8c9463c18685e948b5t.jpg&#34; alt=&#34;手机端修改前的显示&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hd9296ab5f06043219ac6c493ad3eb909v.jpg&#34; alt=&#34;手机端修改前的显示效果&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以看到原来的主题在文章内有较长的链接的时候，在手机端浏览时无法换行，将页面撑大，导致自适应失败。&lt;/p&gt;
+
+&lt;h2 id=&#34;修复后&#34;&gt;修复后&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Ha8a453c4f40b4166a017d689a6f5b709s.jpg&#34; alt=&#34;手机端修复后的显示效果&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;原因&#34;&gt;原因&lt;/h1&gt;
+
+&lt;p&gt;查看了下是文章页样式表的文章内容&lt;code&gt;.post-content&lt;/code&gt;代码块缺少换行的属性。
+作者可能忘记考虑到长URL的换行问题，还是把那两行换行代码加到下面的代码块去了，导致URL没有自动换行。&lt;/p&gt;
+
+&lt;h1 id=&#34;修复办法&#34;&gt;修复办法&lt;/h1&gt;
+
+&lt;p&gt;打开主题目录下的&lt;code&gt;/LeaveIt/assets/css/_common/_page/post.scss&lt;/code&gt; 文件，也就是文章页的样式表。
+大概在第40行，找到&lt;code&gt;.post-content&lt;/code&gt;代码块 在里面添加下面的代码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;		word-break: break-all;
+		word-wrap: break-word;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;添加后的&lt;code&gt;.post-content&lt;/code&gt;代码块如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;    .post-content {
+        padding-top: 2rem;
+		word-break: break-all;
+		word-wrap: break-word;
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            padding-top: .8em;
+            padding-bottom: .3em;
+        }
+/* 下面省略 */
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;其实加的代码就是把原来的&lt;code&gt;pre&lt;/code&gt;代码块的内容复制过来的。&lt;/p&gt;
+
+&lt;h1 id=&#34;延伸&#34;&gt;延伸&lt;/h1&gt;
+
+&lt;h2 id=&#34;word-break&#34;&gt;word-break&lt;/h2&gt;
+
+&lt;p&gt;CSS 属性 word-break 指定了怎样在单词内断行。&lt;/p&gt;
+
+&lt;p&gt;这个属性有下面三个值。
+- &lt;code&gt;normal&lt;/code&gt;   使用默认的断行规则。
+- &lt;code&gt;break-all&lt;/code&gt;  对于non-CJK (CJK 指中文/日文/韩文) 文本，可在任意字符间断行。
+- &lt;code&gt;keep-all&lt;/code&gt;  CJK 文本不断行。 Non-CJK 文本表现同 normal。&lt;/p&gt;
+
+&lt;p&gt;可以查看&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-break&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;MDN Web文档&lt;/a&gt;来看以上的区别。&lt;/p&gt;
+
+&lt;h2 id=&#34;word-warp&#34;&gt;word-warp&lt;/h2&gt;
+
+&lt;p&gt;CSS 属性 overflow-wrap 是用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行。&lt;/p&gt;
+
+&lt;p&gt;引用MDN Web文档的话
+&amp;gt; 注：word-wrap 属性原本属于微软的一个私有属性，在 CSS3 现在的文本规范草案中已经被重名为 overflow-wrap 。 word-wrap 现在被当作 overflow-wrap 的 “别名”。 稳定的谷歌 Chrome 和 Opera 浏览器版本支持这种新语法。&lt;/p&gt;
+
+&lt;p&gt;这个属性有两个值
+- &lt;code&gt;normal&lt;/code&gt;  表示在正常的单词结束处换行。
+- &lt;code&gt;break-word&lt;/code&gt;  表示如果行内没有多余的地方容纳该单词到结尾，则那些正常的不能被分割的单词会被强制分割换行。&lt;/p&gt;
+
+&lt;h2 id=&#34;区别&#34;&gt;区别&lt;/h2&gt;
+
+&lt;p&gt;有些童鞋可能会搞混了这两个属性。其实w&lt;code&gt;ord-break&lt;/code&gt;就是“控制单词如何被拆分换行”。&lt;code&gt;word-wrap&lt;/code&gt;（&lt;code&gt;overflow-wrap&lt;/code&gt;）就是“控制长度超过一行的单词是否被拆分换行”。&lt;/p&gt;
+
+&lt;p&gt;其实还有个&lt;code&gt;white-space&lt;/code&gt;，由于这里没有用到所以就没提到了，以上只是来自 &lt;a href=&#34;https://juejin.im/post/5b8905456fb9a01a105966b4&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;彻底搞懂word-break、word-wrap、white-space&lt;/a&gt;
+，有兴趣的可以看看这里，讲的比较详细。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>修改AdSense自适应广告尺寸 不同宽度屏幕指定不同尺寸广告</title>
@@ -2236,42 +2330,6 @@ vsftpd  855 root    3u  IPv6  15453      0t0  TCP *:ftp (LISTEN)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;参考：&lt;a href=&#34;https://www.bt.cn/bbs/thread-2746-1-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.bt.cn/bbs/thread-2746-1-1.html&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>解决wordpress后台安装插件时提示需要ftp账号和密码</title>
-      <link>https://huaien.co/technology/wordpress-install-plugin-show-ftp-info/</link>
-      <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/wordpress-install-plugin-show-ftp-info/</guid>
-      <description>&lt;p&gt;在wordpress安装之后，想要安装一个插件来用，结果弹出提示输入ftp账户与密码。如下图&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fvmtky7cxqj30ch0dzaab.jpg&#34; alt=&#34;弹出提示输入ftp账户与密码&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;最后搜索了一下网上的解决方案，所需要更改wordpress文件夹的权限，命令如下：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo chown -R www  /home/wwwroot/wordpress
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;这个命令是将wordpress目录下的所有文件与子目录进行相同的拥有者变更为www(即以递回的方式逐个变更)&lt;/p&gt;
-
-&lt;p&gt;后面的&lt;code&gt;/home/wwwroot/wordpress&lt;/code&gt;路径是自己安装wordpress的文件夹。&lt;/p&gt;
-
-&lt;p&gt;如果这样操作报一下错误的话&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;chown: changing ownership of `/home/wwwroot/wordpress/.user.ini&#39;: Operation not permitted
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;只需要如下更改之后就ok了：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo chown -R www  /home/wwwroot/hi/*
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;只需要在文件路径之后再加一个/* 。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;本文来自：&lt;a href=&#34;https://blog.csdn.net/u014182411/article/details/78127663?utm_source=copy&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://blog.csdn.net/u014182411/article/details/78127663?utm_source=copy&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
