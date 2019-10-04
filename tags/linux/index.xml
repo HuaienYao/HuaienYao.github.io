@@ -53,15 +53,6 @@
     </item>
     
     <item>
-      <title>Linux打包压缩目录中的隐藏文件命令</title>
-      <link>https://huaien.co/technology/linux-tar-zcvf-command-of-invisible-file/</link>
-      <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/linux-tar-zcvf-command-of-invisible-file/</guid>
-      <description>&lt;p&gt;今天需要打包Hexo源码文件夹下面的所有文件，但是如果直接使用普通的打包命令不会将包括隐藏的文件或文件夹一起打包，所以得搜索了下，可以用下面的命令来打包。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>如何修改h5ai右上角的版权信息powered by h5ai</title>
       <link>https://huaien.co/technology/modify-h5ai-copyright/</link>
       <pubDate>Sun, 29 Jul 2018 00:00:00 +0000</pubDate>
