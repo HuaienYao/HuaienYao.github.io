@@ -1,6 +1,8 @@
 {
-    "name": "Wyane's",
-    "short_name": "Wyane's",
+  "name": "Wyane's Blog",
+  "short_name": "Wyane's",
+  "start_url": "./",
+  "description": "Wyand的个人博客，记录Wyane的生活学习工作点滴。",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
