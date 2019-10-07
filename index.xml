@@ -5,8 +5,47 @@
     <description>Recent content in Wyane&#39;s Blog on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 04 Oct 2019 16:53:05 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2019 13:43:56 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>如何导出Putty的Sessions配置到其他电脑</title>
+      <link>https://huaien.co/technology/export-putty-sessions/</link>
+      <pubDate>Sat, 05 Oct 2019 13:43:56 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/export-putty-sessions/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;运维人员应该都知道，PuTTY是一款免费开源的SSH远程客户端，它的体积很小，甚至无需安装。
+但是如果想要在多台电脑中用一个putty的session配置，就需要导出导入它的配置。但是Putty本身不自带导出导入功能。不过我们可以用Windows的注册表来导出Putty的session配置。&lt;/p&gt;
+
+&lt;h1 id=&#34;导出方法&#34;&gt;导出方法&lt;/h1&gt;
+
+&lt;h2 id=&#34;注册表&#34;&gt;注册表&lt;/h2&gt;
+
+&lt;p&gt;可以用regedit导出，在命令行下运行regedit找到 &lt;code&gt;[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY]&lt;/code&gt;右键导出
+这样操作有点麻烦，需要去找注册表目录&lt;/p&gt;
+
+&lt;h2 id=&#34;命令行&#34;&gt;命令行&lt;/h2&gt;
+
+&lt;p&gt;也可以直接通过命令行来导出。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;reg export HKEY_CURRENT_USER\Software\SimonTatham\PuTTY putty.reg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;未指定文件目录时，导出的注册表信息默认是在用户目录下，需要指定目录时：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;reg export HKEY_CURRENT_USER\Software\SimonTatham\PuTTY d://putty.reg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;导入方法&#34;&gt;导入方法&lt;/h1&gt;
+
+&lt;p&gt;将导出的putty.reg文件复制到新的电脑中，双击它导入注册表即可。&lt;/p&gt;
+
+&lt;h1 id=&#34;参考来源&#34;&gt;参考来源&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.qizhan100.com/article_67.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;putty导出session配置&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugo的LeaveIt主题优化记录三-修复文章内URL无法改行问题</title>
@@ -2292,44 +2331,6 @@ SYSFONT=latarcyrheb-sun16
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/wzb56_earl/article/details/24046995&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://blog.csdn.net/wzb56_earl/article/details/24046995&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/wusuopuBUPT/article/details/50947243&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://blog.csdn.net/wusuopuBUPT/article/details/50947243&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>宝塔面板无法启动pure-ftpd服务的解决办法</title>
-      <link>https://huaien.co/technology/bt-panel-cannot-active-pure-ftpd/</link>
-      <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/bt-panel-cannot-active-pure-ftpd/</guid>
-      <description>&lt;p&gt;宝塔面板安装pure-ftpd后发现并没有启动，多次手动重启还是显示关闭状态，重装好几次也无法启动。&lt;/p&gt;
-
-&lt;p&gt;进入ssh
-输入以下命令 看是否21端口给其他软件占用&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;lsof -i :21
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;如果结果是下面这样就是系统自带的ftp软件给占用了21端口&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[root@izcupa3t172j1wz ~]# lsof -i :21
-COMMAND PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
-vsftpd  855 root    3u  IPv6  15453      0t0  TCP *:ftp (LISTEN)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;输入以下命令启动即可&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;pkill -9 vsftpd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;service pure-ftpd start
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;也可以用下面的命令启动pure-ftpd&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/etc/init.d/pure-ftpd start
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;参考：&lt;a href=&#34;https://www.bt.cn/bbs/thread-2746-1-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.bt.cn/bbs/thread-2746-1-1.html&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

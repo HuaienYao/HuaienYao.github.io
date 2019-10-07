@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>putty on Wyane&#39;s Blog</title>
+    <link>https://huaien.co/tags/putty/</link>
+    <description>Recent content in putty on Wyane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 05 Oct 2019 13:43:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://huaien.co/tags/putty/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何导出Putty的Sessions配置到其他电脑</title>
+      <link>https://huaien.co/technology/export-putty-sessions/</link>
+      <pubDate>Sat, 05 Oct 2019 13:43:56 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/export-putty-sessions/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;运维人员应该都知道，PuTTY是一款免费开源的SSH远程客户端，它的体积很小，甚至无需安装。
+但是如果想要在多台电脑中用一个putty的session配置，就需要导出导入它的配置。但是Putty本身不自带导出导入功能。不过我们可以用Windows的注册表来导出Putty的session配置。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
