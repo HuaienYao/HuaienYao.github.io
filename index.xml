@@ -1975,64 +1975,70 @@ CloudFlare Partner其实就是CloudFlare为了拓展用户提供的合作分销�
 
 &lt;p&gt;自上而下需要填入的信息为
 - 公司名称 （这个你可以只要域名名字，比如abc.com的话写abc）
-- ==业务类目== *（这里我第一次选择了Web Designer/Developer被拒绝，回信说合作伙伴计划是提供给主机提供商的服务。）
+- 业务类目 *（这里我第一次选择了Web Designer/Developer被拒绝，回信说合作伙伴计划是提供给主机提供商的服务。）
 - 网址 （你自己的域名如&lt;a href=&#34;https://abc.com）&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://abc.com）&lt;/a&gt;
 - 名字
 - 姓氏
 - 职位 （这个虽然为非必填，但是我填了申请成功）
-- ==联系邮箱== *（这里为重点，需要使用企业邮箱，没有的话也可以用域名邮箱。比如QQ的域名邮箱，申请方便，可以接收到信。另外邮箱格式最好为admin@abc.com这样的，虽然我用的是w@abc.com这样的）
+- 联系邮箱 *（这里为重点，需要使用企业邮箱，没有的话也可以用域名邮箱。比如QQ的域名邮箱，申请方便，可以接收到信。另外邮箱格式最好为admin@abc.com这样的，虽然我用的是w@abc.com这样的）
 - 联系电话 （格式为+8613912345678）
 - 通过什么途径知道的 （我选择的Customer request，客户要求）
 - 备注 （可以放空）&lt;/p&gt;
 
 &lt;p&gt;最后我填写的资料差不多是下面这样的
-&lt;a href=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fw4bna1j9qj30cd0em74w&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fw4bna1j9qj30cd0em74w&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://ae01.alicdn.com/kf/Ha74598bd989244b3a6a7863e2e950194x.jpg&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Ha74598bd989244b3a6a7863e2e950194x.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;但是我前两次申请失败了。第一次因为选择业务类目选择的网页设计者/开发者，第二次还是用一样信息只是业务类目改为VPS/服务器提供商，估计是留底了。&lt;/p&gt;
 
-&lt;p&gt;点击提交后你的邮箱就会收到邮件
-&amp;gt; XXX &amp;ndash; [Cloudflare]: Application Received
-&amp;gt; Dear XXX,
-&amp;gt;
-&amp;gt; Thank you for applying to Cloudflare&amp;rsquo;s Certified Partner Program. Your application has been submitted. We review all applications and respond shortly.
-&amp;gt;
-&amp;gt; Cloudflare offers many benefits to you as a service provider:
-&amp;gt; *   Reduced server load
-&amp;gt; *   Bandwidth savings
-&amp;gt; *   Fewer customer support tickets
-&amp;gt; *   Mitigation of DDoS attacks
-&amp;gt; *   IPv4 / IPv6 gateway
-&amp;gt;
-&amp;gt; On average, a website on Cloudflare:
-&amp;gt; *   Loads twice as fast, on an international CDN
-&amp;gt; *   Uses 60% less bandwidth
-&amp;gt; *   Sees 65% fewer requests
-&amp;gt; *   Is way more secure
-&amp;gt;
-&amp;gt; Thank you for your interest in Cloudflare.
-&amp;gt;
-&amp;gt; Regards,
-&amp;gt; The Cloudflare Team&lt;/p&gt;
+&lt;p&gt;点击提交后你的邮箱就会收到邮件&lt;/p&gt;
 
-&lt;p&gt;第一次申请不到五个小时就回信说拒绝了
-&amp;gt; XXX &amp;ndash; [Cloudflare] Application Declined
-&amp;gt;
-&amp;gt; Dear XXX,
-&amp;gt;
-&amp;gt; Thank you for your interest in Cloudflare&amp;rsquo;s Certified Hosting Provider program. Unfortunately at this time, Cloudflare has declined your application to become a partner in this program.
-&amp;gt;
-&amp;gt; The program is created for hosting providers offering commercial hosting only. I&amp;rsquo;d like to encourage you to sign up for Cloudflare directly, take a look at our plans here: www.cloudflare.com/plans
-&amp;gt;
-&amp;gt; We apologize for any inconvenience that this may cause. If you feel that this decision was reached in error, please contact us at partners@cloudflare.com.
-&amp;gt;
-&amp;gt; Regards,
-&amp;gt; The Cloudflare Team&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;XXX &amp;ndash; [Cloudflare]: Application Received
+Dear XXX,&lt;/p&gt;
+
+&lt;p&gt;Thank you for applying to Cloudflare&amp;rsquo;s Certified Partner Program. Your application has been submitted. We review all applications and respond shortly.&lt;/p&gt;
+
+&lt;p&gt;Cloudflare offers many benefits to you as a service provider:
+*   Reduced server load
+*   Bandwidth savings
+*   Fewer customer support tickets
+*   Mitigation of DDoS attacks
+*   IPv4 / IPv6 gateway&lt;/p&gt;
+
+&lt;p&gt;On average, a website on Cloudflare:
+*   Loads twice as fast, on an international CDN
+*   Uses 60% less bandwidth
+*   Sees 65% fewer requests
+*   Is way more secure&lt;/p&gt;
+
+&lt;p&gt;Thank you for your interest in Cloudflare.&lt;/p&gt;
+
+&lt;p&gt;Regards,
+The Cloudflare Team&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;第一次申请不到五个小时就回信说拒绝了&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;XXX &amp;ndash; [Cloudflare] Application Declined&lt;/p&gt;
+
+&lt;p&gt;Dear XXX,&lt;/p&gt;
+
+&lt;p&gt;Thank you for your interest in Cloudflare&amp;rsquo;s Certified Hosting Provider program. Unfortunately at this time, Cloudflare has declined your application to become a partner in this program.&lt;/p&gt;
+
+&lt;p&gt;The program is created for hosting providers offering commercial hosting only. I&amp;rsquo;d like to encourage you to sign up for Cloudflare directly, take a look at our plans here: www.cloudflare.com/plans&lt;/p&gt;
+
+&lt;p&gt;We apologize for any inconvenience that this may cause. If you feel that this decision was reached in error, please contact us at partners@cloudflare.com.&lt;/p&gt;
+
+&lt;p&gt;Regards,
+The Cloudflare Team&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;第二次只是修改了业务类目为VPS还是拒绝，但是时间花了将近5天才回复。&lt;/p&gt;
 
 &lt;p&gt;拒绝的原因还是一样，估计是我这个域名没有写有关主机相关的内容吧，后来看到其他人说可以通过反代一个VPS博客就可以，于是就换了一个com域名反代了一个主机博客。申请后大概过了一天回信通过。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;[Cloudflare] Partnership Application Approved for XXX
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;[Cloudflare] Partnership Application Approved for XXX
 
 Congratulations - you&#39;ve been approved for Cloudflare&#39;s Certified Partner Program!
 
@@ -2144,20 +2150,24 @@ The Cloudflare Team
 
 &lt;h3 id=&#34;开源代码搭建面板&#34;&gt;开源代码搭建面板&lt;/h3&gt;
 
-&lt;p&gt;WeiUZ CloudFlare Partners PHP版本
-&lt;a href=&#34;https://github.com/mphreys/WeiUZ&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/mphreys/WeiUZ&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;WeiUZ CloudFlare Partners PHP版本
+&lt;a href=&#34;https://github.com/mphreys/WeiUZ&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/mphreys/WeiUZ&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;SonicBreaker
-&lt;a href=&#34;https://github.com/AxelPanda/SonicBreaker/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/AxelPanda/SonicBreaker/&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;SonicBreaker
+&lt;a href=&#34;https://github.com/AxelPanda/SonicBreaker/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/AxelPanda/SonicBreaker/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;CFPMP
-&lt;a href=&#34;https://github.com/Netrvin/CFPMP&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/Netrvin/CFPMP&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;CFPMP
+&lt;a href=&#34;https://github.com/Netrvin/CFPMP&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/Netrvin/CFPMP&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;CloudFlare partner website with python and flask
-&lt;a href=&#34;https://github.com/luodaoyi/CloudFlarePartner&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/luodaoyi/CloudFlarePartner&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;CloudFlare partner website with python and flask&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;Cloudflare Partner Panel
-&lt;a href=&#34;https://github.com/ZE3kr/Cloudflare-CNAME-Setup&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/ZE3kr/Cloudflare-CNAME-Setup&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/luodaoyi/CloudFlarePartner&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/luodaoyi/CloudFlarePartner&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Cloudflare Partner Panel&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/ZE3kr/Cloudflare-CNAME-Setup&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/ZE3kr/Cloudflare-CNAME-Setup&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 
