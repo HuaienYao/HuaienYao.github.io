@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 05 Oct 2019 13:43:56 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 06 Oct 2019 16:22:06 +0900</lastBuildDate>
     
 	<atom:link href="https://huaien.co/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>移动设备适合性报告：网页不适合在移动设备上浏览的问题</title>
+      <link>https://huaien.co/technology/google-mobile-friendly/</link>
+      <pubDate>Sun, 06 Oct 2019 16:22:06 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/google-mobile-friendly/</guid>
+      <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
+
+&lt;p&gt;这个问题困扰了很久，不过一直没去研究。因为虽然报告提示有问题，但是每次我自己用手机端打开该网页均显示正常。。今天就查了查资料，原来搜索引擎被阻止读取相关资源，所以无法正常显示。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>如何导出Putty的Sessions配置到其他电脑</title>

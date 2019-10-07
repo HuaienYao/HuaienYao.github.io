@@ -5,8 +5,220 @@
     <description>Recent content in Wyane&#39;s Blog on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 05 Oct 2019 13:43:56 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 06 Oct 2019 16:22:06 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>移动设备适合性报告：网页不适合在移动设备上浏览的问题</title>
+      <link>https://huaien.co/technology/google-mobile-friendly/</link>
+      <pubDate>Sun, 06 Oct 2019 16:22:06 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/google-mobile-friendly/</guid>
+      <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
+
+&lt;p&gt;这个问题困扰了很久，不过一直没去研究。因为虽然报告提示有问题，但是每次我自己用手机端打开该网页均显示正常。。今天就查了查资料，原来搜索引擎被阻止读取相关资源，所以无法正常显示。&lt;/p&gt;
+
+&lt;h1 id=&#34;问题&#34;&gt;问题&lt;/h1&gt;
+
+&lt;p&gt;当用谷歌搜索我的博客的时候，出现的结果下方会提示
+&amp;gt; 您的网页不适合在移动设备上浏览。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hcd36a0e85a854515b826b74385e399b7G.jpg&#34; alt=&#34;Google搜索结果&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;当然这只有我能看到。因为登录了Google Search Console。&lt;/p&gt;
+
+&lt;p&gt;点击这个提示语，可以进入到移动设备适合性报告。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H9bcf7e818a2145fbaceb431c18731790f.jpg&#34; alt=&#34;移动设备适合性报告内容&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;从这里可以看到，总的问题就是“网页不适合在移动设备上浏览。”下面列出了三点详细问题：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;文字太小，无法阅读&lt;/li&gt;
+&lt;li&gt;可点击元素之间的距离太近&lt;/li&gt;
+&lt;li&gt;内容宽度超过了屏幕显示范围&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;的确从右边的Googlebot智能手机版模拟出来的显示效果可以看到的确显示的一塌糊涂。。。
+&lt;img src=&#34;https://ae01.alicdn.com/kf/H6c1a8c79ca654831b1154d14b1b105e68.jpg&#34; alt=&#34;Googlebot智能手机版模拟出来的显示效果&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;解决问题&#34;&gt;解决问题&lt;/h1&gt;
+
+&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
+
+&lt;p&gt;一开始不理解为什么会出现这个问题呢？
+因为自己用手机浏览没出现这个问题，只有之前有注意到过&lt;a href=&#34;https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;文章内的URL过长无法换行&lt;/a&gt;可能导致了“内容宽度超过了屏幕显示范围”，但是我已经修复了这个问题。不过这个适合性报告还是现实宽度超过屏幕显示范围。所以就很不解。&lt;/p&gt;
+
+&lt;p&gt;在找解决办法的时候，注意到移动设备适合性报告的测试结果下面有个“网页加载问题”，可以点击查看详情。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hbc751a7bec9442a09f177328f24761c5V.jpg&#34; alt=&#34;网页加载问题详情&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H6e92debb015c488e9813e1f857e83cd1w.jpg&#34; alt=&#34;网页加载问题详情&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以看到的是，里面提示了“有 10 项网页资源未能成功加载”，本来我还以为是因为某些cdn资源失效了导致这样。但是一看不对啊，原来是我禁止了搜索引擎爬取我的样式或者脚本。。。也不知道是什么时候改的。。&lt;/p&gt;
+
+&lt;p&gt;接着就去确认下robots.txt。
+本站用的是Hugo，Hugo的robots.txt一般在下面的位置：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/layouts/robots.txt
+/themes/&amp;lt;THEME&amp;gt;/layouts/robots.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我用的LeaveIt主题，在&lt;code&gt;/themes/LeaveIt/layouts/robots.txt&lt;/code&gt;找到了该文件。&lt;/p&gt;
+
+&lt;p&gt;一看的确是禁止了相关资源的读取。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;User-agent: *
+
+Disallow: /images/
+Disallow: /js/
+Disallow: /css/
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Block SISTRIX
+User-agent: SISTRIX Crawler
+Disallow: /
+User-agent: sistrix
+Disallow: /
+User-agent: 007ac9
+Disallow: /
+User-agent: 007ac9 Crawler
+Disallow: /
+
+# Block Uptime robot
+User-agent: UptimeRobot/2.0
+Disallow: /
+
+# Block Ezooms Robot
+User-agent: Ezooms Robot
+Disallow: /
+
+# Block Perl LWP
+User-agent: Perl LWP
+Disallow: /
+
+# Block netEstate NE Crawler (+http://www.website-datenbank.de/)
+User-agent: netEstate NE Crawler (+http://www.website-datenbank.de/)
+Disallow: /
+
+# Block WiseGuys Robot
+User-agent: WiseGuys Robot
+Disallow: /
+
+# Block Turnitin Robot
+User-agent: Turnitin Robot
+Disallow: /
+
+# Block Heritrix
+User-agent: Heritrix
+Disallow: /
+
+# Block pricepi
+User-agent: pimonster
+Disallow: /
+User-agent: Pimonster
+Disallow: /
+
+User-agent: SurdotlyBot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+Sitemap: {{ &amp;quot;sitemap.xml&amp;quot; | absLangURL }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;办法&#34;&gt;办法&lt;/h2&gt;
+
+&lt;h3 id=&#34;修改robots-txt&#34;&gt;修改robots.txt&lt;/h3&gt;
+
+&lt;p&gt;修改为允许搜索引擎爬取相关资源。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;User-agent: *
+
+Sitemap: {{ &amp;quot;sitemap.xml&amp;quot; | absLangURL }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后用Hugo重新生成网页，部署到github和coding。&lt;/p&gt;
+
+&lt;h3 id=&#34;验证结果&#34;&gt;验证结果&lt;/h3&gt;
+
+&lt;p&gt;部署成功后，再去Google的移动设备适合性测试网页重新测试下刚才的网页还存在问题吗。
+&lt;img src=&#34;https://ae01.alicdn.com/kf/He13ac111b4804fa993f96038ffb5997fs.jpg&#34; alt=&#34;移动设备适合性报告&#34; /&gt;
+就可以看到大大绿色的字提示&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“网页适合在移动设备上浏览”&lt;/p&gt;
+
+&lt;p&gt;“此网页在移动设备上易于浏览”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;右边的模拟浏览也显示的比较正常，虽然还存在网页加载问题，但是看了下基本是广告的robots.txt设置和一些图片和第三方js资源的重定向问题等等，并不影响页面的构成。&lt;/p&gt;
+
+&lt;h3 id=&#34;gsc验证修复&#34;&gt;GSC验证修复&lt;/h3&gt;
+
+&lt;p&gt;接着再去Google Search Console 的&lt;a href=&#34;https://search.google.com/search-console/mobile-usability&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;移动设备易用性&lt;/a&gt;看了下，存在大概24个以上3个问题的页面。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H3b6f682779174ed6b60cab0d47faf514I.jpg&#34; alt=&#34;移动设备易用性&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;要解决这个问题的话就要告诉Google我更新了robots.txt，让爬虫再去爬一遍。&lt;/p&gt;
+
+&lt;p&gt;点击上图中的验证那一栏的未启动。可以看到有
+验证修复的按钮，&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H4f6ea3f796f148979e2874c8c69d4a08I.jpg&#34; alt=&#34;验证修复&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;就会开始 “正在进行快速初始验证”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hd5a27311d7244aae8ef91d62b92ebcb3p.jpg&#34; alt=&#34;正在进行快速初始验证&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;最后会告诉你验证已经开始，请等待。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H973c934641394cfbb123af3f091924b1Y.jpg&#34; alt=&#34;验证已经开始&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;其他两个错误也是用上面这个办法来验证修复就可以了。&lt;/p&gt;
+
+&lt;h3 id=&#34;gsc提交robots-txt&#34;&gt;GSC提交robots.txt&lt;/h3&gt;
+
+&lt;p&gt;由于现在新版Google Search Console移除了“robots.txt 测试工具”的入口，可以从下面的入口进入。
+&lt;a href=&#34;https://www.google.com/webmasters/tools/robots-testing-tool?utm_source=support.google.com/webmasters/&amp;amp;utm_medium=referral&amp;amp;utm_campaign=%206062598&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;打开“robots.txt 测试工具”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Ha0fb8ef8eaab4452b16ac458d3b8d04cE.jpg&#34; alt=&#34;robots.txt 测试工具&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果框中显示的是你修改过的最新的robots.txt就说明修改的有生效。可以点击提交重新提交一次。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hb3afcc6487b442d7be12164c3289e8f0i.jpg&#34; alt=&#34;提交robots.txt&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;不放心的话可以在最下面的栏中测试下原来有问题的资源是否还被阻止访问。&lt;/p&gt;
+
+&lt;h3 id=&#34;提交sitemap&#34;&gt;提交sitemap&lt;/h3&gt;
+
+&lt;p&gt;最后也可以再去提交一下sitemap（站点地图）给Google。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H9f06051b371c419998cbd6c5f0ae60e8X.jpg&#34; alt=&#34;提交sitemap&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;最后就是等Google搜索引擎更新你的搜索结果了。
+解决了被阻止访问相关资源，就不会被降低网站排名。&lt;/p&gt;
+
+&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/webmasters/answer/9063469?hl=zh-Hans&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;“移动设备易用性”报告&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/webmasters/answer/6062608?hl=zh-Hans&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;robots.txt 文件简介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/webmasters/answer/6062598?hl=zh-Hans&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;使用 robots.txt 测试工具测试 robots.txt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/templates/robots/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Robots.txt File&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>如何导出Putty的Sessions配置到其他电脑</title>
@@ -2174,175 +2386,6 @@ The Cloudflare Team
 &lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://wzfou.com/cloudflare-partner/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://wzfou.com/cloudflare-partner/&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>解决Linux系统SSH终端显示中文乱码以centos为例</title>
-      <link>https://huaien.co/technology/linux-os-ssh-show-chinese/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/linux-os-ssh-show-chinese/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fvntln8qacj30gj09sgmt&#34; alt=&#34;&#34; /&gt;
-如果没有设置好编码，在SSH客户端连接Linux服务器的时候就是像上面那样显示效果。不过经过设置，可以正常显示中文。&lt;/p&gt;
-
-&lt;h2 id=&#34;查看当前系统编码设置&#34;&gt;查看当前系统编码设置&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;# echo $LANG
-C
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;返回的值为C，可以知道当前的系统语言编码设置为C&lt;/p&gt;
-
-&lt;h2 id=&#34;查看当前系统的中文支持&#34;&gt;查看当前系统的中文支持&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;# locale -a | grep zh_CN
-zh_CN
-zh_CN.gb18030
-zh_CN.gb2312
-zh_CN.gbk
-zh_CN.utf8
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以上列出的为当前系统可用中文字符集&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;vim 只能正确识别列表中的中文编码文件，如需识别其他编码类型的中文文件，则需要做系统升级。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;修改linux系统的编码文件&#34;&gt;修改Linux系统的编码文件&lt;/h2&gt;
-
-&lt;p&gt;以下操作在root权限下操作。&lt;/p&gt;
-
-&lt;h3 id=&#34;临时生效-重启失效&#34;&gt;临时生效，重启失效&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;# export LANG=&amp;quot;zh_CN.UTF-8&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;查看编码设置是否变更为zh_CN.UTF-8&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# echo $LANG
-zh_CN.UTF-8
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;永久生效&#34;&gt;永久生效&lt;/h3&gt;
-
-&lt;p&gt;只需要编辑/etc/sysconfig/i18n文件就好了&lt;/p&gt;
-
-&lt;p&gt;用vi编辑&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# vi /etc/sysconfig/i18n
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在原来的内容前加上“#”注释掉&lt;/p&gt;
-
-&lt;p&gt;并添加一行&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;LANG=&amp;quot;zh_CN.UTF-8&amp;quot;  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fvntwapar7j30gj09sdg3&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;按esc退出insert模式&lt;/p&gt;
-
-&lt;p&gt;底行模式下输入&lt;code&gt;:wq&lt;/code&gt;保存退出&lt;/p&gt;
-
-&lt;p&gt;用下面其中一种命令使修改生效&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;source /etc/sysconfig/i18n
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;或者&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;. /etc/sysconfig/i18n
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;附带网上几个版本的i18n配置文件&lt;/p&gt;
-
-&lt;p&gt;这个版本最普遍，当时可能是我的客户端没有找到这个编码导致还是有些中文无法显示。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;LANG=&amp;quot;zh_CN.GB18030&amp;quot;
-SUPPORTED=&amp;quot;zh_CN.UTF-8:zh_CN:zh:en_US.UTF-8:en_US:en:zh_CN.GB18030&amp;quot;
-SYSFONT=&amp;quot;latarcyrheb-sun16&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;下面这个可以完全显示。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;LANG=&amp;quot;zh_CN.UTF-8&amp;quot;  
-SUPPORTED=&amp;quot;zh_CN.UTF-8:zh_CN:zh&amp;quot;  
-SYSFONT=&amp;quot;latarcyrheb-sun16&amp;quot;  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;修改putty客户端的编码设置&#34;&gt;修改Putty客户端的编码设置&lt;/h2&gt;
-
-&lt;p&gt;其他的客户端也需要设置，方法差不多。&lt;/p&gt;
-
-&lt;p&gt;putty设置&lt;/p&gt;
-
-&lt;p&gt;左侧设置类别的Window-Appearance，右侧的Font settings的Change按钮&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fvnt7nzrshj30cy0argmv&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;在字体设置中字体选择带有中文的字体如下图选择楷体Kaiti ，在下方的文字设置选择中文。OK确定&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fvnt9pnoisj30c90fpjsa&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;设置类别的Windows-Translation，右侧如图选择UTF-8编码。这里要选择之前设置的服务器配置文件设置的编码。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fvntbuqak3j30cy0ap0u2&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;以上就是putty客户端的编码设置。&lt;/p&gt;
-
-&lt;h2 id=&#34;正常显示中文效果&#34;&gt;正常显示中文效果&lt;/h2&gt;
-
-&lt;p&gt;经过上面一系列的设置，就可以在SSH终端中正常显示中文了
-&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fvnteux1qej30gj09s756&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;学到的几个linux命令&#34;&gt;学到的几个Linux命令&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;#全局系统环境变量配置文件
-echo &#39;export LANG=&amp;quot;ZH_CN.GB18030&amp;quot;&#39; &amp;gt;&amp;gt;/etc/profile
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;#使配置生效
-source /etc/profile
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;#查看结果
-echo $LANG
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;更改脚本字符集&#34;&gt;更改脚本字符集&lt;/h2&gt;
-
-&lt;p&gt;有时候脚本内容出现中文乱码，也可以在脚本里面更改字符集&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
-　export LANG=&amp;quot;ZH_CN.GB18030&amp;quot;
-　（脚本内容）
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;批量文件转码命令&#34;&gt;批量文件转码命令&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;iconv -c -f gbk -t utf-8 $data_path/$item_uv
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;最后付上原centos默认编码配置文件内容&lt;/p&gt;
-
-&lt;p&gt;位置&lt;/p&gt;
-
-&lt;p&gt;/etc/sysconfig/i18n&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;LANG=C
-SYSFONT=latarcyrheb-sun16
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;参考自&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/wzb56_earl/article/details/24046995&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://blog.csdn.net/wzb56_earl/article/details/24046995&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/wusuopuBUPT/article/details/50947243&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://blog.csdn.net/wusuopuBUPT/article/details/50947243&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

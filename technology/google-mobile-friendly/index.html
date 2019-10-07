@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Wyane">
+  <meta name="description" content="Record Wyane&#39;s life and study">
+  <meta name="keywords" content="Wyane,Blog,博客,ブログ">
+  <meta name="google-site-verification" content="BSHAeX0rpMJl5P9uivMCvTuOjrwjHaZJd1ByR12z6BE" />
+   
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122761254-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122761254-3');
+</script>
+  
+  <link rel="prev" href="https://huaien.co/technology/export-putty-sessions/" />
+  
+  <link rel="canonical" href="https://huaien.co/technology/google-mobile-friendly/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PPXN5WC');</script>
+
+  
+  <title>
+       
+       
+           移动设备适合性报告：网页不适合在移动设备上浏览的问题 | Wyane&#39;s Blog
+       
+  </title>
+  <meta name="title" content="移动设备适合性报告：网页不适合在移动设备上浏览的问题 | Wyane&#39;s Blog">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/huaien.co\/"
+    },
+    "articleSection" : "posts",
+    "name" : "移动设备适合性报告：网页不适合在移动设备上浏览的问题",
+    "headline" : "移动设备适合性报告：网页不适合在移动设备上浏览的问题",
+    "description" : "当用谷歌搜索自己的网站的时候，出现的结果下方会提示“您的网页不适合在移动设备上浏览”。本文记录了如何解决这一问题。",
+    "inLanguage" : "zh-cn",
+    "author" : "Wyane",
+    "creator" : "Wyane",
+    "publisher": "Wyane",
+    "accountablePerson" : "Wyane",
+    "copyrightHolder" : "Wyane",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-10-06 16:22:06 \x2b0900 JST",
+    "dateModified" : "2019-10-06 16:22:06 \x2b0900 JST",
+    "url" : "https:\/\/huaien.co\/technology\/google-mobile-friendly\/",
+    "wordCount" : "1547",
+    "keywords" : [ "Google Search Console", "Wyane\x27s Blog"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPXN5WC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://huaien.co/">Wyane&#39;s Blog</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Links">Links</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://huaien.co/">Wyane&#39;s Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/links/" title="Links">Links</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">移动设备适合性报告：网页不适合在移动设备上浏览的问题</h1>
+        <div class="post-meta">
+        
+                      
+          <i class="far fa-folder-open"></i>
+                <span class="post-category">
+                        <a href="https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"> 技术记录 </a>
+                        
+                </span>
+          <span class="post-time">
+         <i class="far fa-calendar-alt"></i>  <time datetime=2019-10-06 itemprop="datePublished">2019-10-06</time>
+           </span>
+     
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 1547 字</span>
+         <i class="far fa-clock"></i> <span class="more-meta"> 4 分钟</span>
+          
+        </div>
+    </header>
+	
+          <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title"></h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#背景">背景</a></li>
+<li><a href="#问题">问题</a></li>
+<li><a href="#解决问题">解决问题</a>
+<ul>
+<li><a href="#原因">原因</a></li>
+<li><a href="#办法">办法</a>
+<ul>
+<li><a href="#修改robots-txt">修改robots.txt</a></li>
+<li><a href="#验证结果">验证结果</a></li>
+<li><a href="#gsc验证修复">GSC验证修复</a></li>
+<li><a href="#gsc提交robots-txt">GSC提交robots.txt</a></li>
+<li><a href="#提交sitemap">提交sitemap</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#参考资料">参考资料</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+<script type="text/javascript">
+  window.onload = function () {
+    var fix = $('.post-toc');
+    var end = $('.post-comment');
+    var fixTop = fix.offset().top, fixHeight = fix.height();
+    var endTop, miss;
+    var offsetTop = fix[0].offsetTop;
+    $(window).scroll(function () {
+      var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+      if (end.length > 0) {
+        endTop = end.offset().top;
+        miss = endTop - docTop - fixHeight;
+      }
+      if (fixTop < docTop) {
+        fix.css({ 'position': 'fixed' });
+        if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+          fix.css({ top: miss });
+        } else {
+          fix.css({ top: 0 });
+        }
+      } else {
+        fix.css({ 'position': 'absolute' });
+        fix.css({ top: offsetTop });
+      }
+    })
+  }
+</script> 
+	
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://ae01.alicdn.com/kf/Hc21f396778e540f7b5eac8f6ee6e9ee6k.jpg" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h1 id="背景">背景</h1>
+
+<p>这个问题困扰了很久，不过一直没去研究。因为虽然报告提示有问题，但是每次我自己用手机端打开该网页均显示正常。。今天就查了查资料，原来搜索引擎被阻止读取相关资源，所以无法正常显示。</p>
+
+<h1 id="问题">问题</h1>
+
+<p>当用谷歌搜索我的博客的时候，出现的结果下方会提示
+&gt; 您的网页不适合在移动设备上浏览。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/Hcd36a0e85a854515b826b74385e399b7G.jpg" alt="Google搜索结果" class="lazyload"><figcaption class="image-caption">Google搜索结果</figcaption></figure></p>
+
+<p>当然这只有我能看到。因为登录了Google Search Console。</p>
+
+<p>点击这个提示语，可以进入到移动设备适合性报告。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/H9bcf7e818a2145fbaceb431c18731790f.jpg" alt="移动设备适合性报告内容" class="lazyload"><figcaption class="image-caption">移动设备适合性报告内容</figcaption></figure></p>
+
+<p>从这里可以看到，总的问题就是“网页不适合在移动设备上浏览。”下面列出了三点详细问题：</p>
+
+<blockquote>
+<ul>
+<li>文字太小，无法阅读</li>
+<li>可点击元素之间的距离太近</li>
+<li>内容宽度超过了屏幕显示范围</li>
+</ul>
+</blockquote>
+
+<p>的确从右边的Googlebot智能手机版模拟出来的显示效果可以看到的确显示的一塌糊涂。。。
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/H6c1a8c79ca654831b1154d14b1b105e68.jpg" alt="Googlebot智能手机版模拟出来的显示效果" class="lazyload"><figcaption class="image-caption">Googlebot智能手机版模拟出来的显示效果</figcaption></figure></p>
+
+<h1 id="解决问题">解决问题</h1>
+
+<h2 id="原因">原因</h2>
+
+<p>一开始不理解为什么会出现这个问题呢？
+因为自己用手机浏览没出现这个问题，只有之前有注意到过<a href="https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/" rel="nofollow noreferrer" target="_blank">文章内的URL过长无法换行</a>可能导致了“内容宽度超过了屏幕显示范围”，但是我已经修复了这个问题。不过这个适合性报告还是现实宽度超过屏幕显示范围。所以就很不解。</p>
+
+<p>在找解决办法的时候，注意到移动设备适合性报告的测试结果下面有个“网页加载问题”，可以点击查看详情。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/Hbc751a7bec9442a09f177328f24761c5V.jpg" alt="网页加载问题详情" class="lazyload"><figcaption class="image-caption">网页加载问题详情</figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/H6e92debb015c488e9813e1f857e83cd1w.jpg" alt="网页加载问题详情" class="lazyload"><figcaption class="image-caption">网页加载问题详情</figcaption></figure></p>
+
+<p>可以看到的是，里面提示了“有 10 项网页资源未能成功加载”，本来我还以为是因为某些cdn资源失效了导致这样。但是一看不对啊，原来是我禁止了搜索引擎爬取我的样式或者脚本。。。也不知道是什么时候改的。。</p>
+
+<p>接着就去确认下robots.txt。
+本站用的是Hugo，Hugo的robots.txt一般在下面的位置：</p>
+
+<pre><code class="language-bash">/layouts/robots.txt
+/themes/&lt;THEME&gt;/layouts/robots.txt
+</code></pre>
+
+<p>我用的LeaveIt主题，在<code>/themes/LeaveIt/layouts/robots.txt</code>找到了该文件。</p>
+
+<p>一看的确是禁止了相关资源的读取。</p>
+
+<pre><code class="language-html">User-agent: *
+
+Disallow: /images/
+Disallow: /js/
+Disallow: /css/
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Block SISTRIX
+User-agent: SISTRIX Crawler
+Disallow: /
+User-agent: sistrix
+Disallow: /
+User-agent: 007ac9
+Disallow: /
+User-agent: 007ac9 Crawler
+Disallow: /
+
+# Block Uptime robot
+User-agent: UptimeRobot/2.0
+Disallow: /
+
+# Block Ezooms Robot
+User-agent: Ezooms Robot
+Disallow: /
+
+# Block Perl LWP
+User-agent: Perl LWP
+Disallow: /
+
+# Block netEstate NE Crawler (+http://www.website-datenbank.de/)
+User-agent: netEstate NE Crawler (+http://www.website-datenbank.de/)
+Disallow: /
+
+# Block WiseGuys Robot
+User-agent: WiseGuys Robot
+Disallow: /
+
+# Block Turnitin Robot
+User-agent: Turnitin Robot
+Disallow: /
+
+# Block Heritrix
+User-agent: Heritrix
+Disallow: /
+
+# Block pricepi
+User-agent: pimonster
+Disallow: /
+User-agent: Pimonster
+Disallow: /
+
+User-agent: SurdotlyBot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+Sitemap: {{ &quot;sitemap.xml&quot; | absLangURL }}
+</code></pre>
+
+<h2 id="办法">办法</h2>
+
+<h3 id="修改robots-txt">修改robots.txt</h3>
+
+<p>修改为允许搜索引擎爬取相关资源。</p>
+
+<pre><code class="language-html">User-agent: *
+
+Sitemap: {{ &quot;sitemap.xml&quot; | absLangURL }}
+</code></pre>
+
+<p>然后用Hugo重新生成网页，部署到github和coding。</p>
+
+<h3 id="验证结果">验证结果</h3>
+
+<p>部署成功后，再去Google的移动设备适合性测试网页重新测试下刚才的网页还存在问题吗。
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/He13ac111b4804fa993f96038ffb5997fs.jpg" alt="移动设备适合性报告" class="lazyload"><figcaption class="image-caption">移动设备适合性报告</figcaption></figure>
+就可以看到大大绿色的字提示</p>
+
+<blockquote>
+<p>“网页适合在移动设备上浏览”</p>
+
+<p>“此网页在移动设备上易于浏览”</p>
+</blockquote>
+
+<p>右边的模拟浏览也显示的比较正常，虽然还存在网页加载问题，但是看了下基本是广告的robots.txt设置和一些图片和第三方js资源的重定向问题等等，并不影响页面的构成。</p>
+
+<h3 id="gsc验证修复">GSC验证修复</h3>
+
+<p>接着再去Google Search Console 的<a href="https://search.google.com/search-console/mobile-usability" rel="nofollow noreferrer" target="_blank">移动设备易用性</a>看了下，存在大概24个以上3个问题的页面。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/H3b6f682779174ed6b60cab0d47faf514I.jpg" alt="移动设备易用性" class="lazyload"><figcaption class="image-caption">移动设备易用性</figcaption></figure></p>
+
+<p>要解决这个问题的话就要告诉Google我更新了robots.txt，让爬虫再去爬一遍。</p>
+
+<p>点击上图中的验证那一栏的未启动。可以看到有
+验证修复的按钮，</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/H4f6ea3f796f148979e2874c8c69d4a08I.jpg" alt="验证修复" class="lazyload"><figcaption class="image-caption">验证修复</figcaption></figure></p>
+
+<p>就会开始 “正在进行快速初始验证”</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/Hd5a27311d7244aae8ef91d62b92ebcb3p.jpg" alt="正在进行快速初始验证" class="lazyload"><figcaption class="image-caption">正在进行快速初始验证</figcaption></figure></p>
+
+<p>最后会告诉你验证已经开始，请等待。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/H973c934641394cfbb123af3f091924b1Y.jpg" alt="验证已经开始" class="lazyload"><figcaption class="image-caption">验证已经开始</figcaption></figure></p>
+
+<p>其他两个错误也是用上面这个办法来验证修复就可以了。</p>
+
+<h3 id="gsc提交robots-txt">GSC提交robots.txt</h3>
+
+<p>由于现在新版Google Search Console移除了“robots.txt 测试工具”的入口，可以从下面的入口进入。
+<a href="https://www.google.com/webmasters/tools/robots-testing-tool?utm_source=support.google.com/webmasters/&amp;utm_medium=referral&amp;utm_campaign=%206062598" rel="nofollow noreferrer" target="_blank">打开“robots.txt 测试工具”</a></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/Ha0fb8ef8eaab4452b16ac458d3b8d04cE.jpg" alt="robots.txt 测试工具" class="lazyload"><figcaption class="image-caption">robots.txt 测试工具</figcaption></figure></p>
+
+<p>如果框中显示的是你修改过的最新的robots.txt就说明修改的有生效。可以点击提交重新提交一次。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/Hb3afcc6487b442d7be12164c3289e8f0i.jpg" alt="提交robots.txt" class="lazyload"><figcaption class="image-caption">提交robots.txt</figcaption></figure></p>
+
+<p>不放心的话可以在最下面的栏中测试下原来有问题的资源是否还被阻止访问。</p>
+
+<h3 id="提交sitemap">提交sitemap</h3>
+
+<p>最后也可以再去提交一下sitemap（站点地图）给Google。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://ae01.alicdn.com/kf/H9f06051b371c419998cbd6c5f0ae60e8X.jpg" alt="提交sitemap" class="lazyload"><figcaption class="image-caption">提交sitemap</figcaption></figure></p>
+
+<p>最后就是等Google搜索引擎更新你的搜索结果了。
+解决了被阻止访问相关资源，就不会被降低网站排名。</p>
+
+<h1 id="参考资料">参考资料</h1>
+
+<ul>
+<li><a href="https://support.google.com/webmasters/answer/9063469?hl=zh-Hans" rel="nofollow noreferrer" target="_blank">“移动设备易用性”报告</a></li>
+<li><a href="https://support.google.com/webmasters/answer/6062608?hl=zh-Hans" rel="nofollow noreferrer" target="_blank">robots.txt 文件简介</a></li>
+<li><a href="https://support.google.com/webmasters/answer/6062598?hl=zh-Hans" rel="nofollow noreferrer" target="_blank">使用 robots.txt 测试工具测试 robots.txt</a></li>
+<li><a href="https://gohugo.io/templates/robots/" rel="nofollow noreferrer" target="_blank">Robots.txt File</a></li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+            <p class="copyright-item">
+              <span><i class="fa fa-user"></i></span>
+                
+             <span> <a itemprop="name" href="https://huaien.co/" rel="author">Wyane</a> </span>
+                </p>
+
+             
+            <p class="copyright-item">
+              <span><i class="fa fa-link"></i></span>
+                   
+                    <span><a href=https://huaien.co/technology/google-mobile-friendly/>https://huaien.co/technology/google-mobile-friendly/</span>
+            </p>
+            
+              
+      
+             
+            <p class="copyright-item lincese">
+              <span><i class="fa fa-copyright"></i></span>
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+      
+        
+
+
+                  
+  
+
+
+
+
+    </div>
+      
+      
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://huaien.co/tags/google-search-console/">
+                    #Google Search Console</a></span>
+            
+            </section>
+        
+        <section>
+                <span><a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://huaien.co/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://huaien.co/technology/export-putty-sessions/" class="prev" rel="prev" title="如何导出Putty的Sessions配置到其他电脑"><i class="iconfont icon-left"></i>&nbsp;如何导出Putty的Sessions配置到其他电脑</a>
+         
+        
+    </div>
+<br>
+<style>
+.before-comment { height: 3rem; }
+@media(min-width: 500px) { .before-comment { height: 2rem; }
+@media(min-width: 800px) { .before-comment { height: 1rem; }
+</style>       
+<div class="before-comment"></div>  
+
+          
+			
+			<div align="center">
+<style>
+.adsbygoogle-comment { width: 99%; height: 60px; padding: 1rem 0px }
+@media(min-width: 500px) { .adsbygoogle-comment { width: 99%; height: 70px; padding: 1rem 0px} }
+@media(min-width: 800px) { .adsbygoogle-comment { width: 99%; height: 90px; padding: 1rem 0px} }
+</style> 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+<ins class="adsbygoogle adsbygoogle-comment"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4547757701057415"
+     data-ad-slot="9118682280"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+          
+
+      <p></p>
+<div class="post-comment">
+		
+                 
+            
+			
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'NW2s1QV41zVBXsHRzTeVJWPf-MdYXbMMI',
+        appKey: 'BhNP1gtLFJ7aF5QfM89DpbFv',
+        notify:  false , 
+        verify:  false , 
+        avatar:'monsterid', 
+        placeholder: '说说你的看法~(*填写邮箱的话若有人回复，将可以收到提醒邮件哦^_^)',
+        visitor: 'false'
+    });
+  </script>
+
+  
+
+		
+
+</div>
+      
+ 
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2010 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://huaien.co/">Wyane</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+  
+    
+  
+  
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5d4384e9e5ae967ef80e0653/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+  
+
+  
+    
+
+  
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
