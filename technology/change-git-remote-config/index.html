@@ -212,6 +212,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         
 
+        <img src="https://ae01.alicdn.com/kf/H4e2afc6193d54cc487d4a4b18242b34c5.jpg" class="featured_image">
         
         
      
@@ -232,21 +233,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>在指定远程仓库的时候输入错误导致设置了错误的远程仓库，直接重新用下面的命令会提示错误</p>
 
-<pre><code>$ git remote add origin git@github.com:github帐号名/仓库名.git
+<pre><code class="language-shell">$ git remote add origin git@github.com:github帐号名/仓库名.git
 </code></pre>
 
 <p>提示已经存在的出错信息：</p>
 
-<pre><code>fatal: remote origin already exists.
+<pre><code class="language-shell">fatal: remote origin already exists.
 </code></pre>
 
 <h2 id="解决办法">解决办法</h2>
 
-<pre><code># 删除错误的远程仓库配置
+<pre><code class="language-shell"># 删除错误的远程仓库配置
 $ git remote rm origin
 </code></pre>
 
-<pre><code># 重新输入正确的远程仓库配置
+<pre><code class="language-shell"># 重新输入正确的远程仓库配置
 $ git remote add origin git@github.com:github帐号名/仓库名.git
 </code></pre>
 

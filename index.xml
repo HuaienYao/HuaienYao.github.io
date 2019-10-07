@@ -1033,7 +1033,7 @@ root@instance:/home/ubuntu# docker attach baota
 &lt;p&gt;这样就修改成了上图的排版，添加了字数统计及阅读时间。以及添加了几个font awesome的图标。使得比较简单点。
 不过用了字数统计，就需要在站点配置文件config.toml里面添加一个配置，表示网站内容包含中文，日语，韩文。可以更准确的统计字数。(或者在文章的frontmatter内单独添加这个配置应该也行的)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;hasCJKLanguage = true
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;hasCJKLanguage = true
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;放大文章内图片显示&#34;&gt;放大文章内图片显示&lt;/h2&gt;
@@ -1094,7 +1094,7 @@ root@instance:/home/ubuntu# docker attach baota
 
 &lt;p&gt;再安装RVM:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;\curl -sSL https://get.rvm.io | bash -s stable
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;\curl -sSL https://get.rvm.io | bash -s stable
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;如果需要在安装RVM的同时安装Ruby 和 Rails 的话用下面的命令:&lt;/p&gt;
@@ -1882,21 +1882,21 @@ echo &amp;quot;................................&amp;quot;
 
 &lt;p&gt;在指定远程仓库的时候输入错误导致设置了错误的远程仓库，直接重新用下面的命令会提示错误&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ git remote add origin git@github.com:github帐号名/仓库名.git
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ git remote add origin git@github.com:github帐号名/仓库名.git
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;提示已经存在的出错信息：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;fatal: remote origin already exists.
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;fatal: remote origin already exists.
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;# 删除错误的远程仓库配置
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# 删除错误的远程仓库配置
 $ git remote rm origin
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code&gt;# 重新输入正确的远程仓库配置
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# 重新输入正确的远程仓库配置
 $ git remote add origin git@github.com:github帐号名/仓库名.git
 &lt;/code&gt;&lt;/pre&gt;
 
