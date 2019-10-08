@@ -284,7 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>使用下面的一键安装包来安装Caddy，需要添加的组件是http.filemanager（在线个人网盘），http.webdav（Webdav支持）还有http.cors（这个是在使用KeeWeb连接Webdav时出现网络错误Netword Error的时候需要添加这个）。</p>
 
-<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.filemanager,http.webdav,http.cors
+<pre><code class="language-shell">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.filemanager,http.webdav,http.cors
 
 # 如果上面这个脚本无法下载，尝试使用备用下载：
 
@@ -296,7 +296,7 @@ ertificate https://softs.loan/Bash/caddy_install.sh &amp;&amp; chmod +x caddy_in
 
 <h3 id="caddy的使用说明及相关路径">Caddy的使用说明及相关路径</h3>
 
-<pre><code>启动：/etc/init.d/caddy start
+<pre><code class="language-shell">启动：/etc/init.d/caddy start
 
 停止：/etc/init.d/caddy stop
 
@@ -319,13 +319,13 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 
 <h5 id="vi方式">vi方式</h5>
 
-<pre><code>vi /usr/local/caddy/Caddyfile
+<pre><code class="language-shell">vi /usr/local/caddy/Caddyfile
 </code></pre>
 
 <p>按i键进入insert模式
 输入以下内容</p>
 
-<pre><code>dav.yourdomain.com {
+<pre><code class="language-json">dav.yourdomain.com {
  #申请免费SSL证书
  tls 你的邮箱
  #根目录
@@ -367,12 +367,12 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 
 <p>上面的命令是清空覆盖源文件内容替换为新内容，如果要在源文件内容最后追加新内容的话把上面最后一行改为</p>
 
-<pre><code>}&quot; &gt;&gt; /usr/local/caddy/Caddyfile
+<pre><code class="language-shell">}&quot; &gt;&gt; /usr/local/caddy/Caddyfile
 </code></pre>
 
 <h4 id="重启caddy">重启Caddy</h4>
 
-<pre><code>/etc/init.d/caddy restart
+<pre><code class="language-shell">/etc/init.d/caddy restart
 </code></pre>
 
 <h4 id="验证搭建成功">验证搭建成功</h4>
@@ -394,7 +394,7 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 
 <h3 id="vi方式修改caddy配置文件">vi方式修改Caddy配置文件</h3>
 
-<pre><code>file.example.com {
+<pre><code class="language-json">file.example.com {
  root /usr/local/caddy/www/file
  timeouts none
  #这里使用免费SSL证书
@@ -410,7 +410,7 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 
 <p>因为之前我们已经配置过Caddyfile了，本次就在前面WebDav配置的后面追加FileManager的配置。所以用下面的命令</p>
 
-<pre><code>echo &quot;file.example.com {
+<pre><code class="language-shell">echo &quot;file.example.com {
  root /usr/local/caddy/www/file
  timeouts none
  #这里使用免费SSL证书
@@ -424,7 +424,7 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 
 <h3 id="重启caddy-1">重启Caddy</h3>
 
-<pre><code>/etc/init.d/caddy restart
+<pre><code class="language-shell">/etc/init.d/caddy restart
 </code></pre>
 
 <h2 id="相关问题">相关问题</h2>
@@ -437,7 +437,7 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 http.cors扩展插件前面我们已经在安装Caddy的时候安装好了，现在我们只需要在Caddyfile里面的WebDav配置内容加上cors指令。
 下面是完整的配置文件</p>
 
-<pre><code>dav.yourdomain.com {
+<pre><code class="language-json">dav.yourdomain.com {
  #申请免费SSL证书
  tls 你的邮箱
  #根目录
@@ -470,7 +470,7 @@ http.cors扩展插件前面我们已经在安装Caddy的时候安装好了，现
 <p>试了好几次好像是因为WebDav开启了认证就不好使。就是配置文件中的basicauth指令。
 后来尝试把basicauth设置成下面的格式就可以用了，但是WebDav就没有认证登录机制了。</p>
 
-<pre><code>dav.yourdomain.com {
+<pre><code class="language-json">dav.yourdomain.com {
  #申请免费SSL证书
  tls 你的邮箱
  #根目录
@@ -500,14 +500,14 @@ http.cors扩展插件前面我们已经在安装Caddy的时候安装好了，现
 
 <p>在试验中发现，配置内容里面去掉</p>
 
-<pre><code>root /usr/local/caddy/www/file/dav
+<pre><code class="language-shell">root /usr/local/caddy/www/file/dav
 </code></pre>
 
 <p>也可以正常使用。。</p>
 
 <p>附上我实际用的配置，应该是有安全风险的。</p>
 
-<pre><code>dav.domain.com {
+<pre><code class="language-json">dav.domain.com {
  tls www@gmail.com
  basicauth admin password
  webdav / {
@@ -530,7 +530,7 @@ http.cors扩展插件前面我们已经在安装Caddy的时候安装好了，现
 
 <p>请活用启动日志</p>
 
-<pre><code>tail -f /tmp/caddy.log
+<pre><code class="language-shell">tail -f /tmp/caddy.log
 </code></pre>
 
 <p><strong>出现启动失败多数是因为Caddyfile指令写错或者没有安装相关扩展组件导致无法启动。</strong></p>

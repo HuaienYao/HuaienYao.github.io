@@ -254,7 +254,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>这里是复习一下前面的内容。</p>
 
-<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.filemanager
+<pre><code class="language-shell">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.filemanager
 
 # 如果上面这个脚本无法下载，尝试使用备用下载：
 
@@ -270,7 +270,7 @@ ertificate https://softs.loan/Bash/caddy_install.sh &amp;&amp; chmod +x caddy_in
 <p>以下使用方法仅适用于本一键安装脚本安装的Caddy。<br />
 其他方式安装的Caddy需要其他的操作指令。</p>
 
-<pre><code>启动：/etc/init.d/caddy start
+<pre><code class="language-shell">启动：/etc/init.d/caddy start
 
 停止：/etc/init.d/caddy stop
 
@@ -297,22 +297,22 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 
 <p>这里可以通过两种方式来修改</p>
 
-<p>Caddy配置文件 /usr/local/caddy/Caddyfile</p>
+<p>Caddy配置文件 <code>/usr/local/caddy/Caddyfile</code></p>
 
 <p>一种是直接</p>
 
-<pre><code>vi /usr/local/caddy/Caddyfile
+<pre><code class="language-shell">vi /usr/local/caddy/Caddyfile
 </code></pre>
 
 <p>另一种是直接用echo来添加内容到指定文件。</p>
 
 <p>例如</p>
 
-<pre><code>#清空覆盖源文件内容替换为新内容
+<pre><code class="language-shell">#清空覆盖源文件内容替换为新内容
 echo &quot;配置内容&quot; &gt; /usr/local/caddy/Caddyfile
 </code></pre>
 
-<pre><code>#在源文件内容最后追加新内容
+<pre><code class="language-shell">#在源文件内容最后追加新内容
 echo &quot;配置内容&quot; &gt;&gt; /usr/local/caddy/Caddyfile
 </code></pre>
 
@@ -320,7 +320,7 @@ echo &quot;配置内容&quot; &gt;&gt; /usr/local/caddy/Caddyfile
 
 <p>Caddfile的格式还是比较简单的，首先第一行必须是网站的地址，例如：</p>
 
-<pre><code>#ip端口
+<pre><code class="language-shell">#ip端口
 localhost:8080
 #域名
 huaien.me
@@ -334,7 +334,7 @@ huaien.me
 
 <h4 id="单网站写法">单网站写法</h4>
 
-<pre><code>example.com
+<pre><code class="language-shell">example.com
 root /usr/local/caddy/www
 #其他指令
 </code></pre>
@@ -343,7 +343,7 @@ root /usr/local/caddy/www
 
 <p>网站后面用{}花括号包起来</p>
 
-<pre><code>example.com1 {
+<pre><code class="language-json">example.com1 {
   gzip
   root /usr/local/caddy/www
   #其他指令
@@ -357,7 +357,7 @@ example.com2 {
 
 <h4 id="一些常见的指令">一些常见的指令</h4>
 
-<pre><code>#网站根目录
+<pre><code class="language-shell">#网站根目录
 root /usr/local/caddy/www/example.com
 
 #log日志
@@ -411,14 +411,14 @@ rewrite {
 
 <h5 id="vi模式修改caddy配置文件">vi模式修改Caddy配置文件</h5>
 
-<pre><code>vi /usr/local/caddy/Caddyfile
+<pre><code class="language-shell">vi /usr/local/caddy/Caddyfile
 </code></pre>
 
 <p>进入vi界面后按i键进入insert模式</p>
 
 <p>填入以下*(花括号与域名之间需要半角空格)</p>
 
-<pre><code>#第一个网站
+<pre><code class="language-shell">#第一个网站
 huaien.me {
  #指定根目录
  root /usr/local/caddy/www/huaien.me
@@ -448,21 +448,21 @@ huaien2.me {
 
 <p>修改完后，按左上角esc键退出insert模式，再按半角冒号</p>
 
-<pre><code>:wq
+<pre><code class="language-shell">:wq
 </code></pre>
 
 <p>保存修改并退出。</p>
 
 <p>每次修改Caddyfile文件都需要重启Caddy使其生效</p>
 
-<pre><code>/etc/init.d/caddy restart
+<pre><code class="language-shell">/etc/init.d/caddy restart
 </code></pre>
 
 <h5 id="直接追加内容至caddy配置文件">直接追加内容至Caddy配置文件</h5>
 
 <p>以下一串是整体代码，需要复制全部内容*（不是一句一句复制粘贴）</p>
 
-<pre><code>echo &quot;huaien.me {
+<pre><code class="language-shell">echo &quot;huaien.me {
  #指定根目录
  root /usr/local/caddy/www/huaien.me
  #开启gzip压缩
@@ -491,7 +491,7 @@ huaien2.me {
 
 <p>重启Caddy使其生效</p>
 
-<pre><code>/etc/init.d/caddy restart
+<pre><code class="language-shell">/etc/init.d/caddy restart
 </code></pre>
 
 <p>其他操作就是修改DNS记录，添加A记录到该服务器IP并等其生效。然后通过ftp上传网页到指定网站根目录。</p>
@@ -508,14 +508,14 @@ huaien2.me {
 但是基本不外乎就是Caddyfile里面的内容出错了。
 遇到问题时候先查看Caddy的log，里面会显示是什么原因无法启动。</p>
 
-<pre><code>tail -f /tmp/caddy.log
+<pre><code class="language-shell">tail -f /tmp/caddy.log
 </code></pre>
 
 <h4 id="网站的网址写法">网站的网址写法</h4>
 
 <p>按正常写法单网站是直接下面这样写</p>
 
-<pre><code>domain.com
+<pre><code class="language-shell">domain.com
 gzip
 root /usr/local/caddy/www/domain.com
 </code></pre>
@@ -528,12 +528,12 @@ root /usr/local/caddy/www/domain.com
 
 <p>只需要在网站内配置指令加入</p>
 
-<pre><code>tls 自己的证书路径
+<pre><code class="language-shell">tls 自己的证书路径
 </code></pre>
 
 <p>或者</p>
 
-<pre><code>tls 自己的邮箱
+<pre><code class="language-shell">tls 自己的邮箱
 </code></pre>
 
 <p>如果在第一行的域名用的是domain.com没有  http://  ，这种情况是默认开通80和443端口，默认启用https</p>

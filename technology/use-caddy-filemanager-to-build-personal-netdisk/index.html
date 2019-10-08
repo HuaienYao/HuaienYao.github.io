@@ -78,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "datePublished": "2018-07-21 00:00:00 \x2b0000 UTC",
     "dateModified" : "2018-07-21 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/huaien.co\/technology\/use-caddy-filemanager-to-build-personal-netdisk\/",
-    "wordCount" : "2710",
+    "wordCount" : "2711",
     "keywords" : [ "Caddy","Linux","Web服务器","个人网盘","后端技术", "Wyane\x27s Blog"]
 }
 </script>
@@ -158,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          <i class="far fa-calendar-alt"></i>  <time datetime=2018-07-21 itemprop="datePublished">2018-07-21</time>
            </span>
      
-         <i class="far fa-file-word"></i> <span class="post-word-count"> 2710 字</span>
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 2711 字</span>
          <i class="far fa-clock"></i> <span class="more-meta"> 6 分钟</span>
           
         </div>
@@ -297,7 +297,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>如果你已经安装了Caddy，但是没有Filemanager插件，你需要重新安装一次Caddy，附带Filemanager</p>
 
-<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.filemanager
+<pre><code class="language-shell">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.filemanager
 
 # 如果上面这个脚本无法下载，尝试使用备用下载：
 
@@ -309,7 +309,7 @@ ertificate https://softs.loan/Bash/caddy_install.sh &amp;&amp; chmod +x caddy_in
 
 <h3 id="caddy-使用说明">Caddy 使用说明</h3>
 
-<pre><code>启动：/etc/init.d/caddy start
+<pre><code class="language-shell">启动：/etc/init.d/caddy start
 
 停止：/etc/init.d/caddy stop
 
@@ -330,14 +330,14 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 
 <p>首先先创建一个网站根目录文件夹</p>
 
-<pre><code>mkdir /usr/local/caddy/www &amp;&amp; mkdir /usr/local/caddy/www/pan
+<pre><code class="language-shell">mkdir /usr/local/caddy/www &amp;&amp; mkdir /usr/local/caddy/www/pan
 </code></pre>
 
 <p>根据之前的教程，可以vi修改Caddyfile或者echo修改Caddyfile两种方式来配置。</p>
 
 <h4 id="vi修改方式">vi修改方式</h4>
 
-<pre><code>example.com {
+<pre><code class="language-json">example.com {
  root /usr/local/caddy/www/pan
  timeouts none
  #这里使用免费证书
@@ -351,7 +351,7 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 
 <h4 id="echo修改方式">echo修改方式</h4>
 
-<pre><code>echo &quot;example.com {
+<pre><code class="language-shell">echo &quot;example.com {
  root /usr/local/caddy/www/pan
  timeouts none
  #这里使用免费证书
@@ -370,7 +370,7 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 
 <h4 id="了解filebrowser扩展各个参数">了解FileBrowser扩展各个参数</h4>
 
-<pre><code>filemanager [url] [scope] {
+<pre><code class="language-shell">filemanager [url] [scope] {
  database path
 }
 </code></pre>
@@ -385,12 +385,12 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 
 <p>当你已经配置完上面步骤后，那就需要启动Caddy了。</p>
 
-<pre><code>/etc/init.d/caddy start
+<pre><code class="language-shell">/etc/init.d/caddy start
 </code></pre>
 
 <p>#如果启动失败可以看Caddy日志：</p>
 
-<pre><code>tail -f /tmp/caddy.log
+<pre><code class="language-shell">tail -f /tmp/caddy.log
 </code></pre>
 
 <h3 id="开始使用filebrowser">开始使用FileBrowser</h3>
@@ -430,7 +430,7 @@ Caddy自动申请SSL证书位置：/.caddy/acme/acme-v01.api.letsencrypt.org/sit
 所以卸载的话需要将前面的Caddy安装命令的install改为uninstall就可以了。
 例如</p>
 
-<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh uninstall http.filemanager
+<pre><code class="language-shell">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh uninstall http.filemanager
 
 # 如果上面这个脚本无法下载，尝试使用备用下载：
 
@@ -448,14 +448,14 @@ ertificate https://softs.loan/Bash/caddy_install.sh &amp;&amp; chmod +x caddy_in
 
 <p>所以这种情况下，你应该去查看启动日志：</p>
 
-<pre><code>tail -f /tmp/caddy.log
+<pre><code class="language-shell">tail -f /tmp/caddy.log
 </code></pre>
 
 <h4 id="caddy下载文件频繁中断">Caddy下载文件频繁中断</h4>
 
 <p>可能是因为 Caddy的超时时间机制导致的，可以在配置文件中加入这句代码 timeouts none ，例如这样：</p>
 
-<pre><code>example.com {
+<pre><code class="language-json">example.com {
  root /usr/local/caddy/www/pan
  timeouts none
  #这里使用免费证书
@@ -471,7 +471,7 @@ ertificate https://softs.loan/Bash/caddy_install.sh &amp;&amp; chmod +x caddy_in
 
 <p>一些系统会自带 apache2 ，而 apache2 会占用80端口，导致Caddy无法绑定端口，所以只要关掉就好了。</p>
 
-<pre><code>netstat -lntp
+<pre><code class="language-shell">netstat -lntp
 # 我们可以通过这个命令查看是不是被其他软件占用了 80 端口。
 </code></pre>
 
@@ -479,33 +479,33 @@ ertificate https://softs.loan/Bash/caddy_install.sh &amp;&amp; chmod +x caddy_in
 
 <p>停止 Apache2</p>
 
-<pre><code>/etc/init.d/apache2 stop
+<pre><code class="language-shell">/etc/init.d/apache2 stop
 # 尝试使用上面这个关闭，如果没效果或者提示什么错误无法关闭，那就用下面这个强行关闭进程。
 kill -9 $(ps -ef|grep &quot;apache2&quot;|grep -v &quot;grep&quot;|awk '{print $2}')
 </code></pre>
 
 <p>取消开机自启动</p>
 
-<pre><code># 以下代码仅限 Debian/Ubuntu 系统 #
+<pre><code class="language-shell"># 以下代码仅限 Debian/Ubuntu 系统 #
 update-rc.d -f apache2 remove
 </code></pre>
 
 <p>卸载 Apache2</p>
 
-<pre><code># 以下代码仅限 Debian/Ubuntu 系统 #
+<pre><code class="language-shell"># 以下代码仅限 Debian/Ubuntu 系统 #
 apt-get remove --purge apache2
 </code></pre>
 
 <p>关闭 Apache2后，就可以尝试启动 Caddy ，并试试能不能打开网页。</p>
 
-<pre><code>/etc/init.d/caddy start
+<pre><code class="language-shell">/etc/init.d/caddy start
 </code></pre>
 
 <h4 id="启动-caddy后-无法访问">启动 Caddy后，无法访问</h4>
 
 <p>这个可能是防火墙的问题，开放防火墙端口即可。</p>
 
-<pre><code>iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 端口 -j ACCEPT
+<pre><code class="language-shell">iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 端口 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 端口 -j ACCEPT
 
 # 删除防火墙规则，内容一样把 -I 换成 -D 就行了：
@@ -515,6 +515,8 @@ iptables -D INPUT -m state --state NEW -m udp -p udp --dport 端口 -j ACCEPT
 
 </code></pre>
 
+<p>shell</p>
+
 <h4 id="filebrowser账号密码忘了或想要重置账号信息">FileBrowser账号密码忘了或想要重置账号信息</h4>
 
 <p>我们可以重置FileBrowser的数据库文件来清除所有账号信息，这样我们就变成初始账号和密码了(admin/admin)。
@@ -522,7 +524,7 @@ iptables -D INPUT -m state --state NEW -m udp -p udp --dport 端口 -j ACCEPT
 
 <p>很简单，关闭Caddy，然后删除FileBrowser数据库文件，启动Caddy，使用初始账号密码登陆。</p>
 
-<pre><code>/etc/init.d/caddy stop
+<pre><code class="language-shell">/etc/init.d/caddy stop
 rm -rf /usr/local/caddy/filemanager.db
 /etc/init.d/caddy start
 </code></pre>
