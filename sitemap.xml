@@ -2,28 +2,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://huaien.co/tags/</loc>
-      
-      <lastmod>2019-10-09T16:36:29+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/categories/2019-10-09-hugo-leaveit-theme-modify-log-4/</loc>
-      
-      <lastmod>2019-10-09T16:36:29+09:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
       <loc>https://huaien.co/categories/</loc>
       
       <lastmod>2019-10-09T16:36:29+09:00</lastmod>
@@ -31,6 +9,28 @@
       
       
       <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/hugo/</loc>
+      
+      <lastmod>2019-10-09T16:36:29+09:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</loc>
+      
+      <lastmod>2019-10-09T16:36:29+09:00</lastmod>
+      
+      
       
       
     </url>
@@ -61,6 +61,18 @@
   
     <url>
       <loc>https://huaien.co/</loc>
+      
+      <lastmod>2019-10-09T16:36:29+09:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/</loc>
       
       <lastmod>2019-10-09T16:36:29+09:00</lastmod>
       
@@ -128,35 +140,11 @@
     </url>
   
     <url>
-      <loc>https://huaien.co/tags/hugo/</loc>
-      
-      <lastmod>2019-10-04T16:53:05+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</loc>
       
       <lastmod>2019-10-04T16:53:05+09:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/</loc>
-      
-      <lastmod>2019-10-04T16:53:05+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>

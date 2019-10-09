@@ -6,10 +6,21 @@
     <description>Recent content in 博客程序 on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 04 Oct 2019 16:53:05 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 09 Oct 2019 16:36:29 +0900</lastBuildDate>
     
 	<atom:link href="https://huaien.co/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo的LeaveIt主题优化记录四-修改行内代码样式与代码块重叠问题</title>
+      <link>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</link>
+      <pubDate>Wed, 09 Oct 2019 16:36:29 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</guid>
+      <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
+
+&lt;p&gt;之前也提到过，本站用的是Hugo的LeaveIt主题。前几次也修改过一些内容。这次还是忍不住想改下代码高亮问题。因为我以前有些文章里的代码块没标注语言，如果你所有文章内的代码块都标注了语言，那就没有必要修改了。。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugo的LeaveIt主题优化记录三-修复文章内URL无法改行问题</title>

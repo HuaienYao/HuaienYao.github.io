@@ -12,14 +12,14 @@
     
     
     <item>
-      <title>2019 10 09 Hugo Leaveit Theme Modify Log 4</title>
-      <link>https://huaien.co/categories/2019-10-09-hugo-leaveit-theme-modify-log-4/</link>
+      <title>Hugo的LeaveIt主题优化记录四-修改行内代码样式与代码块重叠问题</title>
+      <link>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</link>
       <pubDate>Wed, 09 Oct 2019 16:36:29 +0900</pubDate>
       
-      <guid>https://huaien.co/categories/2019-10-09-hugo-leaveit-theme-modify-log-4/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Insert Lead paragraph here.&lt;/strong&gt;&lt;/p&gt;
+      <guid>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</guid>
+      <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
-&lt;h2 id=&#34;new-cool-posts&#34;&gt;New Cool Posts&lt;/h2&gt;</description>
+&lt;p&gt;之前也提到过，本站用的是Hugo的LeaveIt主题。前几次也修改过一些内容。这次还是忍不住想改下代码高亮问题。因为我以前有些文章里的代码块没标注语言，如果你所有文章内的代码块都标注了语言，那就没有必要修改了。。&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -9,14 +9,131 @@
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>2019 10 09 Hugo Leaveit Theme Modify Log 4</title>
-      <link>https://huaien.co/categories/2019-10-09-hugo-leaveit-theme-modify-log-4/</link>
+      <title>Hugo的LeaveIt主题优化记录四-修改行内代码样式与代码块重叠问题</title>
+      <link>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</link>
       <pubDate>Wed, 09 Oct 2019 16:36:29 +0900</pubDate>
       
-      <guid>https://huaien.co/categories/2019-10-09-hugo-leaveit-theme-modify-log-4/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Insert Lead paragraph here.&lt;/strong&gt;&lt;/p&gt;
+      <guid>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</guid>
+      <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
-&lt;h2 id=&#34;new-cool-posts&#34;&gt;New Cool Posts&lt;/h2&gt;</description>
+&lt;p&gt;之前也提到过，本站用的是Hugo的LeaveIt主题。前几次也修改过一些内容。这次还是忍不住想改下代码高亮问题。因为我以前有些文章里的代码块没标注语言，如果你所有文章内的代码块都标注了语言，那就没有必要修改了。。&lt;/p&gt;
+
+&lt;h1 id=&#34;问题&#34;&gt;问题&lt;/h1&gt;
+
+&lt;p&gt;LeaveIt主题使用的是Google code-prettify高亮代码。他是一款轻量级的代码高亮项目，虽然可能没highlight.js强大，不过还是够用的，而且小巧。不过在这个主题里存在一个问题，就是
+&amp;gt; 主题中对代码块和行内代码添加了不同的样式。添加代码块时需要注明语言，行内代码则不需要。否则样式会重复。&lt;/p&gt;
+
+&lt;p&gt;原行内代码样式
+&lt;img src=&#34;https://ae01.alicdn.com/kf/H6568f1e53665402d91e8d0e361bed194U.jpg&#34; alt=&#34;原行内代码样式&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;原代码块样式
+&lt;img src=&#34;https://ae01.alicdn.com/kf/Hfab02bf6e56c4f81a3953f23835190bef.jpg&#34; alt=&#34;原代码块样式&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;样式重复的样子&lt;/p&gt;
+
+&lt;p&gt;由于我修复前忘记截图了，所以可以脑补下。。&lt;/p&gt;
+
+&lt;p&gt;虽然作者说了
+&amp;gt; 如果你之前写代码块都没有标语言，你又不需要行内代码高亮，你可以删除assts/css/_page/post.scss中code:not([class])的样式。&lt;/p&gt;
+
+&lt;p&gt;但是我觉得删除了行内代码样式，感觉会怪怪的。本想试试能不能修改成不重复。但是搞了一个上午没弄成自己想要的结果。&lt;/p&gt;
+
+&lt;p&gt;在这之前也尝试了prismjs，我挺喜欢它的第三方主题 &lt;a href=&#34;https://github.com/PrismJS/prism-themes/blob/master/themes/prism-hopscotch.css&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;prism-hopscotch&lt;/a&gt;
+它长这个样子：
+&lt;img src=&#34;https://github.com/PrismJS/prism-themes/raw/master/screenshots/prism-hopscotch.png&#34; alt=&#34;hopscotch&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;就想着把LeaveIt主题的代码高亮换成prismjs，但是发现如果要支持比较多语言和显示行号等，js的体积就比较大，最后还是放弃了。&lt;/p&gt;
+
+&lt;p&gt;最后就像能不能把原来的code-prettify样式改为上图的样式。再通过把行内样式的背景改为和代码块一样的背景色就可以解决行内代码样式和代码块样式重复问题了。&lt;/p&gt;
+
+&lt;p&gt;因为原来的样式重复就是黑色的代码块背景和白色的行内代码背景色重复了。显得非常明显。。&lt;/p&gt;
+
+&lt;h1 id=&#34;修改代码&#34;&gt;修改代码&lt;/h1&gt;
+
+&lt;p&gt;打开&lt;code&gt;/LeaveIt/assets/css/_common/_page/post.scss&lt;/code&gt;
+将原来的第86行起的以下内容&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;        code,
+        pre {
+            padding: 7px;
+            font-size: 13px;
+            font-family: Consolas, Monaco, Menlo, Consolas, monospace;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+        code:not([class]) {
+            padding: 5px 5px;
+            background: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 1px 1px 0 #fff, 2px 2px 0 #ddd;
+            margin-left: 3px;
+            margin-right: 3px;
+
+            .dark-theme &amp;amp;:not([class]) {
+                background: transparent;
+                box-shadow: 1px 1px 0 $dark-font-secondary-color, 2px 2px 0 $dark-font-secondary-color;
+            }
+        }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修改为&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;        code,
+        pre {
+            color: #ffffff;
+            font-family: &amp;quot;Fira Mono&amp;quot;, Menlo, Monaco, &amp;quot;Lucida Console&amp;quot;,&amp;quot;Courier New&amp;quot;, Courier, monospace;
+            font-size: 16px;
+            line-height: 1.375;
+            direction: ltr;
+            text-align: left;
+            word-spacing: normal;
+			padding: 5px 3px;
+
+            hyphens: none;
+            white-space: pre;
+            white-space: pre-wrap;
+            background: #322931;
+            color: #b9b5b8;
+			border-radius: 5px;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+
+       code:not([class]) {
+			font-family: &amp;quot;Fira Mono&amp;quot;, Menlo, Monaco, &amp;quot;Lucida Console&amp;quot;,&amp;quot;Courier New&amp;quot;, Courier, monospace;
+            padding: 2px 4px;
+            background: #322931;
+            color: #b9b5b8;
+            border-radius: 3px;
+            margin-left: 3px;
+            margin-right: 3px;
+            
+            .dark-theme &amp;amp;:not([class]) {
+                background: #2d2d2d;
+                color: #e06c75;
+            }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这部分样式其实就是从prismjs的&lt;a href=&#34;https://github.com/PrismJS/prism-themes/blob/master/themes/prism-hopscotch.css&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;prism-hopscotch&lt;/a&gt;样式 修改来的。&lt;/p&gt;
+
+&lt;h1 id=&#34;效果&#34;&gt;效果&lt;/h1&gt;
+
+&lt;p&gt;行内代码背景和没有指定语言的代码块背景一致，这样就不会出现没有指定语言的代码块样式和行内代码样式重复了。
+&lt;img src=&#34;https://ae01.alicdn.com/kf/H22d9fbedcaec40d598cd957b8b42d890t.jpg&#34; alt=&#34;行内代码背景和代码块背景一致&#34; /&gt;
+查看源代码可以看到这个代码块没有指定语言。
+&lt;img src=&#34;https://ae01.alicdn.com/kf/H388ad007bd4948abad10856718a29cc6u.jpg&#34; alt=&#34;代码块没有指定语言&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;样式这东西是个人喜好，我也是避免麻烦就直接改成一样了。如果你不想行内代码和代码块背景一样那就得用其他办法了。&lt;/p&gt;
+
+&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://yyqx.online/posts/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;代码高亮&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.hgtweb.com/2019/code-csdn/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;修改LeaveIt中的行内code样式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
