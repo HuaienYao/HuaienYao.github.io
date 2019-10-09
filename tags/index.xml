@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Wyane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 06 Oct 2019 16:22:06 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 09 Oct 2019 16:36:29 +0900</lastBuildDate>
     
 	<atom:link href="https://huaien.co/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://huaien.co/tags/</link>
+      <pubDate>Wed, 09 Oct 2019 16:36:29 +0900</pubDate>
+      
+      <guid>https://huaien.co/tags/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Google Search Console</title>
