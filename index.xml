@@ -128,6 +128,37 @@
 
 &lt;p&gt;样式这东西是个人喜好，我也是避免麻烦就直接改成一样了。如果你不想行内代码和代码块背景一样那就得用其他办法了。&lt;/p&gt;
 
+&lt;h1 id=&#34;更新&#34;&gt;更新&lt;/h1&gt;
+
+&lt;p&gt;2019/10/11更新&lt;/p&gt;
+
+&lt;p&gt;由于背景颜色不一问题，更新为以下样式&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;        code,
+        pre {
+            padding: 5px;
+            font-size: 15px;
+            font-family: Consolas, Monaco, Menlo, Consolas, monospace;
+            word-break: break-all;
+            word-wrap: break-word;
+			border-radius: 3px;
+        }
+
+		code:not([class]) {
+    		padding: 2px 4px;
+    		background: #2d2d2d;
+    		color: #ccc;
+    		border-radius: 3px;
+    		margin-left: 4px;
+    		margin-right: 4px;
+    
+    		.dark-theme &amp;amp;:not([class]) {
+        		background: #2d2d2d;
+        		color: #e06c75;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -938,7 +969,6 @@ DISTRIB_DESCRIPTION=&amp;quot;Ubuntu 18.04.3 LTS&amp;quot;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;root@instance-20190921-1119:/home/ubuntu# uname -r
 4.15.0-1021-oracle
-
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;这个机器是4.15 可以安装。&lt;/p&gt;
