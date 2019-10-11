@@ -5,8 +5,102 @@
     <description>Recent content in Wyane`s Blog on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 09 Oct 2019 16:36:29 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 17:08:38 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>微软IME日语输入法按Shift突然变成输入全角英文</title>
+      <link>https://huaien.co/technology/ime-japanese-change-full-to-half/</link>
+      <pubDate>Fri, 11 Oct 2019 17:08:38 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/ime-japanese-change-full-to-half/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;有用微软IME日语输入法的人可能会遇到这种事。就是在平假名输入模式下按Shift键来切换英文字母输入，应该是半角英文数字，但是突然按Shift键变成了全角英文数字模式。&lt;/p&gt;
+
+&lt;h1 id=&#34;问题说明&#34;&gt;问题说明&lt;/h1&gt;
+
+&lt;p&gt;例如，正常输入是平假名输入模式&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hb50a42b973684bbf979ddfa3fe0a0806T.jpg&#34; alt=&#34;正常输入是平假名输入模式&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;按下Shift键应该是半角英数模式&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H6f2f8d435b2b4bf8833e6f313a3fb8b2T.jpg&#34; alt=&#34;按下Shift键应该是半角英数模式&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;但是有时候突然变成按下Shift键切换成全角英数模式。感觉很不方便。而且不知道怎么改回来。&lt;/p&gt;
+
+&lt;h1 id=&#34;解决办法&#34;&gt;解决办法&lt;/h1&gt;
+
+&lt;p&gt;其实只要输入后，按“转换”键选择半角字符，然后从下一次开始，就可以按Shift键切换半角英数字符了&lt;/p&gt;
+
+&lt;p&gt;如果以全角字母数字模式输入，请使用“转换”键显示转换候选，然后选择并确认半角，然后再次按“ CapsLock字母数字”键进入半角字母数字模式。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hf5d69a1afa2c41c38aa93fc8a4da4decV.jpg&#34; alt=&#34;如果以全角字母数字模式输入，请使用“转换”键显示转换候选，然后选择并确认半角，然后再次按“ CapsLock字母数字”键进入半角字母数字模式。&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://hamachan4.exblog.jp/6806905/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Shiftキーを押してアルファベットを入力すると全角？半角？
+&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo的LeaveIt主题优化记录五-修改选中文字的颜色和背景颜色</title>
+      <link>https://huaien.co/technology/leaveit-theme-modified-log-5-selection/</link>
+      <pubDate>Thu, 10 Oct 2019 17:31:46 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/leaveit-theme-modified-log-5-selection/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;总感觉LeaveIt这个黑白主题的选中文字的颜色和背景颜色怪怪的，因为是浅蓝色的，有点和黑白不搭。所以就把修改选中文字的颜色和背景颜色的过程也记录下。&lt;/p&gt;
+
+&lt;h1 id=&#34;效果&#34;&gt;效果&lt;/h1&gt;
+
+&lt;h2 id=&#34;原来的效果是&#34;&gt;原来的效果是&lt;/h2&gt;
+
+&lt;p&gt;由于修改前的效果没截图，就在&lt;a href=&#34;https://yyqx.online/posts/%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E5%9C%A8%E7%BA%BF%E9%80%9A%E8%AE%AF/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;草祭の博客&lt;/a&gt;上截图了效果。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H732842c9efc646a68a6fab9b6add338a2.jpg&#34; alt=&#34;取自草祭の博客&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;修改后的效果&#34;&gt;修改后的效果&lt;/h2&gt;
+
+&lt;p&gt;觉得这样会比较搭配黑白的主题 ^_^。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hf09c52ee5a53454d92358c5c3523ab11A.jpg&#34; alt=&#34;来自本博客&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;修改方法&#34;&gt;修改方法&lt;/h1&gt;
+
+&lt;p&gt;因为是样式，就是修改主题下的css文件了。打开&lt;code&gt;/themes/LeaveIt/assets/css/_common/_core/base.scss&lt;/code&gt; &lt;code&gt;Ctrl+F&lt;/code&gt; 搜索&lt;code&gt;::selection&lt;/code&gt; 定位或者找到第43~45行*（这是默认未修改的文件行数）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;  ::selection {
+    background: rgba(0, 149, 255, 0.1);
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修改为以下内容，增加的&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;  ::selection {
+    background: #080808;
+	color: #FFFFFF;
+  }
+  ::-moz-selection {
+    background: #080808;
+    color: #FFFFFF;
+}
+  ::-webkit-selection {
+    background: #080808;
+    color: #FFFFFF;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;保存后用hugo命令重新生成文章，部署成功后可以用Chrome浏览器的隐私标签来看下效果出来了没有。&lt;/p&gt;
+
+&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/qq_31164127/article/details/76147571&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CSS：改变用户选中文字的颜色和背景颜色&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>Hugo的LeaveIt主题优化记录四-修改行内代码样式与代码块重叠问题</title>
@@ -2235,83 +2329,6 @@ echo &amp;quot;................................&amp;quot;
 &lt;p&gt;&lt;a href=&#34;https://www.smslit.top/2018/07/08/hugo-valine/&#34; title=&#34;hugo博客添加评论系统Valine&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hugo博客添加评论系统Valine&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://valine.js.org/quickstart.html&#34; title=&#34;Valine官方文档&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Valine官方文档&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>手滑导致设置git remote仓库错误 如何修改远程仓库地址配置</title>
-      <link>https://huaien.co/technology/change-git-remote-config/</link>
-      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/change-git-remote-config/</guid>
-      <description>&lt;p&gt;本文记录了如何修改git remote配置的远程仓库地址。在不小心设置错误git remote地址时可以用这个方法修改为正确的远程仓库地址配置。&lt;/p&gt;
-
-&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;在同步github仓库的时候手滑了导致设置的git remote地址出错了。然后又添加了一下提示错误。
-记录一下如何修改&lt;/p&gt;
-
-&lt;p&gt;在指定远程仓库的时候输入错误导致设置了错误的远程仓库，直接重新用下面的命令会提示错误&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ git remote add origin git@github.com:github帐号名/仓库名.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;提示已经存在的出错信息：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;fatal: remote origin already exists.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# 删除错误的远程仓库配置
-$ git remote rm origin
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# 重新输入正确的远程仓库配置
-$ git remote add origin git@github.com:github帐号名/仓库名.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;就不会提示已经存在的错误了&lt;/p&gt;
-
-&lt;p&gt;但是如果输入&lt;code&gt;$ git remote rm origin&lt;/code&gt; 还是报错&lt;code&gt;error: Could not remove config section &#39;remote.origin&#39;.&lt;/code&gt;的话，就需要修改gitconfig文件的内容。&lt;/p&gt;
-
-&lt;p&gt;到你的github的安装路径下的etc文件夹，找到一个名为gitconfig的文件，打开它把里面的[remote &amp;ldquo;origin&amp;rdquo;]那一行删除就可以了。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;参考来源：&lt;a href=&#34;https://blog.csdn.net/dengjianqiang2011/article/details/9260435&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://blog.csdn.net/dengjianqiang2011/article/details/9260435&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Disqus提示无法加载的解决办法</title>
-      <link>https://huaien.co/technology/disqus-error-to-load/</link>
-      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/disqus-error-to-load/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/HTB1c6O0X6vuK1Rjy0Faq6x2aVXaB.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;错误提示&#34;&gt;错误提示：&lt;/h3&gt;
-
-&lt;p&gt;Disqus 无法加载。如果您是管理员，请参阅故障排除指南。&lt;/p&gt;
-
-&lt;p&gt;We were unable to load Disqus. If you are a moderator please see our troubleshooting guide.&lt;/p&gt;
-
-&lt;h3 id=&#34;解决方法&#34;&gt;解决方法：&lt;/h3&gt;
-
-&lt;p&gt;在hexo中的根目录下的_config.yml文件中，这段代码：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;# URL
-## If your site is put in a subdirectory, set url as &#39;http://yoursite.com/child&#39; and root as &#39;/child/&#39;
-url: https://www.nihoncard.com
-root: /
-permalink: :category/:title.html
-permalink_defaults:
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;url: 处需要设置为带http的完整的链接。我原来写的是&lt;code&gt;/&lt;/code&gt;就会出现以上错误。改了之后就好了。&lt;/p&gt;
-
-&lt;h3 id=&#34;参考&#34;&gt;参考：&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/edcc22f6cf33&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.jianshu.com/p/edcc22f6cf33&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
