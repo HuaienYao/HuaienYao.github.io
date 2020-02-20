@@ -9,7 +9,7 @@
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Github Fork后的仓库如何同步源仓库的新更新内容</title>
+      <title>Github fork后的仓库如何同步源仓库的新更新内容</title>
       <link>https://huaien.co/technology/syncing-origin-fork/</link>
       <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
       
@@ -59,7 +59,7 @@ git push
 # upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;2.同步（拉取）源仓库&lt;/p&gt;
+&lt;h3 id=&#34;2-同步-拉取-源仓库&#34;&gt;2.同步（拉取）源仓库&lt;/h3&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Syncing a fork&lt;/p&gt;
