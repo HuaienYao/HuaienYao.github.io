@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 11 Oct 2019 17:08:38 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 15:21:21 +0900</lastBuildDate>
     
 	<atom:link href="https://huaien.co/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git</title>
+      <link>https://huaien.co/tags/git/</link>
+      <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
+      
+      <guid>https://huaien.co/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub</title>
+      <link>https://huaien.co/tags/github/</link>
+      <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
+      
+      <guid>https://huaien.co/tags/github/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>输入法</title>
@@ -174,29 +192,11 @@
     </item>
     
     <item>
-      <title>GitHub</title>
-      <link>https://huaien.co/tags/github/</link>
-      <pubDate>Thu, 25 Jul 2019 14:58:47 +0800</pubDate>
-      
-      <guid>https://huaien.co/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Valine</title>
       <link>https://huaien.co/tags/valine/</link>
       <pubDate>Fri, 19 Apr 2019 09:56:14 +0900</pubDate>
       
       <guid>https://huaien.co/tags/valine/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>https://huaien.co/tags/git/</link>
-      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/tags/git/</guid>
       <description></description>
     </item>
     

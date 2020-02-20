@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 11 Oct 2019 17:08:38 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 15:21:21 +0900</lastBuildDate>
     
 	<atom:link href="https://huaien.co/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Syncing Origin Fork</title>
+      <link>https://huaien.co/technology/syncing-origin-fork/</link>
+      <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/syncing-origin-fork/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;最近遇到一个问题，fork了一位作者的仓库，修改fork的仓库的时候发现作者发布了新版，更新了一部分内容。这是后要怎么把原作者的仓库更新内容同步到自己fork的仓库呢？&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>微软IME日语输入法按Shift突然变成输入全角英文</title>

@@ -5,8 +5,113 @@
     <description>Recent content in Wyane`s Blog on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 11 Oct 2019 17:08:38 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 15:21:21 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Syncing Origin Fork</title>
+      <link>https://huaien.co/technology/syncing-origin-fork/</link>
+      <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/syncing-origin-fork/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;最近遇到一个问题，fork了一位作者的仓库，修改fork的仓库的时候发现作者发布了新版，更新了一部分内容。这是后要怎么把原作者的仓库更新内容同步到自己fork的仓库呢？&lt;/p&gt;
+
+&lt;p&gt;查看了网上的资料，并看到这位作者&lt;a href=&#34;https://gaohaoyang.github.io/2015/04/12/Syncing-a-fork/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;@gaohaoyang&lt;/a&gt;给了相关解决办法。&lt;/p&gt;
+
+&lt;p&gt;简单来说就是以下几步，对于大佬来说很简单，但是对于我这个小白来说就是经验了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote add
+git fetch
+git merge upstream/master
+git push
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;具体方法&#34;&gt;具体方法&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-设置remote&#34;&gt;1.设置remote&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Configuring a remote for a fork&lt;/p&gt;
+
+&lt;p&gt;给 fork 配置一个 remote&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;主要使用 git remote -v 查看远程状态。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote -v
+# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;添加原作者仓库配置为fork仓库的upstream（上游仓库）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;再次查看状态确认remote是否配置成功。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote -v
+# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
+# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2.同步（拉取）源仓库&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Syncing a fork&lt;/p&gt;
+
+&lt;p&gt;同步fork仓库&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;从upstream（上游仓库） &lt;code&gt;fetch&lt;/code&gt; 分支和提交点，传送到本地，并会被存储在一个本地分支 &lt;code&gt;upstream/master&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git fetch upstream
+git fetch upstream
+# remote: Counting objects: 75, done.
+# remote: Compressing objects: 100% (53/53), done.
+# remote: Total 62 (delta 27), reused 44 (delta 9)
+# Unpacking objects: 100% (62/62), done.
+# From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
+#  * [new branch]      master     -&amp;gt; upstream/master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果不在本地主分支(master)，使用下面命令切换&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout master
+# Switched to branch &#39;master&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;把 &lt;code&gt;upstream/master&lt;/code&gt; 分支&lt;code&gt;merge&lt;/code&gt;合并到本地 &lt;code&gt;master&lt;/code&gt; 上，这样就完成了同步原作者更新内容到本地，并且不会丢失本地修改的内容。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git merge upstream/master
+# Updating a422352..5fdff0f
+# Fast-forward
+#  README                    |    9 -------
+#  README.md                 |    7 ++++++
+#  2 files changed, 7 insertions(+), 9 deletions(-)
+#  delete mode 100644 README
+#  create mode 100644 README.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果想更新到 GitHub 的 &lt;code&gt;fork&lt;/code&gt; 仓库上的话，直接用下面命令&lt;code&gt;push&lt;/code&gt; 就好了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://gaohaoyang.github.io/2015/04/12/Syncing-a-fork/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;同步一个 fork&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Configuring a remote for a fork&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Syncing a fork&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>微软IME日语输入法按Shift突然变成输入全角英文</title>
@@ -2109,226 +2214,6 @@ echo &amp;quot;................................&amp;quot;
 &lt;a href=&#34;https://huaien.co/technology/ssh-key-generator-git/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Git生成 SSH 公钥添加到GitHub和Coding.net&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;如果测试没问题就可以使用上面的一键部署脚本来部署博客了，不过也可以用手动输入git命令来同步部署。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hugo添加Valine评论系统 以LeaveIt主题为例</title>
-      <link>https://huaien.co/technology/valine-to-hugo-with-leaveit/</link>
-      <pubDate>Fri, 19 Apr 2019 09:56:14 +0900</pubDate>
-      
-      <guid>https://huaien.co/technology/valine-to-hugo-with-leaveit/</guid>
-      <description>&lt;p&gt;最近将博客的生成器由Hexo转回到Hugo了，在这之后选了一些主题，试过Even,Jane,mainroad等等，最后还是选了v2上有人发布的这个LeaveIt主题。主要是因为这个主题简洁又不缺乏华丽的感觉。不过有点不足的是这个主题并不能直接用评论系统，在查看了相关教程之后，终于添加了原来使用的Valine评论系统。&lt;/p&gt;
-
-&lt;p&gt;今天参考了Even主题和Jane主题的源码，并且看了@5km的教程，尝试了好久，一直无法添加成功，最后在该教程的评论区，有其他人请教了和我一样的主题的问题，最后通过@5km的解答，终于成功实现了Valine评论系统的添加。&lt;/p&gt;
-
-&lt;h2 id=&#34;方法1-只加入valine&#34;&gt;方法1：只加入Valine&lt;/h2&gt;
-
-&lt;p&gt;由于LeaveIt主题并没有自带任何一个评论系统，所以如果只要Valine评论就直接修改下面文件即可。&lt;/p&gt;
-
-&lt;h3 id=&#34;修改站点配置文件&#34;&gt;修改站点配置文件&lt;/h3&gt;
-
-&lt;p&gt;首先先在站点的配置文件&lt;code&gt;config.toml&lt;/code&gt;里面添加下面的配置。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;  # Valine.
-  # You can get your appid and appkey from https://leancloud.cn
-  # more info please open https://valine.js.org
-  [params.valine]
-    enable = true #开关
-    appId = &#39;你的appId&#39;
-    appKey = &#39;你的appKey&#39;
-    notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
-    verify = false # Verification code
-    avatar = &#39;mp&#39; #神秘人(一个灰白头像) 
-    placeholder = &#39;说点什么吧...&#39; #在评论框显示的温馨提示等
-    visitor = true #访问量统计
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;2-主题的文章页模板添加valine&#34;&gt;2.主题的文章页模板添加Valine&lt;/h3&gt;
-
-&lt;p&gt;另外在LeaveIt的主题下的 &lt;code&gt;layouts/_default/single.html&lt;/code&gt; 找到第97行的 &lt;code&gt;&amp;lt;div class=&amp;quot;post-comment&amp;quot;&amp;gt;&lt;/code&gt; 代码块中的判断Disqus略称后的 &lt;code&gt;{{ end }}&lt;/code&gt; 后面，插入Valine代码，插入后的效果如下：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt; &amp;lt;div class=&amp;quot;post-comment&amp;quot;&amp;gt;
-       {{ if ( .Params.showComments | default true ) }}
-             {{ if ne .Site.DisqusShortname &amp;quot;&amp;quot; }}
-                 {{ template &amp;quot;_internal/disqus.html&amp;quot; . }}
-             {{ end }}
-             &amp;lt;!-- valine --&amp;gt;
-             {{- if .Site.Params.valine.enable -}}
-             &amp;lt;!-- id 将作为查询条件 --&amp;gt;
-             &amp;lt;span id=&amp;quot;{{ .URL | relURL }}&amp;quot; class=&amp;quot;leancloud_visitors&amp;quot; data-flag-title=&amp;quot;{{ .Title }}&amp;quot;&amp;gt;
-                 &amp;lt;span class=&amp;quot;post-meta-item-text&amp;quot;&amp;gt;访问量 &amp;lt;/span&amp;gt;
-                 &amp;lt;span class=&amp;quot;leancloud-visitors-count&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
-                 &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
-             &amp;lt;/span&amp;gt;
-             &amp;lt;div id=&amp;quot;vcomments&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
-             &amp;lt;script src=&amp;quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-             &amp;lt;script src=&#39;//unpkg.com/valine/dist/Valine.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
-             &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-                 new Valine({
-                     el: &#39;#vcomments&#39; ,
-                     appId: &#39;{{ .Site.Params.valine.appId }}&#39;,
-                     appKey: &#39;{{ .Site.Params.valine.appKey }}&#39;,
-                     notify: {{ .Site.Params.valine.notify }},
-                     verify: {{ .Site.Params.valine.verify }},
-                     avatar:&#39;{{ .Site.Params.valine.avatar }}&#39;,
-                     placeholder: &#39;{{ .Site.Params.valine.placeholder }}&#39;,
-                     visitor: {{ .Site.Params.valine.visitor }}
-                 });
-             &amp;lt;/script&amp;gt;
-             {{- end }}
-       {{ end }}
- &amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;其实这样已经可以实现了。回到博客文章下方就可以看到已经显示出来了。当然前提是你已经配置好过Valine了，就是在Leancloud上注册等等。相关可以查看&lt;a href=&#34;https://valine.js.org/quickstart.html&#34; title=&#34;Valine官方文档&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Valine官方文档&lt;/a&gt;。
-&lt;img src=&#34;https://ww1.sinaimg.cn/large/007i4MEmgy1g27o6azai0j30m30dzweo.jpg&#34; alt=&#34;Valine已经可以用了&#34; title=&#34;Valine已经可以用了&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;方法2-同时加入多个评论系统的配置&#34;&gt;方法2：同时加入多个评论系统的配置&lt;/h2&gt;
-
-&lt;p&gt;这样是很多主题的做法，为了方便切换评论系统直接内置多个评论系统，这样做的话可以直接在站点配置文件里面修改即可使用。&lt;/p&gt;
-
-&lt;h3 id=&#34;1-主题模板下新建comments-html&#34;&gt;1.主题模板下新建comments.html&lt;/h3&gt;
-
-&lt;p&gt;在LeaveIt主题的/themes/LeaveIt/layouts/partials下新建comments.html模板（如有，则不需新建，直接修改内容即可。）在comments.html里面添加下面的内容。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;{{ if and .IsPage (ne .Params.comment false) -}}
-  &amp;lt;!-- valine --&amp;gt;
-  {{- if .Site.Params.valine.enable -}}
-  &amp;lt;!-- id 将作为查询条件 --&amp;gt;
-  &amp;lt;span id=&amp;quot;{{ .URL | relURL }}&amp;quot; class=&amp;quot;leancloud_visitors&amp;quot; data-flag-title=&amp;quot;{{ .Title }}&amp;quot;&amp;gt;
-    &amp;lt;span class=&amp;quot;post-meta-item-text&amp;quot;&amp;gt;阅读量 &amp;lt;/span&amp;gt;
-    &amp;lt;span class=&amp;quot;leancloud-visitors-count&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
-    &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
-  &amp;lt;/span&amp;gt;
-  &amp;lt;div id=&amp;quot;vcomments&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
-  &amp;lt;script src=&amp;quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-  &amp;lt;script src=&#39;//unpkg.com/valine/dist/Valine.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
-  &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-    new Valine({
-        el: &#39;#vcomments&#39; ,
-        appId: &#39;{{ .Site.Params.valine.appId }}&#39;,
-        appKey: &#39;{{ .Site.Params.valine.appKey }}&#39;,
-        notify: {{ .Site.Params.valine.notify }}, 
-        verify: {{ .Site.Params.valine.verify }}, 
-        avatar:&#39;{{ .Site.Params.valine.avatar }}&#39;, 
-        placeholder: &#39;{{ .Site.Params.valine.placeholder }}&#39;,
-        visitor: &#39;{{ .Site.Params.valine.visitor }}&#39;
-    });
-  &amp;lt;/script&amp;gt;
-  {{- end }}
-
-  &amp;lt;!-- Disqus --&amp;gt;
-  {{- if .Site.DisqusShortname -}}
-    &amp;lt;div id=&amp;quot;disqus_thread&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
-    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-    (function() {
-      // Don&#39;t ever inject Disqus on localhost--it creates unwanted
-      // discussions from &#39;localhost:1313&#39; on your Disqus account...
-      if (window.location.hostname === &#39;localhost&#39;) return;
-      var dsq = document.createElement(&#39;script&#39;); dsq.type = &#39;text/javascript&#39;; dsq.async = true;
-      var disqus_shortname = &#39;{{ .Site.DisqusShortname }}&#39;;
-      dsq.src = &#39;//&#39; + disqus_shortname + &#39;.disqus.com/embed.js&#39;;
-      (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(dsq);
-    })();
-    &amp;lt;/script&amp;gt;
-    &amp;lt;noscript&amp;gt;Please enable JavaScript to view the &amp;lt;a href=&amp;quot;http://disqus.com/?ref_noscript&amp;quot;&amp;gt;comments powered by Disqus.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
-  {{- end -}}
-
-  &amp;lt;!-- changyan --&amp;gt;
-  {{- if and .Site.Params.changyanAppid .Site.Params.changyanAppkey -}}
-    &amp;lt;div id=&amp;quot;SOHUCS&amp;quot; sid=&amp;quot;{{ .URL }}&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
-    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-    (function(){
-      if (window.location.hostname === &#39;localhost&#39;) return;
-      var appid = &#39;{{ .Site.Params.changyanAppid }}&#39;;
-      var conf = &#39;{{ .Site.Params.changyanAppkey }}&#39;;
-      var width = window.innerWidth || document.documentElement.clientWidth; 
-      if (width &amp;lt; 960) {window.document.write(&#39;&amp;lt;script id=&amp;quot;changyan_mobile_js&amp;quot; charset=&amp;quot;utf-8&amp;quot; type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=&#39; + appid + &#39;&amp;amp;conf=&#39; + conf + &#39;&amp;quot;&amp;gt;&amp;lt;\/script&amp;gt;&#39;); } else { var loadJs=function(d,a){var c=document.getElementsByTagName(&amp;quot;head&amp;quot;)[0]||document.head||document.documentElement;var b=document.createElement(&amp;quot;script&amp;quot;);b.setAttribute(&amp;quot;type&amp;quot;,&amp;quot;text/javascript&amp;quot;);b.setAttribute(&amp;quot;charset&amp;quot;,&amp;quot;UTF-8&amp;quot;);b.setAttribute(&amp;quot;src&amp;quot;,d);if(typeof a===&amp;quot;function&amp;quot;){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e===&amp;quot;loaded&amp;quot;||e===&amp;quot;complete&amp;quot;){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs(&amp;quot;https://changyan.sohu.com/upload/changyan.js&amp;quot;,function(){window.changyan.api.config({appid:appid,conf:conf})}); }
-    })();
-    &amp;lt;/script&amp;gt;
-  {{- end -}}
-
-  &amp;lt;!-- LiveRe --&amp;gt;
-  {{- if .Site.Params.livereUID -}}
-    &amp;lt;div id=&amp;quot;lv-container&amp;quot; data-id=&amp;quot;city&amp;quot; data-uid=&amp;quot;{{ .Site.Params.livereUID }}&amp;quot;&amp;gt;
-    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === &#39;function&#39;) { return; }
-        j = d.createElement(s);
-        j.src = &#39;https://cdn-city.livere.com/js/embed.dist.js&#39;;
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, &#39;script&#39;);
-    &amp;lt;/script&amp;gt;
-    &amp;lt;noscript&amp;gt;Please enable JavaScript to view the comments powered by &amp;lt;a href=&amp;quot;https://livere.com/&amp;quot;&amp;gt;LiveRe.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
-    &amp;lt;/div&amp;gt;
-  {{- end -}}
-
-  &amp;lt;!-- gitment --&amp;gt;
-  {{- if .Site.Params.gitment.owner -}}
-    &amp;lt;div id=&amp;quot;comments-gitment&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
-    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css&amp;quot; crossorigin=&amp;quot;anonymous&amp;quot;&amp;gt;
-    &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js&amp;quot; crossorigin=&amp;quot;anonymous&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-      var gitment = new Gitment({
-        id: &#39;{{ .Date }}&#39;,
-        title: &#39;{{ .Title }}&#39;,
-        link: decodeURI(location.href),
-        desc: &#39;{{ .Summary }}&#39;,
-        owner: &#39;{{ .Site.Params.gitment.owner }}&#39;,
-        repo: &#39;{{ .Site.Params.gitment.repo }}&#39;,
-        oauth: {
-          client_id: &#39;{{ .Site.Params.gitment.clientId }}&#39;,
-          client_secret: &#39;{{ .Site.Params.gitment.clientSecret }}&#39;
-        }
-      });
-      gitment.render(&#39;comments-gitment&#39;);
-    &amp;lt;/script&amp;gt;
-    &amp;lt;noscript&amp;gt;Please enable JavaScript to view the &amp;lt;a href=&amp;quot;https://github.com/imsun/gitment&amp;quot;&amp;gt;comments powered by gitment.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
-  {{- end -}}
-
-  &amp;lt;!-- gitalk --&amp;gt;
-  {{- if .Site.Params.gitalk.owner -}}
-    &amp;lt;div id=&amp;quot;gitalk-container&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
-    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&amp;quot; crossorigin=&amp;quot;anonymous&amp;quot;&amp;gt;
-    &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&amp;quot; crossorigin=&amp;quot;anonymous&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-      var gitalk = new Gitalk({
-        id: &#39;{{ .Date }}&#39;,
-        title: &#39;{{ .Title }}&#39;,
-        clientID: &#39;{{ .Site.Params.gitalk.clientId }}&#39;,
-        clientSecret: &#39;{{ .Site.Params.gitalk.clientSecret }}&#39;,
-        repo: &#39;{{ .Site.Params.gitalk.repo }}&#39;,
-        owner: &#39;{{ .Site.Params.gitalk.owner }}&#39;,
-        admin: [&#39;{{ .Site.Params.gitalk.owner }}&#39;],
-        body: decodeURI(location.href)
-      });
-      gitalk.render(&#39;gitalk-container&#39;);
-    &amp;lt;/script&amp;gt;
-    &amp;lt;noscript&amp;gt;Please enable JavaScript to view the &amp;lt;a href=&amp;quot;https://github.com/gitalk/gitalk&amp;quot;&amp;gt;comments powered by gitalk.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
-  {{- end }}
-
-{{- end }}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;2-在文章页模板中调用上面新建的评论模板&#34;&gt;2.在文章页模板中调用上面新建的评论模板&lt;/h3&gt;
-
-&lt;p&gt;例如本站用的LeaveIt主题是在&lt;code&gt;layouts/_default/single.html&lt;/code&gt; 找到第97行的&lt;code&gt;&amp;lt;div class=&amp;quot;post-comment&amp;quot;&amp;gt;&lt;/code&gt; 代码块中的判断Disqus略称后的 &lt;code&gt;{{ end }}&lt;/code&gt;后面，插入调用代码。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;{{ partial &amp;quot;comments.html&amp;quot; . }}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;其实就是方法1的第二步，只是方法一是直接将评论代码加到文章页模板中，而这个是将评论代码统统放在comments.html模板下，再在文章页模板通过代码调用这个comments.html，只要站点配置文件config.toml里面存在相关开关配置，则评论系统就会被正常调用。&lt;/p&gt;
-
-&lt;p&gt;方法二参考的是其他的主题Even等，Valine评论系统是可以正常被调用，但是其他的没有测试过。&lt;/p&gt;
-
-&lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.smslit.top/2018/07/08/hugo-valine/&#34; title=&#34;hugo博客添加评论系统Valine&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hugo博客添加评论系统Valine&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://valine.js.org/quickstart.html&#34; title=&#34;Valine官方文档&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Valine官方文档&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
