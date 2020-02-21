@@ -5,13 +5,118 @@
     <description>Recent content in Wyane`s Blog on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 21 Feb 2020 10:39:27 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 15:21:21 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Github fork后的仓库如何同步源仓库的新更新内容</title>
+      <link>https://huaien.co/technology/syncing-origin-fork/</link>
+      <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/syncing-origin-fork/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;最近遇到一个问题，fork了一位作者的仓库，修改fork的仓库的时候发现作者发布了新版，更新了一部分内容。这是后要怎么把原作者的仓库更新内容同步到自己fork的仓库呢？&lt;/p&gt;
+
+&lt;p&gt;查看了网上的资料，并看到这位作者&lt;a href=&#34;https://gaohaoyang.github.io/2015/04/12/Syncing-a-fork/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;@gaohaoyang&lt;/a&gt;给了相关解决办法。&lt;/p&gt;
+
+&lt;p&gt;简单来说就是以下几步，对于大佬来说很简单，但是对于我这个小白来说就是经验了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote add
+git fetch
+git merge upstream/master
+git push
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;具体方法&#34;&gt;具体方法&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-设置remote&#34;&gt;1.设置remote&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Configuring a remote for a fork&lt;/p&gt;
+
+&lt;p&gt;给 fork 配置一个 remote&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;主要使用 git remote -v 查看远程状态。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote -v
+# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;添加原作者仓库配置为fork仓库的upstream（上游仓库）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;再次查看状态确认remote是否配置成功。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote -v
+# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
+# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-同步-拉取-源仓库&#34;&gt;2.同步（拉取）源仓库&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Syncing a fork&lt;/p&gt;
+
+&lt;p&gt;同步fork仓库&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;从upstream（上游仓库） &lt;code&gt;fetch&lt;/code&gt; 分支和提交点，传送到本地，并会被存储在一个本地分支 &lt;code&gt;upstream/master&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git fetch upstream
+git fetch upstream
+# remote: Counting objects: 75, done.
+# remote: Compressing objects: 100% (53/53), done.
+# remote: Total 62 (delta 27), reused 44 (delta 9)
+# Unpacking objects: 100% (62/62), done.
+# From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
+#  * [new branch]      master     -&amp;gt; upstream/master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果不在本地主分支(master)，使用下面命令切换&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout master
+# Switched to branch &#39;master&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;把 &lt;code&gt;upstream/master&lt;/code&gt; 分支&lt;code&gt;merge&lt;/code&gt;合并到本地 &lt;code&gt;master&lt;/code&gt; 上，这样就完成了同步原作者更新内容到本地，并且不会丢失本地修改的内容。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git merge upstream/master
+# Updating a422352..5fdff0f
+# Fast-forward
+#  README                    |    9 -------
+#  README.md                 |    7 ++++++
+#  2 files changed, 7 insertions(+), 9 deletions(-)
+#  delete mode 100644 README
+#  create mode 100644 README.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果想更新到 GitHub 的 &lt;code&gt;fork&lt;/code&gt; 仓库上的话，直接用下面命令&lt;code&gt;push&lt;/code&gt; 就好了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://gaohaoyang.github.io/2015/04/12/Syncing-a-fork/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;同步一个 fork&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Configuring a remote for a fork&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Syncing a fork&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>法克米 - 低价出售域名代注册代续费代支付代购等</title>
       <link>https://huaien.co/internet/fakemi/</link>
-      <pubDate>Fri, 21 Feb 2020 10:39:27 +0900</pubDate>
+      <pubDate>Sat, 01 Feb 2020 10:39:27 +0900</pubDate>
       
       <guid>https://huaien.co/internet/fakemi/</guid>
       <description>&lt;p&gt;由于手头域名越来越多，就低价出给有需要的人。&lt;/p&gt;
@@ -840,111 +945,6 @@
 &lt;a href=&#34;https://t.me/idaigou&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;@客户群组&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;wx: fuckme&lt;/li&gt;
 &lt;li&gt;Google Voice: +12342220121&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Github fork后的仓库如何同步源仓库的新更新内容</title>
-      <link>https://huaien.co/technology/syncing-origin-fork/</link>
-      <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
-      
-      <guid>https://huaien.co/technology/syncing-origin-fork/</guid>
-      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;最近遇到一个问题，fork了一位作者的仓库，修改fork的仓库的时候发现作者发布了新版，更新了一部分内容。这是后要怎么把原作者的仓库更新内容同步到自己fork的仓库呢？&lt;/p&gt;
-
-&lt;p&gt;查看了网上的资料，并看到这位作者&lt;a href=&#34;https://gaohaoyang.github.io/2015/04/12/Syncing-a-fork/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;@gaohaoyang&lt;/a&gt;给了相关解决办法。&lt;/p&gt;
-
-&lt;p&gt;简单来说就是以下几步，对于大佬来说很简单，但是对于我这个小白来说就是经验了。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git remote add
-git fetch
-git merge upstream/master
-git push
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;具体方法&#34;&gt;具体方法&lt;/h2&gt;
-
-&lt;h3 id=&#34;1-设置remote&#34;&gt;1.设置remote&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Configuring a remote for a fork&lt;/p&gt;
-
-&lt;p&gt;给 fork 配置一个 remote&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;主要使用 git remote -v 查看远程状态。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git remote -v
-# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;添加原作者仓库配置为fork仓库的upstream（上游仓库）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;再次查看状态确认remote是否配置成功。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git remote -v
-# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
-# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
-# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;2-同步-拉取-源仓库&#34;&gt;2.同步（拉取）源仓库&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Syncing a fork&lt;/p&gt;
-
-&lt;p&gt;同步fork仓库&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;从upstream（上游仓库） &lt;code&gt;fetch&lt;/code&gt; 分支和提交点，传送到本地，并会被存储在一个本地分支 &lt;code&gt;upstream/master&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git fetch upstream
-git fetch upstream
-# remote: Counting objects: 75, done.
-# remote: Compressing objects: 100% (53/53), done.
-# remote: Total 62 (delta 27), reused 44 (delta 9)
-# Unpacking objects: 100% (62/62), done.
-# From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
-#  * [new branch]      master     -&amp;gt; upstream/master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;如果不在本地主分支(master)，使用下面命令切换&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git checkout master
-# Switched to branch &#39;master&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;把 &lt;code&gt;upstream/master&lt;/code&gt; 分支&lt;code&gt;merge&lt;/code&gt;合并到本地 &lt;code&gt;master&lt;/code&gt; 上，这样就完成了同步原作者更新内容到本地，并且不会丢失本地修改的内容。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git merge upstream/master
-# Updating a422352..5fdff0f
-# Fast-forward
-#  README                    |    9 -------
-#  README.md                 |    7 ++++++
-#  2 files changed, 7 insertions(+), 9 deletions(-)
-#  delete mode 100644 README
-#  create mode 100644 README.md
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;如果想更新到 GitHub 的 &lt;code&gt;fork&lt;/code&gt; 仓库上的话，直接用下面命令&lt;code&gt;push&lt;/code&gt; 就好了。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git push origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://gaohaoyang.github.io/2015/04/12/Syncing-a-fork/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;同步一个 fork&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Configuring a remote for a fork&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Syncing a fork&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     

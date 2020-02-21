@@ -6,19 +6,10 @@
     <description>Recent content in Posts on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 21 Feb 2020 10:39:27 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 15:21:21 +0900</lastBuildDate>
     
 	<atom:link href="https://huaien.co/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>法克米 - 低价出售域名代注册代续费代支付代购等</title>
-      <link>https://huaien.co/internet/fakemi/</link>
-      <pubDate>Fri, 21 Feb 2020 10:39:27 +0900</pubDate>
-      
-      <guid>https://huaien.co/internet/fakemi/</guid>
-      <description>&lt;p&gt;由于手头域名越来越多，就低价出给有需要的人。&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Github fork后的仓库如何同步源仓库的新更新内容</title>
@@ -29,6 +20,15 @@
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;最近遇到一个问题，fork了一位作者的仓库，修改fork的仓库的时候发现作者发布了新版，更新了一部分内容。这是后要怎么把原作者的仓库更新内容同步到自己fork的仓库呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>法克米 - 低价出售域名代注册代续费代支付代购等</title>
+      <link>https://huaien.co/internet/fakemi/</link>
+      <pubDate>Sat, 01 Feb 2020 10:39:27 +0900</pubDate>
+      
+      <guid>https://huaien.co/internet/fakemi/</guid>
+      <description>&lt;p&gt;由于手头域名越来越多，就低价出给有需要的人。&lt;/p&gt;</description>
     </item>
     
     <item>
