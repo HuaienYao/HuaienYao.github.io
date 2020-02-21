@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 20 Feb 2020 15:21:21 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 10:39:27 +0900</lastBuildDate>
     
 	<atom:link href="https://huaien.co/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>域名</title>
+      <link>https://huaien.co/tags/%E5%9F%9F%E5%90%8D/</link>
+      <pubDate>Fri, 21 Feb 2020 10:39:27 +0900</pubDate>
+      
+      <guid>https://huaien.co/tags/%E5%9F%9F%E5%90%8D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>服务器</title>
+      <link>https://huaien.co/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Fri, 21 Feb 2020 10:39:27 +0900</pubDate>
+      
+      <guid>https://huaien.co/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Git</title>
@@ -665,15 +683,6 @@
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
       <guid>https://huaien.co/tags/qq/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>服务器</title>
-      <link>https://huaien.co/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-      <pubDate>Wed, 08 Dec 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://huaien.co/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description></description>
     </item>
     
