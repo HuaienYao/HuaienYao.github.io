@@ -20,9 +20,9 @@
   gtag('config', 'UA-122761254-3');
 </script>
   
-  <link rel="prev" href="https://huaien.co/internet/fakemi/" />
-  <link rel="next" href="https://huaien.co/technology/linux-cp-error/" />
-  <link rel="canonical" href="https://huaien.co/technology/syncing-origin-fork/" />
+  <link rel="prev" href="https://huaien.co/technology/syncing-origin-fork/" />
+  
+  <link rel="canonical" href="https://huaien.co/technology/linux-cp-error/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -43,10 +43,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <title>
        
        
-           Github fork后的仓库如何同步源仓库的新更新内容 | Wyane`s Blog
+           Linux使用cp命令复制目录错误 cp:omitting directory | Wyane`s Blog
        
   </title>
-  <meta name="title" content="Github fork后的仓库如何同步源仓库的新更新内容 | Wyane`s Blog">
+  <meta name="title" content="Linux使用cp命令复制目录错误 cp:omitting directory | Wyane`s Blog">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -65,9 +65,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          "@id": "https:\/\/huaien.co\/"
     },
     "articleSection" : "posts",
-    "name" : "Github fork后的仓库如何同步源仓库的新更新内容",
-    "headline" : "Github fork后的仓库如何同步源仓库的新更新内容",
-    "description" : "最近遇到一个问题，fork了一位作者的仓库，修改fork的仓库的时候发现作者发布了新版，更新了一部分内容。这是后要怎么把原作者的仓库更新内容同步到自己fork的仓库呢？",
+    "name" : "Linux使用cp命令复制目录错误 cp:omitting directory",
+    "headline" : "Linux使用cp命令复制目录错误 cp:omitting directory",
+    "description" : "Linux使用cp命令复制目录错误\x22cp:omitting directory\x22的解决办法",
     "inLanguage" : "zh-cn",
     "author" : "Wyane",
     "creator" : "Wyane",
@@ -75,11 +75,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "accountablePerson" : "Wyane",
     "copyrightHolder" : "Wyane",
     "copyrightYear" : "2020",
-    "datePublished": "2020-02-20 15:21:21 \x2b0900 JST",
-    "dateModified" : "2020-02-20 15:21:21 \x2b0900 JST",
-    "url" : "https:\/\/huaien.co\/technology\/syncing-origin-fork\/",
-    "wordCount" : "579",
-    "keywords" : [ "github","git", "Wyane`s Blog"]
+    "datePublished": "2020-02-21 16:36:31 \x2b0900 JST",
+    "dateModified" : "2020-02-21 16:36:31 \x2b0900 JST",
+    "url" : "https:\/\/huaien.co\/technology\/linux-cp-error\/",
+    "wordCount" : "238",
+    "keywords" : [ "linux", "Wyane`s Blog"]
 }
 </script>
  
@@ -145,7 +145,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Github fork后的仓库如何同步源仓库的新更新内容</h1>
+        <h1 class="post-title" itemprop="name headline">Linux使用cp命令复制目录错误 cp:omitting directory</h1>
         <div class="post-meta">
         
                       
@@ -155,11 +155,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
                 </span>
           <span class="post-time">
-         <i class="far fa-calendar-alt"></i>  <time datetime=2020-02-20 itemprop="datePublished">2020-02-20</time>
+         <i class="far fa-calendar-alt"></i>  <time datetime=2020-02-21 itemprop="datePublished">2020-02-21</time>
            </span>
      
-         <i class="far fa-file-word"></i> <span class="post-word-count"> 579 字</span>
-         <i class="far fa-clock"></i> <span class="more-meta"> 2 分钟</span>
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 238 字</span>
+         <i class="far fa-clock"></i> <span class="more-meta"> 1 分钟</span>
           
         </div>
     </header>
@@ -173,12 +173,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>
 <ul>
 <li><a href="#背景">背景</a></li>
-<li><a href="#具体方法">具体方法</a>
-<ul>
-<li><a href="#1-设置remote">1.设置remote</a></li>
-<li><a href="#2-同步-拉取-源仓库">2.同步（拉取）源仓库</a></li>
-</ul></li>
-<li><a href="#参考来源">参考来源</a></li>
+<li><a href="#原因">原因</a></li>
+<li><a href="#解决方法">解决方法</a></li>
+<li><a href="#参考文章">参考文章</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -217,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         
 
-        <img src="https://i.loli.net/2020/02/20/RTCYSKeADgG2HtM.png" class="featured_image">
+        <img src="https://i.loli.net/2020/02/20/gcYlnUjxq7LSHMm.png" class="featured_image">
         
         
      
@@ -231,100 +228,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <h2 id="背景">背景</h2>
 
-<p>最近遇到一个问题，fork了一位作者的仓库，修改fork的仓库的时候发现作者发布了新版，更新了一部分内容。这是后要怎么把原作者的仓库更新内容同步到自己fork的仓库呢？</p>
+<p>今天在Linux系统使用<code>cp</code>（复制命令）复制目录时，出现下面的错误：</p>
 
-<p>查看了网上的资料，并看到这位作者<a href="https://gaohaoyang.github.io/2015/04/12/Syncing-a-fork/" rel="nofollow noreferrer" target="_blank">@gaohaoyang</a>给了相关解决办法。</p>
-
-<p>简单来说就是以下几步，对于大佬来说很简单，但是对于我这个小白来说就是经验了。</p>
-
-<pre><code>git remote add
-git fetch
-git merge upstream/master
-git push
+<pre><code class="language-bash">“cp:omitting directory &quot;directory&quot; ”
 </code></pre>
 
-<h2 id="具体方法">具体方法</h2>
+<p>*(directory是需要复制的目录名称)。</p>
 
-<h3 id="1-设置remote">1.设置remote</h3>
+<h2 id="原因">原因</h2>
 
-<blockquote>
-<p>Configuring a remote for a fork</p>
+<p>查询了一下网上资料，原来这是因为dir目录下存在其他目录或文件，不可只使用cp命令实现复制操作。</p>
 
-<p>给 fork 配置一个 remote</p>
-</blockquote>
+<h2 id="解决方法">解决方法</h2>
 
-<p>主要使用 git remote -v 查看远程状态。</p>
+<p>使用<code>cp</code>命令时，加上 <code>-r</code>选项就可以了，这个选项是指“递归持续复制，用於目录的复制行为”。</p>
 
-<pre><code>git remote -v
-# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+<p>例如</p>
+
+<pre><code class="language-bash">cp -r dir ./usr
 </code></pre>
 
-<p>添加原作者仓库配置为fork仓库的upstream（上游仓库）</p>
+<p>当执行删除操作时碰到类似的错误，也可使用递归式删除方式。</p>
 
-<pre><code>git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
-</code></pre>
-
-<p>再次查看状态确认remote是否配置成功。</p>
-
-<pre><code>git remote -v
-# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
-# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
-# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
-# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
-</code></pre>
-
-<h3 id="2-同步-拉取-源仓库">2.同步（拉取）源仓库</h3>
-
-<blockquote>
-<p>Syncing a fork</p>
-
-<p>同步fork仓库</p>
-</blockquote>
-
-<p>从upstream（上游仓库） <code>fetch</code> 分支和提交点，传送到本地，并会被存储在一个本地分支 <code>upstream/master</code></p>
-
-<pre><code>git fetch upstream
-git fetch upstream
-# remote: Counting objects: 75, done.
-# remote: Compressing objects: 100% (53/53), done.
-# remote: Total 62 (delta 27), reused 44 (delta 9)
-# Unpacking objects: 100% (62/62), done.
-# From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
-#  * [new branch]      master     -&gt; upstream/master
-</code></pre>
-
-<p>如果不在本地主分支(master)，使用下面命令切换</p>
-
-<pre><code>git checkout master
-# Switched to branch 'master'
-</code></pre>
-
-<p>把 <code>upstream/master</code> 分支<code>merge</code>合并到本地 <code>master</code> 上，这样就完成了同步原作者更新内容到本地，并且不会丢失本地修改的内容。</p>
-
-<pre><code>git merge upstream/master
-# Updating a422352..5fdff0f
-# Fast-forward
-#  README                    |    9 -------
-#  README.md                 |    7 ++++++
-#  2 files changed, 7 insertions(+), 9 deletions(-)
-#  delete mode 100644 README
-#  create mode 100644 README.md
-</code></pre>
-
-<p>如果想更新到 GitHub 的 <code>fork</code> 仓库上的话，直接用下面命令<code>push</code> 就好了。</p>
-
-<pre><code>git push origin master
-</code></pre>
-
-<h2 id="参考来源">参考来源</h2>
+<h2 id="参考文章">参考文章</h2>
 
 <ul>
-<li><p><a href="https://gaohaoyang.github.io/2015/04/12/Syncing-a-fork/" rel="nofollow noreferrer" target="_blank">同步一个 fork</a></p></li>
-
-<li><p><a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork" rel="nofollow noreferrer" target="_blank">Configuring a remote for a fork</a></p></li>
-
-<li><p><a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork" rel="nofollow noreferrer" target="_blank">Syncing a fork</a></p></li>
+<li><a href="https://blog.csdn.net/qq_27278957/article/details/81188973" rel="nofollow noreferrer" target="_blank">Linux常见错误 “cp: omitting directory”解决办法
+</a></li>
 </ul>
     </div>
 
@@ -339,7 +269,7 @@ git fetch upstream
             <p class="copyright-item">
               <span><i class="fa fa-link"></i></span>
                    
-                    <span><a href=https://huaien.co/technology/syncing-origin-fork/>https://huaien.co/technology/syncing-origin-fork/</span>
+                    <span><a href=https://huaien.co/technology/linux-cp-error/>https://huaien.co/technology/linux-cp-error/</span>
             </p>
             
               
@@ -370,11 +300,8 @@ git fetch upstream
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="https://huaien.co/tags/github/">
-                    #github</a></span>
-            
-            <span class="tag"><a href="https://huaien.co/tags/git/">
-                    #git</a></span>
+            <span class="tag"><a href="https://huaien.co/tags/linux/">
+                    #linux</a></span>
             
             </section>
         
@@ -386,10 +313,8 @@ git fetch upstream
 
     <div class="post-nav">
         
-        <a href="https://huaien.co/internet/fakemi/" class="prev" rel="prev" title="法克米 - 低价出售域名代注册代续费代支付代购等"><i class="iconfont icon-left"></i>&nbsp;法克米 - 低价出售域名代注册代续费代支付代购等</a>
+        <a href="https://huaien.co/technology/syncing-origin-fork/" class="prev" rel="prev" title="Github fork后的仓库如何同步源仓库的新更新内容"><i class="iconfont icon-left"></i>&nbsp;Github fork后的仓库如何同步源仓库的新更新内容</a>
          
-        
-        <a href="https://huaien.co/technology/linux-cp-error/" class="next" rel="next" title="Linux使用cp命令复制目录错误 cp:omitting directory">Linux使用cp命令复制目录错误 cp:omitting directory&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 <br>

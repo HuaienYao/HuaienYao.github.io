@@ -6,10 +6,26 @@
     <description>Recent content in Posts on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 20 Feb 2020 15:21:21 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 16:36:31 +0900</lastBuildDate>
     
 	<atom:link href="https://huaien.co/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux使用cp命令复制目录错误 cp:omitting directory</title>
+      <link>https://huaien.co/technology/linux-cp-error/</link>
+      <pubDate>Fri, 21 Feb 2020 16:36:31 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/linux-cp-error/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;今天在Linux系统使用&lt;code&gt;cp&lt;/code&gt;（复制命令）复制目录时，出现下面的错误：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;“cp:omitting directory &amp;quot;directory&amp;quot; ”
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;*(directory是需要复制的目录名称)。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Github fork后的仓库如何同步源仓库的新更新内容</title>

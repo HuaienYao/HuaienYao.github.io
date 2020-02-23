@@ -5,8 +5,46 @@
     <description>Recent content in Wyane`s Blog on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 20 Feb 2020 15:21:21 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 16:36:31 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Linux使用cp命令复制目录错误 cp:omitting directory</title>
+      <link>https://huaien.co/technology/linux-cp-error/</link>
+      <pubDate>Fri, 21 Feb 2020 16:36:31 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/linux-cp-error/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;今天在Linux系统使用&lt;code&gt;cp&lt;/code&gt;（复制命令）复制目录时，出现下面的错误：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;“cp:omitting directory &amp;quot;directory&amp;quot; ”
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;*(directory是需要复制的目录名称)。&lt;/p&gt;
+
+&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
+
+&lt;p&gt;查询了一下网上资料，原来这是因为dir目录下存在其他目录或文件，不可只使用cp命令实现复制操作。&lt;/p&gt;
+
+&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
+
+&lt;p&gt;使用&lt;code&gt;cp&lt;/code&gt;命令时，加上 &lt;code&gt;-r&lt;/code&gt;选项就可以了，这个选项是指“递归持续复制，用於目录的复制行为”。&lt;/p&gt;
+
+&lt;p&gt;例如&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cp -r dir ./usr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当执行删除操作时碰到类似的错误，也可使用递归式删除方式。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考文章&#34;&gt;参考文章&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/qq_27278957/article/details/81188973&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Linux常见错误 “cp: omitting directory”解决办法
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>Github fork后的仓库如何同步源仓库的新更新内容</title>
@@ -2664,195 +2702,6 @@ Ruby Sass 3.7.4
 &lt;li&gt;&lt;a href=&#34;https://akisnote.com/2018/12/sass-scss/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;簡単！便利！HugoでSass/Scssを使う方法！&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.sass.hk/install/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;如何安装Sass&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hugo的LeaveIt主题优化记录一-修复错位，添加toc</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/</link>
-      <pubDate>Mon, 29 Jul 2019 07:42:33 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/</guid>
-      <description>
-
-&lt;h2 id=&#34;标签处的back-home按钮位置错位&#34;&gt;标签处的back・home按钮位置错位&lt;/h2&gt;
-
-&lt;p&gt;这个问题我现在才发现，原来是因为这个主题在生成静态文件的时候需要sass编译。难怪我每次修改&lt;code&gt;/themes/LeaveIt/assets/css/&lt;/code&gt;下面的样式总不见效果。后来一直直接修改的站点目录下的/resources/_gen/assets/scss/css/XXX.content文件才会看到修改的效果。直到今天，我发现原来普通版本的hugo是不支持sass编译的，查看了这个&lt;a href=&#34;https://github.com/liuzc/LeaveIt/issues/14/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;#14 Issue&lt;/a&gt;才知道原来要用hugo extended版本才可以编译sass。
-可以从&lt;a href=&#34;https://github.com/gohugoio/hugo/releases/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo Release页面&lt;/a&gt;下载该版本。&lt;/p&gt;
-
-&lt;h3 id=&#34;原因&#34;&gt;原因&lt;/h3&gt;
-
-&lt;p&gt;其实就是&lt;code&gt;/themes/LeaveIt/assets/css/_common/_page/post.scss&lt;/code&gt;样式表的&lt;code&gt;.post-tags&lt;/code&gt;样式问题，这个文件里的&lt;code&gt;.post-tags&lt;/code&gt;样式应该是正常的，如下：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;    .post-tags {
-        padding: 1rem 0 1rem;
-        display: flex;
-        justify-content: space-between;
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;而主题目录自带的&lt;code&gt;LeaveIt/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content&lt;/code&gt;里的&lt;code&gt;.post-tags&lt;/code&gt;样式却是不一样。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H39fd4ba308524a4cb510f832b7753b8fl.jpg&#34; alt=&#34;原作者github主题截图&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/liuzc/LeaveIt/blob/master/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;点此&lt;/a&gt;进入相关页面。&lt;/p&gt;
-
-&lt;p&gt;原因就在于作者生成的&lt;code&gt;LeaveIt/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content&lt;/code&gt;里的&lt;code&gt;.post-tags&lt;/code&gt;样式是错误的，正常应该在使用&lt;code&gt;hugo&lt;/code&gt;命令生成静态页面的时候会通过sass编译重新生成&lt;code&gt;LeaveIt/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content&lt;/code&gt;文件，但是由于我用的版本不是&lt;code&gt;hugo_extend&lt;/code&gt;版本，所以每次生成静态页面都导致在 &lt;code&gt;/themes/LeaveIt/assets/css/_common/_page/post.scss&lt;/code&gt; 里面修改的都不能更新到&lt;code&gt;LeaveIt/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content&lt;/code&gt;所以没有效果。&lt;/p&gt;
-
-&lt;h3 id=&#34;解决方法&#34;&gt;解决方法&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;使用支持sass编译的&lt;a href=&#34;https://github.com/gohugoio/hugo/releases//&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hugo extend版本&lt;/a&gt;，就可以通过修改&lt;code&gt;/themes/LeaveIt/assets/css/_common/_page/post.scss&lt;/code&gt;来实现效果。&lt;/li&gt;
-&lt;li&gt;使用普通的不支持sass编译的hugo版本，这样需要直接修改&lt;code&gt;LeaveIt/resources/_gen/assets/scss/css/&lt;/code&gt;下的.content文件，这样的话修改&lt;code&gt;/themes/LeaveIt/assets/css/&lt;/code&gt;下的文件均无法直接反应效果。&lt;/li&gt;
-&lt;li&gt;使用普通的不支持sass编译的hugo版本，在修改样式后，需要使用sass命令来编译生成一下.content文件，具体可以参考&lt;a href=&#34;https://huaien.co/technology/install-ruby-update-on-centos/#延伸阅读&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这里&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;文章页添加toc目录支持&#34;&gt;文章页添加TOC目录支持&lt;/h2&gt;
-
-&lt;p&gt;原版的LeaveIt主题没有很好的支持TOC文章目录导航，但是@&lt;a href=&#34;https://github.com/ehlxr/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;ehlxr&lt;/a&gt; 在Github提交了&lt;a href=&#34;https://github.com/liuzc/LeaveIt/pull/11/commits&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;相关pull请求&lt;/a&gt; 根据这个成功添加了TOC目录支持。&lt;/p&gt;
-
-&lt;p&gt;1，在&lt;code&gt;/themes/LeaveIt/assets/css/_custom.scss&lt;/code&gt;中添加下面的toc样式，可以根据自己的喜好自定义修改。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.post-toc {
-    position: absolute;
-    width: 200px;
-    margin-left: 780px;
-    padding: 10px;
-    word-wrap: break-word;
-    box-sizing: border-box;
-
-    .post-toc-title {
-        margin: 0;
-        font-weight: 400;
-        text-transform: uppercase;
-    }
-
-    .post-toc-content {
-        &amp;amp;.always-active ul {
-            display: block;
-        }
-
-        &amp;gt;nav&amp;gt;ul {
-            margin: 10px 0;
-        }
-
-        ul {
-            padding-left: 0;
-            list-style: none;
-
-            ul {
-            padding-left: 15px;
-            display: none;
-            }
-
-            .has-active &amp;gt; ul {
-                display: block;
-            }
-        }
-    }
-
-    a:hover {
-        color: #c05b4d;
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-
-    a {
-        display: block;
-        line-height: 30px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        -webkit-transition-duration: .2s;
-        transition-duration: .2s;
-        -webkit-transition-property: -webkit-transform;
-        transition-property: -webkit-transform;
-        transition-property: transform;
-        transition-property: transform,-webkit-transform;
-        -webkit-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
-    }
-}
-
-@media only screen and (max-width: 1224px) {
-    .post-toc {
-        display: none;
-    }
-} 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在&lt;code&gt;/themes/LeaveIt/layouts/partials/&lt;/code&gt;下新建&lt;code&gt;toc.html&lt;/code&gt;文件，内容为下：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;post-toc&amp;quot; id=&amp;quot;post-toc&amp;quot;&amp;gt;
-  &amp;lt;h2 class=&amp;quot;post-toc-title&amp;quot;&amp;gt;{{ T &amp;quot;toc&amp;quot; }}&amp;lt;/h2&amp;gt;
-  {{ $globalAutoCollapseToc := .Site.Params.autoCollapseToc | default false }}
-  &amp;lt;div class=&amp;quot;post-toc-content{{ if not (or .Params.autoCollapseToc (and $globalAutoCollapseToc (ne .Params.autoCollapseToc false))) }} always-active{{ end }}&amp;quot;&amp;gt;
-    {{.TableOfContents}}
-  &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
-  window.onload = function () {
-    var fix = $(&#39;.post-toc&#39;);
-    var end = $(&#39;.post-comment&#39;);
-    var fixTop = fix.offset().top, fixHeight = fix.height();
-    var endTop, miss;
-    var offsetTop = fix[0].offsetTop;
-    $(window).scroll(function () {
-      var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-      if (end.length &amp;gt; 0) {
-        endTop = end.offset().top;
-        miss = endTop - docTop - fixHeight;
-      }
-      if (fixTop &amp;lt; docTop) {
-        fix.css({ &#39;position&#39;: &#39;fixed&#39; });
-        if ((end.length &amp;gt; 0) &amp;amp;&amp;amp; (endTop &amp;lt; (docTop + fixHeight))) {
-          fix.css({ top: miss });
-        } else {
-          fix.css({ top: 0 });
-        }
-      } else {
-        fix.css({ &#39;position&#39;: &#39;absolute&#39; });
-        fix.css({ top: offsetTop });
-      }
-    })
-  }
-&amp;lt;/script&amp;gt; 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在文章页的模板&lt;code&gt;/themes/LeaveIt/layouts/_default/single.html&lt;/code&gt;中 &lt;code&gt;&amp;lt;/header&amp;gt;&lt;/code&gt;标签后引入TOC模板&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;	{{ if ( .Site.Params.toc | default true ) }}
-          {{ partial &amp;quot;toc.html&amp;quot; . }}
-	{{ end }}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;添加后重新使用hugo来生成静态页面，可以在文章页查看到已经有toc目录导航了。当然前提是你得在编辑文章的时候使用到 h1，h2等标题样式。&lt;/p&gt;
-
-&lt;p&gt;最后站点的配置文件&lt;code&gt;config.toml&lt;/code&gt;添加以下配置&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;toc = true                # 是否开启目录
-autoCollapseToc = true   # Auto expand and collapse toc
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;放大文章内图片显示&#34;&gt;放大文章内图片显示&lt;/h2&gt;
-
-&lt;p&gt;LeaveIt主题内置了LightGallery灯箱效果，所以图片原状态是比较小，需要点击才能放大，但是通过添加下面的代码就可以让图片放大显示，对眼睛舒服点。&lt;/p&gt;
-
-&lt;p&gt;在 &lt;code&gt;assets/css/_custom.scss&lt;/code&gt; 中添加下面代码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;	.post-warp .post-content img {
-  		max-width: 100%;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;相关文章&#34;&gt;相关文章&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/valine-to-hugo-with-leaveit/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo添加Valine评论系统 以LeaveIt主题为例&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/install-ruby-update-on-centos/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Centos下安装和升级Ruby和sass&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/025/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Leavelt 主题优化&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
     </item>
     
   </channel>
