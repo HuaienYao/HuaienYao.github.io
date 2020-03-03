@@ -5,8 +5,287 @@
     <description>Recent content in Wyane`s Blog on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 21 Feb 2020 16:36:31 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2020 11:11:51 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>利用免费云平台Heroku搭建WebSSH服务sshwifty</title>
+      <link>https://huaien.co/technology/deploy-sshwifty-heroku/</link>
+      <pubDate>Sat, 22 Feb 2020 11:11:51 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/deploy-sshwifty-heroku/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;最近看到一款出自&lt;a href=&#34;https://github.com/niruix/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;niruix&lt;/a&gt;大神的自建WebSSH源码。试用了一下觉得非常不错，就想推荐＋记录一下。因为第一次用Heroku手动部署，所以折腾了好久才可以。本文记录了如何利用免费云平台&lt;a href=&#34;https://www.heroku.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Heroku&lt;/a&gt;搭建sshwifty。&lt;/p&gt;
+
+&lt;h2 id=&#34;什么是webssh&#34;&gt;什么是WebSSH&lt;/h2&gt;
+
+&lt;p&gt;使用WebSocket通过浏览器连接linux，提供灵活的接口，可直接作为一个服务连接通过cmdb获取信息登陆服务器。从而无需Xshell之类的模拟终端工具进行SSH连接，可以比较方便的再多平台使用。&lt;/p&gt;
+
+&lt;h2 id=&#34;什么是sshwifty&#34;&gt;什么是sshwifty&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Sshwifty is a SSH and Telnet connector made for the Web. It can be deployed on your computer or server to provide SSH and Telnet access interface for any compatible (standard) web browser.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;以上来自官方项目页面的介绍。&lt;/p&gt;
+
+&lt;h2 id=&#34;部署方式&#34;&gt;部署方式&lt;/h2&gt;
+
+&lt;p&gt;这个项目提供了多种部署方式。&lt;/p&gt;
+
+&lt;h3 id=&#34;binary&#34;&gt;Binary&lt;/h3&gt;
+
+&lt;p&gt;通过&lt;a href=&#34;https://github.com/niruix/sshwifty/releases&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;release&lt;/a&gt;下载二进制文件直接使用。&lt;/p&gt;
+
+&lt;h3 id=&#34;docker-image&#34;&gt;Docker Image&lt;/h3&gt;
+
+&lt;p&gt;如果你善于使用Docker，可以利用官方提供的Docker镜像来部署。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ docker run --detach \
+  --restart=always \
+  --publish 8182:8182 \
+  --name sshwifty \
+  niruix/sshwifty:latest
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当比需要TLS并且不想设置&lt;code&gt;Docker Volumes&lt;/code&gt;时，可以使用&lt;code&gt;SSHWIFTY_DOCKER_TLSCERT&lt;/code&gt;和&lt;code&gt;SSHWIFTY_DOCKER_TLSCERTKEY&lt;/code&gt;环境变量将凭据文件导入容器并自动应用它们：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ openssl req \
+  -newkey rsa:4096 -nodes -keyout domain.key -x509 -days 90 -out domain.crt
+$ docker run --detach \
+  --restart=always \
+  --publish 8182:8182 \
+  --env SSHWIFTY_DOCKER_TLSCERT=&amp;quot;$(cat domain.crt)&amp;quot; \
+  --env SSHWIFTY_DOCKER_TLSCERTKEY=&amp;quot;$(cat domain.key)&amp;quot; \
+  --name sshwifty \
+  niruix/sshwifty:latest
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;domain.crt&lt;/code&gt;和&lt;code&gt;domain.key&lt;/code&gt;必须是有效的TLS证书和密钥文件，位于要执行&lt;code&gt;docker run&lt;/code&gt;命令的同一台计算机上。&lt;/p&gt;
+
+&lt;h3 id=&#34;compile-from-source-code-recommanded-if-you-re-a-developer&#34;&gt;Compile from source code (Recommanded if you&amp;rsquo;re a developer)&lt;/h3&gt;
+
+&lt;p&gt;官方推荐开发者使用通过源码编译这个方法。&lt;/p&gt;
+
+&lt;p&gt;你的机器需要以下环境&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git&lt;/code&gt;用于拉取源代码&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;node&lt;/code&gt;和&lt;code&gt;npm&lt;/code&gt;用于构建前端应用程序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;go&lt;/code&gt;用于建立后端应用程序&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;执行以下命令&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git clone https://github.com/niruix/sshwifty
+$ cd sshwifty
+$ npm install
+$ npm run build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;deploy-on-the-cloud&#34;&gt;Deploy on the cloud *&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;To deploy this project onto the cloud, Google App Engine or Heroku for example, you need to first download the source code, then generate it locally before deploying it.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm run generate&lt;/code&gt; command will generate all static files and automatically call &lt;code&gt;go generate ./...&lt;/code&gt; to bind those static files directly into program source code. And you need those generated source code to get the software to function.&lt;/p&gt;
+
+&lt;p&gt;Trying to deploy ungenerated code directly to cloud will lead to failure, as required source code is missing.&lt;/p&gt;
+
+&lt;p&gt;Also keep in mind, if the cloud deployment process is &lt;code&gt;git&lt;/code&gt; based, you may have to modify &lt;code&gt;.gitignore&lt;/code&gt; file in order to allow all required files to be uploaded.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;以上来自官方介绍，但是在&lt;a href=&#34;https://github.com/niruix/sshwifty/issues/5&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;issues#5&lt;/a&gt;作者提供了一个更简单的方法，就是使用&lt;code&gt;.heroku.yml&lt;/code&gt;来快速部署。下面就是这次部署的教程。&lt;/p&gt;
+
+&lt;p&gt;heroku.yml内容&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;build:
+  config:
+    SSHWIFTY_LISTENPORT: SSHWIFTY_ENV_RENAMED:PORT
+  docker:
+    web: Dockerfile
+run:
+  web: /sshwifty.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;部署到heroku详细教程&#34;&gt;部署到Heroku详细教程&lt;/h2&gt;
+
+&lt;p&gt;本文主要详细记录了如何将sshwifty部署到免费云平台Heroku。&lt;/p&gt;
+
+&lt;h3 id=&#34;什么是heroku&#34;&gt;什么是Heroku&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Heroku是一个支持多种编程语言的云平台即服务。在2010年被Salesforce.com收购。Heroku作为最元祖的云平台之一，从2007年6月起开发，当时它仅支持Ruby，但后来增加了对Java、Node.js、Scala、Clojure、Python以及PHP和Perl的支持。
+                     &amp;ndash; 来自维基百科&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;主要是Heroku提供了免费的套餐，未验证信用卡用户可以免费使用550小时，验证之后长达1000小时，用一个月绰绰有余了。&lt;/p&gt;
+
+&lt;p&gt;验证信用卡之后有以下好处：
+- Use more than one dyno in the app.
+- Add any add-on to the app, even if the add-on is free. The only exceptions to this are the free plans for the Heroku Postgres and Heroku Connect add-ons, which can be used without verification.
+- Add a custom domain to the app.
+- Receive the transfer of an app that has paid resources.
+- Exceed default one-off dyno limits on the app.
+- Have more than 5 apps at a time. Verified accounts may have up to 100 apps.&lt;/p&gt;
+
+&lt;p&gt;通过&lt;a href=&#34;https://dashboard.heroku.com/account/billing&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Account-Billing&lt;/a&gt;可以查看到当前使用时长和剩余时长
+没有验证信用卡的使用情况
+&lt;img src=&#34;https://i.loli.net/2020/03/03/difWV19eEYwOt2Z.png&#34; alt=&#34;没有验证信用卡的使用情况&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;验证信用卡后的使用情况
+&lt;img src=&#34;https://i.loli.net/2020/03/03/jL1Ctp4EWvilnGx.png&#34; alt=&#34;验证信用卡后的使用情况&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Heroku的使用教程，会写一个的。这里先略过。&lt;/p&gt;
+
+&lt;h3 id=&#34;部署sshwifty到heroku&#34;&gt;部署sshwifty到Heroku&lt;/h3&gt;
+
+&lt;p&gt;1.首先确保本地安装了&lt;code&gt;git,node,npm,heroku CLI&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git version
+git version 1.8.3.1
+$ node -v
+v10.19.0
+$ npm -v
+6.13.4
+$ heroku -v
+heroku/7.38.2 linux-x64 node-v12.13.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果版本结果，说明已经安装了。&lt;/p&gt;
+
+&lt;p&gt;如果没有安装，一下几个教程可做参考：
+- &lt;a href=&#34;https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Git安装教程&lt;/a&gt;
+- &lt;a href=&#34;https://www.liaoxuefeng.com/wiki/1022910821149312/1023025597810528&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;安装Node.js和npm&lt;/a&gt;
+- &lt;a href=&#34;https://devcenter.heroku.com/articles/heroku-cli&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;The Heroku CLI&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2.接着拉取作者源码到本地&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git clone https://github.com/niruix/sshwifty
+$ cd sshwifty
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2.查看&lt;code&gt;.heroku.yml&lt;/code&gt;是否存在&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls
+application      go.mod      package.json       sshwifty.conf.example.json
+babel.config.js  go.sum      package-lock.json  sshwifty.go
+DEPENDENCIES.md  heroku.yml  README.md          ui
+Dockerfile       LICENSE.md  Screenshot.png     webpack.config.js
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3.登录Heroku&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ heroku login
+heroku: Press any key to open up the browser to login or q to exit
+ ›   Warning: If browser does not open, visit
+ ›   https://cli-auth.heroku.com/auth/browser/***
+heroku: Waiting for login...
+Logging in... done
+Logged in as me@example.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我这边浏览器没弹出登录窗口，需要自己将终端显示的URL复制到浏览器打开点击登录后，终端就会自动识别登录状态。&lt;/p&gt;
+
+&lt;p&gt;4.添加Heroku远程库
+&lt;code&gt;yourapp&lt;/code&gt;为你在Heroku创建的应用名字（App name）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ heroku git:remote -a yourapp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;5.查看是否成功添加远程库&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote -v
+heroku  https://git.heroku.com/yourapp.git (fetch)
+heroku  https://git.heroku.com/yourapp.git (push)
+origin  https://github.com/niruix/sshwifty (fetch)
+origin  https://github.com/niruix/sshwifty (push)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;出现以上的话，说明添加成功。&lt;/p&gt;
+
+&lt;p&gt;6.将应用添加为容器
+这一步是作者在&lt;a href=&#34;https://github.com/niruix/sshwifty/issues/5&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;issues#5&lt;/a&gt;回复的官方教程的&amp;rdquo;Get started&amp;rdquo; step 3。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ heroku stack:set container
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;7.推送应用到Heroku远程库并部署&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git push heroku master
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;最后应该出现类似以下结果&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;remote: Removing intermediate container 157d1927853a
+remote:  ---&amp;gt; 461f43c3b47f
+remote: Successfully built 461f43c3b47f
+remote: Successfully tagged 85bc4064899667389e87d36d0d60e0356cf6e759:latest
+remote:
+remote: === Pushing web (Dockerfile)
+remote: Tagged image &amp;quot;85bc4064899667389e87d36d0d60e0356cf6e759&amp;quot; as &amp;quot;registry.heroku.com/wssh/web&amp;quot;
+remote: The push refers to repository [registry.heroku.com/wssh/web]
+remote: b06b44c43368: Preparing
+remote: 58ad0d2fd01d: Preparing
+remote: 8781a95c3755: Preparing
+remote: 5216338b40a7: Preparing
+remote: b06b44c43368: Pushed
+remote: 8781a95c3755: Pushed
+remote: 5216338b40a7: Pushed
+remote: 58ad0d2fd01d: Pushed
+remote: latest: digest: sha256:274d6bc3c207bd51629313a4a5b4535f22d35652f344e583064e4f860d980ef2 size: 1157
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/yourapp.git
+ * [new branch]      master -&amp;gt; master
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这时Heroku的后台也会显示&lt;code&gt;Deployed b2210ce2&lt;/code&gt;状态
+但是这样还是无法访问。还需要执行下面一步。&lt;/p&gt;
+
+&lt;p&gt;8.Heroku后台添加一条配置信息
+这是为了告诉Sshwifty从Heroku运行时的环境变量PORT中读取端口号。
+在 Heroku 你的应用的后台&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-url&#34;&gt;https://dashboard.heroku.com/apps/yourapp/settings 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;yourapp为你设置的应用名&lt;/p&gt;
+
+&lt;p&gt;在页面中找到&lt;code&gt;Config Vars&lt;/code&gt;项目，点击&lt;code&gt;Reveal Config Vars&lt;/code&gt;显示配置。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/03/03/xsfrwgumeLkqYNy.png&#34; alt=&#34;显示config前&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在&lt;code&gt;KEY&lt;/code&gt;填入&lt;code&gt;SSHWIFTY_LISTENPORT&lt;/code&gt;，&lt;code&gt;VALUE&lt;/code&gt; 填入 &lt;code&gt;SSHWIFTY_ENV_RENAMED:PORT&lt;/code&gt; 后点击 &lt;code&gt;Add&lt;/code&gt;
+&lt;img src=&#34;https://i.loli.net/2020/03/03/ZthBYF5oEzSKsvq.png&#34; alt=&#34;填入相关值&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;添加后如下所示
+&lt;img src=&#34;https://i.loli.net/2020/03/03/Y3PxhDQRCvqi5XU.png&#34; alt=&#34;填好的状态&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这时候你再打开你的app页面就可以访问啦~
+&lt;img src=&#34;https://i.loli.net/2020/03/03/Jf85rxEKNGUctkz.png&#34; alt=&#34;官方演示&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我这里搭建的地址是下面这个，如果有需要可以使用。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wssh.herokuapp.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://wssh.herokuapp.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;注意点&#34;&gt;注意点&lt;/h3&gt;
+
+&lt;p&gt;最后一步的添加端口号设置很重要，不然无法访问。&lt;/p&gt;
+
+&lt;p&gt;Heroku的免费套餐如果应用在30分钟内没有访问，应用将会进入休眠状态，再次访问的时候会花点时间激活，但是也不会等太久。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/niruix/sshwifty&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;sshwifty&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://devcenter.heroku.com/articles/build-docker-images-heroku-yml#getting-started&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;heroku.yml getting-started&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>Linux使用cp命令复制目录错误 cp:omitting directory</title>
@@ -570,6 +849,22 @@ git fetch upstream
 &lt;td&gt;2021-02-25&lt;/td&gt;
 &lt;td&gt;￥20&lt;/td&gt;
 &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;54&lt;/td&gt;
+&lt;td&gt;loc.tokyo&lt;/td&gt;
+&lt;td&gt;loc&lt;/td&gt;
+&lt;td&gt;2021-03-01&lt;/td&gt;
+&lt;td&gt;￥20&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;55&lt;/td&gt;
+&lt;td&gt;uptu.xyz&lt;/td&gt;
+&lt;td&gt;上图&lt;/td&gt;
+&lt;td&gt;2021-03-01&lt;/td&gt;
+&lt;td&gt;￥15&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -921,6 +1216,22 @@ git fetch upstream
 &lt;td&gt;肉丝&lt;/td&gt;
 &lt;td&gt;2021-02-25&lt;/td&gt;
 &lt;td&gt;￥10&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;54&lt;/td&gt;
+&lt;td&gt;loc.tokyo&lt;/td&gt;
+&lt;td&gt;loc&lt;/td&gt;
+&lt;td&gt;2021-03-01&lt;/td&gt;
+&lt;td&gt;￥20&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;55&lt;/td&gt;
+&lt;td&gt;uptu.xyz&lt;/td&gt;
+&lt;td&gt;上图&lt;/td&gt;
+&lt;td&gt;2021-03-01&lt;/td&gt;
+&lt;td&gt;￥15&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -2583,205 +2894,6 @@ root@instance:/home/ubuntu# docker attach baota
 &lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/025/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Leavelt 主题优化&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Centos安装和升级Ruby和sass</title>
-      <link>https://huaien.co/technology/install-ruby-update-on-centos/</link>
-      <pubDate>Wed, 31 Jul 2019 04:59:52 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/install-ruby-update-on-centos/</guid>
-      <description>&lt;h2 id=&#34;安装ruby&#34;&gt;安装Ruby&lt;/h2&gt;
-
-&lt;p&gt;Centos下在线安装Ruby,版本可能比较旧&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo yum install ruby
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装完成后可以通过&lt;code&gt;ruby -v&lt;/code&gt;来查看版本&lt;/p&gt;
-
-&lt;h2 id=&#34;rvm升级ruby&#34;&gt;RVM升级Ruby&lt;/h2&gt;
-
-&lt;p&gt;如果版本太低了，可以听过RVM来升级Ruby&lt;/p&gt;
-
-&lt;p&gt;什么是RVM？
-&amp;gt; RAM（Ruby Version Manager ）是一款RAM的命令行工具，可以使用RAM轻松安装，管理Ruby版本。RVM包含了Ruby的版本管理和Gem库管理(gemset)&lt;/p&gt;
-
-&lt;p&gt;可以通过以下命令来安装RVM&lt;/p&gt;
-
-&lt;p&gt;先安装GPG keys:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;再安装RVM:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;\curl -sSL https://get.rvm.io | bash -s stable
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;如果需要在安装RVM的同时安装Ruby 和 Rails 的话用下面的命令:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;\curl -sSL https://get.rvm.io | bash -s stable --rails
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装完成后需要更新配置文件，来使其生效&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;source /etc/profile.d/rvm.sh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;接着可以通过&lt;code&gt;rvm -v&lt;/code&gt;来查看RVM版本信息，如果可以代表安装成功。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@host ~]# rvm -v
-rvm 1.29.9 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;执行以下命令来查看Ruby版本&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rvm list known
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;结果如下&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@host ~]# rvm list known
-# MRI Rubies
-[ruby-]1.8.6[-p420]
-[ruby-]1.8.7[-head] # security released on head
-[ruby-]1.9.1[-p431]
-[ruby-]1.9.2[-p330]
-[ruby-]1.9.3[-p551]
-[ruby-]2.0.0[-p648]
-[ruby-]2.1[.10]
-[ruby-]2.2[.10]
-[ruby-]2.3[.8]
-[ruby-]2.4[.6]
-[ruby-]2.5[.5]
-[ruby-]2.6[.3]
-[ruby-]2.7[.0-preview1]
-ruby-head
-
-# for forks use: rvm install ruby-head-&amp;lt;name&amp;gt; --url https://github.com/githuby.git --branch 2.2
-
-# JRuby
-jruby-1.6[.8]
-jruby-1.7[.27]
-jruby-9.1[.17.0]
-jruby[-9.2.7.0]
-jruby-head
-
-# Rubinius
-rbx-1[.4.3]
-rbx-2.3[.0]
-rbx-2.4[.1]
-rbx-2[.5.8]
-rbx-3[.107]
-rbx-4[.3]
-rbx-head
-
-# TruffleRuby
-truffleruby[-19.1.0]
-
-# Opal
-opal
-
-# Minimalistic ruby implementation - ISO 30170:2012
-mruby-1.0.0
-mruby-1.1.0
-mruby-1.2.0
-mruby-1.3.0
-mruby-1[.4.1]
-mruby-2[.0.1]
-mruby[-head]
-
-# Ruby Enterprise Edition
-ree-1.8.6
-ree[-1.8.7][-2012.02]
-
-# Topaz
-topaz
-
-# MagLev
-maglev-1.0.0
-maglev-1.1[RC1]
-maglev[-1.2Alpha4]
-maglev-head
-
-# Mac OS X Snow Leopard Or Newer
-macruby-0.10
-macruby-0.11
-macruby[-0.12]
-macruby-nightly
-macruby-head
-
-# IronRuby
-ironruby[-1.1.3]
-ironruby-head
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后就可以通过下面的命令来安装指定版本的Ruby，例如Ruby2.5&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rvm install 2.5
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装后可以通过下面的命令来检测是否安装成功&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@host ~]# ruby -v
-ruby 2.5.5p157 (2019-03-15 revision 67260) [i686-linux]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;添加ruby仓库&#34;&gt;添加ruby仓库&lt;/h2&gt;
-
-&lt;p&gt;如何添加ruby仓库&lt;/p&gt;
-
-&lt;p&gt;添加aliyun镜像并检测Ruby版本&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gem sources -a http://mirrors.aliyun.com/rubygems/ 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;使用rvm安装发现下载缓慢，可以考虑删除原来的仓库地址，只保留阿里云镜像。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gem sources --remove https://rubygems.org/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;延伸阅读&#34;&gt;延伸阅读&lt;/h2&gt;
-
-&lt;p&gt;为什么要安装Ruby呢？因为Hugo的这个LeaveIt主题有用到sass编译，但是sass编译需要安装sass，&lt;/p&gt;
-
-&lt;p&gt;因为以上安装了Ruby，所以可以通过 gem安装sass。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gem install sass
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安装完成后用命令查看版本，看是否安装成功&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[root@host ~]# sass -v
-Ruby Sass 3.7.4
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;显示sass安装成功后，我们每次在修改了LeaveIt主题的样式后都需要执行下面的命令，不然修改的样式没有变化。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sass --style compressed [Leacelt 目录]/assets/css/main.scss:[Leacelt 目录]/resources/_gen/assets/scss/css/main.scss_b95b077eb505d5c0aff8055eaced30ad.content
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;需要替换上面的&lt;code&gt;[Leacelt 目录]&lt;/code&gt;，命令执行后就会在LeaveIt主题目录下的&lt;code&gt;/resources/_gen/assets/scss/css/&lt;/code&gt;下更新&lt;code&gt;.content文件&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;其实还有另一种方法，你可以直接使用Hugo提供的hugo_extended版本就可以直接编译sass了，不需要另外执行sass编译命令。         可以参考&lt;a href=&#34;https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/#%E5%8E%9F%E5%9B%A0/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这里&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;相关文章&#34;&gt;相关文章&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo的LeaveIt主题优化记录一-修复错位，添加toc&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;参考链接&#34;&gt;参考链接&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://rvm.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;RVM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/qq_26440803/article/details/82717244/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Centos7安装升级Ruby&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/025/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Leavelt 主题优化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://akisnote.com/2018/12/sass-scss/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;簡単！便利！HugoでSass/Scssを使う方法！&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.sass.hk/install/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;如何安装Sass&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
   </channel>

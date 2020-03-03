@@ -6,10 +6,21 @@
     <description>Recent content in 技术记录 on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 21 Feb 2020 16:36:31 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2020 11:11:51 +0900</lastBuildDate>
     
 	<atom:link href="https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>利用免费云平台Heroku搭建WebSSH服务sshwifty</title>
+      <link>https://huaien.co/technology/deploy-sshwifty-heroku/</link>
+      <pubDate>Sat, 22 Feb 2020 11:11:51 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/deploy-sshwifty-heroku/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;最近看到一款出自&lt;a href=&#34;https://github.com/niruix/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;niruix&lt;/a&gt;大神的自建WebSSH源码。试用了一下觉得非常不错，就想推荐＋记录一下。因为第一次用Heroku手动部署，所以折腾了好久才可以。本文记录了如何利用免费云平台&lt;a href=&#34;https://www.heroku.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Heroku&lt;/a&gt;搭建sshwifty。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Linux使用cp命令复制目录错误 cp:omitting directory</title>
