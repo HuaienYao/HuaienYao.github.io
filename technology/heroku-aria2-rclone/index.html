@@ -20,9 +20,9 @@
   gtag('config', 'UA-122761254-3');
 </script>
   
-  <link rel="prev" href="https://huaien.co/technology/heroku-aria2-rclone/" />
-  
-  <link rel="canonical" href="https://huaien.co/technology/chrome-crash-windows10/" />
+  <link rel="prev" href="https://huaien.co/technology/deploy-sshwifty-heroku/" />
+  <link rel="next" href="https://huaien.co/technology/chrome-crash-windows10/" />
+  <link rel="canonical" href="https://huaien.co/technology/heroku-aria2-rclone/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -43,10 +43,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <title>
        
        
-           升级到Windows10后Chrome打开就崩溃的问题 | Wyane`s Blog
+           利用Heroku部署Aria2离线下载并同步上传到Onedrive等网盘 | Wyane`s Blog
        
   </title>
-  <meta name="title" content="升级到Windows10后Chrome打开就崩溃的问题 | Wyane`s Blog">
+  <meta name="title" content="利用Heroku部署Aria2离线下载并同步上传到Onedrive等网盘 | Wyane`s Blog">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -65,9 +65,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          "@id": "https:\/\/huaien.co\/"
     },
     "articleSection" : "posts",
-    "name" : "升级到Windows10后Chrome打开就崩溃的问题",
-    "headline" : "升级到Windows10后Chrome打开就崩溃的问题",
-    "description" : "本文记录了解决升级到Windows10后Chrome打开就崩溃的问题",
+    "name" : "利用Heroku部署Aria2离线下载并同步上传到Onedrive等网盘",
+    "headline" : "利用Heroku部署Aria2离线下载并同步上传到Onedrive等网盘",
+    "description" : "本文记录了如何利用Heroku部署Aria2离线下载并同步上传到Onedrive等网盘的过程",
     "inLanguage" : "zh-cn",
     "author" : "Wyane",
     "creator" : "Wyane",
@@ -75,11 +75,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "accountablePerson" : "Wyane",
     "copyrightHolder" : "Wyane",
     "copyrightYear" : "2020",
-    "datePublished": "2020-03-02 13:55:06 \x2b0900 JST",
-    "dateModified" : "2020-03-02 13:55:06 \x2b0900 JST",
-    "url" : "https:\/\/huaien.co\/technology\/chrome-crash-windows10\/",
-    "wordCount" : "581",
-    "keywords" : [ "Google Chrome", "Wyane`s Blog"]
+    "datePublished": "2020-02-24 15:28:36 \x2b0900 JST",
+    "dateModified" : "2020-02-24 15:28:36 \x2b0900 JST",
+    "url" : "https:\/\/huaien.co\/technology\/heroku-aria2-rclone\/",
+    "wordCount" : "1419",
+    "keywords" : [ "Heroku","Aria2","rclone", "Wyane`s Blog"]
 }
 </script>
  
@@ -145,7 +145,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">升级到Windows10后Chrome打开就崩溃的问题</h1>
+        <h1 class="post-title" itemprop="name headline">利用Heroku部署Aria2离线下载并同步上传到Onedrive等网盘</h1>
         <div class="post-meta">
         
                       
@@ -155,11 +155,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
                 </span>
           <span class="post-time">
-         <i class="far fa-calendar-alt"></i>  <time datetime=2020-03-02 itemprop="datePublished">2020-03-02</time>
+         <i class="far fa-calendar-alt"></i>  <time datetime=2020-02-24 itemprop="datePublished">2020-02-24</time>
            </span>
      
-         <i class="far fa-file-word"></i> <span class="post-word-count"> 581 字</span>
-         <i class="far fa-clock"></i> <span class="more-meta"> 2 分钟</span>
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 1419 字</span>
+         <i class="far fa-clock"></i> <span class="more-meta"> 3 分钟</span>
           
         </div>
     </header>
@@ -172,8 +172,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <ul>
 <li>
 <ul>
-<li><a href="#问题">问题</a></li>
-<li><a href="#解决方法">解决方法</a></li>
+<li><a href="#背景">背景</a></li>
+<li><a href="#什么功能">什么功能</a></li>
+<li><a href="#如何部署">如何部署</a></li>
+<li><a href="#享用">享用</a></li>
+<li><a href="#参考">参考</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -214,7 +217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
         
 
-        <img src="https://i.loli.net/2020/03/03/xU971KuRVQgaXhn.png" class="featured_image">
+        <img src="https://i.loli.net/2020/03/03/L3WfZyC5jlOv8Dk.png" class="featured_image">
         
         
      
@@ -226,53 +229,118 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
           
 
-          <h2 id="问题">问题</h2>
+          <h2 id="背景">背景</h2>
 
-<p>由于之前Windows 7 EOS到期的时候我正好放假不在公司，所以公司的电脑还是Windows7，昨天有人提醒了一下我才知道要升级，今天将一个 Windows 7 的PC升级到 Windows 10，但是在升级后使用Chrome的时候，Chrome一打开就出现崩溃，</p>
+<p>最近在MJJ论坛看到<a href="https://www.hostloc.com/thread-641710-1-1.html" rel="nofollow noreferrer" target="_blank">在Heroku上用Aria2下载然后用rclone同步到云盘去的服务</a>，作者将原来的离线下载功能的基础上加上同步上传到Onedrive，Google Drive的功能，当然是用了rclone。</p>
 
-<p>如下图所示：
-<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2020/03/03/rlXHROAYTnpcFQx.png" alt="打开Chrome" class="lazyload"><figcaption class="image-caption">打开Chrome</figcaption></figure></p>
+<h2 id="什么功能">什么功能</h2>
 
-<p>打开新标签页也是
-<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2020/03/03/zpi89VDH1qJZ2kh.png" alt="打开新标签页" class="lazyload"><figcaption class="image-caption">打开新标签页</figcaption></figure>
-打开设置
-<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2020/03/03/BuqCt8YW9GvdJ17.png" alt="打开设置" class="lazyload"><figcaption class="image-caption">打开设置</figcaption></figure></p>
+<p>可以直接在免费的云平台Heroku部署离线下载工具Aria2和可视化UI工具Ariang，并且可以在下载完成后通过rclone自动上传到指定网盘或存储。</p>
 
-<p>在备份Chrome的用户资料，卸载Chrome重装后还是出现以上问题。</p>
+<p>我试着搭建了一下，Heroku的速度的确很快，下载Onedrive的资源最高可达60m/s以上。如果是热门的bt种子的话，速度也不错。</p>
 
-<h2 id="解决方法">解决方法</h2>
+<h2 id="如何部署">如何部署</h2>
 
-<p>在查找了一圈，Google Chrome 帮助中心<a href="https://support.google.com/chrome/thread/17477297?hl=ja" rel="nofollow noreferrer" target="_blank">这个问题</a>找到可以用以下方法临时解决。
-&gt; 78.0.3904.70で、同じ症状発生しています。
-一度発しすると「設定」等も開けないため
-アップデートやバージョン確認もできなくなります
-約４０００台の管理下で１０台以上発生してきております。
-バージョンアップが進むと広がりそうです。
-&gt;
-&gt; 【暫定的な解決方法】
-&gt; ①起動ショートカットのオプションに「&ndash;no-sandbox」を追加
-&gt;
-&gt; ②旧バージョンへ入れなおす
-&gt; 76.0.3809.100での動作を確認、ただし再度アップデートかかると再発します。
-&gt;
-&gt; 【検証したOS環境】
-&gt; win10 1709 1803 どちでも発生
-&gt; win8 発生せず
-&gt;
-&gt; 【追加検証】
-&gt; アドオンなどを入れてないシンプルな状態でも発生を確認</p>
+<p>这里省去注册Heroku以及登录的过程。</p>
 
-<p>在桌面的Chrome的快捷方式右击点击属性，在源文件路径的最后添加以下启动选项<code>--no-sandbox</code>
-也就是路径为：</p>
+<p>作者的项目：<a href="https://github.com/maple3142/" rel="nofollow noreferrer" target="_blank">maple3142</a> / <a href="https://github.com/maple3142/heroku-aria2c" rel="nofollow noreferrer" target="_blank">heroku-aria2c</a></p>
 
-<pre><code>&quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&quot; --no-sandbox
+<p>点击进入作者的项目，在下面的介绍内容中有个紫色的Deploy按钮，点击它==或者==直接点击本文中下面的按钮</p>
+
+<p><a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fmaple3142%2Fheroku-aria2c&amp;template=https%3A%2F%2Fgithub.com%2Fmaple3142%2Fheroku-aria2c" rel="nofollow noreferrer" target="_blank"><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" alt="点击我直接部署" class="lazyload"><figcaption class="image-caption">点击我直接部署</figcaption></figure></a></p>
+
+<p>就会进入Heroku的创建app页面。
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2020/03/03/t81HwF3svxidCbh.png" alt="Heroku的创建app页面" class="lazyload"><figcaption class="image-caption">Heroku的创建app页面</figcaption></figure></p>
+
+<p>这时候需要填的东西如下，带*为必填项</p>
+
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>解释</th>
+<th>示例</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>App name</code> *</td>
+<td>你要创建的应用名</td>
+<td><code>aria2dl</code></td>
+</tr>
+
+<tr>
+<td><code>ARIA2C_SECRET</code> *</td>
+<td>进入Aria2的密码</td>
+<td><code>password</code></td>
+</tr>
+
+<tr>
+<td><code>HEROKU_APP_NAME</code> *</td>
+<td>和上面填的应用名一样</td>
+<td><code>aria2dl</code></td>
+</tr>
+
+<tr>
+<td><code>RCLONE_CONFIG</code></td>
+<td>你的RCLONE配置</td>
+<td>见下文</td>
+</tr>
+
+<tr>
+<td><code>ARIA2C_SECRET</code></td>
+<td>需要同步的目标网盘的路径必须以<code>/</code>开头</td>
+<td><code>/tmp</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>最后两个是如果你需要将离线下载的文件同步到自己的网盘或者存储的话才需要填写。</p>
+
+<p>但是建议同步到自己的网盘，因为Heroku保存的问题好像就一个小时还是可能休眠了重启了就消失了。两面性吧，好处是可以通过休眠重启来删除文件，不好的地方是文件不能长久保存。</p>
+
+<p><code>RCLONE_CONFIG</code>这个选项的话我一开始碰了壁，后来知道原来这么写。
+前提是你已经配置过rclone，如果是在Windows下配置过rclone的话，一般配置文件在<code>/$HOME/.config/rclone/rclone.conf</code>，也可以通过命令<code>rclone config file</code>来显示配置文件路径。</p>
+
+<p>打开对应的配置文件<code>rclone.conf</code>，可以看到格式为下面的内容，或者直接使用<code>rclone</code>命令也可以查看 <code>rclone config show [&lt;remote&gt;] [flags]</code></p>
+
+<pre><code class="language-conf">[XXDrive]
+type = onedrive
+token = {&quot;access_token&quot;:&quot;省略&quot;,&quot;expiry&quot;:&quot;2020-02-29T00:06:11.2713766+09:00&quot;}
+drive_id = b!mcwoiDfma0qsSX_省略gSqJBBrD9W6XX
+drive_type = business
 </code></pre>
 
-<p>如图所示：</p>
+<p>只要选下面这些内容填入<code>RCLONE_CONFIG</code>选项就可以，其实就是不要盘名和每行用<code>\n</code>来连接，但是我试了下像下面这样换行 加上<code>\n</code>也是可以。。。</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2020/03/03/zL3j5ADtheQuFZJ.png" alt="快捷方式添加启动选项" class="lazyload"><figcaption class="image-caption">快捷方式添加启动选项</figcaption></figure></p>
+<pre><code>type = onedrive\n
+token = {&quot;access_token&quot;:&quot;省略&quot;,&quot;expiry&quot;:&quot;2020-02-29T00:06:11.2713766+09:00&quot;}\n
+drive_id = b!mcwoiDfma0qsSX_省略gSqJBBrD9W6XX\n
+drive_type = business
+</code></pre>
 
-<p>然后就可以打开Chrome了。</p>
+<p>最后一个选项<code>ARIA2C_SECRET</code>的话需要，就是你要上传到那个网盘的哪个路径下，可以用<code>/</code>代表上传到根目录。</p>
+
+<p>最后点击<code>Deploy app</code>就可以看到它自动部署了。等看到部署成功后就可以点击<code>Open app</code>或者<code>View</code>来打开或者直接访问 <code>https://你设置好的应用名.herokuapp.com</code>。</p>
+
+<h2 id="享用">享用</h2>
+
+<p>打开后显示如下的话说明部署没问题</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2020/03/03/NAaYSChH9mLKwuE.png" alt="部署成功" class="lazyload"><figcaption class="image-caption">部署成功</figcaption></figure>
+在输入框内填入你设置好的<code>ARIA2C_SECRET</code>密码，比如<code>password</code>，然后点击你要去的地方
+ - Go to AriaNg panel 离线下载面板
+ - View downloaded files 查看下载后的文件</p>
+
+<p>这里感谢<a href="https://github.com/maple3142/" rel="nofollow noreferrer" target="_blank">maple3142</a>大佬</p>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+<li><a href="https://github.com/maple3142/heroku-aria2c" rel="nofollow noreferrer" target="_blank">heroku-aria2c</a></li>
+<li><a href="https://rclone.org/commands/" rel="nofollow noreferrer" target="_blank">Rclone Commands</a></li>
+</ul>
     </div>
 
     <div class="post-copyright">
@@ -286,7 +354,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="copyright-item">
               <span><i class="fa fa-link"></i></span>
                    
-                    <span><a href=https://huaien.co/technology/chrome-crash-windows10/>https://huaien.co/technology/chrome-crash-windows10/</span>
+                    <span><a href=https://huaien.co/technology/heroku-aria2-rclone/>https://huaien.co/technology/heroku-aria2-rclone/</span>
             </p>
             
               
@@ -317,8 +385,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="https://huaien.co/tags/google-chrome/">
-                    #Google Chrome</a></span>
+            <span class="tag"><a href="https://huaien.co/tags/heroku/">
+                    #Heroku</a></span>
+            
+            <span class="tag"><a href="https://huaien.co/tags/aria2/">
+                    #Aria2</a></span>
+            
+            <span class="tag"><a href="https://huaien.co/tags/rclone/">
+                    #rclone</a></span>
             
             </section>
         
@@ -330,8 +404,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="post-nav">
         
-        <a href="https://huaien.co/technology/heroku-aria2-rclone/" class="prev" rel="prev" title="利用Heroku部署Aria2离线下载并同步上传到Onedrive等网盘"><i class="iconfont icon-left"></i>&nbsp;利用Heroku部署Aria2离线下载并同步上传到Onedrive等网盘</a>
+        <a href="https://huaien.co/technology/deploy-sshwifty-heroku/" class="prev" rel="prev" title="利用免费云平台Heroku搭建WebSSH服务sshwifty"><i class="iconfont icon-left"></i>&nbsp;利用免费云平台Heroku搭建WebSSH服务sshwifty</a>
          
+        
+        <a href="https://huaien.co/technology/chrome-crash-windows10/" class="next" rel="next" title="升级到Windows10后Chrome打开就崩溃的问题">升级到Windows10后Chrome打开就崩溃的问题&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 <br>

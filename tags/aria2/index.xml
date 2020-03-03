@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aria2 on Wyane`s Blog</title>
+    <link>https://huaien.co/tags/aria2/</link>
+    <description>Recent content in Aria2 on Wyane`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 24 Feb 2020 15:28:36 +0900</lastBuildDate>
+    
+	<atom:link href="https://huaien.co/tags/aria2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>利用Heroku部署Aria2离线下载并同步上传到Onedrive等网盘</title>
+      <link>https://huaien.co/technology/heroku-aria2-rclone/</link>
+      <pubDate>Mon, 24 Feb 2020 15:28:36 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/heroku-aria2-rclone/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;最近在MJJ论坛看到&lt;a href=&#34;https://www.hostloc.com/thread-641710-1-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;在Heroku上用Aria2下载然后用rclone同步到云盘去的服务&lt;/a&gt;，作者将原来的离线下载功能的基础上加上同步上传到Onedrive，Google Drive的功能，当然是用了rclone。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
