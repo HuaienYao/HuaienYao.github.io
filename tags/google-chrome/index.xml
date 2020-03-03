@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Chrome on Wyane`s Blog</title>
+    <link>https://huaien.co/tags/google-chrome/</link>
+    <description>Recent content in Google Chrome on Wyane`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 02 Mar 2020 13:55:06 +0900</lastBuildDate>
+    
+	<atom:link href="https://huaien.co/tags/google-chrome/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>升级到Windows10后Chrome打开就崩溃的问题</title>
+      <link>https://huaien.co/technology/chrome-crash-windows10/</link>
+      <pubDate>Mon, 02 Mar 2020 13:55:06 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/chrome-crash-windows10/</guid>
+      <description>&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
+
+&lt;p&gt;由于之前Windows 7 EOS到期的时候我正好放假不在公司，所以公司的电脑还是Windows7，昨天有人提醒了一下我才知道要升级，今天将一个 Windows 7 的PC升级到 Windows 10，但是在升级后使用Chrome的时候，Chrome一打开就出现崩溃，&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

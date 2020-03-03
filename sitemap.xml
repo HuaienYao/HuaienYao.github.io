@@ -4,7 +4,77 @@
     <url>
       <loc>https://huaien.co/categories/</loc>
       
-      <lastmod>2020-02-25T11:11:51+09:00</lastmod>
+      <lastmod>2020-03-02T13:55:06+09:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/google-chrome/</loc>
+      
+      <lastmod>2020-03-02T13:55:06+09:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/posts/</loc>
+      
+      <lastmod>2020-03-02T13:55:06+09:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/</loc>
+      
+      <lastmod>2020-03-02T13:55:06+09:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/</loc>
+      
+      <lastmod>2020-03-02T13:55:06+09:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/technology/chrome-crash-windows10/</loc>
+      
+      <lastmod>2020-03-02T13:55:06+09:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</loc>
+      
+      <lastmod>2020-03-02T13:55:06+09:00</lastmod>
       
       
       
@@ -26,59 +96,11 @@
     </url>
   
     <url>
-      <loc>https://huaien.co/posts/</loc>
-      
-      <lastmod>2020-02-25T11:11:51+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/tags/</loc>
-      
-      <lastmod>2020-02-25T11:11:51+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/</loc>
-      
-      <lastmod>2020-02-25T11:11:51+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://huaien.co/technology/deploy-sshwifty-heroku/</loc>
       
       <lastmod>2020-02-25T11:11:51+09:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</loc>
-      
-      <lastmod>2020-02-25T11:11:51+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>

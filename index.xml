@@ -5,8 +5,63 @@
     <description>Recent content in Wyane`s Blog on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 22 Feb 2020 11:11:51 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2020 13:55:06 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>升级到Windows10后Chrome打开就崩溃的问题</title>
+      <link>https://huaien.co/technology/chrome-crash-windows10/</link>
+      <pubDate>Mon, 02 Mar 2020 13:55:06 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/chrome-crash-windows10/</guid>
+      <description>&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
+
+&lt;p&gt;由于之前Windows 7 EOS到期的时候我正好放假不在公司，所以公司的电脑还是Windows7，昨天有人提醒了一下我才知道要升级，今天将一个 Windows 7 的PC升级到 Windows 10，但是在升级后使用Chrome的时候，Chrome一打开就出现崩溃，&lt;/p&gt;
+
+&lt;p&gt;如下图所示：
+&lt;img src=&#34;https://i.loli.net/2020/03/03/rlXHROAYTnpcFQx.png&#34; alt=&#34;打开Chrome&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;打开新标签页也是
+&lt;img src=&#34;https://i.loli.net/2020/03/03/zpi89VDH1qJZ2kh.png&#34; alt=&#34;打开新标签页&#34; /&gt;
+打开设置
+&lt;img src=&#34;https://i.loli.net/2020/03/03/BuqCt8YW9GvdJ17.png&#34; alt=&#34;打开设置&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在备份Chrome的用户资料，卸载Chrome重装后还是出现以上问题。&lt;/p&gt;
+
+&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
+
+&lt;p&gt;在查找了一圈，Google Chrome 帮助中心&lt;a href=&#34;https://support.google.com/chrome/thread/17477297?hl=ja&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这个问题&lt;/a&gt;找到可以用以下方法临时解决。
+&amp;gt; 78.0.3904.70で、同じ症状発生しています。
+一度発しすると「設定」等も開けないため
+アップデートやバージョン確認もできなくなります
+約４０００台の管理下で１０台以上発生してきております。
+バージョンアップが進むと広がりそうです。
+&amp;gt;
+&amp;gt; 【暫定的な解決方法】
+&amp;gt; ①起動ショートカットのオプションに「&amp;ndash;no-sandbox」を追加
+&amp;gt;
+&amp;gt; ②旧バージョンへ入れなおす
+&amp;gt; 76.0.3809.100での動作を確認、ただし再度アップデートかかると再発します。
+&amp;gt;
+&amp;gt; 【検証したOS環境】
+&amp;gt; win10 1709 1803 どちでも発生
+&amp;gt; win8 発生せず
+&amp;gt;
+&amp;gt; 【追加検証】
+&amp;gt; アドオンなどを入れてないシンプルな状態でも発生を確認&lt;/p&gt;
+
+&lt;p&gt;在桌面的Chrome的快捷方式右击点击属性，在源文件路径的最后添加以下启动选项&lt;code&gt;--no-sandbox&lt;/code&gt;
+也就是路径为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&amp;quot; --no-sandbox
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如图所示：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/03/03/zL3j5ADtheQuFZJ.png&#34; alt=&#34;快捷方式添加启动选项&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然后就可以打开Chrome了。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>利用免费云平台Heroku搭建WebSSH服务sshwifty</title>
@@ -2790,108 +2845,6 @@ root@instance:/home/ubuntu# docker attach baota
 &lt;li&gt;&lt;a href=&#34;http://www.runoob.com/docker/ubuntu-docker-install.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Ubuntu Docker 安装&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.runoob.com/docker/docker-exec-command.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Docker exec 命令&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.bt.cn/bbs/thread-19376-1-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;宝塔Linux面板安装教程&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</link>
-      <pubDate>Wed, 31 Jul 2019 05:18:22 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</guid>
-      <description>
-
-&lt;h2 id=&#34;添加字数统计-阅读时间&#34;&gt;添加字数统计,阅读时间&lt;/h2&gt;
-
-&lt;p&gt;原文章标题下的分类目录等的样式是下面图片的样子。图片截图于主题&lt;a href=&#34;https://liuzhichao.com/2018/hugo-theme-leaveit/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;原作者博客&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hc1715da2ca7c43d9b64791b16b8a97d8I.jpg&#34; alt=&#34;截自主题原作者博客&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;在添加了字数统计和阅读时间后，将排版改成下面这样：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/H0199dad846c04a20a55014a76bc46759K.jpg&#34; alt=&#34;新的样式&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;直接放相关代码&lt;/p&gt;
-
-&lt;h3 id=&#34;导入font-awesome的cdn地址&#34;&gt;导入font awesome的cdn地址&lt;/h3&gt;
-
-&lt;p&gt;在主题目录的&lt;code&gt;/LeaveIt/layouts/partials/head.html&lt;/code&gt;的 &lt;code&gt;&amp;lt;/head&amp;gt;&lt;/code&gt;标签前(为了方便查看建议在原有的  &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;标签后)加入下面代码，以加入font awesome  5.9.0版本为例&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link href=&amp;quot;//use.fontawesome.com/releases/v5.9.0/css/all.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;修改文章页面的排版&#34;&gt;修改文章页面的排版&lt;/h3&gt;
-
-&lt;p&gt;修改主题目录下的&lt;code&gt;/LeaveIt/layouts/_default/single.html&lt;/code&gt;文件，将第7行开始的下面的代码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;                Written by &amp;lt;a itemprop=&amp;quot;name&amp;quot; href=&amp;quot;{{.Site.BaseURL }}&amp;quot; rel=&amp;quot;author&amp;quot;&amp;gt;{{ if isset .Params &amp;quot;author&amp;quot; }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}&amp;lt;/a&amp;gt; with ♥ 
-                &amp;lt;span class=&amp;quot;post-time&amp;quot;&amp;gt;
-                on &amp;lt;time datetime={{.Date.Format (.Site.Params.dateFormatToUse | default &amp;quot;2006-01-02&amp;quot;) }} itemprop=&amp;quot;datePublished&amp;quot;&amp;gt;{{ .Date.Format (.Site.Params.dateFormatToUse | default &amp;quot;January 2, 2006&amp;quot;) }}&amp;lt;/time&amp;gt;
-                &amp;lt;/span&amp;gt;
-                in
-                {{ with .Params.categories -}}
-                &amp;lt;i class=&amp;quot;iconfont icon-folder&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
-                &amp;lt;span class=&amp;quot;post-category&amp;quot;&amp;gt;
-                        {{ range . }}
-                        {{- $name := . -}}
-                        {{- with $.Site.GetPage &amp;quot;taxonomy&amp;quot; (printf &amp;quot;categories/%s&amp;quot; $name) | default ($.Site.GetPage &amp;quot;taxonomy&amp;quot; (printf &amp;quot;categories/%s&amp;quot; ($name | urlize))) -}}
-                          &amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt; {{ $name }} &amp;lt;/a&amp;gt;
-                        {{ end -}}
-                        {{ end }}
-                &amp;lt;/span&amp;gt;
-                {{- end }}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;修改为&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;            {{ with .Params.categories -}}
-          &amp;lt;i class=&amp;quot;far fa-folder-open&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
-                &amp;lt;span class=&amp;quot;post-category&amp;quot;&amp;gt;
-                        {{ range . }}
-                        {{- $name := . -}}
-                        {{- with $.Site.GetPage &amp;quot;taxonomy&amp;quot; (printf &amp;quot;categories/%s&amp;quot; $name) | default ($.Site.GetPage &amp;quot;taxonomy&amp;quot; (printf &amp;quot;categories/%s&amp;quot; ($name | urlize))) -}}
-                          &amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt; {{ $name }} &amp;lt;/a&amp;gt;
-                        {{ end -}}
-                        {{ end }}
-                &amp;lt;/span&amp;gt;
-            {{- end }}
-          &amp;lt;span class=&amp;quot;post-time&amp;quot;&amp;gt;
-         &amp;lt;i class=&amp;quot;far fa-calendar-alt&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;  &amp;lt;time datetime={{.Date.Format (.Site.Params.dateFormatToUse | default &amp;quot;2006-01-02&amp;quot;) }} itemprop=&amp;quot;datePublished&amp;quot;&amp;gt;{{ .Date.Format (.Site.Params.dateFormatToUse | default &amp;quot;2006-01-02&amp;quot;) }}&amp;lt;/time&amp;gt;
-           &amp;lt;/span&amp;gt;
-         &amp;lt;i class=&amp;quot;far fa-file-word&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;span class=&amp;quot;post-word-count&amp;quot;&amp;gt; {{ .WordCount }} 字&amp;lt;/span&amp;gt;
-         &amp;lt;i class=&amp;quot;far fa-clock&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;span class=&amp;quot;more-meta&amp;quot;&amp;gt; {{ .ReadingTime }} 分钟&amp;lt;/span&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;这样就修改成了上图的排版，添加了字数统计及阅读时间。以及添加了几个font awesome的图标。使得比较简单点。
-不过用了字数统计，就需要在站点配置文件config.toml里面添加一个配置，表示网站内容包含中文，日语，韩文。可以更准确的统计字数。(或者在文章的frontmatter内单独添加这个配置应该也行的)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;hasCJKLanguage = true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;放大文章内图片显示&#34;&gt;放大文章内图片显示&lt;/h2&gt;
-
-&lt;p&gt;LeaveIt主题内置了LightGallery灯箱效果，所以图片原状态是比较小，需要点击才能放大，但是通过添加下面的代码就可以让图片放大显示，对眼睛舒服点。&lt;/p&gt;
-
-&lt;p&gt;在 &lt;code&gt;assets/css/_custom.scss&lt;/code&gt; 中添加下面代码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;	.post-warp .post-content img {
-  		max-width: 100%;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;相关文章&#34;&gt;相关文章&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo的LeaveIt主题优化记录一-修复错位，添加toc&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/valine-to-hugo-with-leaveit/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo添加Valine评论系统 以LeaveIt主题为例&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://huaien.co/technology/install-ruby-update-on-centos/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Centos下安装和升级Ruby和sass&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;参考文章&#34;&gt;参考文章&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://mogeko.me/2018/025/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Leavelt 主题优化&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
