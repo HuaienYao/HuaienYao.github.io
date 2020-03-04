@@ -35,20 +35,22 @@
 一度発しすると「設定」等も開けないため
 アップデートやバージョン確認もできなくなります
 約４０００台の管理下で１０台以上発生してきております。
-バージョンアップが進むと広がりそうです。
-&amp;gt;
-&amp;gt; 【暫定的な解決方法】
-&amp;gt; ①起動ショートカットのオプションに「&amp;ndash;no-sandbox」を追加
-&amp;gt;
-&amp;gt; ②旧バージョンへ入れなおす
-&amp;gt; 76.0.3809.100での動作を確認、ただし再度アップデートかかると再発します。
-&amp;gt;
-&amp;gt; 【検証したOS環境】
-&amp;gt; win10 1709 1803 どちでも発生
-&amp;gt; win8 発生せず
-&amp;gt;
-&amp;gt; 【追加検証】
-&amp;gt; アドオンなどを入れてないシンプルな状態でも発生を確認&lt;/p&gt;
+バージョンアップが進むと広がりそうです。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;【暫定的な解決方法】
+①起動ショートカットのオプションに「&amp;ndash;no-sandbox」を追加&lt;/p&gt;
+
+&lt;p&gt;②旧バージョンへ入れなおす
+76.0.3809.100での動作を確認、ただし再度アップデートかかると再発します。&lt;/p&gt;
+
+&lt;p&gt;【検証したOS環境】
+win10 1709 1803 どちでも発生
+win8 発生せず&lt;/p&gt;
+
+&lt;p&gt;【追加検証】
+アドオンなどを入れてないシンプルな状態でも発生を確認&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;在桌面的Chrome的快捷方式右击点击属性，在源文件路径的最后添加以下启动选项&lt;code&gt;--no-sandbox&lt;/code&gt;
 也就是路径为：&lt;/p&gt;
@@ -172,6 +174,8 @@ drive_type = business
 在输入框内填入你设置好的&lt;code&gt;ARIA2C_SECRET&lt;/code&gt;密码，比如&lt;code&gt;password&lt;/code&gt;，然后点击你要去的地方
  - Go to AriaNg panel 离线下载面板
  - View downloaded files 查看下载后的文件&lt;/p&gt;
+
+&lt;p&gt;需要注意的是mjj论坛有mjj反应说账号被封了，估计是违反了Heroku官方的使用规则。但是也没有确定，大家酌情使用吧。&lt;/p&gt;
 
 &lt;p&gt;这里感谢&lt;a href=&#34;https://github.com/maple3142/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;maple3142&lt;/a&gt;大佬&lt;/p&gt;
 
