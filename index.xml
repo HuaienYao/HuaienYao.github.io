@@ -5,13 +5,13 @@
     <description>Recent content in Wyane`s Blog on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 25 Feb 2020 13:55:06 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2020 13:55:06 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>升级到Windows10后Chrome打开就崩溃的问题</title>
       <link>https://huaien.co/technology/chrome-crash-windows10/</link>
-      <pubDate>Tue, 25 Feb 2020 13:55:06 +0900</pubDate>
+      <pubDate>Mon, 02 Mar 2020 13:55:06 +0900</pubDate>
       
       <guid>https://huaien.co/technology/chrome-crash-windows10/</guid>
       <description>&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
@@ -28,29 +28,102 @@
 
 &lt;p&gt;在备份Chrome的用户资料，卸载Chrome重装后还是出现以上问题。&lt;/p&gt;
 
+&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
+
+&lt;p&gt;在查找资料后，根据赛门铁克提供的资料知道了以下版本的OS或者浏览器会出现这种情况。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这是由于Google Chrome（chrome.exe）和Microsoft Edge Chromium已启用Microsoft的代码完整性功能。 Chrome / Chromium的此功能和SEP的应用程序控制不兼容。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;环境&#34;&gt;环境&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;浏览器版本
+
+&lt;ul&gt;
+&lt;li&gt;Google Chrome 78.0.x (2019 年 10 月)&lt;/li&gt;
+&lt;li&gt;Google Chrome 79.0.x (2019 年 12 月)&lt;/li&gt;
+&lt;li&gt;Microsoft Edge Chromium 78.0.x&lt;/li&gt;
+&lt;li&gt;Microsoft Edge Chromium 79.0.x&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;搭载了 SEP 的 Windows Server 2016 と Windows 10 RS1&lt;/li&gt;
+&lt;li&gt;装有 14.2 以前版本 SEP 的 Windows OS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;出现的错误&#34;&gt;出现的错误&lt;/h3&gt;
+
+&lt;p&gt;Google Chrome浏览器：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;查看此网页时出现问题。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Microsoft Edge Chromium浏览器：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;该页面无法显示。
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
+
+&lt;h3 id=&#34;赛门铁克提供的解决方法&#34;&gt;赛门铁克提供的解决方法&lt;/h3&gt;
+
+&lt;h4 id=&#34;升级sep&#34;&gt;升级SEP&lt;/h4&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;对于Windows 10 Creators Update 1703或更高版本以及Windows Server 2019，请升级到Symantec Endpoint Protection 14.2.x以解决与Chrome的任何不兼容问题。&lt;/p&gt;
+
+&lt;p&gt;对于以下操作系统，需要更新Symantec Endpoint Protection以支持应用程序控制的代码完整性：&lt;/p&gt;
+
+&lt;p&gt;Windows 10 Anniversary Update 1607版
+Windows 10 Enterprise 2016 LTSC
+Windows Server 2016
+此更新将包含在将来的产品版本中。该文档将在有可用更新时进行更新。&lt;/p&gt;
+
+&lt;p&gt;如果SEP无法升级，或者操作系统是上面列出的操作系统之一，则通过添加Chrome（Chrome.exe）和/或Microsoft Edge Chromium（MSEdge.exe）的应用程序控制例外，您可以解决问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;总而言之就是升级SEP，不然就用另一种方法&lt;/p&gt;
+
+&lt;h4 id=&#34;禁用代码完整性&#34;&gt;禁用代码完整性&lt;/h4&gt;
+
+&lt;p&gt;另一种解决方法是在禁用代码完整性的情况下运行Chrome。&lt;/p&gt;
+
+&lt;p&gt;在Chrome快捷方式添加下面的启动标签。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;Chrome.exe --disable-features=RendererCodeIntegrity
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或者，将以下注册表值设置为0：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;Key：HKLM\Software\Policies\Google\Chrome
+Name：RendererCodeIntegrityEnabled
+Type：DWORD（32bit）
+Value：0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样的话，通过这个快捷方式启动的Chrome就没问题了。&lt;/p&gt;
+
+&lt;h3 id=&#34;网友提供的临时性解决办法&#34;&gt;网友提供的临时性解决办法&lt;/h3&gt;
 
 &lt;p&gt;在查找了一圈，Google Chrome 帮助中心&lt;a href=&#34;https://support.google.com/chrome/thread/17477297?hl=ja&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这个问题&lt;/a&gt;找到可以用以下方法临时解决。
 &amp;gt; 78.0.3904.70で、同じ症状発生しています。
 一度発しすると「設定」等も開けないため
 アップデートやバージョン確認もできなくなります
 約４０００台の管理下で１０台以上発生してきております。
-バージョンアップが進むと広がりそうです。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;【暫定的な解決方法】
-①起動ショートカットのオプションに「&amp;ndash;no-sandbox」を追加&lt;/p&gt;
-
-&lt;p&gt;②旧バージョンへ入れなおす
-76.0.3809.100での動作を確認、ただし再度アップデートかかると再発します。&lt;/p&gt;
-
-&lt;p&gt;【検証したOS環境】
-win10 1709 1803 どちでも発生
-win8 発生せず&lt;/p&gt;
-
-&lt;p&gt;【追加検証】
-アドオンなどを入れてないシンプルな状態でも発生を確認&lt;/p&gt;
-&lt;/blockquote&gt;
+バージョンアップが進むと広がりそうです。
+&amp;gt;
+&amp;gt; 【暫定的な解決方法】
+&amp;gt; ①起動ショートカットのオプションに「&amp;ndash;no-sandbox」を追加
+&amp;gt;
+&amp;gt; ②旧バージョンへ入れなおす
+&amp;gt; 76.0.3809.100での動作を確認、ただし再度アップデートかかると再発します。
+&amp;gt;
+&amp;gt; 【検証したOS環境】
+&amp;gt; win10 1709 1803 どちでも発生
+&amp;gt; win8 発生せず
+&amp;gt;
+&amp;gt; 【追加検証】
+&amp;gt; アドオンなどを入れてないシンプルな状態でも発生を確認&lt;/p&gt;
 
 &lt;p&gt;在桌面的Chrome的快捷方式右击点击属性，在源文件路径的最后添加以下启动选项&lt;code&gt;--no-sandbox&lt;/code&gt;
 也就是路径为：&lt;/p&gt;
@@ -62,7 +135,12 @@ win8 発生せず&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/03/03/zL3j5ADtheQuFZJ.png&#34; alt=&#34;快捷方式添加启动选项&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;然后就可以打开Chrome了。&lt;/p&gt;</description>
+&lt;p&gt;然后就可以打开Chrome了。&lt;/p&gt;
+
+&lt;p&gt;参考
+- &lt;a href=&#34;https://support.symantec.com/jp/ja/article.tech256047.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Endpoint Protection を使用していると Google Chrome バージョン 78.0.x で &amp;ldquo;このウェブページの表示中に問題が発生しました&amp;rdquo; エラーが発生する&lt;/a&gt;
+- &lt;a href=&#34;https://web.archive.org/web/20191224020859/https://support.symantec.com/jp/ja/article.tech256047.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;上面链接无法进入的话从这里查看存档&lt;/a&gt;
+- &lt;a href=&#34;https://support.google.com/chrome/thread/17477297?hl=ja&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;アップデートをしたらクラッシュして起動できない&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

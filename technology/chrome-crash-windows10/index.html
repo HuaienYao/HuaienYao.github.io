@@ -75,10 +75,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "accountablePerson" : "Wyane",
     "copyrightHolder" : "Wyane",
     "copyrightYear" : "2020",
-    "datePublished": "2020-02-25 13:55:06 \x2b0900 JST",
-    "dateModified" : "2020-02-25 13:55:06 \x2b0900 JST",
+    "datePublished": "2020-03-02 13:55:06 \x2b0900 JST",
+    "dateModified" : "2020-03-02 13:55:06 \x2b0900 JST",
     "url" : "https:\/\/huaien.co\/technology\/chrome-crash-windows10\/",
-    "wordCount" : "568",
+    "wordCount" : "1455",
     "keywords" : [ "Google Chrome", "Wyane`s Blog"]
 }
 </script>
@@ -155,11 +155,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
                 </span>
           <span class="post-time">
-         <i class="far fa-calendar-alt"></i>  <time datetime=2020-02-25 itemprop="datePublished">2020-02-25</time>
+         <i class="far fa-calendar-alt"></i>  <time datetime=2020-03-02 itemprop="datePublished">2020-03-02</time>
            </span>
      
-         <i class="far fa-file-word"></i> <span class="post-word-count"> 568 字</span>
-         <i class="far fa-clock"></i> <span class="more-meta"> 2 分钟</span>
+         <i class="far fa-file-word"></i> <span class="post-word-count"> 1455 字</span>
+         <i class="far fa-clock"></i> <span class="more-meta"> 3 分钟</span>
           
         </div>
     </header>
@@ -173,7 +173,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>
 <ul>
 <li><a href="#问题">问题</a></li>
-<li><a href="#解决方法">解决方法</a></li>
+<li><a href="#原因">原因</a>
+<ul>
+<li><a href="#环境">环境</a></li>
+<li><a href="#出现的错误">出现的错误</a></li>
+</ul></li>
+<li><a href="#解决方法">解决方法</a>
+<ul>
+<li><a href="#赛门铁克提供的解决方法">赛门铁克提供的解决方法</a>
+<ul>
+<li><a href="#升级sep">升级SEP</a></li>
+<li><a href="#禁用代码完整性">禁用代码完整性</a></li>
+</ul></li>
+<li><a href="#网友提供的临时性解决办法">网友提供的临时性解决办法</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -240,29 +253,102 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>在备份Chrome的用户资料，卸载Chrome重装后还是出现以上问题。</p>
 
+<h2 id="原因">原因</h2>
+
+<p>在查找资料后，根据赛门铁克提供的资料知道了以下版本的OS或者浏览器会出现这种情况。</p>
+
+<blockquote>
+<p>这是由于Google Chrome（chrome.exe）和Microsoft Edge Chromium已启用Microsoft的代码完整性功能。 Chrome / Chromium的此功能和SEP的应用程序控制不兼容。</p>
+</blockquote>
+
+<h3 id="环境">环境</h3>
+
+<ul>
+<li>浏览器版本
+
+<ul>
+<li>Google Chrome 78.0.x (2019 年 10 月)</li>
+<li>Google Chrome 79.0.x (2019 年 12 月)</li>
+<li>Microsoft Edge Chromium 78.0.x</li>
+<li>Microsoft Edge Chromium 79.0.x</li>
+</ul></li>
+<li>搭载了 SEP 的 Windows Server 2016 と Windows 10 RS1</li>
+<li>装有 14.2 以前版本 SEP 的 Windows OS</li>
+</ul>
+
+<h3 id="出现的错误">出现的错误</h3>
+
+<p>Google Chrome浏览器：</p>
+
+<pre><code>查看此网页时出现问题。
+</code></pre>
+
+<p>Microsoft Edge Chromium浏览器：</p>
+
+<pre><code>该页面无法显示。
+</code></pre>
+
 <h2 id="解决方法">解决方法</h2>
+
+<h3 id="赛门铁克提供的解决方法">赛门铁克提供的解决方法</h3>
+
+<h4 id="升级sep">升级SEP</h4>
+
+<blockquote>
+<p>对于Windows 10 Creators Update 1703或更高版本以及Windows Server 2019，请升级到Symantec Endpoint Protection 14.2.x以解决与Chrome的任何不兼容问题。</p>
+
+<p>对于以下操作系统，需要更新Symantec Endpoint Protection以支持应用程序控制的代码完整性：</p>
+
+<p>Windows 10 Anniversary Update 1607版
+Windows 10 Enterprise 2016 LTSC
+Windows Server 2016
+此更新将包含在将来的产品版本中。该文档将在有可用更新时进行更新。</p>
+
+<p>如果SEP无法升级，或者操作系统是上面列出的操作系统之一，则通过添加Chrome（Chrome.exe）和/或Microsoft Edge Chromium（MSEdge.exe）的应用程序控制例外，您可以解决问题。</p>
+</blockquote>
+
+<p>总而言之就是升级SEP，不然就用另一种方法</p>
+
+<h4 id="禁用代码完整性">禁用代码完整性</h4>
+
+<p>另一种解决方法是在禁用代码完整性的情况下运行Chrome。</p>
+
+<p>在Chrome快捷方式添加下面的启动标签。</p>
+
+<pre><code class="language-c">Chrome.exe --disable-features=RendererCodeIntegrity
+</code></pre>
+
+<p>或者，将以下注册表值设置为0：</p>
+
+<pre><code class="language-c">Key：HKLM\Software\Policies\Google\Chrome
+Name：RendererCodeIntegrityEnabled
+Type：DWORD（32bit）
+Value：0
+</code></pre>
+
+<p>这样的话，通过这个快捷方式启动的Chrome就没问题了。</p>
+
+<h3 id="网友提供的临时性解决办法">网友提供的临时性解决办法</h3>
 
 <p>在查找了一圈，Google Chrome 帮助中心<a href="https://support.google.com/chrome/thread/17477297?hl=ja" rel="nofollow noreferrer" target="_blank">这个问题</a>找到可以用以下方法临时解决。
 &gt; 78.0.3904.70で、同じ症状発生しています。
 一度発しすると「設定」等も開けないため
 アップデートやバージョン確認もできなくなります
 約４０００台の管理下で１０台以上発生してきております。
-バージョンアップが進むと広がりそうです。</p>
-
-<blockquote>
-<p>【暫定的な解決方法】
-①起動ショートカットのオプションに「&ndash;no-sandbox」を追加</p>
-
-<p>②旧バージョンへ入れなおす
-76.0.3809.100での動作を確認、ただし再度アップデートかかると再発します。</p>
-
-<p>【検証したOS環境】
-win10 1709 1803 どちでも発生
-win8 発生せず</p>
-
-<p>【追加検証】
-アドオンなどを入れてないシンプルな状態でも発生を確認</p>
-</blockquote>
+バージョンアップが進むと広がりそうです。
+&gt;
+&gt; 【暫定的な解決方法】
+&gt; ①起動ショートカットのオプションに「&ndash;no-sandbox」を追加
+&gt;
+&gt; ②旧バージョンへ入れなおす
+&gt; 76.0.3809.100での動作を確認、ただし再度アップデートかかると再発します。
+&gt;
+&gt; 【検証したOS環境】
+&gt; win10 1709 1803 どちでも発生
+&gt; win8 発生せず
+&gt;
+&gt; 【追加検証】
+&gt; アドオンなどを入れてないシンプルな状態でも発生を確認</p>
 
 <p>在桌面的Chrome的快捷方式右击点击属性，在源文件路径的最后添加以下启动选项<code>--no-sandbox</code>
 也就是路径为：</p>
@@ -275,6 +361,11 @@ win8 発生せず</p>
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://i.loli.net/2020/03/03/zL3j5ADtheQuFZJ.png" alt="快捷方式添加启动选项" class="lazyload"><figcaption class="image-caption">快捷方式添加启动选项</figcaption></figure></p>
 
 <p>然后就可以打开Chrome了。</p>
+
+<p>参考
+- <a href="https://support.symantec.com/jp/ja/article.tech256047.html" rel="nofollow noreferrer" target="_blank">Endpoint Protection を使用していると Google Chrome バージョン 78.0.x で &ldquo;このウェブページの表示中に問題が発生しました&rdquo; エラーが発生する</a>
+- <a href="https://web.archive.org/web/20191224020859/https://support.symantec.com/jp/ja/article.tech256047.html" rel="nofollow noreferrer" target="_blank">上面链接无法进入的话从这里查看存档</a>
+- <a href="https://support.google.com/chrome/thread/17477297?hl=ja" rel="nofollow noreferrer" target="_blank">アップデートをしたらクラッシュして起動できない</a></p>
     </div>
 
     <div class="post-copyright">
