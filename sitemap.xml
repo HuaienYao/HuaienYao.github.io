@@ -4,7 +4,31 @@
     <url>
       <loc>https://huaien.co/categories/</loc>
       
-      <lastmod>2020-05-05T17:29:52+09:00</lastmod>
+      <lastmod>2020-05-06T18:41:00+09:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/office365/</loc>
+      
+      <lastmod>2020-05-06T18:41:00+09:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/onedrive/</loc>
+      
+      <lastmod>2020-05-06T18:41:00+09:00</lastmod>
       
       
       
@@ -16,7 +40,7 @@
     <url>
       <loc>https://huaien.co/posts/</loc>
       
-      <lastmod>2020-05-05T17:29:52+09:00</lastmod>
+      <lastmod>2020-05-06T18:41:00+09:00</lastmod>
       
       
       
@@ -28,7 +52,7 @@
     <url>
       <loc>https://huaien.co/tags/</loc>
       
-      <lastmod>2020-05-05T17:29:52+09:00</lastmod>
+      <lastmod>2020-05-06T18:41:00+09:00</lastmod>
       
       
       
@@ -40,11 +64,45 @@
     <url>
       <loc>https://huaien.co/</loc>
       
-      <lastmod>2020-05-05T17:29:52+09:00</lastmod>
+      <lastmod>2020-05-06T18:41:00+09:00</lastmod>
       
       
       
       <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/tags/rclone/</loc>
+      
+      <lastmod>2020-05-06T18:41:00+09:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</loc>
+      
+      <lastmod>2020-05-06T18:41:00+09:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://huaien.co/technology/use-api-to-connect-rclone-onedrive/</loc>
+      
+      <lastmod>2020-05-06T18:41:00+09:00</lastmod>
+      
+      
       
       
     </url>
@@ -84,7 +142,7 @@
     </url>
   
     <url>
-      <loc>https://huaien.co/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+      <loc>https://huaien.co/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
       
       <lastmod>2020-03-05T14:09:02+09:00</lastmod>
       
@@ -96,7 +154,7 @@
     </url>
   
     <url>
-      <loc>https://huaien.co/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+      <loc>https://huaien.co/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
       
       <lastmod>2020-03-05T14:09:02+09:00</lastmod>
       
@@ -130,18 +188,6 @@
     </url>
   
     <url>
-      <loc>https://huaien.co/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/</loc>
-      
-      <lastmod>2020-05-05T17:29:52+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://huaien.co/tags/aria2/</loc>
       
       <lastmod>2020-03-03T15:28:36+09:00</lastmod>
@@ -155,18 +201,6 @@
   
     <url>
       <loc>https://huaien.co/tags/heroku/</loc>
-      
-      <lastmod>2020-03-03T15:28:36+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/tags/rclone/</loc>
       
       <lastmod>2020-03-03T15:28:36+09:00</lastmod>
       
@@ -255,18 +289,6 @@
   
     <url>
       <loc>https://huaien.co/tags/microsoft/</loc>
-      
-      <lastmod>2020-05-05T17:29:52+09:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://huaien.co/tags/office365/</loc>
       
       <lastmod>2020-05-05T17:29:52+09:00</lastmod>
       

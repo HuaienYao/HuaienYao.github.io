@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 04 Mar 2020 18:09:02 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2020 18:41:00 +0900</lastBuildDate>
     
 	<atom:link href="https://huaien.co/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Office365</title>
+      <link>https://huaien.co/tags/office365/</link>
+      <pubDate>Wed, 06 May 2020 18:41:00 +0900</pubDate>
+      
+      <guid>https://huaien.co/tags/office365/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OneDrive</title>
+      <link>https://huaien.co/tags/onedrive/</link>
+      <pubDate>Wed, 06 May 2020 18:41:00 +0900</pubDate>
+      
+      <guid>https://huaien.co/tags/onedrive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rclone</title>
+      <link>https://huaien.co/tags/rclone/</link>
+      <pubDate>Wed, 06 May 2020 18:41:00 +0900</pubDate>
+      
+      <guid>https://huaien.co/tags/rclone/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>docker</title>
@@ -66,15 +93,6 @@
     </item>
     
     <item>
-      <title>rclone</title>
-      <link>https://huaien.co/tags/rclone/</link>
-      <pubDate>Mon, 24 Feb 2020 15:28:36 +0900</pubDate>
-      
-      <guid>https://huaien.co/tags/rclone/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Linux</title>
       <link>https://huaien.co/tags/linux/</link>
       <pubDate>Fri, 21 Feb 2020 16:36:31 +0900</pubDate>
@@ -107,15 +125,6 @@
       <pubDate>Wed, 05 Feb 2020 17:29:52 +0900</pubDate>
       
       <guid>https://huaien.co/tags/microsoft/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Office365</title>
-      <link>https://huaien.co/tags/office365/</link>
-      <pubDate>Wed, 05 Feb 2020 17:29:52 +0900</pubDate>
-      
-      <guid>https://huaien.co/tags/office365/</guid>
       <description></description>
     </item>
     

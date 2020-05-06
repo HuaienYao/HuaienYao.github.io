@@ -5,8 +5,296 @@
     <description>Recent content in Wyane`s Blog on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 04 Mar 2020 18:09:02 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2020 18:41:00 +0900</lastBuildDate>
     <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>通过自建API使用Rclone连接OneDrive并续订Office 365 E5</title>
+      <link>https://huaien.co/technology/use-api-to-connect-rclone-onedrive/</link>
+      <pubDate>Wed, 06 May 2020 18:41:00 +0900</pubDate>
+      
+      <guid>https://huaien.co/technology/use-api-to-connect-rclone-onedrive/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;提到rclone这一强大的网盘同步工具，想必很多人会用到其来连接OneDrive，但是有时候的确rclone在同步OneDrive的时候速度不太理想。在参考了 &lt;a href=&#34;https://p3terx.com/archives/rclone-connect-onedrive-with-selfbuilt-api.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;P3TERX&lt;/a&gt; 大佬的文章后，才知道原来可能是很多人同时使用rclone自带的API的锅。所以&lt;a href=&#34;https://p3terx.com/archives/rclone-connect-onedrive-with-selfbuilt-api.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;P3TERX&lt;/a&gt; 大佬指出可以通过自建OneDrive的API来改善这一问题，还有可能续订Office 365 E5呢。&lt;/p&gt;
+
+&lt;h2 id=&#34;创建azure应用&#34;&gt;创建Azure应用&lt;/h2&gt;
+
+&lt;h3 id=&#34;获取client-id&#34;&gt;获取Client ID&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;打开&lt;a href=&#34;https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Microsoft Azure 应用注册页面&lt;/a&gt;，点击 新注册按钮。
+&lt;img src=&#34;https://i.loli.net/2020/05/06/pQFjA1gq7nYXZGD.png&#34; alt=&#34;image.png&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;填写名称，选择受支持的账户类型并填写重定向URL后点击注册按钮&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;名称随意&lt;/li&gt;
+&lt;li&gt;受支持的账户类型选择第三个&lt;/li&gt;
+&lt;li&gt;重定向URL填写 &lt;code&gt;http://localhost&lt;/code&gt;
+&lt;img src=&#34;https://i.loli.net/2020/05/06/SCieuOb59jxafFh.png&#34; alt=&#34;image.png&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;注册应用后会返回应用首页，复制记好应用程序（客户端）ID 也就是 Client ID。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/05/06/c1XgpeOmUIBsM3K.png&#34; alt=&#34;image.png&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;获取client-secret&#34;&gt;获取Client secret&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在左侧点击 证书和密码，再点击中间的 新客户端密码 按钮来创建Client secret。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/05/06/QANEeT16Ycn584K.png&#34; alt=&#34;image.png&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;点击添加按钮后就会看到你创建的Client secret，复制保存好。
+&lt;img src=&#34;https://i.loli.net/2020/05/06/LmtgIw5fhlj9oN1.png&#34; alt=&#34;image.png&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;设置你创建好的api的权限&#34;&gt;设置你创建好的API的权限&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;点击左侧的 API 权限，点击中间的 Microsoft Graph，接着在右侧的界面中搜索并打勾以下权限，最后点击下方更新权限的按钮&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Files.Read&lt;/li&gt;
+&lt;li&gt;Files.ReadWrite&lt;/li&gt;
+&lt;li&gt;Files.Read.All&lt;/li&gt;
+&lt;li&gt;Files.ReadWrite.All&lt;/li&gt;
+&lt;li&gt;offline_access&lt;/li&gt;
+&lt;li&gt;User.Read
+&lt;img src=&#34;https://i.loli.net/2020/05/06/18h5ciQyIEuPdZW.png&#34; alt=&#34;image.png&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;添加完成后确认是否有以下权限&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Files.Read&lt;/li&gt;
+&lt;li&gt;Files.ReadWrite&lt;/li&gt;
+&lt;li&gt;Files.Read.All&lt;/li&gt;
+&lt;li&gt;Files.ReadWrite.All&lt;/li&gt;
+&lt;li&gt;offline_access&lt;/li&gt;
+&lt;li&gt;User.Read
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2020/05/06/wGQ8sRT75Z3xCBD.png&#34; alt=&#34;image.png&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;使用rclone获取token&#34;&gt;使用rclone获取token&lt;/h3&gt;
+
+&lt;p&gt;你的电脑里已经有rclone的话可以直接看下面（以Windows为例），没有的话请通过&lt;a href=&#34;https://rclone.org/downloads/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这里&lt;/a&gt;下载。
+- 进入rclone的文件夹，在资源管理器地址栏输入&lt;code&gt;cmd&lt;/code&gt;回车或者在文件夹内按住Shift＋鼠标右键，选择 &lt;code&gt;在此处打开 Powershell 窗口&lt;/code&gt;，就会在当前路径打开命令提示符。
+- 在命令提示符或者Powershell内执行以下命令，注意替换&lt;code&gt;&amp;quot;Client_ID&amp;quot; &amp;quot;Client_secret&amp;quot;&lt;/code&gt;。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-dos&#34;&gt;rclone authorize &amp;quot;onedrive&amp;quot; &amp;quot;Client_ID&amp;quot; &amp;quot;Client_secret&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;-执行以上命令就会弹出浏览器窗口登录账号来授权获取token。显示Success的话可以关掉浏览器回到原来的命令提示符界面，应该可以看到以下信息：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-dos&#34;&gt;If your browser doesn&#39;t open automatically go to the following link: http://127.0.0.1:53682/auth
+Log in and authorize rclone for access
+Waiting for code...
+Got code
+Paste the following into your remote machine ---&amp;gt;
+{&amp;quot;access_token&amp;quot;:&amp;quot;xxxxxxxxxxxxxxxxxx&amp;quot;,&amp;quot;expiry&amp;quot;:&amp;quot;2020-02-22T21:18:39.5036298+08:00&amp;quot;}
+&amp;lt;---End paste
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;根据提示复制保存好token&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-dos&#34;&gt;{&amp;quot;access_token&amp;quot;:&amp;quot;xxxxxxxxxxxxxxxxxx&amp;quot;,&amp;quot;expiry&amp;quot;:&amp;quot;2020-02-22T21:18:39.5036298+08:00&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;rclone添加onedrive网盘&#34;&gt;rclone添加OneDrive网盘&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;继续在上面的命令提示符执行以下命令来添加网盘&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-vba&#34;&gt;PS C:\Users\Wyane&amp;gt; rclone config
+Current remotes:
+
+Name                 Type
+====                 ====
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q&amp;gt; n  ←这里选择n添加新的网盘
+name&amp;gt; myonedrive
+Type of storage to configure.
+Enter a string value. Press Enter for the default (&amp;quot;&amp;quot;).
+Choose a number from below, or type in your own value
+1 / 1Fichier
+\ &amp;quot;fichier&amp;quot;
+2 / Alias for an existing remote
+\ &amp;quot;alias&amp;quot;
+3 / Amazon Drive
+\ &amp;quot;amazon cloud drive&amp;quot;
+4 / Amazon S3 Compliant Storage Provider (AWS, Alibaba, Ceph, Digital Ocean, Dreamhost, IBM COS, Minio, etc)
+\ &amp;quot;s3&amp;quot;
+5 / Backblaze B2
+\ &amp;quot;b2&amp;quot;
+6 / Box
+\ &amp;quot;box&amp;quot;
+7 / Cache a remote
+\ &amp;quot;cache&amp;quot;
+8 / Citrix Sharefile
+\ &amp;quot;sharefile&amp;quot;
+9 / Dropbox
+\ &amp;quot;dropbox&amp;quot;
+10 / Encrypt/Decrypt a remote
+\ &amp;quot;crypt&amp;quot;
+11 / FTP Connection
+\ &amp;quot;ftp&amp;quot;
+12 / Google Cloud Storage (this is not Google Drive)
+\ &amp;quot;google cloud storage&amp;quot;
+13 / Google Drive
+\ &amp;quot;drive&amp;quot;
+14 / Google Photos
+\ &amp;quot;google photos&amp;quot;
+15 / Hubic
+\ &amp;quot;hubic&amp;quot;
+16 / In memory object storage system.
+\ &amp;quot;memory&amp;quot;
+17 / JottaCloud
+\ &amp;quot;jottacloud&amp;quot;
+18 / Koofr
+\ &amp;quot;koofr&amp;quot;
+19 / Local Disk
+\ &amp;quot;local&amp;quot;
+20 / Mail.ru Cloud
+\ &amp;quot;mailru&amp;quot;
+21 / Mega
+\ &amp;quot;mega&amp;quot;
+22 / Microsoft Azure Blob Storage
+\ &amp;quot;azureblob&amp;quot;
+23 / Microsoft OneDrive
+\ &amp;quot;onedrive&amp;quot;
+24 / OpenDrive
+\ &amp;quot;opendrive&amp;quot;
+25 / Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)
+\ &amp;quot;swift&amp;quot;
+26 / Pcloud
+\ &amp;quot;pcloud&amp;quot;
+27 / Put.io
+\ &amp;quot;putio&amp;quot;
+28 / QingCloud Object Storage
+\ &amp;quot;qingstor&amp;quot;
+29 / SSH/SFTP Connection
+\ &amp;quot;sftp&amp;quot;
+30 / Sugarsync
+\ &amp;quot;sugarsync&amp;quot;
+31 / Transparently chunk/split large files
+\ &amp;quot;chunker&amp;quot;
+32 / Union merges the contents of several remotes
+\ &amp;quot;union&amp;quot;
+33 / Webdav
+\ &amp;quot;webdav&amp;quot;
+34 / Yandex Disk
+\ &amp;quot;yandex&amp;quot;
+35 / http Connection
+\ &amp;quot;http&amp;quot;
+36 / premiumize.me
+\ &amp;quot;premiumizeme&amp;quot;
+Storage&amp;gt; 23  ←选择OneDrive
+** See help for onedrive backend at: https://rclone.org/onedrive/ **
+
+Microsoft App Client Id
+Leave blank normally.
+Enter a string value. Press Enter for the default (&amp;quot;&amp;quot;).
+client_id&amp;gt; client-id  ←输入前面保存的client id
+Microsoft App Client Secret
+Leave blank normally.
+Enter a string value. Press Enter for the default (&amp;quot;&amp;quot;).
+client_secret&amp;gt; client-secret  ←输入前面保存的client secret
+Edit advanced config? (y/n)
+y) Yes
+n) No (default)
+y/n&amp;gt; n  ←输入n选择不用
+Remote config
+Make sure your Redirect URL is set to &amp;quot;http://localhost:53682/&amp;quot; in your custom config.
+Use auto config?
+* Say Y if not sure
+* Say N if you are working on a remote or headless machine
+y) Yes (default)
+n) No
+y/n&amp;gt; n  ←输入n选择不用
+For this to work, you will need rclone available on a machine that has a web browser available.
+Execute the following on your machine (same rclone version recommended) :
+rclone authorize &amp;quot;onedrive&amp;quot; &amp;quot;client_id&amp;quot; &amp;quot;client_secret&amp;quot;
+Then paste the result below:
+result&amp;gt; {&amp;quot;access_token&amp;quot;:&amp;quot;XXXXXXXXX&amp;quot;,&amp;quot;expiry&amp;quot;:&amp;quot;2020-02-22T21:18:39.5036298+08:00&amp;quot;}   # 输入 token
+Choose a number from below, or type in an existing value
+1 / OneDrive Personal or Business
+\ &amp;quot;onedrive&amp;quot;
+2 / Root Sharepoint site
+\ &amp;quot;sharepoint&amp;quot;
+3 / Type in driveID
+\ &amp;quot;driveid&amp;quot;
+4 / Type in SiteID
+\ &amp;quot;siteid&amp;quot;
+5 / Search a Sharepoint site
+\ &amp;quot;search&amp;quot;
+Your choice&amp;gt; 1 ←这里选择1
+Found 1 drives, please select the one you want to use:
+0: OneDrive (business) id=xxxxxxxxxxxxxx
+Chose drive to use:&amp;gt; 0 ←输入检测到的网盘编号0
+Found drive &#39;root&#39; of type &#39;business&#39;, URL: https://wyane-my.sharepoint.com/personal/xxxxxx/Documents
+Is that okay?
+y) Yes
+n) No
+y/n&amp;gt; y ←确认没问题选择 y
+
+--------------------
+[od-e5-api]
+type = onedrive
+client_id = xxxxxxxxxx
+client_secret = xxxxxxxxxxxxxxxx
+token = {&amp;quot;access_token&amp;quot;:&amp;quot;xxxxxxxxxxxxxxxxxx&amp;quot;,&amp;quot;expiry&amp;quot;:&amp;quot;2020-02-22T21:18:39.5036298+08:00&amp;quot;}
+drive_id = xxxxxxxxxxxxxxxxxxxxxxxxx
+drive_type = business
+--------------------
+y) Yes this is OK
+e) Edit this remote
+d) Delete this remote
+y/e/d&amp;gt; y # 最后会显示网盘的配置信息并询问你是否正确，如果没问题则输入 y
+Current remotes:
+
+Name                 Type
+====                 ====
+myonedrive            onedrive
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q&amp;gt; q # 输入 q 退出
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;最后可以验证下是否能用自建API来连接。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rclone mkdir myonedrive:/test 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;执行成功的话应该可以在OneDrive网盘里面看到test文件夹。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://p3terx.com/archives/rclone-connect-onedrive-with-selfbuilt-api.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Rclone 使用自建 API 连接 OneDrive（Office 365 E5 自动续订）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>基于Docker的永久免费的VPS服务器云容器 - goormIDE</title>
@@ -2471,141 +2759,6 @@ Sitemap: {{ &amp;quot;sitemap.xml&amp;quot; | absLangURL }}
 
 &lt;p&gt;其实还有个&lt;code&gt;white-space&lt;/code&gt;，由于这里没有用到所以就没提到了，以上只是来自 &lt;a href=&#34;https://juejin.im/post/5b8905456fb9a01a105966b4&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;彻底搞懂word-break、word-wrap、white-space&lt;/a&gt;
 ，有兴趣的可以看看这里，讲的比较详细。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>修改AdSense自适应广告尺寸 不同宽度屏幕指定不同尺寸广告</title>
-      <link>https://huaien.co/technology/modify-google-adsense-auto-style/</link>
-      <pubDate>Thu, 03 Oct 2019 04:50:16 +0000</pubDate>
-      
-      <guid>https://huaien.co/technology/modify-google-adsense-auto-style/</guid>
-      <description>
-
-&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
-
-&lt;p&gt;个人也是比较反感那些不美观的广告，但是适当利用Google广告的话可以给网站添加一点内容，个人觉得还是挺好的。虽然Google Adsense 提供了自适应广告尺寸。但是有时候适配的尺寸并不是你想要的尺寸。比如本博客的下方有个横幅广告，考虑到用固定尺寸的横幅广告会导致手机端的显示太大，不美观。试过了自适应广告尺寸，效果是移动端的显示也是正方形方块广告，但是我想要的是高度比较小的横幅广告，只要一小块的长方形广告会比较美观。这篇文章记录了如何将自适应广告代码修改为不同屏幕大小显示指定尺寸。&lt;/p&gt;
-
-&lt;!--MORE--&gt;
-
-&lt;h1 id=&#34;效果&#34;&gt;效果&lt;/h1&gt;
-
-&lt;p&gt;下面是本博客的评论框上方的长方形广告。根据不同屏幕宽度显示不同高度尺寸，宽度基本为根据屏幕大小自动拉伸。&lt;/p&gt;
-
-&lt;h2 id=&#34;电脑端显示效果&#34;&gt;电脑端显示效果&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hc88ab47c72984960b4b91925619a5f3cg.jpg&#34; alt=&#34;电脑端显示效果&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ipad端显示效果&#34;&gt;iPad端显示效果&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Heba58630eeb741a5a90598f4821d1488M.jpg&#34; alt=&#34;iPad端显示效果&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;手机端显示效果&#34;&gt;手机端显示效果&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/Hf47aa3c8030e4a6bb77c93fac699d910U.jpg&#34; alt=&#34;手机端显示效果&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;可以看到，根据不同屏幕大小，广告尺寸会自动适配宽度和指定高度。原来的代码会导致是一块正方形广告，感觉在手机端等比较小的屏幕上占用屏幕太大，影响体验。&lt;/p&gt;
-
-&lt;h1 id=&#34;代码&#34;&gt;代码&lt;/h1&gt;
-
-&lt;h2 id=&#34;谷歌官方修改代码&#34;&gt;谷歌官方修改代码&lt;/h2&gt;
-
-&lt;p&gt;这里贴上Google官方修改后的自适应广告代码。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;style&amp;gt;
-.example_responsive_1 { width: 320px; height: 100px; }
-@media(min-width: 500px) { .example_responsive_1 { width: 468px; height: 60px; } }
-@media(min-width: 800px) { .example_responsive_1 { width: 728px; height: 90px; } }
-&amp;lt;/style&amp;gt;
-&amp;lt;script async src=&amp;quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;!-- example_responsive_1 --&amp;gt;
-&amp;lt;ins class=&amp;quot;adsbygoogle example_responsive_1&amp;quot;
-     style=&amp;quot;display:inline-block&amp;quot;
-     data-ad-client=&amp;quot;ca-pub-XXXXXXX11XXX9&amp;quot;
-     data-ad-slot=&amp;quot;8XXXXX1&amp;quot;&amp;gt;&amp;lt;/ins&amp;gt;
-&amp;lt;script&amp;gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;宽度不超过 500 像素的屏幕：320x100 广告单元。&lt;/li&gt;
-&lt;li&gt;宽度在 500 像素到 799 像素之间的屏幕：468x60 广告单元。&lt;/li&gt;
-&lt;li&gt;宽度在 800 像素以上的屏幕：728x90 广告单元。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;本博客修改后代码&#34;&gt;本博客修改后代码&lt;/h2&gt;
-
-&lt;p&gt;这里附上本博客用的代码，就是Google发布的代码再根据自己的实际情况修改。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div align=&amp;quot;center&amp;quot;&amp;gt;
-&amp;lt;style&amp;gt;
-.adsbygoogle-comment { width: 99%; height: 60px; padding: 1rem 0px }
-@media(min-width: 500px) { .adsbygoogle-comment { width: 99%; height: 70px; padding: 1rem 0px} }
-@media(min-width: 800px) { .adsbygoogle-comment { width: 99%; height: 90px; padding: 1rem 0px} }
-&amp;lt;/style&amp;gt; 
-&amp;lt;script async src=&amp;quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;!-- Wyane&#39;s Blog 长方形 --&amp;gt;
-
-&amp;lt;ins class=&amp;quot;adsbygoogle adsbygoogle-comment&amp;quot;
-     style=&amp;quot;display:inline-block&amp;quot;
-     data-ad-client=&amp;quot;ca-pub-xxxxxxxxxxxxxxxxxx&amp;quot;
-     data-ad-slot=&amp;quot;xxxxxxxxxx&amp;quot;&amp;gt;&amp;lt;/ins&amp;gt;
-&amp;lt;script&amp;gt;
-     (adsbygoogle = window.adsbygoogle || []).push({});
-&amp;lt;/script&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;解释&#34;&gt;解释&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;宽度不超过 500 像素的屏幕：宽度为根据屏幕实际宽度自动调整为99%的宽度，高度固定为60px的广告单元 上下内边距1rem。&lt;/li&gt;
-&lt;li&gt;宽度在 500 像素到 799 像素之间的屏幕：宽度为根据屏幕实际宽度自动调整为99%的宽度，高度固定为70px的广告单元 上下内边距1rem。&lt;/li&gt;
-&lt;li&gt;宽度在 800 像素以上的屏幕：宽度为根据屏幕实际宽度自动调整为99%的宽度，高度固定为90px的广告单元 上下内边距1rem。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;adsbygoogle-comment&lt;/code&gt;为样式名，可以自定义，需要和 &lt;code&gt;&amp;lt;ins class=&amp;quot;adsbygoogle adsbygoogle-comment&amp;quot;&lt;/code&gt; 对应&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;data-ad-client=&amp;quot;ca-pub-xxxxxxxxxxxxxxxxxx&amp;quot;&lt;/code&gt;的&lt;code&gt;ca-pub-xxxxxxxxxxxxxxxxxx&lt;/code&gt;为你自己的发布商ID&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;data-ad-slot=&amp;quot;xxxxxxxxxx&amp;quot;&lt;/code&gt;的&lt;code&gt;xxxxxxxxxx&lt;/code&gt;为你自己的广告单元ID&lt;/li&gt;
-&lt;li&gt;以上地方根据自己需求修改。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;如果还有不懂的地方可以参考下面的官方解释。
-注意：Google AdSense原则上不允许修改广告代码，官方好像只允许这种通过css样式的方法来修改自适应广告尺寸。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;在您的 AdSense 帐号中创建一个展示广告单元，确保“广告尺寸”部分中的自适应选项保持选中状态。记下自适应广告代码中的以下信息：
-发布商 ID，例如 ca-pub-1234567891234567
-广告单元 ID (data-ad-slot)，例如 1234567890。
-在示例代码中：
-将所有 example_responsive_1 实例都替换为唯一名称，例如 Home_Page、front_page_123 等。
-注意事项：
-您的唯一名称只能包含英文字母 (A-Z)、数字和下划线，且第一个字符必须是英文字母。
-您每次调整此示例代码时都必须使用不同的唯一名称。
-将 ca-pub-XXXXXXX11XXX9 替换为您自己的发布商 ID。
-将 8XXXXX1 替换为您自己的广告单元 ID。
-决定您希望广告单元在每类屏幕宽度上占据的尺寸：
-如果您希望采用示例代码中现有的广告单元尺寸，则不需要做出任何额外更改。
-如果您希望根据具体屏幕尺寸设置不同的广告单元尺寸，请在示例代码中进行以下操作：
-将 320px 和 100px 替换为您希望为宽度不超过 500 像素的屏幕使用的广告单元的宽度和高度。
-将 468px 和 60px 替换为您希望为宽度在 500 像素和 799 像素之间的屏幕使用的广告单元的宽度和高度。
-将 728px 和 90px 替换为您希望为宽度超过 800 像素的屏幕使用的广告单元的宽度和高度。
-复制修改后的广告代码，并将其粘贴到您希望展示广告的网页的 HTML 源代码中。
-注意：放置广告代码后，我们建议您在不同的设备和屏幕上测试您的广告，确保自适应功能正常工作。
-自适应广告代码高级功能示例
-如果您发现我们的自适应广告代码无法满足您的所有需求，则不妨修改广告代码，通过 CSS 指定广告单元的确切尺寸。&lt;/p&gt;
-
-&lt;p&gt;注意：除非您对修改广告代码非常有把握，否则我们不建议您使用这些高级功能。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;参考来源&#34;&gt;参考来源&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://support.google.com/adsense/answer/9183363?hl=zh-Hans&amp;amp;visit_id=636989514276087628-3394097392&amp;amp;rd=1&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;如何修改自适应广告代码&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://tumutanzi.com/archives/12509&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;修改AdSense自适应广告尺寸提高点击率技巧&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
     </item>
     
   </channel>
