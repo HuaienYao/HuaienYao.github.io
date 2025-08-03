@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>个人网盘 on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/</link>
+    <link>https://xxoo.be/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/</link>
     <description>Recent content in 个人网盘 on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 21 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>利用Caddy的Filemanager插件搭建个人网盘教程</title>
-      <link>https://huaien.co/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
+      <link>https://xxoo.be/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
+      <guid>https://xxoo.be/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
       <description>前面我们了解了Caddy是一个极简HTTP服务器，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Cadd</description>
     </item>
     

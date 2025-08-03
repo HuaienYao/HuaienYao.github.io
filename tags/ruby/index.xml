@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ruby on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/ruby/</link>
+    <link>https://xxoo.be/tags/ruby/</link>
     <description>Recent content in Ruby on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 31 Jul 2019 04:59:52 +0000</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Centos安装和升级Ruby和sass</title>
-      <link>https://huaien.co/technology/install-ruby-update-on-centos/</link>
+      <link>https://xxoo.be/technology/install-ruby-update-on-centos/</link>
       <pubDate>Wed, 31 Jul 2019 04:59:52 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/install-ruby-update-on-centos/</guid>
+      <guid>https://xxoo.be/technology/install-ruby-update-on-centos/</guid>
       <description>&lt;h2 id=&#34;安装ruby&#34;&gt;安装Ruby&lt;/h2&gt;
 
 &lt;p&gt;Centos下在线安装Ruby,版本可能比较旧&lt;/p&gt;

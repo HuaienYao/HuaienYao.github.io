@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Flarum on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/flarum/</link>
+    <link>https://xxoo.be/tags/flarum/</link>
     <description>Recent content in Flarum on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 10 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/flarum/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/flarum/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>宝塔面板安装Flarum轻论坛程序时提示The PHP extension &#39;fileinfo&#39; is required</title>
-      <link>https://huaien.co/technology/bt-panel-install-fileinfo-for-php/</link>
+      <link>https://xxoo.be/technology/bt-panel-install-fileinfo-for-php/</link>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/bt-panel-install-fileinfo-for-php/</guid>
+      <guid>https://xxoo.be/technology/bt-panel-install-fileinfo-for-php/</guid>
       <description>&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
 
 &lt;p&gt;宝塔面板默认并没有安装fileinfo模块，可按以下教程安装：&lt;/p&gt;

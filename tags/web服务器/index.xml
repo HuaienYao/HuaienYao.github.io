@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web服务器 on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+    <link>https://xxoo.be/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
     <description>Recent content in Web服务器 on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 21 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>利用Caddy的Filemanager插件搭建个人网盘教程</title>
-      <link>https://huaien.co/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
+      <link>https://xxoo.be/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
+      <guid>https://xxoo.be/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
       <description>前面我们了解了Caddy是一个极简HTTP服务器，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Cadd</description>
     </item>
     
     <item>
       <title>利用Caddy来搭建网站之Caddy配置文件教程</title>
-      <link>https://huaien.co/technology/use-caddy-to-run-site/</link>
+      <link>https://xxoo.be/technology/use-caddy-to-run-site/</link>
       <pubDate>Thu, 19 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/use-caddy-to-run-site/</guid>
+      <guid>https://xxoo.be/technology/use-caddy-to-run-site/</guid>
       <description>&lt;p&gt;前面我们了解了&lt;a href=&#34;https://huaien.me/article/backend/caddy-a-light-http-server/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy是一个极简HTTP服务器&lt;/a&gt;，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Caddy帮你自动生成Let&amp;rsquo;s Encrypt的免费证书，简单的配置就能搭建好一个HTTPS的Web服务器环境。&lt;/p&gt;</description>
     </item>
     

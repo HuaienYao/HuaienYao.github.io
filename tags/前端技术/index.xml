@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前端技术 on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</link>
+    <link>https://xxoo.be/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</link>
     <description>Recent content in 前端技术 on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 10 Oct 2019 17:31:46 +0900</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo的LeaveIt主题优化记录五-修改选中文字的颜色和背景颜色</title>
-      <link>https://huaien.co/technology/leaveit-theme-modified-log-5-selection/</link>
+      <link>https://xxoo.be/technology/leaveit-theme-modified-log-5-selection/</link>
       <pubDate>Thu, 10 Oct 2019 17:31:46 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/leaveit-theme-modified-log-5-selection/</guid>
+      <guid>https://xxoo.be/technology/leaveit-theme-modified-log-5-selection/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;总感觉LeaveIt这个黑白主题的选中文字的颜色和背景颜色怪怪的，因为是浅蓝色的，有点和黑白不搭。所以就把修改选中文字的颜色和背景颜色的过程也记录下。&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Hugo的LeaveIt主题优化记录四-修改行内代码样式与代码块重叠问题</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-modify-log-4/</link>
       <pubDate>Wed, 09 Oct 2019 16:36:29 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-modify-log-4/</guid>
       <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
 &lt;p&gt;之前也提到过，本站用的是Hugo的LeaveIt主题。前几次也修改过一些内容。这次还是忍不住想改下代码高亮问题。因为我以前有些文章里的代码块没标注语言，如果你所有文章内的代码块都标注了语言，那就没有必要修改了。。&lt;/p&gt;</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>Hugo的LeaveIt主题优化记录三-修复文章内URL无法改行问题</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-url-warp-problem/</link>
       <pubDate>Fri, 04 Oct 2019 16:53:05 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-url-warp-problem/</guid>
       <description>&lt;h1 id=&#34;问题&#34;&gt;问题&lt;/h1&gt;
 
 &lt;h2 id=&#34;文内长url手机端显示问题&#34;&gt;文内长URL手机端显示问题&lt;/h2&gt;
@@ -48,28 +48,28 @@
     
     <item>
       <title>Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-update-logs/</link>
       <pubDate>Wed, 31 Jul 2019 05:18:22 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-update-logs/</guid>
       <description>添加字数统计,阅读时间 原文章标题下的分类目录等的样式是下面图片的样子。图片截图于主题原作者博客 在添加了字数统计和阅读时间后，将排版改成下面这</description>
     </item>
     
     <item>
       <title>Hugo的LeaveIt主题优化记录一-修复错位，添加toc</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-modified-of-bugs-1/</link>
       <pubDate>Mon, 29 Jul 2019 07:42:33 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-modified-of-bugs-1/</guid>
       <description>标签处的back・home按钮位置错位 这个问题我现在才发现，原来是因为这个主题在生成静态文件的时候需要sass编译。难怪我每次修改/them</description>
     </item>
     
     <item>
       <title>如何修改h5ai右上角的版权信息powered by h5ai</title>
-      <link>https://huaien.co/technology/modify-h5ai-copyright/</link>
+      <link>https://xxoo.be/technology/modify-h5ai-copyright/</link>
       <pubDate>Sun, 29 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/modify-h5ai-copyright/</guid>
+      <guid>https://xxoo.be/technology/modify-h5ai-copyright/</guid>
       <description>&lt;h2 id=&#34;关于h5ai&#34;&gt;关于h5ai&lt;/h2&gt;
 
 &lt;p&gt;前面我们说到了h5ai这款德国开发者开发的强大的PHP文件目录程序。在折腾这款程序的时候有一些地方一直搞不明白。比如今天要说的如何修改右上角版权信息Powered by h5ai。&lt;/p&gt;</description>

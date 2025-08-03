@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OneDrive on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/onedrive/</link>
+    <link>https://xxoo.be/tags/onedrive/</link>
     <description>Recent content in OneDrive on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 06 May 2020 18:41:00 +0900</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/onedrive/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/onedrive/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>通过自建API使用Rclone连接OneDrive并续订Office 365 E5</title>
-      <link>https://huaien.co/technology/use-api-to-connect-rclone-onedrive/</link>
+      <link>https://xxoo.be/technology/use-api-to-connect-rclone-onedrive/</link>
       <pubDate>Wed, 06 May 2020 18:41:00 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/use-api-to-connect-rclone-onedrive/</guid>
+      <guid>https://xxoo.be/technology/use-api-to-connect-rclone-onedrive/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;提到rclone这一强大的网盘同步工具，想必很多人会用到其来连接OneDrive，但是有时候的确rclone在同步OneDrive的时候速度不太理想。在参考了 &lt;a href=&#34;https://p3terx.com/archives/rclone-connect-onedrive-with-selfbuilt-api.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;P3TERX&lt;/a&gt; 大佬的文章后，才知道原来可能是很多人同时使用rclone自带的API的锅。所以&lt;a href=&#34;https://p3terx.com/archives/rclone-connect-onedrive-with-selfbuilt-api.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;P3TERX&lt;/a&gt; 大佬指出可以通过自建OneDrive的API来改善这一问题，还有可能续订Office 365 E5呢。&lt;/p&gt;</description>

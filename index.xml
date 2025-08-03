@@ -1,19 +1,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wyane`s Blog on Wyane`s Blog</title>
-    <link>https://huaien.co/</link>
+    <link>https://xxoo.be/</link>
     <description>Recent content in Wyane`s Blog on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 06 May 2020 18:41:00 +0900</lastBuildDate>
-    <atom:link href="https://huaien.co/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xxoo.be/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>通过自建API使用Rclone连接OneDrive并续订Office 365 E5</title>
-      <link>https://huaien.co/technology/use-api-to-connect-rclone-onedrive/</link>
+      <link>https://xxoo.be/technology/use-api-to-connect-rclone-onedrive/</link>
       <pubDate>Wed, 06 May 2020 18:41:00 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/use-api-to-connect-rclone-onedrive/</guid>
+      <guid>https://xxoo.be/technology/use-api-to-connect-rclone-onedrive/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;提到rclone这一强大的网盘同步工具，想必很多人会用到其来连接OneDrive，但是有时候的确rclone在同步OneDrive的时候速度不太理想。在参考了 &lt;a href=&#34;https://p3terx.com/archives/rclone-connect-onedrive-with-selfbuilt-api.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;P3TERX&lt;/a&gt; 大佬的文章后，才知道原来可能是很多人同时使用rclone自带的API的锅。所以&lt;a href=&#34;https://p3terx.com/archives/rclone-connect-onedrive-with-selfbuilt-api.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;P3TERX&lt;/a&gt; 大佬指出可以通过自建OneDrive的API来改善这一问题，还有可能续订Office 365 E5呢。&lt;/p&gt;
@@ -298,10 +298,10 @@ e/n/d/r/c/s/q&amp;gt; q # 输入 q 退出
     
     <item>
       <title>基于Docker的永久免费的VPS服务器云容器 - goormIDE</title>
-      <link>https://huaien.co/server/free-container-goorm/</link>
+      <link>https://xxoo.be/server/free-container-goorm/</link>
       <pubDate>Wed, 04 Mar 2020 18:09:02 +0900</pubDate>
       
-      <guid>https://huaien.co/server/free-container-goorm/</guid>
+      <guid>https://xxoo.be/server/free-container-goorm/</guid>
       <description>&lt;h2 id=&#34;免费容器服务商&#34;&gt;免费容器服务商&lt;/h2&gt;
 
 &lt;p&gt;今天在MJJ论坛看到&lt;a href=&#34;https://www.hostloc.com/thread-652692-1-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;永久免费的VPS goorm&lt;/a&gt;的帖子，知道了一个叫&lt;a href=&#34;https://www.goorm.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;goorm&lt;/a&gt;的免费提供docker容器的服务。看样子好像是一家韩国公司。语言有英语，韩语和日语。&lt;/p&gt;
@@ -403,10 +403,10 @@ e/n/d/r/c/s/q&amp;gt; q # 输入 q 退出
     
     <item>
       <title>升级到Windows10后Chrome打开就崩溃的问题</title>
-      <link>https://huaien.co/technology/chrome-crash-windows10/</link>
+      <link>https://xxoo.be/technology/chrome-crash-windows10/</link>
       <pubDate>Mon, 02 Mar 2020 13:55:06 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/chrome-crash-windows10/</guid>
+      <guid>https://xxoo.be/technology/chrome-crash-windows10/</guid>
       <description>&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
 
 &lt;p&gt;由于之前Windows 7 EOS到期的时候我正好放假不在公司，所以公司的电脑还是Windows7，昨天有人提醒了一下我才知道要升级，今天将一个 Windows 7 的PC升级到 Windows 10，但是在升级后使用Chrome的时候，Chrome一打开就出现崩溃，&lt;/p&gt;
@@ -541,10 +541,10 @@ Value：0
     
     <item>
       <title>利用Heroku部署Aria2离线下载并同步上传到Onedrive等网盘</title>
-      <link>https://huaien.co/technology/heroku-aria2-rclone/</link>
+      <link>https://xxoo.be/technology/heroku-aria2-rclone/</link>
       <pubDate>Mon, 24 Feb 2020 15:28:36 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/heroku-aria2-rclone/</guid>
+      <guid>https://xxoo.be/technology/heroku-aria2-rclone/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;最近在MJJ论坛看到&lt;a href=&#34;https://www.hostloc.com/thread-641710-1-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;在Heroku上用Aria2下载然后用rclone同步到云盘去的服务&lt;/a&gt;，作者将原来的离线下载功能的基础上加上同步上传到Onedrive，Google Drive的功能，当然是用了rclone。&lt;/p&gt;
@@ -663,10 +663,10 @@ drive_type = business
     
     <item>
       <title>利用免费云平台Heroku搭建WebSSH服务sshwifty</title>
-      <link>https://huaien.co/technology/deploy-sshwifty-heroku/</link>
+      <link>https://xxoo.be/technology/deploy-sshwifty-heroku/</link>
       <pubDate>Sat, 22 Feb 2020 11:11:51 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/deploy-sshwifty-heroku/</guid>
+      <guid>https://xxoo.be/technology/deploy-sshwifty-heroku/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;最近看到一款出自&lt;a href=&#34;https://github.com/niruix/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;niruix&lt;/a&gt;大神的自建WebSSH源码。试用了一下觉得非常不错，就想推荐＋记录一下。因为第一次用Heroku手动部署，所以折腾了好久才可以。本文记录了如何利用免费云平台&lt;a href=&#34;https://www.heroku.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Heroku&lt;/a&gt;搭建sshwifty。&lt;/p&gt;
@@ -942,10 +942,10 @@ To https://git.heroku.com/yourapp.git
     
     <item>
       <title>Linux使用cp命令复制目录错误 cp:omitting directory</title>
-      <link>https://huaien.co/technology/linux-cp-error/</link>
+      <link>https://xxoo.be/technology/linux-cp-error/</link>
       <pubDate>Fri, 21 Feb 2020 16:36:31 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/linux-cp-error/</guid>
+      <guid>https://xxoo.be/technology/linux-cp-error/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;今天在Linux系统使用&lt;code&gt;cp&lt;/code&gt;（复制命令）复制目录时，出现下面的错误：&lt;/p&gt;
@@ -980,10 +980,10 @@ To https://git.heroku.com/yourapp.git
     
     <item>
       <title>Github fork后的仓库如何同步源仓库的新更新内容</title>
-      <link>https://huaien.co/technology/syncing-origin-fork/</link>
+      <link>https://xxoo.be/technology/syncing-origin-fork/</link>
       <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/syncing-origin-fork/</guid>
+      <guid>https://xxoo.be/technology/syncing-origin-fork/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;最近遇到一个问题，fork了一位作者的仓库，修改fork的仓库的时候发现作者发布了新版，更新了一部分内容。这是后要怎么把原作者的仓库更新内容同步到自己fork的仓库呢？&lt;/p&gt;
@@ -1085,10 +1085,10 @@ git fetch upstream
     
     <item>
       <title>免费申请Office 365 E5 开发者订阅及续订方法</title>
-      <link>https://huaien.co/technology/microsoft-office-365-e5-developer/</link>
+      <link>https://xxoo.be/technology/microsoft-office-365-e5-developer/</link>
       <pubDate>Wed, 05 Feb 2020 17:29:52 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/microsoft-office-365-e5-developer/</guid>
+      <guid>https://xxoo.be/technology/microsoft-office-365-e5-developer/</guid>
       <description>&lt;p&gt;说到巨硬家的Office 365 想必大家都比较熟悉。除了付费购买套餐之外，巨硬还针对开发者推出了开发者订阅，只要你能使用巨硬家的产品来开发，换一句话说就是能证明你是开发者就可以申请获取免费、可续订的 90 天 Microsoft 365 E5 开发人员订阅。&lt;/p&gt;
 
 &lt;h2 id=&#34;microsoft-365-e5-开发人员订阅包含&#34;&gt;Microsoft 365 E5 开发人员订阅包含&lt;/h2&gt;
@@ -1218,10 +1218,10 @@ git fetch upstream
     
     <item>
       <title>法克米 - 低价出售域名代注册代续费代支付代购等</title>
-      <link>https://huaien.co/internet/fakemi/</link>
+      <link>https://xxoo.be/internet/fakemi/</link>
       <pubDate>Sat, 01 Feb 2020 10:39:27 +0900</pubDate>
       
-      <guid>https://huaien.co/internet/fakemi/</guid>
+      <guid>https://xxoo.be/internet/fakemi/</guid>
       <description>&lt;p&gt;由于手头域名越来越多，就低价出给有需要的人。&lt;/p&gt;
 
 &lt;h2 id=&#34;代购域名&#34;&gt;代购域名&lt;/h2&gt;
@@ -2165,10 +2165,10 @@ git fetch upstream
     
     <item>
       <title>微软IME日语输入法按Shift突然变成输入全角英文</title>
-      <link>https://huaien.co/technology/ime-japanese-change-full-to-half/</link>
+      <link>https://xxoo.be/technology/ime-japanese-change-full-to-half/</link>
       <pubDate>Fri, 11 Oct 2019 17:08:38 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/ime-japanese-change-full-to-half/</guid>
+      <guid>https://xxoo.be/technology/ime-japanese-change-full-to-half/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;有用微软IME日语输入法的人可能会遇到这种事。就是在平假名输入模式下按Shift键来切换英文字母输入，应该是半角英文数字，但是突然按Shift键变成了全角英文数字模式。&lt;/p&gt;
@@ -2201,10 +2201,10 @@ git fetch upstream
     
     <item>
       <title>Hugo的LeaveIt主题优化记录五-修改选中文字的颜色和背景颜色</title>
-      <link>https://huaien.co/technology/leaveit-theme-modified-log-5-selection/</link>
+      <link>https://xxoo.be/technology/leaveit-theme-modified-log-5-selection/</link>
       <pubDate>Thu, 10 Oct 2019 17:31:46 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/leaveit-theme-modified-log-5-selection/</guid>
+      <guid>https://xxoo.be/technology/leaveit-theme-modified-log-5-selection/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;总感觉LeaveIt这个黑白主题的选中文字的颜色和背景颜色怪怪的，因为是浅蓝色的，有点和黑白不搭。所以就把修改选中文字的颜色和背景颜色的过程也记录下。&lt;/p&gt;
@@ -2259,10 +2259,10 @@ git fetch upstream
     
     <item>
       <title>Hugo的LeaveIt主题优化记录四-修改行内代码样式与代码块重叠问题</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-modify-log-4/</link>
       <pubDate>Wed, 09 Oct 2019 16:36:29 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-modify-log-4/</guid>
       <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
 &lt;p&gt;之前也提到过，本站用的是Hugo的LeaveIt主题。前几次也修改过一些内容。这次还是忍不住想改下代码高亮问题。因为我以前有些文章里的代码块没标注语言，如果你所有文章内的代码块都标注了语言，那就没有必要修改了。。&lt;/p&gt;
@@ -2418,10 +2418,10 @@ git fetch upstream
     
     <item>
       <title>移动设备适合性报告：网页不适合在移动设备上浏览的问题</title>
-      <link>https://huaien.co/technology/google-mobile-friendly/</link>
+      <link>https://xxoo.be/technology/google-mobile-friendly/</link>
       <pubDate>Sun, 06 Oct 2019 16:22:06 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/google-mobile-friendly/</guid>
+      <guid>https://xxoo.be/technology/google-mobile-friendly/</guid>
       <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
 &lt;p&gt;这个问题困扰了很久，不过一直没去研究。因为虽然报告提示有问题，但是每次我自己用手机端打开该网页均显示正常。。今天就查了查资料，原来搜索引擎被阻止读取相关资源，所以无法正常显示。&lt;/p&gt;
@@ -2630,10 +2630,10 @@ Sitemap: {{ &amp;quot;sitemap.xml&amp;quot; | absLangURL }}
     
     <item>
       <title>如何导出Putty的Sessions配置到其他电脑</title>
-      <link>https://huaien.co/technology/export-putty-sessions/</link>
+      <link>https://xxoo.be/technology/export-putty-sessions/</link>
       <pubDate>Sat, 05 Oct 2019 13:43:56 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/export-putty-sessions/</guid>
+      <guid>https://xxoo.be/technology/export-putty-sessions/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;运维人员应该都知道，PuTTY是一款免费开源的SSH远程客户端，它的体积很小，甚至无需安装。
@@ -2669,10 +2669,10 @@ Sitemap: {{ &amp;quot;sitemap.xml&amp;quot; | absLangURL }}
     
     <item>
       <title>Hugo的LeaveIt主题优化记录三-修复文章内URL无法改行问题</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-url-warp-problem/</link>
       <pubDate>Fri, 04 Oct 2019 16:53:05 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-url-warp-problem/</guid>
       <description>&lt;h1 id=&#34;问题&#34;&gt;问题&lt;/h1&gt;
 
 &lt;h2 id=&#34;文内长url手机端显示问题&#34;&gt;文内长URL手机端显示问题&lt;/h2&gt;

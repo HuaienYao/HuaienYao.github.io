@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nvm on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/nvm/</link>
+    <link>https://xxoo.be/tags/nvm/</link>
     <description>Recent content in nvm on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 07 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/nvm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/nvm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linux安装nvm后无法使用nvm安装node</title>
-      <link>https://huaien.co/technology/not-able-to-install-nodejs-by-nvm/</link>
+      <link>https://xxoo.be/technology/not-able-to-install-nodejs-by-nvm/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/not-able-to-install-nodejs-by-nvm/</guid>
+      <guid>https://xxoo.be/technology/not-able-to-install-nodejs-by-nvm/</guid>
       <description>&lt;p&gt;今天在给服务器安装nvm的时候出现无法安装node的错误，查询了网上资料，可以通过修改bash_profile来解决。&lt;/p&gt;</description>
     </item>
     

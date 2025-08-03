@@ -2,813 +2,813 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/</link>
+    <link>https://xxoo.be/tags/</link>
     <description>Recent content in Tags on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 06 May 2020 18:41:00 +0900</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Office365</title>
-      <link>https://huaien.co/tags/office365/</link>
+      <link>https://xxoo.be/tags/office365/</link>
       <pubDate>Wed, 06 May 2020 18:41:00 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/office365/</guid>
+      <guid>https://xxoo.be/tags/office365/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OneDrive</title>
-      <link>https://huaien.co/tags/onedrive/</link>
+      <link>https://xxoo.be/tags/onedrive/</link>
       <pubDate>Wed, 06 May 2020 18:41:00 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/onedrive/</guid>
+      <guid>https://xxoo.be/tags/onedrive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rclone</title>
-      <link>https://huaien.co/tags/rclone/</link>
+      <link>https://xxoo.be/tags/rclone/</link>
       <pubDate>Wed, 06 May 2020 18:41:00 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/rclone/</guid>
+      <guid>https://xxoo.be/tags/rclone/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>https://huaien.co/tags/docker/</link>
+      <link>https://xxoo.be/tags/docker/</link>
       <pubDate>Wed, 04 Mar 2020 18:09:02 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/docker/</guid>
+      <guid>https://xxoo.be/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vps</title>
-      <link>https://huaien.co/tags/vps/</link>
+      <link>https://xxoo.be/tags/vps/</link>
       <pubDate>Wed, 04 Mar 2020 18:09:02 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/vps/</guid>
+      <guid>https://xxoo.be/tags/vps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>服务器</title>
-      <link>https://huaien.co/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <link>https://xxoo.be/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Wed, 04 Mar 2020 18:09:02 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <guid>https://xxoo.be/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Google Chrome</title>
-      <link>https://huaien.co/tags/google-chrome/</link>
+      <link>https://xxoo.be/tags/google-chrome/</link>
       <pubDate>Mon, 02 Mar 2020 13:55:06 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/google-chrome/</guid>
+      <guid>https://xxoo.be/tags/google-chrome/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aria2</title>
-      <link>https://huaien.co/tags/aria2/</link>
+      <link>https://xxoo.be/tags/aria2/</link>
       <pubDate>Mon, 24 Feb 2020 15:28:36 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/aria2/</guid>
+      <guid>https://xxoo.be/tags/aria2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Heroku</title>
-      <link>https://huaien.co/tags/heroku/</link>
+      <link>https://xxoo.be/tags/heroku/</link>
       <pubDate>Mon, 24 Feb 2020 15:28:36 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/heroku/</guid>
+      <guid>https://xxoo.be/tags/heroku/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://huaien.co/tags/linux/</link>
+      <link>https://xxoo.be/tags/linux/</link>
       <pubDate>Fri, 21 Feb 2020 16:36:31 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/linux/</guid>
+      <guid>https://xxoo.be/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git</title>
-      <link>https://huaien.co/tags/git/</link>
+      <link>https://xxoo.be/tags/git/</link>
       <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/git/</guid>
+      <guid>https://xxoo.be/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GitHub</title>
-      <link>https://huaien.co/tags/github/</link>
+      <link>https://xxoo.be/tags/github/</link>
       <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/github/</guid>
+      <guid>https://xxoo.be/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microsoft</title>
-      <link>https://huaien.co/tags/microsoft/</link>
+      <link>https://xxoo.be/tags/microsoft/</link>
       <pubDate>Wed, 05 Feb 2020 17:29:52 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/microsoft/</guid>
+      <guid>https://xxoo.be/tags/microsoft/</guid>
       <description></description>
     </item>
     
     <item>
       <title>域名</title>
-      <link>https://huaien.co/tags/%E5%9F%9F%E5%90%8D/</link>
+      <link>https://xxoo.be/tags/%E5%9F%9F%E5%90%8D/</link>
       <pubDate>Sat, 01 Feb 2020 10:39:27 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%9F%9F%E5%90%8D/</guid>
+      <guid>https://xxoo.be/tags/%E5%9F%9F%E5%90%8D/</guid>
       <description></description>
     </item>
     
     <item>
       <title>输入法</title>
-      <link>https://huaien.co/tags/%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+      <link>https://xxoo.be/tags/%E8%BE%93%E5%85%A5%E6%B3%95/</link>
       <pubDate>Fri, 11 Oct 2019 17:08:38 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
+      <guid>https://xxoo.be/tags/%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://huaien.co/tags/hugo/</link>
+      <link>https://xxoo.be/tags/hugo/</link>
       <pubDate>Thu, 10 Oct 2019 17:31:46 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/hugo/</guid>
+      <guid>https://xxoo.be/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>css</title>
-      <link>https://huaien.co/tags/css/</link>
+      <link>https://xxoo.be/tags/css/</link>
       <pubDate>Thu, 10 Oct 2019 17:31:46 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/css/</guid>
+      <guid>https://xxoo.be/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>前端技术</title>
-      <link>https://huaien.co/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</link>
+      <link>https://xxoo.be/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Thu, 10 Oct 2019 17:31:46 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</guid>
+      <guid>https://xxoo.be/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>博客程序</title>
-      <link>https://huaien.co/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/</link>
+      <link>https://xxoo.be/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/</link>
       <pubDate>Thu, 10 Oct 2019 17:31:46 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/</guid>
+      <guid>https://xxoo.be/tags/%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Google Search Console</title>
-      <link>https://huaien.co/tags/google-search-console/</link>
+      <link>https://xxoo.be/tags/google-search-console/</link>
       <pubDate>Sun, 06 Oct 2019 16:22:06 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/google-search-console/</guid>
+      <guid>https://xxoo.be/tags/google-search-console/</guid>
       <description></description>
     </item>
     
     <item>
       <title>putty</title>
-      <link>https://huaien.co/tags/putty/</link>
+      <link>https://xxoo.be/tags/putty/</link>
       <pubDate>Sat, 05 Oct 2019 13:43:56 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/putty/</guid>
+      <guid>https://xxoo.be/tags/putty/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Adsense</title>
-      <link>https://huaien.co/tags/adsense/</link>
+      <link>https://xxoo.be/tags/adsense/</link>
       <pubDate>Thu, 03 Oct 2019 04:50:16 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/adsense/</guid>
+      <guid>https://xxoo.be/tags/adsense/</guid>
       <description></description>
     </item>
     
     <item>
       <title>typecho</title>
-      <link>https://huaien.co/tags/typecho/</link>
+      <link>https://xxoo.be/tags/typecho/</link>
       <pubDate>Wed, 02 Oct 2019 06:03:21 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/typecho/</guid>
+      <guid>https://xxoo.be/tags/typecho/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Django</title>
-      <link>https://huaien.co/tags/django/</link>
+      <link>https://xxoo.be/tags/django/</link>
       <pubDate>Tue, 01 Oct 2019 16:14:12 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/django/</guid>
+      <guid>https://xxoo.be/tags/django/</guid>
       <description></description>
     </item>
     
     <item>
       <title>debian</title>
-      <link>https://huaien.co/tags/debian/</link>
+      <link>https://xxoo.be/tags/debian/</link>
       <pubDate>Tue, 01 Oct 2019 16:14:12 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/debian/</guid>
+      <guid>https://xxoo.be/tags/debian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>导航</title>
-      <link>https://huaien.co/tags/%E5%AF%BC%E8%88%AA/</link>
+      <link>https://xxoo.be/tags/%E5%AF%BC%E8%88%AA/</link>
       <pubDate>Tue, 01 Oct 2019 16:14:12 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%AF%BC%E8%88%AA/</guid>
+      <guid>https://xxoo.be/tags/%E5%AF%BC%E8%88%AA/</guid>
       <description></description>
     </item>
     
     <item>
       <title>宝塔面板</title>
-      <link>https://huaien.co/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</link>
+      <link>https://xxoo.be/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</link>
       <pubDate>Mon, 30 Sep 2019 10:58:47 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</guid>
+      <guid>https://xxoo.be/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Centos</title>
-      <link>https://huaien.co/tags/centos/</link>
+      <link>https://xxoo.be/tags/centos/</link>
       <pubDate>Wed, 31 Jul 2019 04:59:52 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/centos/</guid>
+      <guid>https://xxoo.be/tags/centos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ruby</title>
-      <link>https://huaien.co/tags/ruby/</link>
+      <link>https://xxoo.be/tags/ruby/</link>
       <pubDate>Wed, 31 Jul 2019 04:59:52 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/ruby/</guid>
+      <guid>https://xxoo.be/tags/ruby/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SASS</title>
-      <link>https://huaien.co/tags/sass/</link>
+      <link>https://xxoo.be/tags/sass/</link>
       <pubDate>Wed, 31 Jul 2019 04:59:52 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/sass/</guid>
+      <guid>https://xxoo.be/tags/sass/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Coding Pages</title>
-      <link>https://huaien.co/tags/coding-pages/</link>
+      <link>https://xxoo.be/tags/coding-pages/</link>
       <pubDate>Thu, 25 Jul 2019 14:58:47 +0800</pubDate>
       
-      <guid>https://huaien.co/tags/coding-pages/</guid>
+      <guid>https://xxoo.be/tags/coding-pages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Valine</title>
-      <link>https://huaien.co/tags/valine/</link>
+      <link>https://xxoo.be/tags/valine/</link>
       <pubDate>Fri, 19 Apr 2019 09:56:14 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/valine/</guid>
+      <guid>https://xxoo.be/tags/valine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Disqus</title>
-      <link>https://huaien.co/tags/disqus/</link>
+      <link>https://xxoo.be/tags/disqus/</link>
       <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/disqus/</guid>
+      <guid>https://xxoo.be/tags/disqus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CDN</title>
-      <link>https://huaien.co/tags/cdn/</link>
+      <link>https://xxoo.be/tags/cdn/</link>
       <pubDate>Thu, 11 Oct 2018 16:53:05 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/cdn/</guid>
+      <guid>https://xxoo.be/tags/cdn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CloudFlare Partner</title>
-      <link>https://huaien.co/tags/cloudflare-partner/</link>
+      <link>https://xxoo.be/tags/cloudflare-partner/</link>
       <pubDate>Thu, 11 Oct 2018 16:53:05 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/cloudflare-partner/</guid>
+      <guid>https://xxoo.be/tags/cloudflare-partner/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SSL</title>
-      <link>https://huaien.co/tags/ssl/</link>
+      <link>https://xxoo.be/tags/ssl/</link>
       <pubDate>Thu, 11 Oct 2018 16:53:05 +0900</pubDate>
       
-      <guid>https://huaien.co/tags/ssl/</guid>
+      <guid>https://xxoo.be/tags/ssl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SSH</title>
-      <link>https://huaien.co/tags/ssh/</link>
+      <link>https://xxoo.be/tags/ssh/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/ssh/</guid>
+      <guid>https://xxoo.be/tags/ssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>后端技术</title>
-      <link>https://huaien.co/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/</link>
+      <link>https://xxoo.be/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/</guid>
+      <guid>https://xxoo.be/tags/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>WordPress</title>
-      <link>https://huaien.co/tags/wordpress/</link>
+      <link>https://xxoo.be/tags/wordpress/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/wordpress/</guid>
+      <guid>https://xxoo.be/tags/wordpress/</guid>
       <description></description>
     </item>
     
     <item>
       <title>宝塔</title>
-      <link>https://huaien.co/tags/%E5%AE%9D%E5%A1%94/</link>
+      <link>https://xxoo.be/tags/%E5%AE%9D%E5%A1%94/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%AE%9D%E5%A1%94/</guid>
+      <guid>https://xxoo.be/tags/%E5%AE%9D%E5%A1%94/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nginx</title>
-      <link>https://huaien.co/tags/nginx/</link>
+      <link>https://xxoo.be/tags/nginx/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/nginx/</guid>
+      <guid>https://xxoo.be/tags/nginx/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Flarum</title>
-      <link>https://huaien.co/tags/flarum/</link>
+      <link>https://xxoo.be/tags/flarum/</link>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/flarum/</guid>
+      <guid>https://xxoo.be/tags/flarum/</guid>
       <description></description>
     </item>
     
     <item>
       <title>php</title>
-      <link>https://huaien.co/tags/php/</link>
+      <link>https://xxoo.be/tags/php/</link>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/php/</guid>
+      <guid>https://xxoo.be/tags/php/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AWS</title>
-      <link>https://huaien.co/tags/aws/</link>
+      <link>https://xxoo.be/tags/aws/</link>
       <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/aws/</guid>
+      <guid>https://xxoo.be/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AMP</title>
-      <link>https://huaien.co/tags/amp/</link>
+      <link>https://xxoo.be/tags/amp/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/amp/</guid>
+      <guid>https://xxoo.be/tags/amp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SEO</title>
-      <link>https://huaien.co/tags/seo/</link>
+      <link>https://xxoo.be/tags/seo/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/seo/</guid>
+      <guid>https://xxoo.be/tags/seo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>网站建设</title>
-      <link>https://huaien.co/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</link>
+      <link>https://xxoo.be/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</guid>
+      <guid>https://xxoo.be/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hexo</title>
-      <link>https://huaien.co/tags/hexo/</link>
+      <link>https://xxoo.be/tags/hexo/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/hexo/</guid>
+      <guid>https://xxoo.be/tags/hexo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>node.js</title>
-      <link>https://huaien.co/tags/node.js/</link>
+      <link>https://xxoo.be/tags/node.js/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/node.js/</guid>
+      <guid>https://xxoo.be/tags/node.js/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nvm</title>
-      <link>https://huaien.co/tags/nvm/</link>
+      <link>https://xxoo.be/tags/nvm/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/nvm/</guid>
+      <guid>https://xxoo.be/tags/nvm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shell</title>
-      <link>https://huaien.co/tags/shell/</link>
+      <link>https://xxoo.be/tags/shell/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/shell/</guid>
+      <guid>https://xxoo.be/tags/shell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Directory Lister</title>
-      <link>https://huaien.co/tags/directory-lister/</link>
+      <link>https://xxoo.be/tags/directory-lister/</link>
       <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/directory-lister/</guid>
+      <guid>https://xxoo.be/tags/directory-lister/</guid>
       <description></description>
     </item>
     
     <item>
       <title>文件目录列表程序</title>
-      <link>https://huaien.co/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8%E7%A8%8B%E5%BA%8F/</link>
+      <link>https://xxoo.be/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8%E7%A8%8B%E5%BA%8F/</link>
       <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8%E7%A8%8B%E5%BA%8F/</guid>
+      <guid>https://xxoo.be/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8%E7%A8%8B%E5%BA%8F/</guid>
       <description></description>
     </item>
     
     <item>
       <title>源码程序</title>
-      <link>https://huaien.co/tags/%E6%BA%90%E7%A0%81%E7%A8%8B%E5%BA%8F/</link>
+      <link>https://xxoo.be/tags/%E6%BA%90%E7%A0%81%E7%A8%8B%E5%BA%8F/</link>
       <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E6%BA%90%E7%A0%81%E7%A8%8B%E5%BA%8F/</guid>
+      <guid>https://xxoo.be/tags/%E6%BA%90%E7%A0%81%E7%A8%8B%E5%BA%8F/</guid>
       <description></description>
     </item>
     
     <item>
       <title>h5ai</title>
-      <link>https://huaien.co/tags/h5ai/</link>
+      <link>https://xxoo.be/tags/h5ai/</link>
       <pubDate>Sun, 29 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/h5ai/</guid>
+      <guid>https://xxoo.be/tags/h5ai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>文件目录程序</title>
-      <link>https://huaien.co/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%A8%8B%E5%BA%8F/</link>
+      <link>https://xxoo.be/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%A8%8B%E5%BA%8F/</link>
       <pubDate>Sun, 29 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%A8%8B%E5%BA%8F/</guid>
+      <guid>https://xxoo.be/tags/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%A8%8B%E5%BA%8F/</guid>
       <description></description>
     </item>
     
     <item>
       <title>1Password</title>
-      <link>https://huaien.co/tags/1password/</link>
+      <link>https://xxoo.be/tags/1password/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/1password/</guid>
+      <guid>https://xxoo.be/tags/1password/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bitwarden</title>
-      <link>https://huaien.co/tags/bitwarden/</link>
+      <link>https://xxoo.be/tags/bitwarden/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/bitwarden/</guid>
+      <guid>https://xxoo.be/tags/bitwarden/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Enpass</title>
-      <link>https://huaien.co/tags/enpass/</link>
+      <link>https://xxoo.be/tags/enpass/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/enpass/</guid>
+      <guid>https://xxoo.be/tags/enpass/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Keepass</title>
-      <link>https://huaien.co/tags/keepass/</link>
+      <link>https://xxoo.be/tags/keepass/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/keepass/</guid>
+      <guid>https://xxoo.be/tags/keepass/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LastPass</title>
-      <link>https://huaien.co/tags/lastpass/</link>
+      <link>https://xxoo.be/tags/lastpass/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/lastpass/</guid>
+      <guid>https://xxoo.be/tags/lastpass/</guid>
       <description></description>
     </item>
     
     <item>
       <title>密码管理器</title>
-      <link>https://huaien.co/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/</link>
+      <link>https://xxoo.be/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/</guid>
+      <guid>https://xxoo.be/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Caddy</title>
-      <link>https://huaien.co/tags/caddy/</link>
+      <link>https://xxoo.be/tags/caddy/</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/caddy/</guid>
+      <guid>https://xxoo.be/tags/caddy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>FileBrowser</title>
-      <link>https://huaien.co/tags/filebrowser/</link>
+      <link>https://xxoo.be/tags/filebrowser/</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/filebrowser/</guid>
+      <guid>https://xxoo.be/tags/filebrowser/</guid>
       <description></description>
     </item>
     
     <item>
       <title>WebDav网盘</title>
-      <link>https://huaien.co/tags/webdav%E7%BD%91%E7%9B%98/</link>
+      <link>https://xxoo.be/tags/webdav%E7%BD%91%E7%9B%98/</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/webdav%E7%BD%91%E7%9B%98/</guid>
+      <guid>https://xxoo.be/tags/webdav%E7%BD%91%E7%9B%98/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web服务器</title>
-      <link>https://huaien.co/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <link>https://xxoo.be/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <guid>https://xxoo.be/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>个人网盘</title>
-      <link>https://huaien.co/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/</link>
+      <link>https://xxoo.be/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/</link>
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/</guid>
+      <guid>https://xxoo.be/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deepin</title>
-      <link>https://huaien.co/tags/deepin/</link>
+      <link>https://xxoo.be/tags/deepin/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/deepin/</guid>
+      <guid>https://xxoo.be/tags/deepin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>深度系统</title>
-      <link>https://huaien.co/tags/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F/</link>
+      <link>https://xxoo.be/tags/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>https://xxoo.be/tags/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu</title>
-      <link>https://huaien.co/tags/ubuntu/</link>
+      <link>https://xxoo.be/tags/ubuntu/</link>
       <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/ubuntu/</guid>
+      <guid>https://xxoo.be/tags/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure</title>
-      <link>https://huaien.co/tags/azure/</link>
+      <link>https://xxoo.be/tags/azure/</link>
       <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/azure/</guid>
+      <guid>https://xxoo.be/tags/azure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HTTPS</title>
-      <link>https://huaien.co/tags/https/</link>
+      <link>https://xxoo.be/tags/https/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/https/</guid>
+      <guid>https://xxoo.be/tags/https/</guid>
       <description></description>
     </item>
     
     <item>
       <title>服务器面板</title>
-      <link>https://huaien.co/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/</link>
+      <link>https://xxoo.be/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/</link>
       <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/</guid>
+      <guid>https://xxoo.be/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9D%A2%E6%9D%BF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apache</title>
-      <link>https://huaien.co/tags/apache/</link>
+      <link>https://xxoo.be/tags/apache/</link>
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/apache/</guid>
+      <guid>https://xxoo.be/tags/apache/</guid>
       <description></description>
     </item>
     
     <item>
       <title>微博</title>
-      <link>https://huaien.co/tags/%E5%BE%AE%E5%8D%9A/</link>
+      <link>https://xxoo.be/tags/%E5%BE%AE%E5%8D%9A/</link>
       <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%BE%AE%E5%8D%9A/</guid>
+      <guid>https://xxoo.be/tags/%E5%BE%AE%E5%8D%9A/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PayPal</title>
-      <link>https://huaien.co/tags/paypal/</link>
+      <link>https://xxoo.be/tags/paypal/</link>
       <pubDate>Sat, 27 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/paypal/</guid>
+      <guid>https://xxoo.be/tags/paypal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>吸血鬼日记</title>
-      <link>https://huaien.co/tags/%E5%90%B8%E8%A1%80%E9%AC%BC%E6%97%A5%E8%AE%B0/</link>
+      <link>https://xxoo.be/tags/%E5%90%B8%E8%A1%80%E9%AC%BC%E6%97%A5%E8%AE%B0/</link>
       <pubDate>Sat, 14 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%90%B8%E8%A1%80%E9%AC%BC%E6%97%A5%E8%AE%B0/</guid>
+      <guid>https://xxoo.be/tags/%E5%90%B8%E8%A1%80%E9%AC%BC%E6%97%A5%E8%AE%B0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>美剧</title>
-      <link>https://huaien.co/tags/%E7%BE%8E%E5%89%A7/</link>
+      <link>https://xxoo.be/tags/%E7%BE%8E%E5%89%A7/</link>
       <pubDate>Sat, 14 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E7%BE%8E%E5%89%A7/</guid>
+      <guid>https://xxoo.be/tags/%E7%BE%8E%E5%89%A7/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IT知识</title>
-      <link>https://huaien.co/tags/it%E7%9F%A5%E8%AF%86/</link>
+      <link>https://xxoo.be/tags/it%E7%9F%A5%E8%AF%86/</link>
       <pubDate>Sun, 20 Mar 2011 17:39:31 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/it%E7%9F%A5%E8%AF%86/</guid>
+      <guid>https://xxoo.be/tags/it%E7%9F%A5%E8%AF%86/</guid>
       <description></description>
     </item>
     
     <item>
       <title>图床</title>
-      <link>https://huaien.co/tags/%E5%9B%BE%E5%BA%8A/</link>
+      <link>https://xxoo.be/tags/%E5%9B%BE%E5%BA%8A/</link>
       <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%9B%BE%E5%BA%8A/</guid>
+      <guid>https://xxoo.be/tags/%E5%9B%BE%E5%BA%8A/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LNMP</title>
-      <link>https://huaien.co/tags/lnmp/</link>
+      <link>https://xxoo.be/tags/lnmp/</link>
       <pubDate>Fri, 04 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/lnmp/</guid>
+      <guid>https://xxoo.be/tags/lnmp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>QQ</title>
-      <link>https://huaien.co/tags/qq/</link>
+      <link>https://xxoo.be/tags/qq/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/qq/</guid>
+      <guid>https://xxoo.be/tags/qq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>htaccess</title>
-      <link>https://huaien.co/tags/htaccess/</link>
+      <link>https://xxoo.be/tags/htaccess/</link>
       <pubDate>Sat, 20 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/htaccess/</guid>
+      <guid>https://xxoo.be/tags/htaccess/</guid>
       <description></description>
     </item>
     
     <item>
       <title>重定向</title>
-      <link>https://huaien.co/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</link>
+      <link>https://xxoo.be/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</link>
       <pubDate>Sat, 20 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</guid>
+      <guid>https://xxoo.be/tags/%E9%87%8D%E5%AE%9A%E5%90%91/</guid>
       <description></description>
     </item>
     
     <item>
       <title>音乐</title>
-      <link>https://huaien.co/tags/%E9%9F%B3%E4%B9%90/</link>
+      <link>https://xxoo.be/tags/%E9%9F%B3%E4%B9%90/</link>
       <pubDate>Sat, 13 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E9%9F%B3%E4%B9%90/</guid>
+      <guid>https://xxoo.be/tags/%E9%9F%B3%E4%B9%90/</guid>
       <description></description>
     </item>
     
     <item>
       <title>好站分享</title>
-      <link>https://huaien.co/tags/%E5%A5%BD%E7%AB%99%E5%88%86%E4%BA%AB/</link>
+      <link>https://xxoo.be/tags/%E5%A5%BD%E7%AB%99%E5%88%86%E4%BA%AB/</link>
       <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%A5%BD%E7%AB%99%E5%88%86%E4%BA%AB/</guid>
+      <guid>https://xxoo.be/tags/%E5%A5%BD%E7%AB%99%E5%88%86%E4%BA%AB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>健身</title>
-      <link>https://huaien.co/tags/%E5%81%A5%E8%BA%AB/</link>
+      <link>https://xxoo.be/tags/%E5%81%A5%E8%BA%AB/</link>
       <pubDate>Sun, 29 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E5%81%A5%E8%BA%AB/</guid>
+      <guid>https://xxoo.be/tags/%E5%81%A5%E8%BA%AB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>英语</title>
-      <link>https://huaien.co/tags/%E8%8B%B1%E8%AF%AD/</link>
+      <link>https://xxoo.be/tags/%E8%8B%B1%E8%AF%AD/</link>
       <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/%E8%8B%B1%E8%AF%AD/</guid>
+      <guid>https://xxoo.be/tags/%E8%8B%B1%E8%AF%AD/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ShadowBox</title>
-      <link>https://huaien.co/tags/shadowbox/</link>
+      <link>https://xxoo.be/tags/shadowbox/</link>
       <pubDate>Wed, 04 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/tags/shadowbox/</guid>
+      <guid>https://xxoo.be/tags/shadowbox/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/hugo/</link>
+    <link>https://xxoo.be/tags/hugo/</link>
     <description>Recent content in Hugo on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 10 Oct 2019 17:31:46 +0900</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo的LeaveIt主题优化记录五-修改选中文字的颜色和背景颜色</title>
-      <link>https://huaien.co/technology/leaveit-theme-modified-log-5-selection/</link>
+      <link>https://xxoo.be/technology/leaveit-theme-modified-log-5-selection/</link>
       <pubDate>Thu, 10 Oct 2019 17:31:46 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/leaveit-theme-modified-log-5-selection/</guid>
+      <guid>https://xxoo.be/technology/leaveit-theme-modified-log-5-selection/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;总感觉LeaveIt这个黑白主题的选中文字的颜色和背景颜色怪怪的，因为是浅蓝色的，有点和黑白不搭。所以就把修改选中文字的颜色和背景颜色的过程也记录下。&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Hugo的LeaveIt主题优化记录四-修改行内代码样式与代码块重叠问题</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-modify-log-4/</link>
       <pubDate>Wed, 09 Oct 2019 16:36:29 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-modify-log-4/</guid>
       <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
 &lt;p&gt;之前也提到过，本站用的是Hugo的LeaveIt主题。前几次也修改过一些内容。这次还是忍不住想改下代码高亮问题。因为我以前有些文章里的代码块没标注语言，如果你所有文章内的代码块都标注了语言，那就没有必要修改了。。&lt;/p&gt;</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>Hugo的LeaveIt主题优化记录三-修复文章内URL无法改行问题</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-url-warp-problem/</link>
       <pubDate>Fri, 04 Oct 2019 16:53:05 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-url-warp-problem/</guid>
       <description>&lt;h1 id=&#34;问题&#34;&gt;问题&lt;/h1&gt;
 
 &lt;h2 id=&#34;文内长url手机端显示问题&#34;&gt;文内长URL手机端显示问题&lt;/h2&gt;
@@ -48,19 +48,19 @@
     
     <item>
       <title>Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-update-logs/</link>
       <pubDate>Wed, 31 Jul 2019 05:18:22 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-update-logs/</guid>
       <description>添加字数统计,阅读时间 原文章标题下的分类目录等的样式是下面图片的样子。图片截图于主题原作者博客 在添加了字数统计和阅读时间后，将排版改成下面这</description>
     </item>
     
     <item>
       <title>Centos安装和升级Ruby和sass</title>
-      <link>https://huaien.co/technology/install-ruby-update-on-centos/</link>
+      <link>https://xxoo.be/technology/install-ruby-update-on-centos/</link>
       <pubDate>Wed, 31 Jul 2019 04:59:52 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/install-ruby-update-on-centos/</guid>
+      <guid>https://xxoo.be/technology/install-ruby-update-on-centos/</guid>
       <description>&lt;h2 id=&#34;安装ruby&#34;&gt;安装Ruby&lt;/h2&gt;
 
 &lt;p&gt;Centos下在线安装Ruby,版本可能比较旧&lt;/p&gt;
@@ -71,28 +71,28 @@
     
     <item>
       <title>Hugo的LeaveIt主题优化记录一-修复错位，添加toc</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-modified-of-bugs-1/</link>
       <pubDate>Mon, 29 Jul 2019 07:42:33 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-modified-of-bugs-1/</guid>
       <description>标签处的back・home按钮位置错位 这个问题我现在才发现，原来是因为这个主题在生成静态文件的时候需要sass编译。难怪我每次修改/them</description>
     </item>
     
     <item>
       <title>Hugo添加Valine评论系统 以LeaveIt主题为例</title>
-      <link>https://huaien.co/technology/valine-to-hugo-with-leaveit/</link>
+      <link>https://xxoo.be/technology/valine-to-hugo-with-leaveit/</link>
       <pubDate>Fri, 19 Apr 2019 09:56:14 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/valine-to-hugo-with-leaveit/</guid>
+      <guid>https://xxoo.be/technology/valine-to-hugo-with-leaveit/</guid>
       <description>&lt;p&gt;最近将博客的生成器由Hexo转回到Hugo了，在这之后选了一些主题，试过Even,Jane,mainroad等等，最后还是选了v2上有人发布的这个LeaveIt主题。主要是因为这个主题简洁又不缺乏华丽的感觉。不过有点不足的是这个主题并不能直接用评论系统，在查看了相关教程之后，终于添加了原来使用的Valine评论系统。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>折腾静态博客程序之Hugo部署到Github Pages搭建个人博客</title>
-      <link>https://huaien.co/technology/using-hugo-to-build-blog/</link>
+      <link>https://xxoo.be/technology/using-hugo-to-build-blog/</link>
       <pubDate>Sun, 15 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/using-hugo-to-build-blog/</guid>
+      <guid>https://xxoo.be/technology/using-hugo-to-build-blog/</guid>
       <description>&lt;p&gt;最近在浏览许多人博客时候，发现了静态博客程序这种东西。是因为看到&lt;a href=&#34;http://notes.iissnan.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;IIssNan&lt;/a&gt;这位大神的博客主题非常好看，之前用的博客程序都是wordpress或者typecho，这个主题让人眼前一亮。动态效果很好看。但是看到底部信息，发现是用&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;程序搭建的。于是就搜索了&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;相关信息，才知道静态博客程序这个东西，&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;是用Node.js语言，因为之前有看到过ghost&lt;/p&gt;</description>
     </item>
     

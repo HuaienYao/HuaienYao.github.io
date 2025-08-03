@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Wyane`s Blog</title>
-    <link>https://huaien.co/posts/</link>
+    <link>https://xxoo.be/posts/</link>
     <description>Recent content in Posts on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 06 May 2020 18:41:00 +0900</lastBuildDate>
     
-	<atom:link href="https://huaien.co/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>通过自建API使用Rclone连接OneDrive并续订Office 365 E5</title>
-      <link>https://huaien.co/technology/use-api-to-connect-rclone-onedrive/</link>
+      <link>https://xxoo.be/technology/use-api-to-connect-rclone-onedrive/</link>
       <pubDate>Wed, 06 May 2020 18:41:00 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/use-api-to-connect-rclone-onedrive/</guid>
+      <guid>https://xxoo.be/technology/use-api-to-connect-rclone-onedrive/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;提到rclone这一强大的网盘同步工具，想必很多人会用到其来连接OneDrive，但是有时候的确rclone在同步OneDrive的时候速度不太理想。在参考了 &lt;a href=&#34;https://p3terx.com/archives/rclone-connect-onedrive-with-selfbuilt-api.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;P3TERX&lt;/a&gt; 大佬的文章后，才知道原来可能是很多人同时使用rclone自带的API的锅。所以&lt;a href=&#34;https://p3terx.com/archives/rclone-connect-onedrive-with-selfbuilt-api.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;P3TERX&lt;/a&gt; 大佬指出可以通过自建OneDrive的API来改善这一问题，还有可能续订Office 365 E5呢。&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>基于Docker的永久免费的VPS服务器云容器 - goormIDE</title>
-      <link>https://huaien.co/server/free-container-goorm/</link>
+      <link>https://xxoo.be/server/free-container-goorm/</link>
       <pubDate>Wed, 04 Mar 2020 18:09:02 +0900</pubDate>
       
-      <guid>https://huaien.co/server/free-container-goorm/</guid>
+      <guid>https://xxoo.be/server/free-container-goorm/</guid>
       <description>&lt;h2 id=&#34;免费容器服务商&#34;&gt;免费容器服务商&lt;/h2&gt;
 
 &lt;p&gt;今天在MJJ论坛看到&lt;a href=&#34;https://www.hostloc.com/thread-652692-1-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;永久免费的VPS goorm&lt;/a&gt;的帖子，知道了一个叫&lt;a href=&#34;https://www.goorm.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;goorm&lt;/a&gt;的免费提供docker容器的服务。看样子好像是一家韩国公司。语言有英语，韩语和日语。&lt;/p&gt;</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>升级到Windows10后Chrome打开就崩溃的问题</title>
-      <link>https://huaien.co/technology/chrome-crash-windows10/</link>
+      <link>https://xxoo.be/technology/chrome-crash-windows10/</link>
       <pubDate>Mon, 02 Mar 2020 13:55:06 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/chrome-crash-windows10/</guid>
+      <guid>https://xxoo.be/technology/chrome-crash-windows10/</guid>
       <description>&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
 
 &lt;p&gt;由于之前Windows 7 EOS到期的时候我正好放假不在公司，所以公司的电脑还是Windows7，昨天有人提醒了一下我才知道要升级，今天将一个 Windows 7 的PC升级到 Windows 10，但是在升级后使用Chrome的时候，Chrome一打开就出现崩溃，&lt;/p&gt;</description>
@@ -46,10 +46,10 @@
     
     <item>
       <title>利用Heroku部署Aria2离线下载并同步上传到Onedrive等网盘</title>
-      <link>https://huaien.co/technology/heroku-aria2-rclone/</link>
+      <link>https://xxoo.be/technology/heroku-aria2-rclone/</link>
       <pubDate>Mon, 24 Feb 2020 15:28:36 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/heroku-aria2-rclone/</guid>
+      <guid>https://xxoo.be/technology/heroku-aria2-rclone/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;最近在MJJ论坛看到&lt;a href=&#34;https://www.hostloc.com/thread-641710-1-1.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;在Heroku上用Aria2下载然后用rclone同步到云盘去的服务&lt;/a&gt;，作者将原来的离线下载功能的基础上加上同步上传到Onedrive，Google Drive的功能，当然是用了rclone。&lt;/p&gt;</description>
@@ -57,10 +57,10 @@
     
     <item>
       <title>利用免费云平台Heroku搭建WebSSH服务sshwifty</title>
-      <link>https://huaien.co/technology/deploy-sshwifty-heroku/</link>
+      <link>https://xxoo.be/technology/deploy-sshwifty-heroku/</link>
       <pubDate>Sat, 22 Feb 2020 11:11:51 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/deploy-sshwifty-heroku/</guid>
+      <guid>https://xxoo.be/technology/deploy-sshwifty-heroku/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;最近看到一款出自&lt;a href=&#34;https://github.com/niruix/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;niruix&lt;/a&gt;大神的自建WebSSH源码。试用了一下觉得非常不错，就想推荐＋记录一下。因为第一次用Heroku手动部署，所以折腾了好久才可以。本文记录了如何利用免费云平台&lt;a href=&#34;https://www.heroku.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Heroku&lt;/a&gt;搭建sshwifty。&lt;/p&gt;</description>
@@ -68,10 +68,10 @@
     
     <item>
       <title>Linux使用cp命令复制目录错误 cp:omitting directory</title>
-      <link>https://huaien.co/technology/linux-cp-error/</link>
+      <link>https://xxoo.be/technology/linux-cp-error/</link>
       <pubDate>Fri, 21 Feb 2020 16:36:31 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/linux-cp-error/</guid>
+      <guid>https://xxoo.be/technology/linux-cp-error/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;今天在Linux系统使用&lt;code&gt;cp&lt;/code&gt;（复制命令）复制目录时，出现下面的错误：&lt;/p&gt;
@@ -84,10 +84,10 @@
     
     <item>
       <title>Github fork后的仓库如何同步源仓库的新更新内容</title>
-      <link>https://huaien.co/technology/syncing-origin-fork/</link>
+      <link>https://xxoo.be/technology/syncing-origin-fork/</link>
       <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/syncing-origin-fork/</guid>
+      <guid>https://xxoo.be/technology/syncing-origin-fork/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;最近遇到一个问题，fork了一位作者的仓库，修改fork的仓库的时候发现作者发布了新版，更新了一部分内容。这是后要怎么把原作者的仓库更新内容同步到自己fork的仓库呢？&lt;/p&gt;</description>
@@ -95,28 +95,28 @@
     
     <item>
       <title>免费申请Office 365 E5 开发者订阅及续订方法</title>
-      <link>https://huaien.co/technology/microsoft-office-365-e5-developer/</link>
+      <link>https://xxoo.be/technology/microsoft-office-365-e5-developer/</link>
       <pubDate>Wed, 05 Feb 2020 17:29:52 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/microsoft-office-365-e5-developer/</guid>
+      <guid>https://xxoo.be/technology/microsoft-office-365-e5-developer/</guid>
       <description>&lt;p&gt;说到巨硬家的Office 365 想必大家都比较熟悉。除了付费购买套餐之外，巨硬还针对开发者推出了开发者订阅，只要你能使用巨硬家的产品来开发，换一句话说就是能证明你是开发者就可以申请获取免费、可续订的 90 天 Microsoft 365 E5 开发人员订阅。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>法克米 - 低价出售域名代注册代续费代支付代购等</title>
-      <link>https://huaien.co/internet/fakemi/</link>
+      <link>https://xxoo.be/internet/fakemi/</link>
       <pubDate>Sat, 01 Feb 2020 10:39:27 +0900</pubDate>
       
-      <guid>https://huaien.co/internet/fakemi/</guid>
+      <guid>https://xxoo.be/internet/fakemi/</guid>
       <description>&lt;p&gt;由于手头域名越来越多，就低价出给有需要的人。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>微软IME日语输入法按Shift突然变成输入全角英文</title>
-      <link>https://huaien.co/technology/ime-japanese-change-full-to-half/</link>
+      <link>https://xxoo.be/technology/ime-japanese-change-full-to-half/</link>
       <pubDate>Fri, 11 Oct 2019 17:08:38 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/ime-japanese-change-full-to-half/</guid>
+      <guid>https://xxoo.be/technology/ime-japanese-change-full-to-half/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;有用微软IME日语输入法的人可能会遇到这种事。就是在平假名输入模式下按Shift键来切换英文字母输入，应该是半角英文数字，但是突然按Shift键变成了全角英文数字模式。&lt;/p&gt;</description>
@@ -124,10 +124,10 @@
     
     <item>
       <title>Hugo的LeaveIt主题优化记录五-修改选中文字的颜色和背景颜色</title>
-      <link>https://huaien.co/technology/leaveit-theme-modified-log-5-selection/</link>
+      <link>https://xxoo.be/technology/leaveit-theme-modified-log-5-selection/</link>
       <pubDate>Thu, 10 Oct 2019 17:31:46 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/leaveit-theme-modified-log-5-selection/</guid>
+      <guid>https://xxoo.be/technology/leaveit-theme-modified-log-5-selection/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;总感觉LeaveIt这个黑白主题的选中文字的颜色和背景颜色怪怪的，因为是浅蓝色的，有点和黑白不搭。所以就把修改选中文字的颜色和背景颜色的过程也记录下。&lt;/p&gt;</description>
@@ -135,10 +135,10 @@
     
     <item>
       <title>Hugo的LeaveIt主题优化记录四-修改行内代码样式与代码块重叠问题</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-modify-log-4/</link>
       <pubDate>Wed, 09 Oct 2019 16:36:29 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-modify-log-4/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-modify-log-4/</guid>
       <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
 &lt;p&gt;之前也提到过，本站用的是Hugo的LeaveIt主题。前几次也修改过一些内容。这次还是忍不住想改下代码高亮问题。因为我以前有些文章里的代码块没标注语言，如果你所有文章内的代码块都标注了语言，那就没有必要修改了。。&lt;/p&gt;</description>
@@ -146,10 +146,10 @@
     
     <item>
       <title>移动设备适合性报告：网页不适合在移动设备上浏览的问题</title>
-      <link>https://huaien.co/technology/google-mobile-friendly/</link>
+      <link>https://xxoo.be/technology/google-mobile-friendly/</link>
       <pubDate>Sun, 06 Oct 2019 16:22:06 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/google-mobile-friendly/</guid>
+      <guid>https://xxoo.be/technology/google-mobile-friendly/</guid>
       <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
 &lt;p&gt;这个问题困扰了很久，不过一直没去研究。因为虽然报告提示有问题，但是每次我自己用手机端打开该网页均显示正常。。今天就查了查资料，原来搜索引擎被阻止读取相关资源，所以无法正常显示。&lt;/p&gt;</description>
@@ -157,10 +157,10 @@
     
     <item>
       <title>如何导出Putty的Sessions配置到其他电脑</title>
-      <link>https://huaien.co/technology/export-putty-sessions/</link>
+      <link>https://xxoo.be/technology/export-putty-sessions/</link>
       <pubDate>Sat, 05 Oct 2019 13:43:56 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/export-putty-sessions/</guid>
+      <guid>https://xxoo.be/technology/export-putty-sessions/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;运维人员应该都知道，PuTTY是一款免费开源的SSH远程客户端，它的体积很小，甚至无需安装。
@@ -169,10 +169,10 @@
     
     <item>
       <title>Hugo的LeaveIt主题优化记录三-修复文章内URL无法改行问题</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-url-warp-problem/</link>
       <pubDate>Fri, 04 Oct 2019 16:53:05 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-url-warp-problem/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-url-warp-problem/</guid>
       <description>&lt;h1 id=&#34;问题&#34;&gt;问题&lt;/h1&gt;
 
 &lt;h2 id=&#34;文内长url手机端显示问题&#34;&gt;文内长URL手机端显示问题&lt;/h2&gt;
@@ -182,19 +182,19 @@
     
     <item>
       <title>修改AdSense自适应广告尺寸 不同宽度屏幕指定不同尺寸广告</title>
-      <link>https://huaien.co/technology/modify-google-adsense-auto-style/</link>
+      <link>https://xxoo.be/technology/modify-google-adsense-auto-style/</link>
       <pubDate>Thu, 03 Oct 2019 04:50:16 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/modify-google-adsense-auto-style/</guid>
+      <guid>https://xxoo.be/technology/modify-google-adsense-auto-style/</guid>
       <description>背景 个人也是比较反感那些不美观的广告，但是适当利用Google广告的话可以给网站添加一点内容，个人觉得还是挺好的。虽然Google Adsense 提供了自</description>
     </item>
     
     <item>
       <title>好看喜欢的免费与收费typecho主题收藏</title>
-      <link>https://huaien.co/internet/favorite-great-typecho-themes/</link>
+      <link>https://xxoo.be/internet/favorite-great-typecho-themes/</link>
       <pubDate>Wed, 02 Oct 2019 06:03:21 +0000</pubDate>
       
-      <guid>https://huaien.co/internet/favorite-great-typecho-themes/</guid>
+      <guid>https://xxoo.be/internet/favorite-great-typecho-themes/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;因为本人也在用typecho搭建博客，typecho的主题没有wordpress多，但是很多国内大佬做的主题是真心喜欢，本人收藏的多为简洁又好看的主题。&lt;/p&gt;</description>
@@ -202,37 +202,37 @@
     
     <item>
       <title>记录docker的Debian下搭建Django框架开发的仿zhuye.kim导航</title>
-      <link>https://huaien.co/technology/debian-install-zhuye-kim/</link>
+      <link>https://xxoo.be/technology/debian-install-zhuye-kim/</link>
       <pubDate>Tue, 01 Oct 2019 16:14:12 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/debian-install-zhuye-kim/</guid>
+      <guid>https://xxoo.be/technology/debian-install-zhuye-kim/</guid>
       <description></description>
     </item>
     
     <item>
       <title>记录docker安装宝塔面板</title>
-      <link>https://huaien.co/technology/docker-install-bt-panel/</link>
+      <link>https://xxoo.be/technology/docker-install-bt-panel/</link>
       <pubDate>Mon, 30 Sep 2019 10:58:47 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/docker-install-bt-panel/</guid>
+      <guid>https://xxoo.be/technology/docker-install-bt-panel/</guid>
       <description>背景 因为最近在学docker，而且有oracle的免费机，就像测试测试docker安装宝塔面板的效果。其实通过一系列操作可以学习到挺多doc</description>
     </item>
     
     <item>
       <title>Hugo的LeaveIt主题优化记录二-添加字数统计,阅读时间,放大图片</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-update-logs/</link>
       <pubDate>Wed, 31 Jul 2019 05:18:22 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-update-logs/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-update-logs/</guid>
       <description>添加字数统计,阅读时间 原文章标题下的分类目录等的样式是下面图片的样子。图片截图于主题原作者博客 在添加了字数统计和阅读时间后，将排版改成下面这</description>
     </item>
     
     <item>
       <title>Centos安装和升级Ruby和sass</title>
-      <link>https://huaien.co/technology/install-ruby-update-on-centos/</link>
+      <link>https://xxoo.be/technology/install-ruby-update-on-centos/</link>
       <pubDate>Wed, 31 Jul 2019 04:59:52 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/install-ruby-update-on-centos/</guid>
+      <guid>https://xxoo.be/technology/install-ruby-update-on-centos/</guid>
       <description>&lt;h2 id=&#34;安装ruby&#34;&gt;安装Ruby&lt;/h2&gt;
 
 &lt;p&gt;Centos下在线安装Ruby,版本可能比较旧&lt;/p&gt;
@@ -243,19 +243,19 @@
     
     <item>
       <title>Hugo的LeaveIt主题优化记录一-修复错位，添加toc</title>
-      <link>https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/</link>
+      <link>https://xxoo.be/technology/hugo-leaveit-theme-modified-of-bugs-1/</link>
       <pubDate>Mon, 29 Jul 2019 07:42:33 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/hugo-leaveit-theme-modified-of-bugs-1/</guid>
+      <guid>https://xxoo.be/technology/hugo-leaveit-theme-modified-of-bugs-1/</guid>
       <description>标签处的back・home按钮位置错位 这个问题我现在才发现，原来是因为这个主题在生成静态文件的时候需要sass编译。难怪我每次修改/them</description>
     </item>
     
     <item>
       <title>一键备份博客源文件与发布文章到Github和Coding</title>
-      <link>https://huaien.co/technology/one-click-script-deploy-hugo/</link>
+      <link>https://xxoo.be/technology/one-click-script-deploy-hugo/</link>
       <pubDate>Thu, 25 Jul 2019 14:58:47 +0800</pubDate>
       
-      <guid>https://huaien.co/technology/one-click-script-deploy-hugo/</guid>
+      <guid>https://xxoo.be/technology/one-click-script-deploy-hugo/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;经过一番折腾，利用shell脚本来实现更新文章后的一键备份博客源文件及发布文章到Github和Coding两个平台。&lt;/p&gt;</description>
@@ -263,37 +263,37 @@
     
     <item>
       <title>Hugo添加Valine评论系统 以LeaveIt主题为例</title>
-      <link>https://huaien.co/technology/valine-to-hugo-with-leaveit/</link>
+      <link>https://xxoo.be/technology/valine-to-hugo-with-leaveit/</link>
       <pubDate>Fri, 19 Apr 2019 09:56:14 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/valine-to-hugo-with-leaveit/</guid>
+      <guid>https://xxoo.be/technology/valine-to-hugo-with-leaveit/</guid>
       <description>&lt;p&gt;最近将博客的生成器由Hexo转回到Hugo了，在这之后选了一些主题，试过Even,Jane,mainroad等等，最后还是选了v2上有人发布的这个LeaveIt主题。主要是因为这个主题简洁又不缺乏华丽的感觉。不过有点不足的是这个主题并不能直接用评论系统，在查看了相关教程之后，终于添加了原来使用的Valine评论系统。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>手滑导致设置git remote仓库错误 如何修改远程仓库地址配置</title>
-      <link>https://huaien.co/technology/change-git-remote-config/</link>
+      <link>https://xxoo.be/technology/change-git-remote-config/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/change-git-remote-config/</guid>
+      <guid>https://xxoo.be/technology/change-git-remote-config/</guid>
       <description>&lt;p&gt;本文记录了如何修改git remote配置的远程仓库地址。在不小心设置错误git remote地址时可以用这个方法修改为正确的远程仓库地址配置。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Disqus提示无法加载的解决办法</title>
-      <link>https://huaien.co/technology/disqus-error-to-load/</link>
+      <link>https://xxoo.be/technology/disqus-error-to-load/</link>
       <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/disqus-error-to-load/</guid>
+      <guid>https://xxoo.be/technology/disqus-error-to-load/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://ae01.alicdn.com/kf/HTB1c6O0X6vuK1Rjy0Faq6x2aVXaB.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>如何申请成为Cloudflare Partner合作伙伴</title>
-      <link>https://huaien.co/internet/become-cloudflare-partner/</link>
+      <link>https://xxoo.be/internet/become-cloudflare-partner/</link>
       <pubDate>Thu, 11 Oct 2018 16:53:05 +0900</pubDate>
       
-      <guid>https://huaien.co/internet/become-cloudflare-partner/</guid>
+      <guid>https://xxoo.be/internet/become-cloudflare-partner/</guid>
       <description>&lt;h2 id=&#34;什么是cloudflare&#34;&gt;什么是CloudFlare&lt;/h2&gt;
 
 &lt;p&gt;CloudFlare想必大家还是挺熟悉的，作为世界最大的CDN服务提供商之一，CloudFlare不但提供了免费的域名DNS解析服务，包括了HTTPS加密的免费的CDN服务，还有吊炸天的1.1.1.1 1.0.0.1的公共DNS服务。而且解析速度非常之快，我也将自己10个左右的域名托管在CloudFlare的DNS解析服务上。试过如果添加解析记录或者修改解析记录后，几乎即时生效，虽然说这样有好有坏，但是反应速度之快，真的让我吓一跳。&lt;/p&gt;</description>
@@ -301,38 +301,38 @@
     
     <item>
       <title>解决Linux系统SSH终端显示中文乱码以centos为例</title>
-      <link>https://huaien.co/technology/linux-os-ssh-show-chinese/</link>
+      <link>https://xxoo.be/technology/linux-os-ssh-show-chinese/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/linux-os-ssh-show-chinese/</guid>
+      <guid>https://xxoo.be/technology/linux-os-ssh-show-chinese/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://ww1.sinaimg.cn/large/005YhI8igy1fvntln8qacj30gj09sgmt&#34; alt=&#34;&#34; /&gt;
 如果没有设置好编码，在SSH客户端连接Linux服务器的时候就是像上面那样显示效果。不过经过设置，可以正常显示中文。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>宝塔面板无法启动pure-ftpd服务的解决办法</title>
-      <link>https://huaien.co/technology/bt-panel-cannot-active-pure-ftpd/</link>
+      <link>https://xxoo.be/technology/bt-panel-cannot-active-pure-ftpd/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/bt-panel-cannot-active-pure-ftpd/</guid>
+      <guid>https://xxoo.be/technology/bt-panel-cannot-active-pure-ftpd/</guid>
       <description>&lt;p&gt;宝塔面板安装pure-ftpd后发现并没有启动，多次手动重启还是显示关闭状态，重装好几次也无法启动。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>解决wordpress后台安装插件时提示需要ftp账号和密码</title>
-      <link>https://huaien.co/technology/wordpress-install-plugin-show-ftp-info/</link>
+      <link>https://xxoo.be/technology/wordpress-install-plugin-show-ftp-info/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/wordpress-install-plugin-show-ftp-info/</guid>
+      <guid>https://xxoo.be/technology/wordpress-install-plugin-show-ftp-info/</guid>
       <description>&lt;p&gt;在wordpress安装之后，想要安装一个插件来用，结果弹出提示输入ftp账户与密码。如下图&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>宝塔面板忘记密码如何找回宝塔面板账户登录密码</title>
-      <link>https://huaien.co/technology/bt-panel-get-password-back/</link>
+      <link>https://xxoo.be/technology/bt-panel-get-password-back/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/bt-panel-get-password-back/</guid>
+      <guid>https://xxoo.be/technology/bt-panel-get-password-back/</guid>
       <description>&lt;h2 id=&#34;找回密码&#34;&gt;找回密码&lt;/h2&gt;
 
 &lt;p&gt;如果只是忘记了密码，还记得账号&lt;/p&gt;
@@ -342,10 +342,10 @@
     
     <item>
       <title>宝塔启动nginx服务失败提示failed (98:Address already in use)</title>
-      <link>https://huaien.co/technology/bt-panel-failed-to-start-nginx/</link>
+      <link>https://xxoo.be/technology/bt-panel-failed-to-start-nginx/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/bt-panel-failed-to-start-nginx/</guid>
+      <guid>https://xxoo.be/technology/bt-panel-failed-to-start-nginx/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;发现宝塔的nginx没有在运行，于是在宝塔面板上手动重启，但是提示失败，失败信息是下面那样：&lt;/p&gt;</description>
@@ -353,10 +353,10 @@
     
     <item>
       <title>Git生成 SSH 公钥添加到GitHub和Coding.net</title>
-      <link>https://huaien.co/technology/ssh-key-generator-git/</link>
+      <link>https://xxoo.be/technology/ssh-key-generator-git/</link>
       <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/ssh-key-generator-git/</guid>
+      <guid>https://xxoo.be/technology/ssh-key-generator-git/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;大多数 Git 服务器都会选择使用 SSH 公钥来进行授权。系统中的每个用户都必须提供一个公钥用于授权，没有的话就要生成一个。例如我们在使用GitHub Pages来托管博客，或者将代码推到GitHub或者Coding上的话需要先生成一个SSH并填入到托管平台的设置中来授权。&lt;/p&gt;</description>
@@ -364,10 +364,10 @@
     
     <item>
       <title>宝塔面板安装Flarum轻论坛程序时提示The PHP extension &#39;fileinfo&#39; is required</title>
-      <link>https://huaien.co/technology/bt-panel-install-fileinfo-for-php/</link>
+      <link>https://xxoo.be/technology/bt-panel-install-fileinfo-for-php/</link>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/bt-panel-install-fileinfo-for-php/</guid>
+      <guid>https://xxoo.be/technology/bt-panel-install-fileinfo-for-php/</guid>
       <description>&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
 
 &lt;p&gt;宝塔面板默认并没有安装fileinfo模块，可按以下教程安装：&lt;/p&gt;
@@ -377,10 +377,10 @@
     
     <item>
       <title>编译安装PHP组件出现错误提示内存不足：virtual memory exhausted Cannot allocate memory</title>
-      <link>https://huaien.co/technology/no-enough-memory-to-make-php/</link>
+      <link>https://xxoo.be/technology/no-enough-memory-to-make-php/</link>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/no-enough-memory-to-make-php/</guid>
+      <guid>https://xxoo.be/technology/no-enough-memory-to-make-php/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;前面一篇我们介绍了&lt;a href=&#34;https://huaien.me/article/backend/bt-panel-install-fileinfo-for-php/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;宝塔面板的PHP默认不安装fileinfo组件，需要手动编译安装&lt;/a&gt;。在php5.6上是没有出现问题，但是在编译php7.1的版本的&lt;code&gt;make &amp;amp;&amp;amp; make install&lt;/code&gt;这一步出现错误，提示：&lt;/p&gt;</description>
@@ -388,10 +388,10 @@
     
     <item>
       <title>AWS用ec2-user用户来更改root密码并使用root用户</title>
-      <link>https://huaien.co/technology/change-password-for-root-on-aws-ec2/</link>
+      <link>https://xxoo.be/technology/change-password-for-root-on-aws-ec2/</link>
       <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/change-password-for-root-on-aws-ec2/</guid>
+      <guid>https://xxoo.be/technology/change-password-for-root-on-aws-ec2/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;AWS的EC2在创建实例后，默认是使用ec2-user用户加密钥文件来登录ssh，使用AWS默认的EC2账户登录服务器后，用户权限收到很大的限制，有些目录无法访问，需要切换到root账户下工作。&lt;/p&gt;</description>
@@ -399,10 +399,10 @@
     
     <item>
       <title>正确使用AMP 让Google找到你的AMP页面</title>
-      <link>https://huaien.co/technology/let-google-find-your-amp/</link>
+      <link>https://xxoo.be/technology/let-google-find-your-amp/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/let-google-find-your-amp/</guid>
+      <guid>https://xxoo.be/technology/let-google-find-your-amp/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在用Hexo的&lt;a href=&#34;https://github.com/tea3/hexo-generator-amp&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo-generator-amp&lt;/a&gt;插件后，发现并没有被收录AMP页面。
@@ -411,10 +411,10 @@
     
     <item>
       <title>32位Linux系统的node_modules文件夹移到64位系统下报错</title>
-      <link>https://huaien.co/technology/unable-to-use-nodejs-on-64-bit-os/</link>
+      <link>https://xxoo.be/technology/unable-to-use-nodejs-on-64-bit-os/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/unable-to-use-nodejs-on-64-bit-os/</guid>
+      <guid>https://xxoo.be/technology/unable-to-use-nodejs-on-64-bit-os/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;把Hexo博客源码整个从32位的Linux系统搬到64位系统下，本来还没发现32位和64位，直到执行hexo clean的时候提示错误才发现。node_modules文件夹的指定模块报错。&lt;/p&gt;</description>
@@ -422,28 +422,28 @@
     
     <item>
       <title>Git学习相关资料整理</title>
-      <link>https://huaien.co/technology/git-learning-sheet/</link>
+      <link>https://xxoo.be/technology/git-learning-sheet/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/git-learning-sheet/</guid>
+      <guid>https://xxoo.be/technology/git-learning-sheet/</guid>
       <description>&lt;p&gt;部分电子书已经收录到仓库中，可以在这里查看到：&lt;a href=&#34;https://down.huaien.me/00.%E7%94%B5%E5%AD%90%E4%B9%A6_Ebook/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;电子书仓库&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux安装nvm后无法使用nvm安装node</title>
-      <link>https://huaien.co/technology/not-able-to-install-nodejs-by-nvm/</link>
+      <link>https://xxoo.be/technology/not-able-to-install-nodejs-by-nvm/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/not-able-to-install-nodejs-by-nvm/</guid>
+      <guid>https://xxoo.be/technology/not-able-to-install-nodejs-by-nvm/</guid>
       <description>&lt;p&gt;今天在给服务器安装nvm的时候出现无法安装node的错误，查询了网上资料，可以通过修改bash_profile来解决。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>多平台维护Hexo提示node_modules错误问题</title>
-      <link>https://huaien.co/technology/hexo-for-multiple-platform-error/</link>
+      <link>https://xxoo.be/technology/hexo-for-multiple-platform-error/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/hexo-for-multiple-platform-error/</guid>
+      <guid>https://xxoo.be/technology/hexo-for-multiple-platform-error/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在将Hexo在多个平台之间移动，配置，使用的时候会遇到组件问题，如下面，在原平台可以正常使用。但是移动到新的64位Linux系统后各种错误。大部分是因为node组件没有安装好的原因。&lt;/p&gt;</description>
@@ -451,10 +451,10 @@
     
     <item>
       <title>Github Pages已经官方支持HTTPS与如何开启GitHub Pages HTTPS支持</title>
-      <link>https://huaien.co/news/github-pages-support-https/</link>
+      <link>https://xxoo.be/news/github-pages-support-https/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/news/github-pages-support-https/</guid>
+      <guid>https://xxoo.be/news/github-pages-support-https/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;根据GitHub博客，Github Pages是从今年5月1日开始支持的HTTPS的：
@@ -463,10 +463,10 @@
     
     <item>
       <title>linux下删除某个文件之外的其他所有文件的命令之extglob模式</title>
-      <link>https://huaien.co/technology/remove-all-except-this-file-linux-command/</link>
+      <link>https://xxoo.be/technology/remove-all-except-this-file-linux-command/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/remove-all-except-this-file-linux-command/</guid>
+      <guid>https://xxoo.be/technology/remove-all-except-this-file-linux-command/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;比如最近我在备份Hexo的时候，多次需要调试效果，因为有备份一个文件夹叫hexo.zip，把这个传到服务器的网站根目录下，然后将其解压。但是之后再重建Hexo的时候需要将目录下所有文件除了hexo.zip都删除的时候，不能只用到简单的rm命令了。&lt;/p&gt;</description>
@@ -474,10 +474,10 @@
     
     <item>
       <title>给托管在Coding Pages上的博客开启HTTPS支持 申请失败的原因</title>
-      <link>https://huaien.co/technology/enable-https-on-coding-pages/</link>
+      <link>https://xxoo.be/technology/enable-https-on-coding-pages/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/enable-https-on-coding-pages/</guid>
+      <guid>https://xxoo.be/technology/enable-https-on-coding-pages/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;前两天将&lt;a href=&#34;http://blog.huaien.me/article/blogengine/how-to-backup-hexo-to-github/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;博客同时托管到GitHub Pages和Coding Pages，并备份到这两个平台&lt;/a&gt;。
@@ -486,19 +486,19 @@
     
     <item>
       <title>Linux打包压缩目录中的隐藏文件命令</title>
-      <link>https://huaien.co/technology/linux-tar-zcvf-command-of-invisible-file/</link>
+      <link>https://xxoo.be/technology/linux-tar-zcvf-command-of-invisible-file/</link>
       <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/linux-tar-zcvf-command-of-invisible-file/</guid>
+      <guid>https://xxoo.be/technology/linux-tar-zcvf-command-of-invisible-file/</guid>
       <description>&lt;p&gt;今天需要打包Hexo源码文件夹下面的所有文件，但是如果直接使用普通的打包命令不会将包括隐藏的文件或文件夹一起打包，所以得搜索了下，可以用下面的命令来打包。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Windows,Linux多平台下共同维护Hexo 备份Hexo到GitHub</title>
-      <link>https://huaien.co/technology/how-to-backup-hexo-to-github/</link>
+      <link>https://xxoo.be/technology/how-to-backup-hexo-to-github/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/how-to-backup-hexo-to-github/</guid>
+      <guid>https://xxoo.be/technology/how-to-backup-hexo-to-github/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;因为经常需要在不同的操作系统上工作，所以需要在每个平台下都可以方便的写博客。&lt;/p&gt;
@@ -512,20 +512,20 @@
     
     <item>
       <title>git push远程版本和本地版本冲突时强制覆盖已有的分支有的分支</title>
-      <link>https://huaien.co/technology/git-commit-push-rejected-error/</link>
+      <link>https://xxoo.be/technology/git-commit-push-rejected-error/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/git-commit-push-rejected-error/</guid>
+      <guid>https://xxoo.be/technology/git-commit-push-rejected-error/</guid>
       <description>&lt;p&gt;前面我们讲到&lt;a href=&#34;https://huaien.me/article/blogengine/how-to-backup-hexo-to-github/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;备份 Hexo 源码文件到GitHub仓库&lt;/a&gt;
 在尝试将本地hexo源码文件同步到GitHub仓库的hexo分支的时候，执行&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>修改Directory Lister的字体为小夜美化版并将字体本地化</title>
-      <link>https://huaien.co/technology/make-directory-lister-more-beautiful/</link>
+      <link>https://xxoo.be/technology/make-directory-lister-more-beautiful/</link>
       <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/make-directory-lister-more-beautiful/</guid>
+      <guid>https://xxoo.be/technology/make-directory-lister-more-beautiful/</guid>
       <description>&lt;p&gt;前一段时间，在&lt;a href=&#34;https://www.moerats.com/archives/547/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Rat&amp;rsquo;s Blog&lt;/a&gt;上看到了小夜大佬Directory Lister美化修改版，但是发现网上下载下来的美化版都和小夜大佬的字体不一样。&lt;/p&gt;
 
 &lt;p&gt;自己安装好后是这样的&lt;/p&gt;</description>
@@ -533,10 +533,10 @@
     
     <item>
       <title>如何修改h5ai右上角的版权信息powered by h5ai</title>
-      <link>https://huaien.co/technology/modify-h5ai-copyright/</link>
+      <link>https://xxoo.be/technology/modify-h5ai-copyright/</link>
       <pubDate>Sun, 29 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/modify-h5ai-copyright/</guid>
+      <guid>https://xxoo.be/technology/modify-h5ai-copyright/</guid>
       <description>&lt;h2 id=&#34;关于h5ai&#34;&gt;关于h5ai&lt;/h2&gt;
 
 &lt;p&gt;前面我们说到了h5ai这款德国开发者开发的强大的PHP文件目录程序。在折腾这款程序的时候有一些地方一直搞不明白。比如今天要说的如何修改右上角版权信息Powered by h5ai。&lt;/p&gt;</description>
@@ -544,10 +544,10 @@
     
     <item>
       <title>帮你记密码：几款密码管理器Keepass LastPass Bitwarden Enpass</title>
-      <link>https://huaien.co/software/compare-some-password-manager/</link>
+      <link>https://xxoo.be/software/compare-some-password-manager/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/software/compare-some-password-manager/</guid>
+      <guid>https://xxoo.be/software/compare-some-password-manager/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;之前有听说过这类软件，比如1password，之前有在iOS的限免软件里面见到过，但是一直没有去了解。最近发现很多平台的密码给忘记了，而且找回密码需要用到绑定的手机来验证，但是有些网站绑定的手机号已经是国内高中，或者大学时期用得号码，想要找回非常麻烦，就比如之前所说的微博，还有特别要提的是百度的更改手机号的体验及其差，之后有时间会说到。这次想写写关于现在比较热门的几款密码管理器。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -555,55 +555,55 @@
     
     <item>
       <title>利用Caddy来搭建可挂载的WebDAV个人网盘&#43;配合FileBrowser来管理文件</title>
-      <link>https://huaien.co/technology/use-caddy-to-build-webdav-server/</link>
+      <link>https://xxoo.be/technology/use-caddy-to-build-webdav-server/</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/use-caddy-to-build-webdav-server/</guid>
+      <guid>https://xxoo.be/technology/use-caddy-to-build-webdav-server/</guid>
       <description>&lt;p&gt;前面我们讲到了&lt;a href=&#34;https://huaien.me/article/backend/caddy-a-light-http-server/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy&lt;/a&gt;以及用&lt;a href=&#34;https://huaien.me/article/backend/use-caddy-to-run-site/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy搭建网站&lt;/a&gt;还有用&lt;a href=&#34;https://huaien.me/article/backend/use-caddy-filemanager-to-build-personal-netdisk/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy的File Manager来搭建个人网盘&lt;/a&gt;。今天我们要讲的用Caddy的WebDav扩展组件来搭建一个Webdav服务器。并且配合Caddy的FileManager扩展组件来在线管理WebDav服务器的文件。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>利用Caddy的Filemanager插件搭建个人网盘教程</title>
-      <link>https://huaien.co/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
+      <link>https://xxoo.be/technology/use-caddy-filemanager-to-build-personal-netdisk/</link>
       <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
+      <guid>https://xxoo.be/technology/use-caddy-filemanager-to-build-personal-netdisk/</guid>
       <description>前面我们了解了Caddy是一个极简HTTP服务器，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Cadd</description>
     </item>
     
     <item>
       <title>利用Caddy来搭建网站之Caddy配置文件教程</title>
-      <link>https://huaien.co/technology/use-caddy-to-run-site/</link>
+      <link>https://xxoo.be/technology/use-caddy-to-run-site/</link>
       <pubDate>Thu, 19 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/use-caddy-to-run-site/</guid>
+      <guid>https://xxoo.be/technology/use-caddy-to-run-site/</guid>
       <description>&lt;p&gt;前面我们了解了&lt;a href=&#34;https://huaien.me/article/backend/caddy-a-light-http-server/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy是一个极简HTTP服务器&lt;/a&gt;，可以用来快速配置网站。并且支持HTTPS，支持自己的SSL证书或者只需要一个邮箱，Caddy帮你自动生成Let&amp;rsquo;s Encrypt的免费证书，简单的配置就能搭建好一个HTTPS的Web服务器环境。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Caddy一个轻量的Go语言HTTP服务器的一键安装脚本教程</title>
-      <link>https://huaien.co/technology/caddy-a-light-http-server/</link>
+      <link>https://xxoo.be/technology/caddy-a-light-http-server/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/caddy-a-light-http-server/</guid>
+      <guid>https://xxoo.be/technology/caddy-a-light-http-server/</guid>
       <description>&lt;p&gt;最近在逛逗比根据地的时候发现了这个用Golang写的极简HTTP WEB Server，叫&lt;a href=&#34;https://doub.io/shell-jc1/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Caddy&lt;/a&gt;，上网查了其实好多博客都写了关于这个。于是就想用闲置的服务器折腾试试。但是毕竟是折腾，过程中还是遇到挺多问题。这里就简单记录一下。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>解决Deepin深度系统下没有无线网络选项之安装驱动</title>
-      <link>https://huaien.co/technology/fix-no-wifi-on-deepin-os/</link>
+      <link>https://xxoo.be/technology/fix-no-wifi-on-deepin-os/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/fix-no-wifi-on-deepin-os/</guid>
+      <guid>https://xxoo.be/technology/fix-no-wifi-on-deepin-os/</guid>
       <description>&lt;p&gt;前两天装了Deepin 深度系统。在查询Linux资料的时候被安利了。深度系统是国内最大的国产系统，由于其界面优美，符合国人使用习惯。下面摘了维基百科的词条：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ubuntu修改时区的简单方法-以修改UTC为JST为例</title>
-      <link>https://huaien.co/technology/change-timezone-for-unbuntu/</link>
+      <link>https://xxoo.be/technology/change-timezone-for-unbuntu/</link>
       <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/change-timezone-for-unbuntu/</guid>
+      <guid>https://xxoo.be/technology/change-timezone-for-unbuntu/</guid>
       <description>&lt;p&gt;今天公司给了个课题，让我们查看AWS上的所有服务器是不是JST时区时间。
 如果不是就需要修改为JST。
 先用&lt;code&gt;date&lt;/code&gt;命令来查看当前设置的时区。
@@ -613,10 +613,10 @@
     
     <item>
       <title>クラウドサービス企業ノAWSとその他の企業Azure　GCP　IBM　CLOUDなどの比較</title>
-      <link>https://huaien.co/technology/difference-of-iaas-saas-paas/</link>
+      <link>https://xxoo.be/technology/difference-of-iaas-saas-paas/</link>
       <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/difference-of-iaas-saas-paas/</guid>
+      <guid>https://xxoo.be/technology/difference-of-iaas-saas-paas/</guid>
       <description>&lt;p&gt;今回は課題としてクラウドサービスの現状を調べました。今後閲覧しやいために、ここでまとめました。&lt;/p&gt;
 
 &lt;h1 id=&#34;クラウドとは&#34;&gt;クラウドとは&lt;/h1&gt;
@@ -628,10 +628,10 @@
     
     <item>
       <title>开启HTTPS后WordPress后台wp-admin提示ERR_TOO_MANY_REDIRECTS</title>
-      <link>https://huaien.co/technology/wp_admin_https_unavailable/</link>
+      <link>https://xxoo.be/technology/wp_admin_https_unavailable/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/wp_admin_https_unavailable/</guid>
+      <guid>https://xxoo.be/technology/wp_admin_https_unavailable/</guid>
       <description>&lt;p&gt;今天打开Hanayao博客，访问后台&lt;code&gt;wp-admin&lt;/code&gt;发现提示 &lt;code&gt;ERR_TOO_MANY_REDIRECTS&lt;/code&gt;
 于是查询了下解决方法，参考了&lt;a href=&#34;https://www.tongfu.info/solve-wordpress-wp-admin-https-redirect-loop/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;同富&lt;/a&gt;的文章，发现可以解决。特记录下来。
 在wp-config.php文件下增加了以下几行就可以。&lt;/p&gt;</description>
@@ -639,10 +639,10 @@
     
     <item>
       <title>开启HTTPS后WordPress后台wp-admin登录后：显示抱歉，您不能访问此页面</title>
-      <link>https://huaien.co/technology/wp_admin_https_sorry_cannot_reach/</link>
+      <link>https://xxoo.be/technology/wp_admin_https_sorry_cannot_reach/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/wp_admin_https_sorry_cannot_reach/</guid>
+      <guid>https://xxoo.be/technology/wp_admin_https_sorry_cannot_reach/</guid>
       <description>&lt;p&gt;之前提到Hanayao博客，开启HTTPS后访问后台&lt;code&gt;wp-admin&lt;/code&gt;提示 &lt;code&gt;ERR_TOO_MANY_REDIRECTS&lt;/code&gt;过多次重定向的&lt;a href=&#34;https://huaien.me/2018/06/05/wp_admin_https_unavailable/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;解决办法&lt;/a&gt;
 但是解决多次重定向的问题后，登陆账号后又显示“抱歉，您不能访问此页面。”的提示
 经过查询，下面两部可以解决这个问题。&lt;/p&gt;</description>
@@ -650,10 +650,10 @@
     
     <item>
       <title>解决32系统无法安装bt宝塔服务器面板</title>
-      <link>https://huaien.co/technology/install-bt-panel-on-32-bit-os/</link>
+      <link>https://xxoo.be/technology/install-bt-panel-on-32-bit-os/</link>
       <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/install-bt-panel-on-32-bit-os/</guid>
+      <guid>https://xxoo.be/technology/install-bt-panel-on-32-bit-os/</guid>
       <description>&lt;h2 id=&#34;bt&#34;&gt;bt&lt;/h2&gt;
 
 &lt;p&gt;前段时间把VPS重装系统为debian的32位，因为内存只有512M，还是用32位比较省资源。
@@ -662,58 +662,58 @@
     
     <item>
       <title>添加SSL后Nginx的https伪静态配置多次不成功</title>
-      <link>https://huaien.co/technology/nginx-conf-after-ssl/</link>
+      <link>https://xxoo.be/technology/nginx-conf-after-ssl/</link>
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/nginx-conf-after-ssl/</guid>
+      <guid>https://xxoo.be/technology/nginx-conf-after-ssl/</guid>
       <description>&lt;p&gt;前两天给&lt;a href=&#34;http://www.hanayao.com&#34; title=&#34;HanaYao博客&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;HanaYao博客&lt;/a&gt;添加了SSL证书。但是经过多次测试，会出现访问带www的域名就会显示Nginx默认页面，或者是404 。多次修改伪静态配置后也还是会出现带www和不带www域名访问出现问题，或者就是进入后台会出现404。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>用Linux系统搭建Web环境做网站网站FTP权限问题</title>
-      <link>https://huaien.co/technology/linux-ftp-permission/</link>
+      <link>https://xxoo.be/technology/linux-ftp-permission/</link>
       <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/linux-ftp-permission/</guid>
+      <guid>https://xxoo.be/technology/linux-ftp-permission/</guid>
       <description>&lt;p&gt;在搬瓦工的VPS上，wordpress的主题或者插件无法直接在后台安装与修改。会弹出ftp设置。
 导致这一问题，一个是需要修改wordpress的主题和插件的文件夹的权限为777。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>关于WordPress后台只显示一个主题的问题</title>
-      <link>https://huaien.co/technology/wordpress-only-one-theme/</link>
+      <link>https://xxoo.be/technology/wordpress-only-one-theme/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/wordpress-only-one-theme/</guid>
+      <guid>https://xxoo.be/technology/wordpress-only-one-theme/</guid>
       <description>&lt;p&gt;今天给Hanayao博客配置了SSL证书，但是发现前台还是不会显示安全。但是在wordpress后台登录界面却可以显示安全标识。于是进了Hanayao博客后台，想换个主题试试。因为可能是使用的情侣博客主题并不是很完善，导致页面有漏洞。但是却发现后台只能看到一个主题。不过可以安装新的主题，但是安装后也是只显示最新安装的主题。
 于是查询了下资料，发现是&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>删除与卸载Debian8的Apache2</title>
-      <link>https://huaien.co/technology/uninstall-apache20-on-debian8/</link>
+      <link>https://xxoo.be/technology/uninstall-apache20-on-debian8/</link>
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/uninstall-apache20-on-debian8/</guid>
+      <guid>https://xxoo.be/technology/uninstall-apache20-on-debian8/</guid>
       <description>参考源：Linux Tips 由于某些主机提供商在重装系统后系统自带apache2，但是我用不到，一直用的nginx。如果不卸载会导致端口冲突等问题。</description>
     </item>
     
     <item>
       <title>typecho发表评论需要发送两次才成功的解决方案</title>
-      <link>https://huaien.co/technology/need-to-click-twice-to-submit-comment-on-typecho/</link>
+      <link>https://xxoo.be/technology/need-to-click-twice-to-submit-comment-on-typecho/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/need-to-click-twice-to-submit-comment-on-typecho/</guid>
+      <guid>https://xxoo.be/technology/need-to-click-twice-to-submit-comment-on-typecho/</guid>
       <description>&lt;p&gt;最近发现typecho发表评论需要发送两次才会成功发送出去，网上查询了下资料，好像把&lt;strong&gt;&lt;em&gt;后台设置里面的开启反垃圾评论选项关闭&lt;/em&gt;&lt;/strong&gt;就可以解决问题。
 原来typecho的反垃圾就是通过用户发送两次评论来实现。。。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>typecho文章评论带表情就database query error</title>
-      <link>https://huaien.co/technology/comment-with-emoji-shows-datebase-error-on-typecho/</link>
+      <link>https://xxoo.be/technology/comment-with-emoji-shows-datebase-error-on-typecho/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/comment-with-emoji-shows-datebase-error-on-typecho/</guid>
+      <guid>https://xxoo.be/technology/comment-with-emoji-shows-datebase-error-on-typecho/</guid>
       <description>&lt;p&gt;前几天开了童童的博客，但是在发布文章经常出现错误。老婆说发不出去。发给我的截图显示错误为&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -726,10 +726,10 @@
     
     <item>
       <title>CSS学习笔记</title>
-      <link>https://huaien.co/technology/css-study-note/</link>
+      <link>https://xxoo.be/technology/css-study-note/</link>
       <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/css-study-note/</guid>
+      <guid>https://xxoo.be/technology/css-study-note/</guid>
       <description>&lt;p&gt;CSS样式的三种方式&lt;/p&gt;
 
 &lt;ol&gt;
@@ -747,73 +747,73 @@
     
     <item>
       <title>typecho博客程序上传后缀为大写JPG附件失败的解决办法</title>
-      <link>https://huaien.co/technology/typecho-upload-jpg-image/</link>
+      <link>https://xxoo.be/technology/typecho-upload-jpg-image/</link>
       <pubDate>Mon, 19 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/typecho-upload-jpg-image/</guid>
+      <guid>https://xxoo.be/technology/typecho-upload-jpg-image/</guid>
       <description>昨天安装了Typecho 1.0 (14.10.10)，是官网最新的正式版，但是调试中遇到一个问题，就是上传照片的时候会出现不能上传，后来试来试去发</description>
     </item>
     
     <item>
       <title>弃用新浪微博</title>
-      <link>https://huaien.co/life/no-weibo/</link>
+      <link>https://xxoo.be/life/no-weibo/</link>
       <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/no-weibo/</guid>
+      <guid>https://xxoo.be/life/no-weibo/</guid>
       <description>&lt;p&gt;前几天老婆问我是不是修改了我们的共用微博的密码。我说没啊，都没去碰它。但是老婆说突然弹出来提示说密码已经成功修改。我马上就试了下，的确不能登录。所以就想试下找回密码，因为老婆之前绑定的手机号已经不用了，本想可以通过邮箱或者其他方式来找回密码，却发现新浪微博召回密码只能支持手机号，不然就只能通过回答相关问题来申诉找回。既然不能手机号，就只能试下申诉，填了注册日期，常使用地点，使用过的密码，名字，身份证等相关信息，提交。说通常两天可以给结果，原来觉得肯定可以通过的，但是第二天来的结果，是不通过，理由是:&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>折腾静态博客程序之Hugo部署到Github Pages搭建个人博客</title>
-      <link>https://huaien.co/technology/using-hugo-to-build-blog/</link>
+      <link>https://xxoo.be/technology/using-hugo-to-build-blog/</link>
       <pubDate>Sun, 15 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/using-hugo-to-build-blog/</guid>
+      <guid>https://xxoo.be/technology/using-hugo-to-build-blog/</guid>
       <description>&lt;p&gt;最近在浏览许多人博客时候，发现了静态博客程序这种东西。是因为看到&lt;a href=&#34;http://notes.iissnan.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;IIssNan&lt;/a&gt;这位大神的博客主题非常好看，之前用的博客程序都是wordpress或者typecho，这个主题让人眼前一亮。动态效果很好看。但是看到底部信息，发现是用&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;程序搭建的。于是就搜索了&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;相关信息，才知道静态博客程序这个东西，&lt;a href=&#34;https://hexo.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;hexo&lt;/a&gt;是用Node.js语言，因为之前有看到过ghost&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>分享几张iPhone4高清Retina壁纸</title>
-      <link>https://huaien.co/video/iphone4-retina-wallpapers/</link>
+      <link>https://xxoo.be/video/iphone4-retina-wallpapers/</link>
       <pubDate>Sun, 28 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/video/iphone4-retina-wallpapers/</guid>
+      <guid>https://xxoo.be/video/iphone4-retina-wallpapers/</guid>
       <description>&lt;p&gt;上次需要将iPhone4升级到4.3.3固件，于是备份了原来照片库的图片，今天发现有些上次手机下载的iPhone4高清Retina壁纸，分享一下&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>拿福能千人挑战等你来参与</title>
-      <link>https://huaien.co/news/naffnang-1000-ads/</link>
+      <link>https://xxoo.be/news/naffnang-1000-ads/</link>
       <pubDate>Sun, 28 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/news/naffnang-1000-ads/</guid>
+      <guid>https://xxoo.be/news/naffnang-1000-ads/</guid>
       <description>&lt;p&gt;前一阵子在很多博客都看到这个图片，后来仔细一看，原来是拿福能做的活动。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>有时还有更好的选择吗?</title>
-      <link>https://huaien.co/life/is-there-any-options/</link>
+      <link>https://xxoo.be/life/is-there-any-options/</link>
       <pubDate>Sun, 28 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/is-there-any-options/</guid>
+      <guid>https://xxoo.be/life/is-there-any-options/</guid>
       <description>&lt;p&gt;我是一个很容易纠结的人，很多时候遇到两种选择，就要犹豫好久，对于这个我自己都觉得无奈。。这两天又为了MediaTense要不要换域名的事情纠结了好久，现在还是换成Maybe.asia，因为mediatense.com再过两个月要到期了，是扔掉还是续费？&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>PayPal 2011 4大礼包现金派送</title>
-      <link>https://huaien.co/news/paypal-2011-gifts/</link>
+      <link>https://xxoo.be/news/paypal-2011-gifts/</link>
       <pubDate>Sat, 27 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/news/paypal-2011-gifts/</guid>
+      <guid>https://xxoo.be/news/paypal-2011-gifts/</guid>
       <description>&lt;p&gt;活动地址地址：&lt;a href=&#34;https://www.paypal-biz.com/onestopsolution/2011offer/ossLP.php&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.paypal-biz.com/onestopsolution/2011offer/ossLP.php&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>DNSPod收费功能彻底免费啦</title>
-      <link>https://huaien.co/news/dns-free-vip/</link>
+      <link>https://xxoo.be/news/dns-free-vip/</link>
       <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/news/dns-free-vip/</guid>
+      <guid>https://xxoo.be/news/dns-free-vip/</guid>
       <description>&lt;p&gt;亲爱滴DNSPod用户：&lt;/p&gt;
 
 &lt;p&gt;为了给大家提供更优质的DNS解析服务，阿D决定在8月25日对产品线进行全新升级，此次升级会将超值套餐的服务免费提供给大家，以后免费解析不仅更快更稳定，而且还可以享受更多更强大的功能，比如多至10条的URL转发，更强大的宕机检测，2级泛解析，域名共享、搜索引擎线路划分等。&lt;/p&gt;</description>
@@ -821,37 +821,37 @@
     
     <item>
       <title>坑爹的2011年福建高考</title>
-      <link>https://huaien.co/life/fuck-2011-fujian-gaokao/</link>
+      <link>https://xxoo.be/life/fuck-2011-fujian-gaokao/</link>
       <pubDate>Sun, 24 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/fuck-2011-fujian-gaokao/</guid>
+      <guid>https://xxoo.be/life/fuck-2011-fujian-gaokao/</guid>
       <description>&lt;p&gt;今年的高考已经结束，现在福建正在进行本二的招生，我很不幸地落榜了，以一分只差与本科线无缘，真TMD衰，我身边的人不是高中就是差本二好多分，朋友都说我这个分数最麻烦。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>吸血鬼日记第二季完结 Anna Viki重现</title>
-      <link>https://huaien.co/video/the-vampire-daries-season-2/</link>
+      <link>https://xxoo.be/video/the-vampire-daries-season-2/</link>
       <pubDate>Sat, 14 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/video/the-vampire-daries-season-2/</guid>
+      <guid>https://xxoo.be/video/the-vampire-daries-season-2/</guid>
       <description>&lt;p&gt;今天看到吸血鬼日记第二季大结局出来了！怀着激动的心情看完了，真不愧是美剧，第二季完结的最后，前面的杰米的女朋友都复活了。。。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>开启Nginx的目录文件列表功能-让Nginx显示文件列表</title>
-      <link>https://huaien.co/technology/let-nginx-show-file-list/</link>
+      <link>https://xxoo.be/technology/let-nginx-show-file-list/</link>
       <pubDate>Thu, 24 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/let-nginx-show-file-list/</guid>
+      <guid>https://xxoo.be/technology/let-nginx-show-file-list/</guid>
       <description>&lt;p&gt;今天在hostloc上看到以为朋友xtmp 请教&lt;a href=&#34;http://soft.vpser.net/是如何实现的，可以显示文件列表，因为http://soft.vpser.net/用的是nginx&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://soft.vpser.net/是如何实现的，可以显示文件列表，因为http://soft.vpser.net/用的是nginx&lt;/a&gt; 作为webserver的，但是 nginx默认是不允许列出整个目录的，所以看到版主咯拉无米推荐的方法&lt;a href=&#34;http://www.hostloc.com/thread-21478-1-4.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://www.hostloc.com/thread-21478-1-4.html&lt;/a&gt; 帖子里美国VPS给出一个ctohome的详细教程，下面转自 ctohome&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Byte与Bit有什么区别</title>
-      <link>https://huaien.co/technology/difference-byte-bit/</link>
+      <link>https://xxoo.be/technology/difference-byte-bit/</link>
       <pubDate>Sun, 20 Mar 2011 17:39:31 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/difference-byte-bit/</guid>
+      <guid>https://xxoo.be/technology/difference-byte-bit/</guid>
       <description>&lt;p&gt;在工作中遇到一些概念模糊的地方, 特此转载来以供查询。
 bit意为“位”或“比特”，是计算机运算的基础；
 byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&gt;</description>
@@ -859,146 +859,146 @@ byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&
     
     <item>
       <title>沉痛悼念云南地震和日本地震遇难者</title>
-      <link>https://huaien.co/life/yunnan-japan-earthquake/</link>
+      <link>https://xxoo.be/life/yunnan-japan-earthquake/</link>
       <pubDate>Sat, 12 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/yunnan-japan-earthquake/</guid>
+      <guid>https://xxoo.be/life/yunnan-japan-earthquake/</guid>
       <description>&lt;p&gt;都说水火无情人有情，2011年3月10日12时58分，云南省德宏傣族景颇族自治州盈江县发生里氏5.8级地震，截至目前已造成25人遇难250人受伤，而就在云南地震的第二天，也就是2011年3月11日13时46分，日本东北部宫城县以东太平洋海域发生里氏8.9级特大地震，而后又发生6次强烈余震 最大一次震级7.1级并且引发了10米高的海啸，波及了20多个国家和地区，截至目前可能已造成1800人遇难失踪。现在真是灾难不断，而地震是人类最手足无措的一种灾害，无法提前预知，提前警报，所以往往导致重大伤亡。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Wordpress无法编辑更新文章之解决方案</title>
-      <link>https://huaien.co/technology/wordpress-mod-security/</link>
+      <link>https://xxoo.be/technology/wordpress-mod-security/</link>
       <pubDate>Mon, 07 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/wordpress-mod-security/</guid>
+      <guid>https://xxoo.be/technology/wordpress-mod-security/</guid>
       <description>&lt;p&gt;前天锅烧网出现一个异常，可以添加新文章，但是无法更新和编辑文章，点击更新那个按钮后出现错误提示&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LNMP环境下typecho无法登录后台解决方案</title>
-      <link>https://huaien.co/technology/lnmp-typecho-login-error/</link>
+      <link>https://xxoo.be/technology/lnmp-typecho-login-error/</link>
       <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/lnmp-typecho-login-error/</guid>
+      <guid>https://xxoo.be/technology/lnmp-typecho-login-error/</guid>
       <description>&lt;p&gt;&lt;strong&gt;感谢&lt;a href=&#34;http://www.vpsmm.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;小夜&lt;/a&gt;提供帮助。&lt;/strong&gt;
 &amp;gt; 出现的问题：liccess的lnmp0.6 搭建好后安装了typecho后，只有首页可以访问，其他页面都不能访问，后台登录界面可以看到，但是登录后无法访问。官方有解决方案但是我按照那还是解决不了&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>忘记Imagevue的登录信息的解决方案</title>
-      <link>https://huaien.co/technology/forgot-imagevue-login-information/</link>
+      <link>https://xxoo.be/technology/forgot-imagevue-login-information/</link>
       <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/forgot-imagevue-login-information/</guid>
+      <guid>https://xxoo.be/technology/forgot-imagevue-login-information/</guid>
       <description>&lt;p&gt;今天想要登录下&lt;a href=&#34;http://www.guosao.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;锅烧网媒体库&lt;/a&gt;，但好像登录的用户名密码都不正确，无法正常登录，所以在网上找了找，看到zfreet.com的一个教程，现在分享下方法。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LNMP下给已存在的虚拟机添加伪静态规则</title>
-      <link>https://huaien.co/technology/lnmp-conf-rules/</link>
+      <link>https://xxoo.be/technology/lnmp-conf-rules/</link>
       <pubDate>Fri, 04 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/lnmp-conf-rules/</guid>
+      <guid>https://xxoo.be/technology/lnmp-conf-rules/</guid>
       <description>&lt;p&gt;使用军哥的LNMP，在添加虚拟机的时候没有添加伪静态，但是后来真正使用程序的时候需要伪静态，所以想给已经存在的虚拟主机添加伪静态跪着，由于Apache开启伪静态支持后可以直接修改.htaccess文件就行，但是nginx需要新建一个例如名字为example.conf文件，编辑该文件，把伪静态规则输入进去（注意htaccess的伪静态规则需转成nginx的conf规则才行）然后，在/usr/local/nginx/conf/vhost下编辑 域名.conf文件，得到类似&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>给力吧2011！</title>
-      <link>https://huaien.co/life/give-power-2011/</link>
+      <link>https://xxoo.be/life/give-power-2011/</link>
       <pubDate>Thu, 03 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/give-power-2011/</guid>
+      <guid>https://xxoo.be/life/give-power-2011/</guid>
       <description>&lt;p&gt;今天是农历2011年的第一天初一，放假还有8天，想想时间过的真快，一眨眼就是高三下学期了，2011年最大的挑战就是高考，自己觉得还是很有鸭梨的，前几天是高三上学期的期末考，考的成绩算是不错，但是要放到高考，那是本三都困难。。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>myqq3.19.zip 折腾VPS挂QQ 教程</title>
-      <link>https://huaien.co/technology/hang-qq-on-vps/</link>
+      <link>https://xxoo.be/technology/hang-qq-on-vps/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/hang-qq-on-vps/</guid>
+      <guid>https://xxoo.be/technology/hang-qq-on-vps/</guid>
       <description>&lt;p&gt;这文章是转自&lt;a href=&#34;http://bynai.com/archives/528/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://bynai.com/archives/528/&lt;/a&gt; 的  hostloc 上weishimi的&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>最近记性真差</title>
-      <link>https://huaien.co/life/my-bad-memory/</link>
+      <link>https://xxoo.be/life/my-bad-memory/</link>
       <pubDate>Wed, 22 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/my-bad-memory/</guid>
+      <guid>https://xxoo.be/life/my-bad-memory/</guid>
       <description>&lt;p&gt;上次报考的时候需要身份证，于是就向妈妈要了身份证，后来用完后，我放在床头，再后来掉到床下，好像记得是我捡起来放到抽屉里，但是昨天去找一下，居然不见了，我这个人很怪，有时印象中的事情记忆不真实，就好像那些记忆是一场梦，梦里的场景我却当真，可现在我的身份证真的不见了。。。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>好看的美剧推荐：The Vampire Daries（吸血鬼日记）</title>
-      <link>https://huaien.co/video/the-vampire-daries/</link>
+      <link>https://xxoo.be/video/the-vampire-daries/</link>
       <pubDate>Fri, 17 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/video/the-vampire-daries/</guid>
+      <guid>https://xxoo.be/video/the-vampire-daries/</guid>
       <description>&lt;p&gt;这个是09年开拍第一季的美剧，在美国的CW电视台播放，目前已经更新到第二季11集，是现在最火最热的美剧。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>善于利用备忘录记录重要事情</title>
-      <link>https://huaien.co/life/write-down-important-things/</link>
+      <link>https://xxoo.be/life/write-down-important-things/</link>
       <pubDate>Thu, 16 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/write-down-important-things/</guid>
+      <guid>https://xxoo.be/life/write-down-important-things/</guid>
       <description>&lt;p&gt;最近老是忘记事情，其实要写的内容很多，每次思考或发呆的时候都会想到一些值得西德东西，但是都是因为自己的拖延，到后来都忘了要写的是什么。因此，我们在日常生活中应该善于利用备忘录记录重要事情，比如你一闪而过的创意、重要的约会，想说的话和想做的事等等。这样不仅能让我们减轻了记过多事情而觉得烦躁，还能使我们不会错过一些重要事情。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>卓越当当京东三大图书零售商的价格战</title>
-      <link>https://huaien.co/life/jd-dangdang-joy-price-war/</link>
+      <link>https://xxoo.be/life/jd-dangdang-joy-price-war/</link>
       <pubDate>Wed, 15 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/jd-dangdang-joy-price-war/</guid>
+      <guid>https://xxoo.be/life/jd-dangdang-joy-price-war/</guid>
       <description>&lt;p&gt;这两天京东商城与国内另外两家网上图书零售商的价格战可谓火热，京东更是在14日对外宣称京东的图书价格将启用会员价，就是在原有的京东价上在打折20%，并称是国内最低价格。这样一来，必将对卓越与当当造成影响，即使这两家是国内最大的网上图书商。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Backy LLC 老薛主机和游子主机</title>
-      <link>https://huaien.co/server/backy-llc-laoxue-youzi-host/</link>
+      <link>https://xxoo.be/server/backy-llc-laoxue-youzi-host/</link>
       <pubDate>Wed, 08 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/server/backy-llc-laoxue-youzi-host/</guid>
+      <guid>https://xxoo.be/server/backy-llc-laoxue-youzi-host/</guid>
       <description>&lt;p&gt;Wyane目前一共有3个站点在线，分别是 MediaTense.com GuoSao.com 与IMYIA.com 。其中三个站点分别托管在不同的服务器上。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Wordpress引用优酷无广告版</title>
-      <link>https://huaien.co/technology/youku-noads-wordpress/</link>
+      <link>https://xxoo.be/technology/youku-noads-wordpress/</link>
       <pubDate>Wed, 08 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/youku-noads-wordpress/</guid>
+      <guid>https://xxoo.be/technology/youku-noads-wordpress/</guid>
       <description>在引用时,把优酷的flash地址,替换下边的视频flash地址 [html]&amp;lt;embed type=&amp;quot;application/x-shockwave-flash&amp;quot; src=&amp;quot;视频flash地址&amp;quot;d=&amp;quot;movi</description>
     </item>
     
     <item>
       <title>IPhone 5 即将上市？</title>
-      <link>https://huaien.co/news/iphone-5-is-coming/</link>
+      <link>https://xxoo.be/news/iphone-5-is-coming/</link>
       <pubDate>Thu, 02 Dec 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/news/iphone-5-is-coming/</guid>
+      <guid>https://xxoo.be/news/iphone-5-is-coming/</guid>
       <description>&lt;p&gt;&lt;span style=&#34;font-weight: normal;&#34;&gt;前两天，在一位网友的微博上发出这样一条消息“iPhone 5首次曝光，即将上市。1.5GHz A4处理器，使用全新材质氮涂层外壳，这种氮涂层外壳具有防划防磨的特效。800万传感器，而且iPhone 5完全解决了信号问题，并将支持4G连接，拥有32GB内存或64GB，此外，在续航能力方面也得到了大幅提高。”但是这条消息未经过苹果公司证实。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>锅烧网搬家出现问题</title>
-      <link>https://huaien.co/life/guosao-transport-problem/</link>
+      <link>https://xxoo.be/life/guosao-transport-problem/</link>
       <pubDate>Mon, 29 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/guosao-transport-problem/</guid>
+      <guid>https://xxoo.be/life/guosao-transport-problem/</guid>
       <description>&lt;p&gt;前面说购买了Backy LLC 的主机，于是将锅烧网搬到该主机上，但是由于域名解析的问题，网站暂时无法访问，正在解决中。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>利用感恩节促销将主机换到Backy LLC</title>
-      <link>https://huaien.co/server/thanksgiving-backy-llc/</link>
+      <link>https://xxoo.be/server/thanksgiving-backy-llc/</link>
       <pubDate>Sun, 28 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/server/thanksgiving-backy-llc/</guid>
+      <guid>https://xxoo.be/server/thanksgiving-backy-llc/</guid>
       <description>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
 &lt;p&gt;感恩节是美国比较重要的节日，而商家促销是这个节日不可缺少的一部分。&lt;/p&gt;
@@ -1008,10 +1008,10 @@ byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&
     
     <item>
       <title>代码高亮插件SyntaxHighlighter Evolved</title>
-      <link>https://huaien.co/technology/code-highlighter-wordpress-plugin/</link>
+      <link>https://xxoo.be/technology/code-highlighter-wordpress-plugin/</link>
       <pubDate>Tue, 23 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/code-highlighter-wordpress-plugin/</guid>
+      <guid>https://xxoo.be/technology/code-highlighter-wordpress-plugin/</guid>
       <description>&lt;p&gt;使用方法：&lt;/p&gt;
 
 &lt;p&gt;1.上传插件到 wp-contents/plugins 文件夹并在博客后台启用——————废话啊。。。。&lt;/p&gt;
@@ -1021,28 +1021,28 @@ byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&
     
     <item>
       <title>WordPress手机适配插件WPtouch</title>
-      <link>https://huaien.co/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</link>
+      <link>https://xxoo.be/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</link>
       <pubDate>Sun, 21 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</guid>
+      <guid>https://xxoo.be/technology/wptouch-wordpress-your-phone-more-powerful-in-touch/</guid>
       <description>该插件可以让你的wordpress网站在iPhone手机或者android系统上显示的更加美观，功能更加强大，有很好的界面体验。 图片将再下次</description>
     </item>
     
     <item>
       <title>Change Blog to Mediatense</title>
-      <link>https://huaien.co/life/change-blog-to-mt/</link>
+      <link>https://xxoo.be/life/change-blog-to-mt/</link>
       <pubDate>Sat, 20 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/change-blog-to-mt/</guid>
+      <guid>https://xxoo.be/life/change-blog-to-mt/</guid>
       <description>&lt;p&gt;经过多天准备，将原来的Wyane&amp;rsquo;S Blog 改为MediaTense ，虽然我也不知道这个单词组合有什么意义，就是觉得看得比较好看。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>配置.htaccess来实现301重定向（旧域名指向新域名）</title>
-      <link>https://huaien.co/technology/use-htaccess-301-redirect/</link>
+      <link>https://xxoo.be/technology/use-htaccess-301-redirect/</link>
       <pubDate>Sat, 20 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/use-htaccess-301-redirect/</guid>
+      <guid>https://xxoo.be/technology/use-htaccess-301-redirect/</guid>
       <description>&lt;p&gt;换了域名，为了访问旧域名的访客引导到新域名上，要使用301重定向。&lt;/p&gt;
 
 &lt;p&gt;最后在网上找到这么一个方法，可以通过 .htaccess 来实现 301 重定向，原文如下：&lt;/p&gt;</description>
@@ -1050,10 +1050,10 @@ byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&
     
     <item>
       <title>一番绮丽な私を-中岛美嘉</title>
-      <link>https://huaien.co/video/nakashima-mika-the-most-beautiful-of-me/</link>
+      <link>https://xxoo.be/video/nakashima-mika-the-most-beautiful-of-me/</link>
       <pubDate>Sat, 13 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/video/nakashima-mika-the-most-beautiful-of-me/</guid>
+      <guid>https://xxoo.be/video/nakashima-mika-the-most-beautiful-of-me/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.henanpifa.com/mp3/h1.mp3&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;一番绮丽な私を&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;2010夏季，已完结日剧《自恋刑警》插曲。中岛美嘉演唱&lt;/p&gt;</description>
@@ -1061,111 +1061,111 @@ byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&
     
     <item>
       <title>omegle-随机和全世界的网友聊天</title>
-      <link>https://huaien.co/internet/omegle-random-and-chat-with-friends-around-the-world/</link>
+      <link>https://xxoo.be/internet/omegle-random-and-chat-with-friends-around-the-world/</link>
       <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/internet/omegle-random-and-chat-with-friends-around-the-world/</guid>
+      <guid>https://xxoo.be/internet/omegle-random-and-chat-with-friends-around-the-world/</guid>
       <description>&lt;p&gt;最近好久没更新博客了。因为高三了，时间也变得紧张起来了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>电动车没电什么的，最讨厌了～</title>
-      <link>https://huaien.co/life/i-hate-about-electric-mobike-no-power/</link>
+      <link>https://xxoo.be/life/i-hate-about-electric-mobike-no-power/</link>
       <pubDate>Thu, 16 Sep 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/i-hate-about-electric-mobike-no-power/</guid>
+      <guid>https://xxoo.be/life/i-hate-about-electric-mobike-no-power/</guid>
       <description>&lt;p&gt;开学了。上学用的电动车在使用一年半后电瓶接近报废了…无奈只好花了将近六百大洋换了电瓶，在换的时候还在犹豫着要不要还助力车…涛哥给我提了醒：把电瓶拿去修复吧，在呀迪的店旁边有个电动车电瓶修复的店…。还是换个吧…也不知道修复的效果如何…价格怎样…&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>只想买iPhone的脑残果粉与店员的爆笑对话</title>
-      <link>https://huaien.co/video/iphone-fan-with-shop-staff-talk/</link>
+      <link>https://xxoo.be/video/iphone-fan-with-shop-staff-talk/</link>
       <pubDate>Sun, 29 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/video/iphone-fan-with-shop-staff-talk/</guid>
+      <guid>https://xxoo.be/video/iphone-fan-with-shop-staff-talk/</guid>
       <description>&lt;p&gt;当年诺基亚以其symbian系统独霸智能手机市场，如今却有了几个巨头，真是风水轮流转，  苹果、谷歌等在手机业的崛起给NOKIA敲响了一个警钟，技术创新是时代的潮流。现在手机功能越来越多，也越来越多人不满足。而苹果以其  独特的魅力影响了很大一部分人，但其中有些果粉，根本都不知道苹果好在哪里，别人问起就尴尬了，下面一段视频，揭示了一些苹果迷的无知。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>如何修改WordPress头像</title>
-      <link>https://huaien.co/technology/modify-your-head-is-more-prominent-personality/</link>
+      <link>https://xxoo.be/technology/modify-your-head-is-more-prominent-personality/</link>
       <pubDate>Sun, 29 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/modify-your-head-is-more-prominent-personality/</guid>
+      <guid>https://xxoo.be/technology/modify-your-head-is-more-prominent-personality/</guid>
       <description>&lt;p&gt;有些人刚接触像IMYIA的网站，都会有一个疑问，就是 评论的后显示的头像是哪里的？怎么来的？
 这里告诉大家，麦芽使用的wordpress程序搭建的网站，评论的头像是由Gravatar支持的。我也不会表达下面转一段比较清楚的：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>每天坚持8分钟 造就坚实6块腹肌</title>
-      <link>https://huaien.co/video/8-mins-work-out-everyday/</link>
+      <link>https://xxoo.be/video/8-mins-work-out-everyday/</link>
       <pubDate>Sun, 29 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/video/8-mins-work-out-everyday/</guid>
+      <guid>https://xxoo.be/video/8-mins-work-out-everyday/</guid>
       <description>&lt;p&gt;我想要是你能坚持锻炼 ，就可能有效果。这个视频教程挺不错，主要是坚持。哈哈
 第一级 Level 1&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>康盛创想被腾讯收购了</title>
-      <link>https://huaien.co/news/tencent-buy-comsenz/</link>
+      <link>https://xxoo.be/news/tencent-buy-comsenz/</link>
       <pubDate>Wed, 25 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/news/tencent-buy-comsenz/</guid>
+      <guid>https://xxoo.be/news/tencent-buy-comsenz/</guid>
       <description>8月24日，国内最大的互联网企业腾讯证实，已与中国最大的社区软件平台及服务提供商康盛创想达成收购协议，具体交易将在近期完成。 对于这一事件，大</description>
     </item>
     
     <item>
       <title>喜爱的NBA球员狼王加内特纪录片</title>
-      <link>https://huaien.co/life/nba-kevin-garnett-video/</link>
+      <link>https://xxoo.be/life/nba-kevin-garnett-video/</link>
       <pubDate>Wed, 11 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/nba-kevin-garnett-video/</guid>
+      <guid>https://xxoo.be/life/nba-kevin-garnett-video/</guid>
       <description>&lt;p&gt;我原来很少关注NBA。。后来我被堂哥影响了（他经常看NBA  打NBA 游戏） :mrgreen:  他喜欢凯文·加内特，我渐渐得也喜欢上了这位狼王。他能给人一种霸气，是真男人。当然打篮球 不用说。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>谈谈学英语的那点事</title>
-      <link>https://huaien.co/life/about-learning-english/</link>
+      <link>https://xxoo.be/life/about-learning-english/</link>
       <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/about-learning-english/</guid>
+      <guid>https://xxoo.be/life/about-learning-english/</guid>
       <description>&lt;p&gt;很多认识我的人 会认为我英语学的很好。其实不然，我认为自己也就是三脚猫的功夫。原因是什么呢？你们就只是看到我的英语成绩好，但是在我们那个学校 那个班级，这个分数来说是比较高，如果和别的班级比， 就脸红了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>万能红军版的《非诚勿扰》出场曲 can you feel it </title>
-      <link>https://huaien.co/video/universal-red-army-version-of-you-are-the-one-played-song-can-you-feel-it/</link>
+      <link>https://xxoo.be/video/universal-red-army-version-of-you-are-the-one-played-song-can-you-feel-it/</link>
       <pubDate>Sun, 08 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/video/universal-red-army-version-of-you-are-the-one-played-song-can-you-feel-it/</guid>
+      <guid>https://xxoo.be/video/universal-red-army-version-of-you-are-the-one-played-song-can-you-feel-it/</guid>
       <description>&lt;p&gt;恶搞。。。看起来太疯狂了。。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>电影夜店恶搞视频片段《哥是女人》</title>
-      <link>https://huaien.co/video/iam-woman-fucking-video/</link>
+      <link>https://xxoo.be/video/iam-woman-fucking-video/</link>
       <pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/video/iam-woman-fucking-video/</guid>
+      <guid>https://xxoo.be/video/iam-woman-fucking-video/</guid>
       <description>&lt;p&gt;电影《夜店》的片段被人连起来配音 成了挺搞笑的小短片 呵呵，有兴趣就看看吧&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>WordPress插件ShadowBoxJS幻灯片</title>
-      <link>https://huaien.co/technology/shadowbox-wordpress-plugin/</link>
+      <link>https://xxoo.be/technology/shadowbox-wordpress-plugin/</link>
       <pubDate>Wed, 04 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/shadowbox-wordpress-plugin/</guid>
+      <guid>https://xxoo.be/technology/shadowbox-wordpress-plugin/</guid>
       <description>&lt;p&gt;wordpress之所以强大就是因为它有很多插件做后盾，多彩丰富的博客都是我们所希望的，幻灯片插件那么就是必不可少的了，Shadowbox JS就一款不错的幻灯片插件，除了一般的图片效果外，它还支持图片的裁剪、拖动、多媒体播放等功能。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>自己的博客终于上线了</title>
-      <link>https://huaien.co/life/your-blog-finally-on-the-line/</link>
+      <link>https://xxoo.be/life/your-blog-finally-on-the-line/</link>
       <pubDate>Wed, 04 Aug 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/life/your-blog-finally-on-the-line/</guid>
+      <guid>https://xxoo.be/life/your-blog-finally-on-the-line/</guid>
       <description>经过几天的测试修改，自己的博客终于开通了。 想想自己是在06年的时候开始对网站制作产生兴趣。。想想那时也挺早的，但是由于还小，还不知道建设网站</description>
     </item>
     

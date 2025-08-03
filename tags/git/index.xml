@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/git/</link>
+    <link>https://xxoo.be/tags/git/</link>
     <description>Recent content in Git on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 20 Feb 2020 15:21:21 +0900</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Github fork后的仓库如何同步源仓库的新更新内容</title>
-      <link>https://huaien.co/technology/syncing-origin-fork/</link>
+      <link>https://xxoo.be/technology/syncing-origin-fork/</link>
       <pubDate>Thu, 20 Feb 2020 15:21:21 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/syncing-origin-fork/</guid>
+      <guid>https://xxoo.be/technology/syncing-origin-fork/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;最近遇到一个问题，fork了一位作者的仓库，修改fork的仓库的时候发现作者发布了新版，更新了一部分内容。这是后要怎么把原作者的仓库更新内容同步到自己fork的仓库呢？&lt;/p&gt;</description>
@@ -24,19 +24,19 @@
     
     <item>
       <title>手滑导致设置git remote仓库错误 如何修改远程仓库地址配置</title>
-      <link>https://huaien.co/technology/change-git-remote-config/</link>
+      <link>https://xxoo.be/technology/change-git-remote-config/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/change-git-remote-config/</guid>
+      <guid>https://xxoo.be/technology/change-git-remote-config/</guid>
       <description>&lt;p&gt;本文记录了如何修改git remote配置的远程仓库地址。在不小心设置错误git remote地址时可以用这个方法修改为正确的远程仓库地址配置。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Git生成 SSH 公钥添加到GitHub和Coding.net</title>
-      <link>https://huaien.co/technology/ssh-key-generator-git/</link>
+      <link>https://xxoo.be/technology/ssh-key-generator-git/</link>
       <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/ssh-key-generator-git/</guid>
+      <guid>https://xxoo.be/technology/ssh-key-generator-git/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;大多数 Git 服务器都会选择使用 SSH 公钥来进行授权。系统中的每个用户都必须提供一个公钥用于授权，没有的话就要生成一个。例如我们在使用GitHub Pages来托管博客，或者将代码推到GitHub或者Coding上的话需要先生成一个SSH并填入到托管平台的设置中来授权。&lt;/p&gt;</description>
@@ -44,19 +44,19 @@
     
     <item>
       <title>Git学习相关资料整理</title>
-      <link>https://huaien.co/technology/git-learning-sheet/</link>
+      <link>https://xxoo.be/technology/git-learning-sheet/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/git-learning-sheet/</guid>
+      <guid>https://xxoo.be/technology/git-learning-sheet/</guid>
       <description>&lt;p&gt;部分电子书已经收录到仓库中，可以在这里查看到：&lt;a href=&#34;https://down.huaien.me/00.%E7%94%B5%E5%AD%90%E4%B9%A6_Ebook/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;电子书仓库&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>git push远程版本和本地版本冲突时强制覆盖已有的分支有的分支</title>
-      <link>https://huaien.co/technology/git-commit-push-rejected-error/</link>
+      <link>https://xxoo.be/technology/git-commit-push-rejected-error/</link>
       <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/git-commit-push-rejected-error/</guid>
+      <guid>https://xxoo.be/technology/git-commit-push-rejected-error/</guid>
       <description>&lt;p&gt;前面我们讲到&lt;a href=&#34;https://huaien.me/article/blogengine/how-to-backup-hexo-to-github/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;备份 Hexo 源码文件到GitHub仓库&lt;/a&gt;
 在尝试将本地hexo源码文件同步到GitHub仓库的hexo分支的时候，执行&lt;/p&gt;</description>
     </item>

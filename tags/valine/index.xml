@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Valine on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/valine/</link>
+    <link>https://xxoo.be/tags/valine/</link>
     <description>Recent content in Valine on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 19 Apr 2019 09:56:14 +0900</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/valine/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/valine/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo添加Valine评论系统 以LeaveIt主题为例</title>
-      <link>https://huaien.co/technology/valine-to-hugo-with-leaveit/</link>
+      <link>https://xxoo.be/technology/valine-to-hugo-with-leaveit/</link>
       <pubDate>Fri, 19 Apr 2019 09:56:14 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/valine-to-hugo-with-leaveit/</guid>
+      <guid>https://xxoo.be/technology/valine-to-hugo-with-leaveit/</guid>
       <description>&lt;p&gt;最近将博客的生成器由Hexo转回到Hugo了，在这之后选了一些主题，试过Even,Jane,mainroad等等，最后还是选了v2上有人发布的这个LeaveIt主题。主要是因为这个主题简洁又不缺乏华丽的感觉。不过有点不足的是这个主题并不能直接用评论系统，在查看了相关教程之后，终于添加了原来使用的Valine评论系统。&lt;/p&gt;</description>
     </item>
     

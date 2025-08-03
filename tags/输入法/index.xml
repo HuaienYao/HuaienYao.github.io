@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>输入法 on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+    <link>https://xxoo.be/tags/%E8%BE%93%E5%85%A5%E6%B3%95/</link>
     <description>Recent content in 输入法 on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 11 Oct 2019 17:08:38 +0900</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/%E8%BE%93%E5%85%A5%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/%E8%BE%93%E5%85%A5%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>微软IME日语输入法按Shift突然变成输入全角英文</title>
-      <link>https://huaien.co/technology/ime-japanese-change-full-to-half/</link>
+      <link>https://xxoo.be/technology/ime-japanese-change-full-to-half/</link>
       <pubDate>Fri, 11 Oct 2019 17:08:38 +0900</pubDate>
       
-      <guid>https://huaien.co/technology/ime-japanese-change-full-to-half/</guid>
+      <guid>https://xxoo.be/technology/ime-japanese-change-full-to-half/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;有用微软IME日语输入法的人可能会遇到这种事。就是在平假名输入模式下按Shift键来切换英文字母输入，应该是半角英文数字，但是突然按Shift键变成了全角英文数字模式。&lt;/p&gt;</description>

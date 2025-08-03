@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>typecho on Wyane`s Blog</title>
-    <link>https://huaien.co/tags/typecho/</link>
+    <link>https://xxoo.be/tags/typecho/</link>
     <description>Recent content in typecho on Wyane`s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 02 Oct 2019 06:03:21 +0000</lastBuildDate>
     
-	<atom:link href="https://huaien.co/tags/typecho/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxoo.be/tags/typecho/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>好看喜欢的免费与收费typecho主题收藏</title>
-      <link>https://huaien.co/internet/favorite-great-typecho-themes/</link>
+      <link>https://xxoo.be/internet/favorite-great-typecho-themes/</link>
       <pubDate>Wed, 02 Oct 2019 06:03:21 +0000</pubDate>
       
-      <guid>https://huaien.co/internet/favorite-great-typecho-themes/</guid>
+      <guid>https://xxoo.be/internet/favorite-great-typecho-themes/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;因为本人也在用typecho搭建博客，typecho的主题没有wordpress多，但是很多国内大佬做的主题是真心喜欢，本人收藏的多为简洁又好看的主题。&lt;/p&gt;</description>
@@ -24,20 +24,20 @@
     
     <item>
       <title>typecho发表评论需要发送两次才成功的解决方案</title>
-      <link>https://huaien.co/technology/need-to-click-twice-to-submit-comment-on-typecho/</link>
+      <link>https://xxoo.be/technology/need-to-click-twice-to-submit-comment-on-typecho/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/need-to-click-twice-to-submit-comment-on-typecho/</guid>
+      <guid>https://xxoo.be/technology/need-to-click-twice-to-submit-comment-on-typecho/</guid>
       <description>&lt;p&gt;最近发现typecho发表评论需要发送两次才会成功发送出去，网上查询了下资料，好像把&lt;strong&gt;&lt;em&gt;后台设置里面的开启反垃圾评论选项关闭&lt;/em&gt;&lt;/strong&gt;就可以解决问题。
 原来typecho的反垃圾就是通过用户发送两次评论来实现。。。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>typecho文章评论带表情就database query error</title>
-      <link>https://huaien.co/technology/comment-with-emoji-shows-datebase-error-on-typecho/</link>
+      <link>https://xxoo.be/technology/comment-with-emoji-shows-datebase-error-on-typecho/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/comment-with-emoji-shows-datebase-error-on-typecho/</guid>
+      <guid>https://xxoo.be/technology/comment-with-emoji-shows-datebase-error-on-typecho/</guid>
       <description>&lt;p&gt;前几天开了童童的博客，但是在发布文章经常出现错误。老婆说发不出去。发给我的截图显示错误为&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -50,19 +50,19 @@
     
     <item>
       <title>typecho博客程序上传后缀为大写JPG附件失败的解决办法</title>
-      <link>https://huaien.co/technology/typecho-upload-jpg-image/</link>
+      <link>https://xxoo.be/technology/typecho-upload-jpg-image/</link>
       <pubDate>Mon, 19 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/typecho-upload-jpg-image/</guid>
+      <guid>https://xxoo.be/technology/typecho-upload-jpg-image/</guid>
       <description>昨天安装了Typecho 1.0 (14.10.10)，是官网最新的正式版，但是调试中遇到一个问题，就是上传照片的时候会出现不能上传，后来试来试去发</description>
     </item>
     
     <item>
       <title>LNMP环境下typecho无法登录后台解决方案</title>
-      <link>https://huaien.co/technology/lnmp-typecho-login-error/</link>
+      <link>https://xxoo.be/technology/lnmp-typecho-login-error/</link>
       <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://huaien.co/technology/lnmp-typecho-login-error/</guid>
+      <guid>https://xxoo.be/technology/lnmp-typecho-login-error/</guid>
       <description>&lt;p&gt;&lt;strong&gt;感谢&lt;a href=&#34;http://www.vpsmm.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;小夜&lt;/a&gt;提供帮助。&lt;/strong&gt;
 &amp;gt; 出现的问题：liccess的lnmp0.6 搭建好后安装了typecho后，只有首页可以访问，其他页面都不能访问，后台登录界面可以看到，但是登录后无法访问。官方有解决方案但是我按照那还是解决不了&lt;/p&gt;</description>
     </item>
